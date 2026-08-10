@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Podaturpet Textile Hub | Lungis, Local Business & Export from Tamil Nadu</title>
+
+  <meta name="description"
+        content="Discover Podaturpet, Tamil Nadu — a textile and lungi hub. Connect with Murali for wholesale lungis, textile sourcing, export enquiries, local businesses and Podaturpet information." />
+
+  <meta name="keywords"
+        content="Podaturpet, lungi manufacturer Tamil Nadu, lungi wholesale India, lungi export, cotton lungi, textile Podaturpet, Tamil Nadu textiles, lungi supplier India" />
+
+  <meta name="robots" content="index,follow" />
+
+  <style>
+    :root {
+      --dark: #071b17;
+      --dark2: #0b2b23;
+      --green: #0d7a5f;
+      --green2: #19a77e;
+      --gold: #e5b84b;
+      --cream: #fff9ec;
+      --white: #ffffff;
+      --text: #19302a;
+      --muted: #6b7d77;
+      --border: #dfe9e5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* NAV */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7, 27, 23, .96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: #d8e8e2;
+      font-size: .94rem;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-cta {
+      padding: 10px 18px;
+      background: var(--gold);
+      color: #14201d !important;
+      border-radius: 999px;
+      font-weight: 800;
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(229,184,75,.25), transparent 32%),
+        radial-gradient(circle at 15% 80%, rgba(25,167,126,.26), transparent 35%),
+        linear-gradient(135deg, #061a16 0%, #0b3328 100%);
+      color: white;
+      padding: 105px 0 90px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.18fr .82fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: .82rem;
+      color: #dcf3ea;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 6vw, 5.5rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+      max-width: 800px;
+    }
+
+    h1 strong {
+      color: var(--gold);
+      display: block;
+    }
+
+    .hero p {
+      margin-top: 26px;
+      max-width: 680px;
+      color: #d4e5df;
+      font-size: 1.1rem;
+    }
+
+    .buttons {
+      margin-top: 34px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: 800;
+      transition: .2s ease;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #15221e;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,.25);
+      color: white;
+      background: rgba(255,255,255,.07);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-card {
+      border: 1px solid rgba(255,255,255,.13);
+      background: rgba(255,255,255,.08);
+      box-shadow: 0 30px 70px rgba(0,0,0,.25);
+      backdrop-filter: blur(15px);
+      border-radius: 28px;
+      padding: 34px;
+    }
+
+    .fabric {
+      min-height: 300px;
+      border-radius: 20px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(255,255,255,.06) 0px,
+          rgba(255,255,255,.06) 2px,
+          transparent 2px,
+          transparent 28px
+        ),
+        repeating-linear-gradient(
+          0deg,
+          rgba(229,184,75,.1) 0px,
+          rgba(229,184,75,.1) 2px,
+          transparent 2px,
+          transparent 28px
+        ),
+        linear-gradient(145deg,#0b654f,#082f27);
+    }
+
+    .fabric small {
+      color: #bfe7da;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+    }
+
+    .fabric h2 {
+      font-size: 2.1rem;
+      margin-top: 7px;
+    }
+
+    /* TRUST */
+
+    .trust {
+      background: var(--cream);
+      border-bottom: 1px solid #eee4cf;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 28px 0;
+    }
+
+    .trust-item {
+      text-align: center;
+      border-right: 1px solid #e4d8bf;
+    }
+
+    .trust-item:last-child {
+      border-right: none;
+    }
+
+    .trust-item b {
+      display: block;
+      color: var(--dark2);
+      font-size: 1.08rem;
+    }
+
+    .trust-item span {
+      color: #806f54;
+      font-size: .87rem;
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 42px;
+    }
+
+    .kicker {
+      color: var(--green);
+      font-size: .8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    .section-head h2 {
+      margin-top: 8px;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.07;
+      letter-spacing: -.045em;
+      color: var(--dark);
+    }
+
+    .section-head p {
+      color: var(--muted);
+      margin-top: 15px;
+    }
+
+    /* EXPORT */
+
+    .export-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: white;
+      transition: .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 50px rgba(12,67,52,.09);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #e9f7f2;
+      display: grid;
+      place-items: center;
+      color: var(--green);
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    /* BUSINESS */
+
+    .business {
+      background: #f7faf9;
+    }
+
+    .business-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .business-box {
+      padding: 36px;
+      border-radius: 25px;
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .business-box.featured {
+      background: var(--dark);
+      color: white;
+      border: 0;
+    }
+
+    .business-box.featured h3 {
+      color: white;
+    }
+
+    .business-box h3 {
+      font-size: 1.7rem;
+      color: var(--dark);
+    }
+
+    .business-box p {
+      margin-top: 12px;
+      color: var(--muted);
+    }
+
+    .business-box.featured p {
+      color: #c5d8d2;
+    }
+
+    /* PODATURPET */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .visual {
+      border-radius: 30px;
+      min-height: 430px;
+      background:
+        radial-gradient(circle at 25% 25%, #e7c15c 0 7%, transparent 8%),
+        linear-gradient(145deg,rgba(15,128,98,.92),rgba(6,38,31,.98)),
+        #0d755b;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .visual::after {
+      content:"PODATURPET\A TAMIL NADU";
+      white-space: pre;
+      position:absolute;
+      left:30px;
+      bottom:30px;
+      color:white;
+      font-size:2.1rem;
+      font-weight:900;
+      line-height:1.1;
+    }
+
+    .about-copy h2 {
+      font-size: clamp(2rem,4vw,3.5rem);
+      letter-spacing: -.045em;
+      line-height: 1.05;
+      color: var(--dark);
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin-top: 18px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: linear-gradient(135deg,#061b16,#0b3d30);
+      color:white;
+    }
+
+    .contact-wrap {
+      display:grid;
+      grid-template-columns: 1fr .8fr;
+      gap:50px;
+      align-items:center;
+    }
+
+    .contact h2 {
+      font-size:clamp(2.2rem,5vw,4rem);
+      letter-spacing:-.05em;
+      line-height:1;
+    }
+
+    .contact p {
+      margin-top:18px;
+      color:#c7dcd5;
+      max-width:650px;
+    }
+
+    .contact-card {
+      padding:32px;
+      border-radius:24px;
+      background:white;
+      color:var(--text);
+    }
+
+    .contact-card h3 {
+      color:var(--dark);
+      margin-bottom:10px;
+    }
+
+    .contact-card p {
+      color:var(--muted);
+      margin:0 0 20px;
+    }
+
+    .contact-card .btn {
+      width:100%;
+      margin-top:10px;
+      background:var(--green);
+      color:white;
+    }
+
+    footer {
+      background:#04120f;
+      color:#9eb2ab;
+      padding:35px 0;
+      font-size:.9rem;
+    }
+
+    .footer-row {
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:850px) {
+      .nav-links {
+        display:none;
+      }
+
+      .hero {
+        padding-top:75px;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .business-grid,
+      .contact-wrap {
+        grid-template-columns:1fr;
+      }
+
+      .hero-card {
+        padding:18px;
+      }
+
+      .export-grid {
+        grid-template-columns:1fr;
+      }
+
+      .trust-grid {
+        grid-template-columns:1fr 1fr;
+      }
+
+      .trust-item {
+        padding:12px 5px;
+        border-right:0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="#">
+        PODATURPET<span>.COM</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#textiles">Textiles</a>
+        <a href="#business">Businesses</a>
+        <a href="#discover">Discover</a>
+        <a href="#contact" class="nav-cta">Contact Murali</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="eyebrow">
+        Podaturpet • Tamil Nadu • India
+      </div>
+
+      <h1>
+        From a textile town
+        <strong>to the world.</strong>
+      </h1>
+
+      <p>
+        Discover Podaturpet's textile heritage and connect for
+        cotton lungis, wholesale sourcing, export enquiries and
+        local business opportunities.
+      </p>
+
+      <div class="buttons">
+        <a href="#contact" class="btn btn-primary">
+          Wholesale & Export Enquiry
+        </a>
+
+        <a href="#business" class="btn btn-secondary">
+          List Your Business
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="fabric">
+        <small>Podaturpet Textile Hub</small>
+        <h2>Premium Cotton Lungis</h2>
+        <p>
+          Wholesale • Retail • Export Enquiries
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="trust">
+  <div class="container trust-grid">
+
+    <div class="trust-item">
+      <b>Textile Hub</b>
+      <span>Local weaving ecosystem</span>
+    </div>
+
+    <div class="trust-item">
+      <b>Wholesale</b>
+      <span>Business enquiries welcome</span>
+    </div>
+
+    <div class="trust-item">
+      <b>Export</b>
+      <span>International buyers welcome</span>
+    </div>
+
+    <div class="trust-item">
+      <b>Local Business</b>
+      <span>Grow your visibility</span>
+    </div>
+
+  </div>
+</div>
+
+
+<section id="textiles">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="kicker">Podaturpet Textile Hub</div>
+
+      <h2>
+        Lungis and textiles built around a local weaving tradition.
+      </h2>
+
+      <p>
+        Podaturpet has a strong textile ecosystem. Podaturpet.com aims
+        to help connect genuine local manufacturers, traders,
+        wholesalers and international buyers.
+      </p>
+    </div>
+
+    <div class="export-grid">
+
+      <div class="card">
+        <div class="icon">01</div>
+        <h3>Cotton Lungis</h3>
+        <p>
+          Connect for cotton lungi sourcing and business enquiries
+          from Podaturpet and surrounding textile communities.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">02</div>
+        <h3>Wholesale Orders</h3>
+        <p>
+          Retailers, distributors and traders can enquire about
+          bulk purchasing and supplier connections.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">03</div>
+        <h3>International Enquiries</h3>
+        <p>
+          Buyers from the Gulf, Asia, Africa and other markets are
+          welcome to contact us for sourcing discussions.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="business" id="business">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="kicker">Local Business Network</div>
+
+      <h2>
+        Helping Podaturpet businesses become visible online.
+      </h2>
+
+      <p>
+        Shops, textile businesses, restaurants and service providers
+        can contact us to be considered for a listing.
+      </p>
+    </div>
+
+    <div class="business-grid">
+
+      <div class="business-box featured">
+        <h3>Own a business in Podaturpet?</h3>
+
+        <p>
+          Want customers to discover your shop or service through
+          Podaturpet.com? Contact Murali to discuss a business listing.
+        </p>
+
+        <div class="buttons">
+          <a href="#contact" class="btn btn-primary">
+            Contact Murali
+          </a>
+        </div>
+      </div>
+
+      <div class="business-box">
+        <h3>Business categories</h3>
+
+        <p>
+          Textiles • Grocery • Restaurants • Jewellery • Electronics •
+          Medical • Education • Services • Local Manufacturers •
+          Tourism-related businesses.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="discover">
+  <div class="container about-grid">
+
+    <div class="visual"></div>
+
+    <div class="about-copy">
+
+      <div class="kicker">Discover Podaturpet</div>
+
+      <h2>
+        Local industry, businesses, culture and community.
+      </h2>
+
+      <p>
+        Podaturpet.com is being developed as an independent digital
+        gateway for the town — connecting residents, visitors,
+        businesses and buyers.
+      </p>
+
+      <p>
+        Future sections will include verified local businesses,
+        textile suppliers, places to visit, temples, essential
+        services, jobs, events and community information.
+      </p>
+
+      <div class="buttons">
+        <a href="#contact"
+           class="btn"
+           style="background:#0d7a5f;color:white;">
+          Partner With Podaturpet.com
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="contact" id="contact">
+  <div class="container contact-wrap">
+
+    <div>
+      <div class="kicker" style="color:#e5b84b">
+        Business & Export Enquiries
+      </div>
+
+      <h2>
+        Let's do business with Podaturpet.
+      </h2>
+
+      <p>
+        For lungi sourcing, textile wholesale, international buyer
+        enquiries, local partnerships or business listings,
+        contact Murali.
+      </p>
+    </div>
+
+    <div class="contact-card">
+
+      <h3>Contact Murali</h3>
+
+      <p>
+        Podaturpet.com Business Coordinator
+      </p>
+
+      <!-- Replace YOURNUMBER with your WhatsApp number.
+           Format example: 919876543210 -->
+
+      <a class="btn"
+         href="https://wa.me/YOURNUMBER?text=Hello%20Murali%2C%20I%20found%20you%20through%20Podaturpet.com%20and%20would%20like%20to%20discuss%20a%20business%20enquiry."
+         target="_blank"
+         rel="noopener noreferrer">
+         WhatsApp Murali
+      </a>
+
+      <!-- Replace with your actual business email -->
+
+      <a class="btn"
+         href="mailto:YOUR_EMAIL@example.com"
+         style="background:#172b25;">
+         Email Enquiry
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+
+<footer>
+  <div class="container footer-row">
+
+    <div>
+      © <span id="year"></span> Podaturpet.com
+    </div>
+
+    <div>
+      Independent local business & information platform • Tamil Nadu, India
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
