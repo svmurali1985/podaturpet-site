@@ -388,6 +388,82 @@
     .assurance-card span{display:block;color:#52605b;line-height:1.55;font-size:.94rem}
     @media(max-width:800px){.assurance-grid{grid-template-columns:1fr}.buyer-assurance{padding:20px 0}}
 
+  
+    /* PODATURPET MANUFACTURER AD */
+    .manufacturer-ad{
+      background:linear-gradient(135deg,#f8f3e9 0%,#fff 52%,#f4ead7 100%);
+      padding:70px 0;
+      border-top:1px solid rgba(7,27,23,.08);
+      border-bottom:1px solid rgba(7,27,23,.08);
+    }
+    .manufacturer-ad-wrap{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:42px;
+      align-items:stretch;
+    }
+    .manufacturer-ad-copy{
+      background:#fff;
+      border:1px solid rgba(7,27,23,.08);
+      border-radius:26px;
+      padding:44px;
+      box-shadow:0 18px 50px rgba(7,27,23,.09);
+    }
+    .manufacturer-kicker{
+      display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;
+      background:#0b2b23;color:#f2c45a;font-size:.76rem;font-weight:900;letter-spacing:.08em;
+      text-transform:uppercase;margin-bottom:20px
+    }
+    .manufacturer-ad h2{
+      margin:0;color:#0b2b23;font-size:clamp(2.6rem,5vw,5rem);line-height:.98;letter-spacing:-.045em
+    }
+    .manufacturer-ad h2 span{color:#c9952f}
+    .manufacturer-lead{margin:22px 0 0;color:#34443e;font-size:1.08rem;line-height:1.75;max-width:720px}
+    .manufacturer-lead strong{color:#0b2b23}
+    .manufacturer-promise{
+      margin:24px 0 0;padding:18px 20px;border-left:4px solid #d4a23d;background:#fbf6eb;
+      border-radius:0 14px 14px 0;color:#0b2b23;font-weight:800;line-height:1.55
+    }
+    .manufacturer-points{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:26px 0 0}
+    .manufacturer-point{padding:16px;border-radius:14px;background:#f7f3ea;border:1px solid rgba(7,27,23,.08)}
+    .manufacturer-point strong{display:block;color:#0b2b23;margin-bottom:4px;font-size:.96rem}
+    .manufacturer-point span{color:#66736e;font-size:.88rem;line-height:1.45}
+    .manufacturer-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .manufacturer-cta a{
+      display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;
+      border-radius:12px;font-weight:900;text-decoration:none
+    }
+    .manufacturer-cta .primary{background:#e3b23c;color:#071b17;box-shadow:0 10px 22px rgba(227,178,60,.24)}
+    .manufacturer-cta .secondary{background:#0b2b23;color:#fff}
+    .manufacturer-ad-visual{
+      position:relative;min-height:100%;border-radius:26px;overflow:hidden;
+      background:linear-gradient(180deg,rgba(5,24,20,.08),rgba(5,24,20,.35)),
+                 url('images/podaturpet-manufacturer-ad.png') center top/cover no-repeat;
+      box-shadow:0 18px 50px rgba(7,27,23,.16);border:1px solid rgba(7,27,23,.10)
+    }
+    .manufacturer-badge{
+      position:absolute;right:20px;bottom:20px;width:min(290px,calc(100% - 40px));
+      background:rgba(7,27,23,.94);color:#fff;border:1px solid rgba(227,178,60,.45);
+      border-radius:18px;padding:20px;backdrop-filter:blur(8px)
+    }
+    .manufacturer-badge small{
+      display:block;color:#e3b23c;font-weight:900;text-transform:uppercase;letter-spacing:.11em;margin-bottom:6px
+    }
+    .manufacturer-badge strong{display:block;font-size:1.35rem;line-height:1.18;margin-bottom:6px}
+    .manufacturer-badge span{color:#d9e2de;font-size:.9rem;line-height:1.45}
+    @media(max-width:900px){
+      .manufacturer-ad{padding:44px 0}
+      .manufacturer-ad-wrap{grid-template-columns:1fr}
+      .manufacturer-ad-copy{padding:30px}
+      .manufacturer-ad-visual{min-height:520px}
+    }
+    @media(max-width:560px){
+      .manufacturer-ad-copy{padding:24px}
+      .manufacturer-points{grid-template-columns:1fr}
+      .manufacturer-ad-visual{min-height:430px}
+      .manufacturer-cta a{width:100%}
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -472,6 +548,64 @@
       </div>
     </div>
   </section>
+
+<section class="manufacturer-ad" id="direct-manufacturer">
+  <div class="container manufacturer-ad-wrap">
+    <div class="manufacturer-ad-copy">
+      <div class="manufacturer-kicker">Direct from Podaturpet • Wholesale Ready</div>
+      <h2>We weave. We deliver. <span>You grow.</span></h2>
+
+      <p class="manufacturer-lead">
+        We work directly from the Podaturpet textile region to supply quality lungis for
+        retailers, distributors and wholesale buyers. <strong>Our goal is simple:</strong>
+        dependable quality, fair wholesale pricing and a business relationship you can trust.
+      </p>
+
+      <div class="manufacturer-promise">
+        Give us one opportunity. Try our lungis once, check the quality yourself,
+        and then decide your next bulk order.
+      </div>
+
+      <div class="manufacturer-points">
+        <div class="manufacturer-point">
+          <strong>Direct Manufacturing Connection</strong>
+          <span>Closer to the weaving source with fewer unnecessary layers.</span>
+        </div>
+        <div class="manufacturer-point">
+          <strong>Quality-Focused Lungis</strong>
+          <span>Cotton, handloom and powerloom options for different markets.</span>
+        </div>
+        <div class="manufacturer-point">
+          <strong>Bulk Orders Welcome</strong>
+          <span>Buyer enquiries for shops, distributors and larger requirements.</span>
+        </div>
+        <div class="manufacturer-point">
+          <strong>India + Worldwide</strong>
+          <span>We welcome enquiries from domestic and international buyers.</span>
+        </div>
+      </div>
+
+      <div class="manufacturer-cta">
+        <a class="primary"
+           href="https://wa.me/14793201970?text=Hello%20Murali%2C%20I%20want%20to%20try%20Podaturpet%20lungis.%20Please%20send%20wholesale%20details%20and%20pricing."
+           target="_blank" rel="noopener noreferrer">
+          Give Us a Chance — Get Wholesale Quote
+        </a>
+        <a class="secondary" href="#international-buyers">International Buyers</a>
+      </div>
+    </div>
+
+    <div class="manufacturer-ad-visual" role="img"
+         aria-label="Podaturpet lungi manufacturing and wholesale buyer promotion">
+      <div class="manufacturer-badge">
+        <small>Woven Trust</small>
+        <strong>Tradition in every thread. Trust in every order.</strong>
+        <span>Quality you can feel. Service you can trust.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <div class="strip">
     <div class="container strip-grid">
