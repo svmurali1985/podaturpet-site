@@ -174,7 +174,7 @@
       min-height:520px;border-radius:30px;overflow:hidden;position:relative;
       background:
         linear-gradient(180deg,transparent 35%,rgba(4,25,20,.84) 100%),
-        url("https://images.unsplash.com/photo-1604011237320-8e0506614fdf?auto=format&fit=crop&w=1200&q=82") center/cover no-repeat;
+        url("images/lungi-patterns.jpeg") center/cover no-repeat;
       box-shadow:var(--shadow)
     }
     .photo-caption{
@@ -212,7 +212,7 @@
       min-height:460px;border-radius:30px;position:relative;overflow:hidden;
       background:
         linear-gradient(180deg,transparent 35%,rgba(4,25,20,.82) 100%),
-        url("https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=82") center/cover no-repeat;
+        url("images/lungi-blue.jpeg") center/cover no-repeat;
       box-shadow:var(--shadow)
     }
     .town-label{
@@ -297,6 +297,49 @@
       .card,.business-box,.feature,.contact-card{padding:24px}
       .floating-whatsapp{width:54px;height:54px;right:14px;bottom:14px}
     }
+  
+
+    /* 2026 PREMIUM BUSINESS REFRESH */
+    body{background:#fbfaf6}
+    header{box-shadow:0 8px 30px rgba(3,24,18,.16)}
+    .container{width:min(1220px,92%)}
+    .hero{min-height:690px;background:
+      linear-gradient(90deg,rgba(3,20,16,.96) 0%,rgba(4,27,21,.88) 44%,rgba(4,27,21,.34) 100%),
+      url("images/lungi-collection.jpeg") center/cover no-repeat}
+    .hero-inner{max-width:760px}
+    .hero h1{font-size:clamp(3.2rem,6.6vw,6rem)}
+    .hero-copy{font-size:1.12rem;max-width:650px}
+    .proof{backdrop-filter:blur(8px)}
+    .btn{box-shadow:0 10px 25px rgba(0,0,0,.12)}
+    .btn-primary{background:linear-gradient(135deg,#f2cf72,#ddb14a)}
+    .product-showcase{padding:70px 0 82px;background:#fff}
+    .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .product-tile{position:relative;min-height:330px;border-radius:26px;overflow:hidden;box-shadow:0 16px 42px rgba(7,27,23,.14);isolation:isolate}
+    .product-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .45s ease;z-index:-2}
+    .product-tile:after{content:"";position:absolute;inset:25% 0 0;background:linear-gradient(transparent,rgba(3,20,16,.92));z-index:-1}
+    .product-tile:hover img{transform:scale(1.045)}
+    .product-copy{position:absolute;left:22px;right:22px;bottom:22px;color:#fff}
+    .product-copy small{display:block;color:#f2cf72;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+    .product-copy h3{font-size:1.35rem;line-height:1.1}
+    .product-copy a{display:inline-block;margin-top:10px;font-weight:900;color:#fff;border-bottom:1px solid rgba(255,255,255,.5)}
+    .section-head{margin-bottom:34px}
+    .card,.feature,.business-box,.enquiry-card{box-shadow:0 10px 30px rgba(7,27,23,.05)}
+    .card{border-radius:20px}
+    .card:hover{border-color:#bfd8ce}
+    .photo-panel{background:
+      linear-gradient(180deg,transparent 32%,rgba(4,25,20,.86) 100%),
+      url("images/lungi-patterns.jpeg") center/cover no-repeat}
+    .town-visual{background:
+      linear-gradient(180deg,transparent 35%,rgba(4,25,20,.86) 100%),
+      url("images/lungi-blue.jpeg") center/cover no-repeat}
+    .buyer-panel{background:
+      radial-gradient(circle at 100% 0,rgba(231,189,87,.18),transparent 35%),
+      linear-gradient(145deg,#061b16,#0b392e)}
+    .market-card{box-shadow:0 12px 32px rgba(7,27,23,.08)}
+    .trust-ribbon{display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap;padding:16px;border-top:1px solid #eee1c5;background:#fff8e9;color:#4c5f58;font-size:.9rem;font-weight:800}
+    @media(max-width:900px){.product-grid{grid-template-columns:1fr 1fr}.product-tile{min-height:290px}}
+    @media(max-width:560px){.product-grid{grid-template-columns:1fr}.product-tile{min-height:310px}.product-showcase{padding:54px 0 62px}}
+
   </style>
 
   <script type="application/ld+json">
@@ -341,12 +384,11 @@
         </div>
       </div>
       <div class="nav-links">
+        <a href="#products">Lungis</a>
+        <a href="#india-buyers">India Buyers</a>
         <a href="#international-buyers">International</a>
-        <a href="#town-guide">Town Guide</a>
-        <a href="#weaving">Weaving</a>
-        <a href="#business">Business</a>
-        <a href="#travel">Travel</a>
-        <a class="nav-cta" href="#contact">Contact Murali</a>
+        <a href="#weaving">Our Weaving</a>
+        <a class="nav-cta" href="#contact">Get a Quote</a>
       </div>
     </nav>
   </div>
@@ -376,9 +418,9 @@
         </div>
 
         <div class="hero-proof">
-          <span class="proof">✓ Textile sourcing</span>
-          <span class="proof">✓ Wholesale enquiries</span>
-          <span class="proof">✓ Local business visibility</span>
+          <span class="proof">✓ Cotton • Handloom • Powerloom</span>
+          <span class="proof">✓ Wholesale buyer enquiries</span>
+          <span class="proof">✓ India & international markets</span>
         </div>
       </div>
     </div>
@@ -393,6 +435,25 @@
     </div>
   </div>
 
+  <div class="trust-ribbon">
+    <span>Podaturpet textile heritage</span><span>•</span><span>Wholesale focused</span><span>•</span><span>Direct buyer enquiries</span><span>•</span><span>Woven Trust</span>
+  </div>
+
+  <section class="product-showcase" id="products">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Lungi Collection</div>
+        <h2>Traditional character. Wholesale-ready choices.</h2>
+        <p>Explore the main product categories buyers ask for, then send your quantity and destination for a sourcing conversation.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-tile"><img src="images/lungi-colors.jpeg" alt="Colorful cotton lungis"><div class="product-copy"><small>Wholesale</small><h3>Cotton Lungis</h3><a href="/cotton-lungi-wholesale.html">View cotton lungis →</a></div></article>
+        <article class="product-tile"><img src="images/lungi-patterns.jpeg" alt="Traditional patterned lungis"><div class="product-copy"><small>Traditional</small><h3>Handloom Lungis</h3><a href="/handloom-lungis.html">View handloom →</a></div></article>
+        <article class="product-tile"><img src="images/lungi-blue.jpeg" alt="Blue checked lungi fabric"><div class="product-copy"><small>Bulk Orders</small><h3>Powerloom Lungis</h3><a href="/powerloom-lungis.html">View powerloom →</a></div></article>
+        <article class="product-tile"><img src="images/lungi-grey.jpeg" alt="Lungi fabric for wholesale buyers"><div class="product-copy"><small>Worldwide</small><h3>Export Enquiries</h3><a href="/lungi-wholesale-worldwide.html">International buyers →</a></div></article>
+      </div>
+    </div>
+  </section>
 
   <section class="buyer-section" id="buyers">
     <div class="container buyer-grid">
@@ -706,35 +767,29 @@
     <div class="container">
       <div class="section-head">
         <div class="kicker">Around Podaturpet</div>
-        <h2>Weaving, temples, fields and the character of northern Tamil Nadu.</h2>
+        <h2>A closer look at lungi colors, checks and textile character.</h2>
         <p>
-          Podaturpet's official town profile highlights weaving, agriculture and the local
-          Amman festival. The visual gallery below is used to introduce that regional character;
-          we will replace representative images with original Podaturpet photographs as verified
-          local photos become available.
+          This product-focused gallery uses the site's own lungi images to show the colors, checks and textile character buyers can discuss when making a sourcing enquiry.
         </p>
       </div>
       <div class="photo-grid">
-        <div class="place-photo" style="background-image:url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1100&q=82')">
-          <div class="place-label">Textile & weaving heritage</div>
+        <div class="place-photo" style="background-image:url('images/lungi-collection.jpeg')">
+          <div class="place-label">Lungi collection</div>
         </div>
-        <div class="place-photo" style="background-image:url('https://images.unsplash.com/photo-1600100397608-f010f51bdb1d?auto=format&fit=crop&w=900&q=82')">
-          <div class="place-label">Temple traditions</div>
+        <div class="place-photo" style="background-image:url('images/lungi-patterns.jpeg')">
+          <div class="place-label">Traditional checks</div>
         </div>
-        <div class="place-photo" style="background-image:url('https://images.unsplash.com/photo-1596796930385-08851b9b8e5f?auto=format&fit=crop&w=900&q=82')">
-          <div class="place-label">Agriculture & countryside</div>
+        <div class="place-photo" style="background-image:url('images/lungi-colors.jpeg')">
+          <div class="place-label">Color selections</div>
         </div>
-        <div class="place-photo" style="background-image:url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=900&q=82')">
-          <div class="place-label">Tamil Nadu heritage</div>
+        <div class="place-photo" style="background-image:url('images/lungi-blue.jpeg')">
+          <div class="place-label">Blue checks</div>
         </div>
-        <div class="place-photo" style="background-image:url('https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=900&q=82')">
-          <div class="place-label">Local community life</div>
+        <div class="place-photo" style="background-image:url('images/lungi-grey.jpeg')">
+          <div class="place-label">Classic neutrals</div>
         </div>
       </div>
-      <p class="source-note">
-        Photo note: these are representative editorial images, not claimed to depict specific
-        Podaturpet landmarks. Original locally sourced photographs will be preferred for future updates.
-      </p>
+      <p class="source-note">Product images shown are from the Podaturpet.com website collection. Buyers should confirm current patterns, colors, samples and availability before ordering.</p>
     </div>
   </section>
 
