@@ -57,6 +57,9 @@
       display:flex;align-items:center;justify-content:space-between;gap:28px
     }
     .brand-wrap{display:flex;align-items:center;gap:11px}
+    .site-logo-link{display:flex;align-items:center;min-width:0}
+    .site-logo-img{width:clamp(250px,29vw,390px);height:auto;max-height:62px;object-fit:contain;object-position:left center}
+
     .loom-mark{
       width:42px;height:42px;border-radius:12px;
       border:1px solid rgba(231,189,87,.48);
@@ -114,6 +117,7 @@
       margin-top:28px;max-width:700px;color:#d4e5df;
       font-size:clamp(1rem,2vw,1.2rem)
     }
+    .brand-promise{margin-top:14px;color:#f2cf72;font-weight:900;font-size:1rem;letter-spacing:.025em}
     .buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
@@ -377,11 +381,9 @@
   <div class="container">
     <nav>
       <div class="brand-wrap">
-        <span class="loom-mark" aria-hidden="true"></span>
-        <div class="brand-text">
-          <a class="logo" href="#top" aria-label="Podaturpet.com home">PODATURPET<span>.COM</span></a>
-          <span class="brand-tagline">Woven Trust</span>
-        </div>
+        <a class="site-logo-link" href="#top" aria-label="Podaturpet.com home">
+          <img class="site-logo-img" src="images/podaturpet-logo.svg" alt="Podaturpet Lungi Weaving and Textile Hub — Woven Trust">
+        </a>
       </div>
       <div class="nav-links">
         <a href="#products">Lungis</a>
@@ -401,7 +403,7 @@
         <div class="eyebrow">Podaturpet • Tamil Nadu • India • Woven Trust</div>
 
         <h1>
-          Podaturpet lungis.
+          Premium lungis from Podaturpet.
           <strong>Woven for the world.</strong>
         </h1>
 
@@ -410,6 +412,7 @@
           Wholesale enquiries are welcome from retailers, distributors and textile buyers
           across India and international markets.
         </p>
+        <p class="brand-promise">Tradition in every thread. Trust in every order.</p>
 
         <div class="buttons">
           <a href="https://wa.me/14793201970?text=Hello%20Murali%2C%20I%20want%20a%20wholesale%20lungi%20quote.%20Product%2Fstyle%3A%20____%20Quantity%3A%20____%20Destination%3A%20____"
@@ -936,7 +939,7 @@
       <a href="tel:+14793201970">+1 479-320-1970</a>
       &nbsp;•&nbsp;
       <a href="mailto:svmuralicenterton@gmail.com">svmuralicenterton@gmail.com</a><br>
-      Independent local business & information platform • Tamil Nadu, India
+      Woven with tradition. Delivered worldwide. • Tamil Nadu, India
     </div>
   </div>
 </footer>
