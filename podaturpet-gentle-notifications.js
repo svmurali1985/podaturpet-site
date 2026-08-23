@@ -11,18 +11,18 @@
   var copy = document.getElementById("gentle-notice-copy");
   var tamil = document.getElementById("gentle-notice-tamil");
   var action = document.getElementById("gentle-notice-action");
-  var storageKey = "podaturpet-gentle-notices-dismissed";
-  var firstAppearanceDelay = 7500;
-  var visibleDuration = 9000;
-  var intervalBetweenMessages = 26000;
-  var maximumAppearances = 7;
-  var appearanceCount = 0;
+  var rotationStorageKey = "podaturpet-gentle-notice-next-message";
+  var soundStorageKey = "podaturpet-gentle-notice-sound-enabled";
+  var firstAppearanceDelay = 3200;
+  var visibleDuration = 11500;
+  var intervalBetweenMessages = 10500;
   var messageIndex = 0;
-  var soundEnabled = false;
+  var soundEnabled = true;
+  var audioUnlocked = false;
   var audioContext = null;
   var showTimer = null;
   var hideTimer = null;
-  var dismissed = false;
+  var activeMessage = null;
 
   var messages = [
     {
@@ -91,12 +91,23 @@
   ];
 
   try {
-    dismissed = window.sessionStorage.getItem(storageKey) === "yes";
+    var savedMessageIndex = Number(window.sessionStorage.getItem(rotationStorageKey));
+    if (Number.isFinite(savedMessageIndex) && savedMessageIndex >= 0) {
+      messageIndex = savedMessageIndex % messages.length;
+    }
+    soundEnabled = window.sessionStorage.getItem(soundStorageKey) !== "off";
   } catch (error) {
-    dismissed = false;
+    messageIndex = 0;
   }
 
-  if (dismissed) return;
+  function updateSoundButton() {
+    soundButton.setAttribute("aria-pressed", soundEnabled ? "true" : "false");
+    soundButton.setAttribute("aria-label", soundEnabled ? "Mute spoken advertising announcements" : "Enable spoken advertising announcements");
+    soundButton.title = soundEnabled ? "Voice on — tap to mute" : "Voice off — tap to enable";
+    soundButton.textContent = soundEnabled ? "🔊" : "🔇";
+  }
+
+  updateSoundButton();
 
   function playGentleChime() {
     if (!soundEnabled || !audioContext || audioContext.state !== "running") return;
@@ -124,9 +135,76 @@
     }
   }
 
+  function findVoice(voices, language) {
+    var exactVoice = voices.find(function (voice) {
+      return voice.lang.toLowerCase().indexOf(language.toLowerCase()) === 0 && voice.localService;
+    });
+
+    return exactVoice || voices.find(function (voice) {
+      return voice.lang.toLowerCase().indexOf(language.toLowerCase()) === 0;
+    }) || null;
+  }
+
+  function speakMessage(message) {
+    if (!soundEnabled || !audioUnlocked || !("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+      return;
+    }
+
+    try {
+      window.speechSynthesis.cancel();
+
+      var voices = window.speechSynthesis.getVoices();
+      var tamilVoice = findVoice(voices, "ta");
+      var englishVoice = findVoice(voices, "en-IN") || findVoice(voices, "en");
+
+      if (tamilVoice) {
+        var tamilSpeech = new window.SpeechSynthesisUtterance(message.tamil);
+        tamilSpeech.lang = tamilVoice.lang;
+        tamilSpeech.voice = tamilVoice;
+        tamilSpeech.rate = 0.91;
+        tamilSpeech.pitch = 1.03;
+        tamilSpeech.volume = 0.76;
+        window.speechSynthesis.speak(tamilSpeech);
+      }
+
+      var englishSpeech = new window.SpeechSynthesisUtterance(message.title + " " + message.copy);
+      englishSpeech.lang = englishVoice ? englishVoice.lang : "en-IN";
+      if (englishVoice) englishSpeech.voice = englishVoice;
+      englishSpeech.rate = 0.93;
+      englishSpeech.pitch = 1.02;
+      englishSpeech.volume = 0.72;
+      window.speechSynthesis.speak(englishSpeech);
+    } catch (error) {
+      // The advertisements continue visually when browser speech is unavailable.
+    }
+  }
+
+  function unlockAudio() {
+    if (audioUnlocked) return;
+    audioUnlocked = true;
+
+    if (!soundEnabled) return;
+
+    var AudioContextConstructor = window.AudioContext || window.webkitAudioContext;
+
+    if (AudioContextConstructor) {
+      try {
+        if (!audioContext) audioContext = new AudioContextConstructor();
+        if (audioContext.state === "suspended") {
+          audioContext.resume().catch(function () {});
+        }
+      } catch (error) {
+        audioContext = null;
+      }
+    }
+
+    if (activeMessage && notice.classList.contains("is-visible")) {
+      speakMessage(activeMessage);
+    }
+  }
+
   function scheduleNext(delay) {
     window.clearTimeout(showTimer);
-    if (dismissed || appearanceCount >= maximumAppearances) return;
     showTimer = window.setTimeout(showNotice, delay);
   }
 
@@ -134,11 +212,11 @@
     window.clearTimeout(hideTimer);
     notice.classList.remove("is-visible");
     notice.setAttribute("aria-hidden", "true");
+    activeMessage = null;
     scheduleNext(intervalBetweenMessages);
   }
 
   function showNotice() {
-    if (dismissed || appearanceCount >= maximumAppearances) return;
     if (document.hidden) {
       scheduleNext(6000);
       return;
@@ -155,9 +233,17 @@
     notice.setAttribute("aria-hidden", "false");
     notice.classList.add("is-visible");
 
-    appearanceCount += 1;
+    activeMessage = message;
     messageIndex = (messageIndex + 1) % messages.length;
+
+    try {
+      window.sessionStorage.setItem(rotationStorageKey, String(messageIndex));
+    } catch (error) {
+      // Rotation continues in memory if session storage is unavailable.
+    }
+
     playGentleChime();
+    speakMessage(message);
     window.clearTimeout(hideTimer);
     hideTimer = window.setTimeout(hideNotice, visibleDuration);
   }
@@ -173,47 +259,44 @@
   });
 
   closeButton.addEventListener("click", function () {
-    dismissed = true;
-    window.clearTimeout(showTimer);
     window.clearTimeout(hideTimer);
     notice.classList.remove("is-visible");
     notice.setAttribute("aria-hidden", "true");
-    try {
-      window.sessionStorage.setItem(storageKey, "yes");
-    } catch (error) {
-      // The in-memory dismissed flag still prevents further messages.
+
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
     }
+
+    activeMessage = null;
+    scheduleNext(18000);
   });
 
   soundButton.addEventListener("click", function () {
     soundEnabled = !soundEnabled;
-    soundButton.setAttribute("aria-pressed", soundEnabled ? "true" : "false");
-    soundButton.setAttribute("aria-label", soundEnabled ? "Mute the gentle notification sound" : "Enable a gentle notification sound");
-    soundButton.title = soundEnabled ? "Sound on — tap to mute" : "Sound off — tap for a gentle chime";
+    updateSoundButton();
 
-    if (!soundEnabled) return;
-    var AudioContextConstructor = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContextConstructor) {
-      soundEnabled = false;
-      soundButton.setAttribute("aria-pressed", "false");
+    try {
+      window.sessionStorage.setItem(soundStorageKey, soundEnabled ? "on" : "off");
+    } catch (error) {
+      // The sound preference still works for the current page.
+    }
+
+    if (!soundEnabled) {
+      if ("speechSynthesis" in window) window.speechSynthesis.cancel();
       return;
     }
 
-    try {
-      if (!audioContext) audioContext = new AudioContextConstructor();
-      if (audioContext.state === "suspended") {
-        audioContext.resume().then(playGentleChime).catch(function () {});
-      } else {
-        playGentleChime();
-      }
-    } catch (error) {
-      soundEnabled = false;
-      soundButton.setAttribute("aria-pressed", "false");
-    }
+    unlockAudio();
+    playGentleChime();
+    if (activeMessage) speakMessage(activeMessage);
   });
+
+  document.addEventListener("pointerdown", unlockAudio, { once: true, capture: true });
+  document.addEventListener("keydown", unlockAudio, { once: true, capture: true });
 
   document.addEventListener("visibilitychange", function () {
     if (document.hidden && notice.classList.contains("is-visible")) {
+      if ("speechSynthesis" in window) window.speechSynthesis.cancel();
       hideNotice();
     }
   });
