@@ -548,6 +548,15 @@
     .product-copy a{font-size:.79rem}
     .product-actions{display:flex;flex-wrap:wrap;align-items:center;gap:9px 13px}
     .product-actions a.product-quote{padding:7px 11px;border:0;border-radius:999px;background:#e7bd57;color:#102b25}
+    .loom-film{padding:85px 0;background:linear-gradient(145deg,#102c25,#173e34);color:#fff}
+    .loom-film-grid{display:grid;grid-template-columns:.78fr 1.22fr;align-items:center;gap:46px}
+    .loom-film .kicker{color:#e8c67e}
+    .loom-film h2{margin:13px 0;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.4rem,4.7vw,4.1rem);font-weight:500;line-height:1.06;letter-spacing:-.045em}
+    .loom-film-copy>p{max-width:435px;color:#d7e4dd;font-size:.96rem;line-height:1.8}
+    .loom-film-links{display:flex;flex-wrap:wrap;gap:13px;margin-top:23px}
+    .loom-film-links a{color:#efd294;font-size:.84rem;font-weight:900}
+    .loom-player{width:100%;aspect-ratio:848/478;border:1px solid rgba(255,255,255,.18);border-radius:20px;background:#071b17;object-fit:contain;box-shadow:0 22px 68px rgba(0,0,0,.22)}
+    .loom-caption{margin:10px 2px 0;color:#cbd9d2;font-size:.77rem}
     #podaturpet-supplier-network{background:#f7f4ee;padding-top:74px;padding-bottom:74px}
     #podaturpet-supplier-network .section-head{max-width:830px}
     #podaturpet-supplier-network .cards{gap:16px}
@@ -633,6 +642,7 @@
       .product-grid{grid-template-columns:1fr 1fr}
       .product-tile{min-height:320px}
       .market-grid,.journey-grid{grid-template-columns:1fr 1fr}
+      .loom-film-grid{grid-template-columns:1fr;gap:23px}
       .quote-panel{grid-template-columns:1fr;gap:16px;padding:29px}
       #india-buyers .cards{grid-template-columns:1fr 1fr}
       #faq .feature-stack{grid-template-columns:1fr}
@@ -676,6 +686,8 @@
       .product-actions{gap:5px 8px}
       .product-actions a.product-quote{padding:5px 7px;font-size:.63rem}
       .quote-section{padding:61px 0}
+      .loom-film{padding:61px 0}
+      .loom-player{border-radius:14px}
       .quote-panel{padding:21px}
       .quote-form{grid-template-columns:1fr}
       .market-grid,.journey-grid,#india-buyers .cards{grid-template-columns:1fr}
@@ -726,6 +738,18 @@
       {"@type":"Question","name":"How far is Podaturpet from Tiruttani?","acceptedAnswer":{"@type":"Answer","text":"The Podhaturpet Town Panchayat profile places the town approximately 21 kilometres from Tiruttani."}},
       {"@type":"Question","name":"What was the recorded population of Podaturpet in 2011?","acceptedAnswer":{"@type":"Answer","text":"The Podhaturpet Town Panchayat profile reports a population of 22,040 for 2011."}}
     ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"VideoObject",
+    "name":"Powerloom weaving in the Podaturpet textile region",
+    "description":"Original short video showing a working powerloom and the textile-weaving process featured by Podaturpet.com.",
+    "thumbnailUrl":"https://podaturpet.com/images/lungi-blue.jpeg",
+    "uploadDate":"2026-08-23",
+    "duration":"PT15S",
+    "contentUrl":"https://podaturpet.com/images/Powerloom.mp4"
   }
   </script>
 </head>
@@ -816,6 +840,18 @@
         <article class="product-tile"><img src="images/lungi-blue.jpeg" alt="Blue checked powerloom lungi fabric" loading="lazy" decoding="async"><div class="product-copy"><small>Wholesale sourcing</small><h3>Powerloom Lungis</h3><a href="/powerloom-lungis.html">Explore powerloom →</a></div></article>
         <article class="product-tile"><img src="images/lungi-grey.jpeg" alt="Classic neutral checked lungi fabric for textile buyers" loading="lazy" decoding="async"><div class="product-copy"><small>Worldwide buyers</small><h3>Global Enquiries</h3><a href="/lungi-wholesale-worldwide.html">Explore markets →</a></div></article>
       </div>
+    </div>
+  </section>
+
+  <section class="loom-film" id="powerloom-video">
+    <div class="container loom-film-grid">
+      <div class="loom-film-copy">
+        <div class="kicker">See the weaving process</div>
+        <h2>Watch the loom bring the fabric to life.</h2>
+        <p>An original look at a working powerloom and the textile-making process behind this traditional weaving region. Discover the movement, rhythm and craft that help shape Podaturpet's textile identity.</p>
+        <div class="loom-film-links"><a href="/powerloom-lungis.html">Explore powerloom lungis →</a><a href="#quick-quote">Send a wholesale enquiry →</a></div>
+      </div>
+      <div><video class="loom-player" controls playsinline preload="none" poster="images/lungi-blue.jpeg" aria-label="Original video showing a working powerloom weaving fabric"><source src="images/Powerloom.mp4" type="video/mp4">Your browser does not support video playback. <a href="images/Powerloom.mp4">Watch the powerloom weaving video.</a></video><p class="loom-caption">Original powerloom weaving video · Tap play to watch.</p></div>
     </div>
   </section>
 
