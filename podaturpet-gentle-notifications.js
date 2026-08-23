@@ -13,9 +13,12 @@
   var action = document.getElementById("gentle-notice-action");
   var rotationStorageKey = "podaturpet-gentle-notice-next-message";
   var soundStorageKey = "podaturpet-gentle-notice-sound-enabled";
-  var firstAppearanceDelay = 3200;
-  var visibleDuration = 11500;
-  var intervalBetweenMessages = 10500;
+  var pauseStorageKey = "podaturpet-gentle-notice-paused-until";
+  var firstAppearanceDelay = 2800;
+  var visibleDuration = 18000;
+  var intervalBetweenMessages = 14000;
+  var dismissalPauseDuration = 15 * 60 * 1000;
+  var pausedUntil = 0;
   var messageIndex = 0;
   var soundEnabled = true;
   var audioUnlocked = false;
@@ -96,6 +99,7 @@
       messageIndex = savedMessageIndex % messages.length;
     }
     soundEnabled = window.sessionStorage.getItem(soundStorageKey) !== "off";
+    pausedUntil = Number(window.sessionStorage.getItem(pauseStorageKey)) || 0;
   } catch (error) {
     messageIndex = 0;
   }
@@ -158,7 +162,9 @@
       var englishVoice = findVoice(voices, "en-IN") || findVoice(voices, "en");
 
       if (tamilVoice) {
-        var tamilSpeech = new window.SpeechSynthesisUtterance(message.tamil);
+        var tamilSpeech = new window.SpeechSynthesisUtterance(
+          message.tamil + " மேலும் தகவல்களுக்கு எங்களை தொடர்பு கொள்ளுங்கள். தொடர்பு எண், எட்டு ஏழு ஏழு எட்டு எட்டு, மூன்று ஆறு மூன்று எட்டு ஐந்து."
+        );
         tamilSpeech.lang = tamilVoice.lang;
         tamilSpeech.voice = tamilVoice;
         tamilSpeech.rate = 0.91;
@@ -167,7 +173,9 @@
         window.speechSynthesis.speak(tamilSpeech);
       }
 
-      var englishSpeech = new window.SpeechSynthesisUtterance(message.title + " " + message.copy);
+      var englishSpeech = new window.SpeechSynthesisUtterance(
+        message.title + " " + message.copy + " " + message.action + ". Contact us at eight seven seven eight eight, three six three eight five."
+      );
       englishSpeech.lang = englishVoice ? englishVoice.lang : "en-IN";
       if (englishVoice) englishSpeech.voice = englishVoice;
       englishSpeech.rate = 0.93;
@@ -268,7 +276,15 @@
     }
 
     activeMessage = null;
-    scheduleNext(18000);
+    pausedUntil = Date.now() + dismissalPauseDuration;
+
+    try {
+      window.sessionStorage.setItem(pauseStorageKey, String(pausedUntil));
+    } catch (error) {
+      // The current page still honors the full fifteen-minute pause.
+    }
+
+    scheduleNext(dismissalPauseDuration);
   });
 
   soundButton.addEventListener("click", function () {
@@ -301,5 +317,5 @@
     }
   });
 
-  scheduleNext(firstAppearanceDelay);
+  scheduleNext(pausedUntil > Date.now() ? pausedUntil - Date.now() : firstAppearanceDelay);
 })();
