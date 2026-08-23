@@ -12,15 +12,17 @@
   var tamil = document.getElementById("gentle-notice-tamil");
   var action = document.getElementById("gentle-notice-action");
   var rotationStorageKey = "podaturpet-gentle-notice-next-message";
+  var nextAppearanceStorageKey = "podaturpet-gentle-notice-next-appearance";
   var soundStorageKey = "podaturpet-gentle-notice-sound-enabled";
   var pauseStorageKey = "podaturpet-gentle-notice-paused-until";
-  var firstAppearanceDelay = 2800;
-  var visibleDuration = 18000;
-  var intervalBetweenMessages = 14000;
-  var dismissalPauseDuration = 15 * 60 * 1000;
+  var rotationInterval = 5 * 60 * 1000;
+  var firstAppearanceDelay = rotationInterval;
+  var visibleDuration = 15000;
+  var dismissalPauseDuration = rotationInterval;
   var pausedUntil = 0;
+  var nextAppearanceAt = 0;
   var messageIndex = 0;
-  var soundEnabled = true;
+  var soundEnabled = false;
   var audioUnlocked = false;
   var audioContext = null;
   var showTimer = null;
@@ -98,8 +100,9 @@
     if (Number.isFinite(savedMessageIndex) && savedMessageIndex >= 0) {
       messageIndex = savedMessageIndex % messages.length;
     }
-    soundEnabled = window.sessionStorage.getItem(soundStorageKey) !== "off";
+    soundEnabled = window.sessionStorage.getItem(soundStorageKey) === "on";
     pausedUntil = Number(window.sessionStorage.getItem(pauseStorageKey)) || 0;
+    nextAppearanceAt = Number(window.sessionStorage.getItem(nextAppearanceStorageKey)) || 0;
   } catch (error) {
     messageIndex = 0;
   }
@@ -221,7 +224,7 @@
     notice.classList.remove("is-visible");
     notice.setAttribute("aria-hidden", "true");
     activeMessage = null;
-    scheduleNext(intervalBetweenMessages);
+    scheduleNext(Math.max(0, nextAppearanceAt - Date.now()));
   }
 
   function showNotice() {
@@ -243,9 +246,11 @@
 
     activeMessage = message;
     messageIndex = (messageIndex + 1) % messages.length;
+    nextAppearanceAt = Date.now() + rotationInterval;
 
     try {
       window.sessionStorage.setItem(rotationStorageKey, String(messageIndex));
+      window.sessionStorage.setItem(nextAppearanceStorageKey, String(nextAppearanceAt));
     } catch (error) {
       // Rotation continues in memory if session storage is unavailable.
     }
@@ -277,11 +282,13 @@
 
     activeMessage = null;
     pausedUntil = Date.now() + dismissalPauseDuration;
+    nextAppearanceAt = pausedUntil;
 
     try {
       window.sessionStorage.setItem(pauseStorageKey, String(pausedUntil));
+      window.sessionStorage.setItem(nextAppearanceStorageKey, String(nextAppearanceAt));
     } catch (error) {
-      // The current page still honors the full fifteen-minute pause.
+      // The current page still honors the full five-minute pause.
     }
 
     scheduleNext(dismissalPauseDuration);
@@ -317,5 +324,6 @@
     }
   });
 
-  scheduleNext(pausedUntil > Date.now() ? pausedUntil - Date.now() : firstAppearanceDelay);
+  var nextScheduledAppearance = Math.max(pausedUntil, nextAppearanceAt);
+  scheduleNext(nextScheduledAppearance > Date.now() ? nextScheduledAppearance - Date.now() : firstAppearanceDelay);
 })();
