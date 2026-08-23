@@ -45,7 +45,7 @@
     ].join(" ").toLowerCase();
 
     var advertisingSection = link.closest(
-      "#advertise, .town-advertising, .town-ad-copy, [data-notice-type='advertising']"
+      "#advertise, .town-advertising, .town-ad-copy, .local-services-banner, [data-notice-type='advertising']"
     );
 
     if (advertisingSection || /advertis|promot.*shop|promot.*business/.test(text)) {

@@ -15,7 +15,7 @@
   var firstAppearanceDelay = 7500;
   var visibleDuration = 9000;
   var intervalBetweenMessages = 26000;
-  var maximumAppearances = 6;
+  var maximumAppearances = 7;
   var appearanceCount = 0;
   var messageIndex = 0;
   var soundEnabled = false;
@@ -42,6 +42,51 @@
       tamil: "மொத்தமாக லுங்கி வாங்க வேண்டுமா?",
       action: "Ask about lungis",
       whatsapp: "Hello Podaturpet Team, I am interested in wholesale lungis. Please share the available designs and sourcing details."
+    },
+    {
+      type: "advertising",
+      label: "Grocery shop advertising",
+      title: "Own a grocery or provision shop?",
+      copy: "Help local shoppers find your grocery store.",
+      tamil: "உங்கள் மளிகைக் கடையை விளம்பரம் செய்ய வேண்டுமா?",
+      action: "Advertise your grocery",
+      whatsapp: "Hello Podaturpet Team, I would like to advertise my grocery or provision shop on Podaturpet.com."
+    },
+    {
+      type: "advertising",
+      label: "Cars and rental services",
+      title: "Offer cars or rental vehicles?",
+      copy: "Showcase your taxi or car rental service locally.",
+      tamil: "உங்கள் வாடகை கார் சேவையை விளம்பரம் செய்ய வேண்டுமா?",
+      action: "Advertise your car service",
+      whatsapp: "Hello Podaturpet Team, I would like to advertise my car rental, taxi or vehicle service on Podaturpet.com."
+    },
+    {
+      type: "advertising",
+      label: "Weaving supplies",
+      title: "Sell loom parts or weaving supplies?",
+      copy: "Reach customers looking for local weaving essentials.",
+      tamil: "உங்கள் தறி சாமான்கள் கடையை விளம்பரம் செய்ய வேண்டுமா?",
+      action: "Advertise weaving supplies",
+      whatsapp: "Hello Podaturpet Team, I would like to advertise loom parts, weaving supplies or a related service on Podaturpet.com."
+    },
+    {
+      type: "advertising",
+      label: "Temples and local discovery",
+      title: "Looking for nearby temple information?",
+      copy: "Discover temples and useful local visitor information.",
+      tamil: "அருகிலுள்ள கோவில்கள் பற்றிய தகவல்கள் வேண்டுமா?",
+      action: "Ask about local temples",
+      whatsapp: "Hello Podaturpet Team, I would like information about temples and visitor attractions near Podaturpet."
+    },
+    {
+      type: "advertising",
+      label: "Land, homes and property agents",
+      title: "Buying or selling land or a home?",
+      copy: "Advertise property listings and local real-estate agent services.",
+      tamil: "நிலம், வீடு வாங்க அல்லது விற்க விளம்பரம் செய்ய வேண்டுமா?",
+      action: "Advertise your property",
+      whatsapp: "Hello Podaturpet Team, I would like to advertise land for sale, a property purchase, a house or my real-estate agent service on Podaturpet.com."
     }
   ];
 
