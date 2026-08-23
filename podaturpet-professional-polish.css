@@ -85,8 +85,50 @@ header nav { min-height: 78px; }
 
 .town-index { padding: 78px 0; background: var(--polish-paper); }
 .town-index-card { border-color: #e6e4dc; }
-.podaturpet-map-experience { padding: 78px 0; }
-.podaturpet-map-credit { max-width: 900px; font-size: .7rem; }
+
+/* An editorial destination card, grounded in original Podaturpet product imagery. */
+.podaturpet-map-experience {
+  position: relative;
+  overflow: hidden;
+  padding: 94px 0 98px;
+  background: linear-gradient(145deg, #102b24 0%, #173b31 57%, #234636 100%);
+}
+.podaturpet-map-heading { align-items: flex-end; gap: 34px; margin-bottom: 38px; }
+.podaturpet-map-heading > div { max-width: 680px; }
+.podaturpet-map-kicker { color: #e3be7b; font-size: .68rem; letter-spacing: .19em; }
+.podaturpet-map-heading h2 { margin: 14px 0 11px; font-size: clamp(2.75rem, 5.3vw, 4.6rem); line-height: 1.01; }
+.podaturpet-map-heading p { max-width: 570px; color: #d5e0d9; font-size: .94rem; line-height: 1.83; }
+.podaturpet-map-open { min-height: 49px; gap: 8px; padding: 12px 17px; border-color: rgba(230, 196, 135, .48); border-radius: 999px; color: #f5e6c6 !important; }
+.podaturpet-map-open:hover { border-color: #e3be7b; background: rgba(255, 255, 255, .065); }
+.podaturpet-map-layout { grid-template-columns: minmax(0, 1.58fr) minmax(285px, .72fr); gap: 19px; align-items: stretch; }
+.podaturpet-map-panel { border: 0; border-radius: 19px; background: #fffdfa; box-shadow: 0 24px 70px rgba(4, 20, 16, .16); }
+.podaturpet-map-toolbar { min-height: 86px; padding: 17px 20px; }
+.podaturpet-map-place { gap: 11px; }
+.podaturpet-map-pin { display: grid; width: 39px; height: 39px; place-items: center; border: 1px solid #e2e8e0; border-radius: 12px; background: #f4f7f2; color: #32624c; font-size: 1.55rem !important; }
+.podaturpet-map-place strong { color: #19382f; font-size: .89rem; }
+.podaturpet-map-place div > span { margin-top: 3px; font-size: .68rem; }
+.podaturpet-map-switch { padding: 4px; border-color: #e6e5df; border-radius: 999px; background: #f7f6f2; }
+.podaturpet-map-switch button { padding: 8px 12px; border-radius: 999px; font-size: .67rem; }
+.podaturpet-map-switch button.is-active { background: #20483a; }
+.podaturpet-map-canvas { height: 440px; }
+.podaturpet-map-badge { top: 14px; right: 14px; padding: 8px 11px; box-shadow: 0 5px 16px rgba(20, 39, 30, .12); }
+.podaturpet-map-links { align-items: center; justify-content: space-between; gap: 12px; padding: 17px 20px; }
+.podaturpet-map-links a { font-size: .73rem; }
+
+.podaturpet-location-card { overflow: hidden; border: 1px solid rgba(255, 255, 255, .14); border-radius: 19px; background: #f9f6ee; color: #19382f; }
+.podaturpet-location-photo { position: relative; height: 177px; overflow: hidden; background: #2a463b; }
+.podaturpet-location-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 47%; }
+.podaturpet-location-photo > span { position: absolute; right: 13px; bottom: 12px; padding: 7px 10px; border-radius: 999px; background: rgba(18, 42, 34, .84); color: #f4e2bc; font-size: .62rem; font-weight: 750; }
+.podaturpet-location-copy { padding: 23px 21px 21px; }
+.podaturpet-location-eyebrow { color: #997345; font-size: .61rem; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+.podaturpet-location-copy h3 { margin: 10px 0 8px; color: #17382e; font-family: Georgia, "Times New Roman", serif; font-size: 1.83rem; font-weight: 500; line-height: 1.12; letter-spacing: -.035em; }
+.podaturpet-location-copy > p { margin: 0; color: #647169; font-size: .79rem; line-height: 1.75; }
+.podaturpet-location-facts { display: grid; gap: 0; margin: 19px 0 16px; border-top: 1px solid #e5e1d7; }
+.podaturpet-location-facts > div { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e5e1d7; }
+.podaturpet-location-facts dt { color: #717b73; font-size: .72rem; }
+.podaturpet-location-facts dd { margin: 0; color: #27463a; font-size: .73rem; font-weight: 750; }
+.podaturpet-location-link { display: inline-flex; align-items: center; gap: 7px; color: #245a45 !important; font-size: .77rem; font-weight: 850; }
+
 .town-advertising { padding: 75px 0; }
 .town-ad-frame { box-shadow: none; }
 .advertising-categories { display: flex; flex-wrap: wrap; gap: 8px; margin: 17px 0 20px; }
@@ -125,6 +167,12 @@ header nav { min-height: 78px; }
 @media (max-width: 820px) {
   header nav { min-height: 68px; }
   .hero-layout { padding-top: 52px; padding-bottom: 48px; }
+  .podaturpet-map-heading { margin-bottom: 26px; }
+  .podaturpet-map-heading h2 { font-size: clamp(2.65rem, 8vw, 3.7rem); }
+  .podaturpet-map-layout { grid-template-columns: 1fr; gap: 16px; }
+  .podaturpet-location-card { display: grid; grid-template-columns: .82fr 1.18fr; }
+  .podaturpet-location-photo { height: 100%; min-height: 260px; }
+  .podaturpet-location-copy { padding: 20px; }
   .gentle-notice { top: auto; right: 14px; bottom: 83px; left: auto; width: min(370px, calc(100vw - 28px)); }
 }
 
@@ -137,6 +185,17 @@ header nav { min-height: 78px; }
   .podaturpet-map-experience, .town-advertising { padding: 58px 0; }
   .market-link-grid { gap: 8px; }
   .market-link-grid a { min-height: 39px; padding: 0 12px; font-size: .73rem; }
+  .podaturpet-map-heading { margin-bottom: 22px; }
+  .podaturpet-map-heading h2 { margin: 11px 0 9px; font-size: 2.75rem; }
+  .podaturpet-map-heading p { font-size: .84rem; }
+  .podaturpet-map-open { min-height: 43px; margin-top: 17px; padding: 10px 14px; }
+  .podaturpet-map-toolbar { min-height: 0; gap: 11px; padding: 14px; }
+  .podaturpet-map-canvas { height: 350px; }
+  .podaturpet-map-links { flex-wrap: wrap; gap: 9px; padding: 14px; }
+  .podaturpet-location-card { grid-template-columns: 1fr; }
+  .podaturpet-location-photo { height: 180px; min-height: 0; }
+  .podaturpet-location-copy { padding: 20px 17px; }
+  .podaturpet-location-copy h3 { font-size: 1.7rem; }
   .gentle-notice { right: 10px; bottom: 81px; width: calc(100vw - 20px); padding: 16px 15px; }
   .gentle-notice-title { font-size: 1.32rem; }
 }
