@@ -44,7 +44,20 @@ header nav { min-height: 78px; }
 .hero-proof .proof { border-color: #e4dfd4; background: rgba(255, 255, 255, .72); font-size: .73rem; }
 
 .visitor-choice { padding: 28px 0 31px; background: #fff; }
+.visitor-choice-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .visitor-choice-card { min-height: 105px; }
+.visitor-choice-card.is-primary-business {
+  grid-column: 1 / -1;
+  min-height: 124px;
+  border-color: #245a45;
+  background: linear-gradient(130deg, #edf5ef 0%, #fffefa 100%);
+}
+.visitor-choice-card.is-primary-business small { color: #245a45; }
+.visitor-choice-card.is-primary-business h2 { font-size: 1.7rem; }
+.visitor-choice-card.is-retail { border-top: 3px solid #a97c42; }
+.visitor-choice-card.is-town { border-top: 3px solid #63849a; }
+.visitor-choice-card.is-advertising { border-top: 3px solid #b88754; }
+.visitor-choice-card:not(.is-primary-business) h2 { font-size: 1.22rem; }
 .strip { background: var(--polish-paper); border-bottom: 1px solid var(--polish-line); }
 .strip-grid { padding: 22px 0; }
 .strip-item b { font-size: .9rem; }
@@ -85,6 +98,20 @@ header nav { min-height: 78px; }
 
 .town-index { padding: 78px 0; background: var(--polish-paper); }
 .town-index-card { border-color: #e6e4dc; }
+
+/* Local retail is an independent directory, never part of the textile offer. */
+.local-retail-section { padding: 78px 0; border-top: 1px solid var(--polish-line); background: #fff; }
+.separate-service-heading { display: flex; align-items: end; justify-content: space-between; gap: 26px; }
+.separate-service-heading .section-head { max-width: 730px; }
+.separate-service-link { flex: none; color: var(--polish-green); font-size: .82rem; font-weight: 850; }
+.local-retail-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.local-retail-card { display: block; min-height: 210px; padding: 22px 20px; border: 1px solid #e8e4dc; border-top: 3px solid #a97c42; border-radius: 14px; background: #fffefa; }
+.local-retail-icon { display: block; margin-bottom: 12px; font-size: 1.42rem; }
+.local-retail-card > span:not(.local-retail-icon) { color: #92703d; font-size: .65rem; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
+.local-retail-card h3 { margin: 8px 0; color: var(--polish-ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.4rem; font-weight: 500; line-height: 1.2; }
+.local-retail-card p { color: #66736b; font-size: .8rem; line-height: 1.65; }
+.local-retail-note { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: 20px; color: #67746d; font-size: .76rem; }
+.local-retail-note a { color: var(--polish-green); font-weight: 850; }
 
 /* An editorial destination card, grounded in original Podaturpet product imagery. */
 .podaturpet-map-experience {
@@ -173,7 +200,23 @@ header nav { min-height: 78px; }
   .podaturpet-location-card { display: grid; grid-template-columns: .82fr 1.18fr; }
   .podaturpet-location-photo { height: 100%; min-height: 260px; }
   .podaturpet-location-copy { padding: 20px; }
-  .gentle-notice { top: auto; right: 14px; bottom: 83px; left: auto; width: min(370px, calc(100vw - 28px)); }
+  .visitor-choice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .visitor-choice-card.is-advertising { grid-column: 1 / -1; }
+  .separate-service-heading { display: block; }
+  .separate-service-link { display: inline-block; margin-top: 15px; }
+  .local-retail-grid { grid-template-columns: 1fr; }
+  .local-retail-card { min-height: 0; }
+  .gentle-notice {
+    z-index: 1200;
+    top: auto;
+    right: 14px;
+    bottom: calc(83px + env(safe-area-inset-bottom, 0px));
+    left: auto;
+    width: min(370px, calc(100vw - 28px));
+    max-height: calc(100dvh - 110px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 @media (max-width: 560px) {
@@ -182,7 +225,15 @@ header nav { min-height: 78px; }
   .visitor-choice { padding: 20px 0 23px; }
   .product-showcase, .manufacturer-ad, .journey-section, .quote-section,
   .buyer-faq, .market-section, .india-market-directory, .town-index,
-  .podaturpet-map-experience, .town-advertising { padding: 58px 0; }
+  .podaturpet-map-experience, .town-advertising, .local-retail-section { padding: 58px 0; }
+  .visitor-choice-grid { grid-template-columns: 1fr; }
+  .visitor-choice-card.is-primary-business, .visitor-choice-card.is-advertising { grid-column: auto; }
+  .visitor-choice-card.is-primary-business { min-height: 110px; }
+  .visitor-choice-card.is-primary-business h2 { font-size: 1.4rem; }
+  .local-retail-grid { gap: 10px; margin-top: 20px; }
+  .local-retail-card { padding: 17px 16px; }
+  .local-retail-note { display: block; }
+  .local-retail-note a { display: block; margin-top: 10px; }
   .market-link-grid { gap: 8px; }
   .market-link-grid a { min-height: 39px; padding: 0 12px; font-size: .73rem; }
   .podaturpet-map-heading { margin-bottom: 22px; }
@@ -196,7 +247,13 @@ header nav { min-height: 78px; }
   .podaturpet-location-photo { height: 180px; min-height: 0; }
   .podaturpet-location-copy { padding: 20px 17px; }
   .podaturpet-location-copy h3 { font-size: 1.7rem; }
-  .gentle-notice { right: 10px; bottom: 81px; width: calc(100vw - 20px); padding: 16px 15px; }
+  .gentle-notice {
+    right: 10px;
+    bottom: calc(81px + env(safe-area-inset-bottom, 0px));
+    width: calc(100vw - 20px);
+    max-height: calc(100dvh - 100px);
+    padding: 16px 15px;
+  }
   .gentle-notice-title { font-size: 1.32rem; }
 }
 

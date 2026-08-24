@@ -16,7 +16,7 @@
   var soundStorageKey = "podaturpet-gentle-notice-sound-enabled";
   var pauseStorageKey = "podaturpet-gentle-notice-paused-until";
   var rotationInterval = 5 * 60 * 1000;
-  var firstAppearanceDelay = rotationInterval;
+  var firstAppearanceDelay = 8000;
   var visibleDuration = 15000;
   var dismissalPauseDuration = rotationInterval;
   var pausedUntil = 0;
@@ -38,15 +38,6 @@
       tamil: "உங்கள் கடையை விளம்பரம் செய்ய வேண்டுமா?",
       action: "Ask about advertising",
       whatsapp: "Hello Podaturpet Team, I would like to advertise my shop or business on Podaturpet.com."
-    },
-    {
-      type: "lungi",
-      label: "Podaturpet lungi wholesale",
-      title: "Looking for quality lungis?",
-      copy: "Explore checked designs and send a wholesale enquiry.",
-      tamil: "மொத்தமாக லுங்கி வாங்க வேண்டுமா?",
-      action: "Ask about lungis",
-      whatsapp: "Hello Podaturpet Team, I am interested in wholesale lungis. Please share the available designs and sourcing details."
     },
     {
       type: "advertising",
@@ -74,15 +65,6 @@
       tamil: "உங்கள் தறி சாமான்கள் கடையை விளம்பரம் செய்ய வேண்டுமா?",
       action: "Advertise weaving supplies",
       whatsapp: "Hello Podaturpet Team, I would like to advertise loom parts, weaving supplies or a related service on Podaturpet.com."
-    },
-    {
-      type: "advertising",
-      label: "Temples and local discovery",
-      title: "Looking for nearby temple information?",
-      copy: "Discover temples and useful local visitor information.",
-      tamil: "அருகிலுள்ள கோவில்கள் பற்றிய தகவல்கள் வேண்டுமா?",
-      action: "Ask about local temples",
-      whatsapp: "Hello Podaturpet Team, I would like information about temples and visitor attractions near Podaturpet."
     },
     {
       type: "advertising",
@@ -216,7 +198,17 @@
 
   function scheduleNext(delay) {
     window.clearTimeout(showTimer);
-    showTimer = window.setTimeout(showNotice, delay);
+    showTimer = window.setTimeout(showNotice, Math.max(0, delay));
+  }
+
+  function resumeNoticeSchedule() {
+    if (document.hidden || notice.classList.contains("is-visible")) return;
+
+    var scheduledAppearance = Math.max(pausedUntil, nextAppearanceAt);
+
+    if (scheduledAppearance > 0) {
+      scheduleNext(scheduledAppearance - Date.now());
+    }
   }
 
   function hideNotice() {
@@ -321,8 +313,14 @@
     if (document.hidden && notice.classList.contains("is-visible")) {
       if ("speechSynthesis" in window) window.speechSynthesis.cancel();
       hideNotice();
+      return;
     }
+
+    resumeNoticeSchedule();
   });
+
+  window.addEventListener("pageshow", resumeNoticeSchedule);
+  window.addEventListener("focus", resumeNoticeSchedule);
 
   var nextScheduledAppearance = Math.max(pausedUntil, nextAppearanceAt);
   scheduleNext(nextScheduledAppearance > Date.now() ? nextScheduledAppearance - Date.now() : firstAppearanceDelay);
