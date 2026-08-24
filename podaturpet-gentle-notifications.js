@@ -11,13 +11,13 @@
   var copy = document.getElementById("gentle-notice-copy");
   var tamil = document.getElementById("gentle-notice-tamil");
   var action = document.getElementById("gentle-notice-action");
-  var rotationStorageKey = "podaturpet-gentle-notice-next-message";
-  var nextAppearanceStorageKey = "podaturpet-gentle-notice-next-appearance";
+  var rotationStorageKey = "podaturpet-gentle-notice-next-message-v2";
+  var nextAppearanceStorageKey = "podaturpet-gentle-notice-next-appearance-v2";
   var soundStorageKey = "podaturpet-gentle-notice-sound-enabled";
-  var pauseStorageKey = "podaturpet-gentle-notice-paused-until";
+  var pauseStorageKey = "podaturpet-gentle-notice-paused-until-v2";
   var rotationInterval = 5 * 60 * 1000;
-  var firstAppearanceDelay = 8000;
-  var visibleDuration = 15000;
+  var firstAppearanceDelay = 3000;
+  var visibleDuration = 22000;
   var dismissalPauseDuration = rotationInterval;
   var pausedUntil = 0;
   var nextAppearanceAt = 0;
@@ -56,6 +56,33 @@
       tamil: "உங்கள் வாடகை கார் சேவையை விளம்பரம் செய்ய வேண்டுமா?",
       action: "Advertise your car service",
       whatsapp: "Hello Podaturpet Team, I would like to advertise my car rental, taxi or vehicle service on Podaturpet.com."
+    },
+    {
+      type: "lungi",
+      label: "Lungi wholesale enquiries",
+      title: "Looking for quality lungis in bulk?",
+      copy: "Connect with Podaturpet textile suppliers for wholesale and business enquiries.",
+      tamil: "தரமான லுங்கிகளை மொத்தமாக வாங்க வேண்டுமா? எங்களை தொடர்பு கொள்ளுங்கள்.",
+      action: "Request a wholesale quote",
+      whatsapp: "Hello Podaturpet Team, I would like a wholesale lungi quotation. Quantity: ____ Delivery location: ____"
+    },
+    {
+      type: "town-guide",
+      label: "Temples and nearby places",
+      title: "Explore temples around Podaturpet",
+      copy: "Discover local temples, visitor attractions and places worth exploring nearby.",
+      tamil: "பொதட்டூர்பேட்டை அருகிலுள்ள கோவில்கள் மற்றும் சுற்றுலா இடங்களை அறிந்து கொள்ளுங்கள்.",
+      action: "Ask about nearby places",
+      whatsapp: "Hello Podaturpet Team, I would like information about nearby temples and visitor attractions."
+    },
+    {
+      type: "town-guide",
+      label: "Local travel advice",
+      title: "Planning a visit to Podaturpet?",
+      copy: "Find practical guidance about local travel, nearby towns and transport connections.",
+      tamil: "பொதட்டூர்பேட்டைக்கு வர திட்டமிடுகிறீர்களா? பயண தகவல்களுக்கு எங்களை தொடர்பு கொள்ளுங்கள்.",
+      action: "Ask for travel information",
+      whatsapp: "Hello Podaturpet Team, I would like local travel information for visiting Podaturpet."
     },
     {
       type: "advertising",
@@ -139,6 +166,8 @@
     soundEnabled = window.sessionStorage.getItem(soundStorageKey) !== "off";
     pausedUntil = Number(window.sessionStorage.getItem(pauseStorageKey)) || 0;
     nextAppearanceAt = Number(window.sessionStorage.getItem(nextAppearanceStorageKey)) || 0;
+    if (pausedUntil > Date.now() + rotationInterval) pausedUntil = 0;
+    if (nextAppearanceAt > Date.now() + rotationInterval) nextAppearanceAt = 0;
   } catch (error) {
     messageIndex = 0;
   }
@@ -281,6 +310,11 @@
   function showNotice() {
     if (document.hidden) {
       scheduleNext(6000);
+      return;
+    }
+
+    if (pausedUntil > Date.now()) {
+      scheduleNext(pausedUntil - Date.now());
       return;
     }
 
