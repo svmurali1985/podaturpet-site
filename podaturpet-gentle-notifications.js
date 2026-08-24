@@ -22,7 +22,7 @@
   var pausedUntil = 0;
   var nextAppearanceAt = 0;
   var messageIndex = 0;
-  var soundEnabled = false;
+  var soundEnabled = true;
   var audioUnlocked = false;
   var audioContext = null;
   var showTimer = null;
@@ -74,6 +74,60 @@
       tamil: "நிலம், வீடு வாங்க அல்லது விற்க விளம்பரம் செய்ய வேண்டுமா?",
       action: "Advertise your property",
       whatsapp: "Hello Podaturpet Team, I would like to advertise land for sale, a property purchase, a house or my real-estate agent service on Podaturpet.com."
+    },
+    {
+      type: "advertising",
+      label: "Restaurants and food businesses",
+      title: "Run a restaurant, bakery or tea shop?",
+      copy: "Promote your food business, menu or special offers to local customers.",
+      tamil: "உங்கள் உணவகம் அல்லது தேநீர் கடையை விளம்பரம் செய்ய வேண்டுமா?",
+      action: "Advertise your food business",
+      whatsapp: "Hello Podaturpet Advertising Team, I would like to advertise my restaurant, bakery, tea shop or food business on Podaturpet.com."
+    },
+    {
+      type: "advertising",
+      label: "Pharmacies and healthcare advertising",
+      title: "Own a pharmacy or healthcare service?",
+      copy: "Help nearby customers discover your medical shop or healthcare service.",
+      tamil: "உங்கள் மருந்தகம் அல்லது மருத்துவ சேவையை விளம்பரம் செய்ய வேண்டுமா?",
+      action: "Advertise your healthcare service",
+      whatsapp: "Hello Podaturpet Advertising Team, I would like to advertise my pharmacy, medical shop or healthcare service on Podaturpet.com."
+    },
+    {
+      type: "advertising",
+      label: "Jewellery and special offers",
+      title: "Have a jewellery shop or festive offer?",
+      copy: "Showcase your jewellery business and seasonal promotions.",
+      tamil: "உங்கள் நகைக்கடை அல்லது சிறப்பு சலுகைகளை விளம்பரம் செய்ய வேண்டுமா?",
+      action: "Advertise your jewellery shop",
+      whatsapp: "Hello Podaturpet Advertising Team, I would like to advertise my jewellery shop or seasonal offers on Podaturpet.com."
+    },
+    {
+      type: "advertising",
+      label: "Mobile and electronics businesses",
+      title: "Sell phones, electronics or accessories?",
+      copy: "Promote your mobile shop, electronics store or repair service.",
+      tamil: "உங்கள் மொபைல் அல்லது எலக்ட்ரானிக்ஸ் கடையை விளம்பரம் செய்ய வேண்டுமா?",
+      action: "Advertise your electronics shop",
+      whatsapp: "Hello Podaturpet Advertising Team, I would like to advertise my mobile shop, electronics store, accessories or repair service on Podaturpet.com."
+    },
+    {
+      type: "advertising",
+      label: "Education and tuition services",
+      title: "Offer tuition, coaching or training?",
+      copy: "Let local families know about your classes and education services.",
+      tamil: "உங்கள் பயிற்சி மையம் அல்லது கல்வி சேவையை விளம்பரம் செய்ய வேண்டுமா?",
+      action: "Advertise your classes",
+      whatsapp: "Hello Podaturpet Advertising Team, I would like to advertise my tuition centre, coaching classes or training service on Podaturpet.com."
+    },
+    {
+      type: "advertising",
+      label: "Repairs and professional services",
+      title: "Provide repairs or professional services?",
+      copy: "Advertise electrical, plumbing, mechanical or other local services.",
+      tamil: "உங்கள் பழுதுபார்ப்பு அல்லது தொழில்முறை சேவையை விளம்பரம் செய்ய வேண்டுமா?",
+      action: "Advertise your local service",
+      whatsapp: "Hello Podaturpet Advertising Team, I would like to advertise my electrical, plumbing, mechanical, repair or professional service on Podaturpet.com."
     }
   ];
 
@@ -82,7 +136,7 @@
     if (Number.isFinite(savedMessageIndex) && savedMessageIndex >= 0) {
       messageIndex = savedMessageIndex % messages.length;
     }
-    soundEnabled = window.sessionStorage.getItem(soundStorageKey) === "on";
+    soundEnabled = window.sessionStorage.getItem(soundStorageKey) !== "off";
     pausedUntil = Number(window.sessionStorage.getItem(pauseStorageKey)) || 0;
     nextAppearanceAt = Number(window.sessionStorage.getItem(nextAppearanceStorageKey)) || 0;
   } catch (error) {
@@ -173,10 +227,8 @@
   }
 
   function unlockAudio() {
-    if (audioUnlocked) return;
+    if (audioUnlocked || !soundEnabled) return false;
     audioUnlocked = true;
-
-    if (!soundEnabled) return;
 
     var AudioContextConstructor = window.AudioContext || window.webkitAudioContext;
 
@@ -191,7 +243,14 @@
       }
     }
 
+    return true;
+  }
+
+  function handleFirstInteraction() {
+    if (!unlockAudio()) return;
+
     if (activeMessage && notice.classList.contains("is-visible")) {
+      playGentleChime();
       speakMessage(activeMessage);
     }
   }
@@ -306,8 +365,9 @@
     if (activeMessage) speakMessage(activeMessage);
   });
 
-  document.addEventListener("pointerdown", unlockAudio, { once: true, capture: true });
-  document.addEventListener("keydown", unlockAudio, { once: true, capture: true });
+  document.addEventListener("pointerdown", handleFirstInteraction, { once: true, capture: true });
+  document.addEventListener("touchstart", handleFirstInteraction, { once: true, capture: true, passive: true });
+  document.addEventListener("keydown", handleFirstInteraction, { once: true, capture: true });
 
   document.addEventListener("visibilitychange", function () {
     if (document.hidden && notice.classList.contains("is-visible")) {
