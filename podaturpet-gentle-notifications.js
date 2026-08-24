@@ -11,12 +11,12 @@
   var copy = document.getElementById("gentle-notice-copy");
   var tamil = document.getElementById("gentle-notice-tamil");
   var action = document.getElementById("gentle-notice-action");
-  var rotationStorageKey = "podaturpet-gentle-notice-next-message-v3";
-  var nextAppearanceStorageKey = "podaturpet-gentle-notice-next-appearance-v2";
+  var rotationStorageKey = "podaturpet-gentle-notice-next-message-v4";
+  var nextAppearanceStorageKey = "podaturpet-gentle-notice-next-appearance-v4";
   var soundStorageKey = "podaturpet-gentle-notice-sound-enabled";
-  var pauseStorageKey = "podaturpet-gentle-notice-paused-until-v2";
-  var rotationInterval = 5 * 60 * 1000;
-  var firstAppearanceDelay = 3000;
+  var pauseStorageKey = "podaturpet-gentle-notice-paused-until-v4";
+  var rotationInterval = 3 * 60 * 1000;
+  var firstAppearanceDelay = 1500;
   var visibleDuration = 22000;
   var dismissalPauseDuration = rotationInterval;
   var pausedUntil = 0;
@@ -29,6 +29,7 @@
   var hideTimer = null;
   var speechTimer = null;
   var activeMessage = null;
+  var shownAt = 0;
 
   var messages = [
     {
@@ -449,9 +450,7 @@
 
     var scheduledAppearance = Math.max(pausedUntil, nextAppearanceAt);
 
-    if (scheduledAppearance > 0) {
-      scheduleNext(scheduledAppearance - Date.now());
-    }
+    scheduleNext(scheduledAppearance > 0 ? scheduledAppearance - Date.now() : firstAppearanceDelay);
   }
 
   function hideNotice() {
@@ -460,10 +459,13 @@
     notice.classList.remove("is-visible");
     notice.setAttribute("aria-hidden", "true");
     activeMessage = null;
+    shownAt = 0;
     scheduleNext(Math.max(0, nextAppearanceAt - Date.now()));
   }
 
   function showNotice() {
+    if (notice.classList.contains("is-visible")) return;
+
     if (document.hidden) {
       scheduleNext(6000);
       return;
@@ -487,6 +489,7 @@
     notice.classList.add("is-visible");
 
     activeMessage = message;
+    shownAt = Date.now();
     messageIndex = (messageIndex + 1) % messages.length;
     nextAppearanceAt = Date.now() + rotationInterval;
 
@@ -523,6 +526,7 @@
     }
 
     activeMessage = null;
+    shownAt = 0;
     pausedUntil = Date.now() + dismissalPauseDuration;
     nextAppearanceAt = pausedUntil;
 
@@ -530,7 +534,7 @@
       window.sessionStorage.setItem(pauseStorageKey, String(pausedUntil));
       window.sessionStorage.setItem(nextAppearanceStorageKey, String(nextAppearanceAt));
     } catch (error) {
-      // The current page still honors the full five-minute pause.
+      // The current page still honors the full three-minute pause.
     }
 
     scheduleNext(dismissalPauseDuration);
@@ -573,6 +577,24 @@
 
   window.addEventListener("pageshow", resumeNoticeSchedule);
   window.addEventListener("focus", resumeNoticeSchedule);
+
+  // A separate heartbeat recovers missed browser timers and prevents a hovered
+  // advertisement from blocking every later item in the rotation.
+  window.setInterval(function () {
+    if (document.hidden) return;
+
+    if (notice.classList.contains("is-visible")) {
+      if (shownAt > 0 && Date.now() - shownAt >= visibleDuration + 2500) {
+        hideNotice();
+      }
+      return;
+    }
+
+    var dueAt = Math.max(pausedUntil, nextAppearanceAt);
+    if (dueAt > 0 && Date.now() >= dueAt) {
+      showNotice();
+    }
+  }, 1500);
 
   var nextScheduledAppearance = Math.max(pausedUntil, nextAppearanceAt);
   scheduleNext(nextScheduledAppearance > Date.now() ? nextScheduledAppearance - Date.now() : firstAppearanceDelay);
