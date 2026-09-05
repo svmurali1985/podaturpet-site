@@ -12,3 +12,16 @@
 .town-guide-spotlight:focus-visible{outline:3px solid #d49322;outline-offset:5px}
 @keyframes town-guide-glow{50%{box-shadow:0 0 0 5px #37a98b25,0 10px 26px #174f4228}}
 @media(prefers-reduced-motion:reduce){.visitor-choice-card.town-guide-spotlight{animation:none;transition:none}}
+
+/* Matching image cards for the local directory and advertising. */
+.visitor-choice-card.service-image-card{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;padding:0;overflow:hidden}
+.service-image-card .town-spotlight-copy,.town-guide-spotlight .town-spotlight-copy{display:flex;flex-direction:column;flex:1}
+.service-image-card .town-spotlight-picture,.town-guide-spotlight .town-spotlight-picture{flex:none}
+.visitor-choice-card.service-image-card h2{font-size:clamp(1.45rem,2.2vw,2rem);line-height:1.15;margin:10px 0}
+.visitor-choice-card.service-image-card small{font-size:14px;color:#64502b}
+.visitor-choice-card.service-image-card p{font-size:16px;line-height:1.6;color:#344f46;margin-bottom:18px}
+.service-image-card .town-spotlight-button,.town-guide-spotlight .town-spotlight-button{margin-top:auto}
+.town-guide-spotlight .town-spotlight-copy>p{margin-bottom:18px}
+.visitor-choice-card.service-image-card.is-advertising{border-color:#b38030;background:#fffaf0}
+.service-image-card.is-advertising .town-spotlight-button{background:#775012}
+.service-image-card:focus-visible{outline:3px solid #17756a;outline-offset:5px}
