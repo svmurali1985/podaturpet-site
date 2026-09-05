@@ -1,0 +1,14 @@
+/* Prominent local-information entry; motion ends after two gentle pulses. */
+.visitor-choice-card.town-guide-spotlight{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;padding:0;overflow:hidden;border:2px solid #17756a;background:#f0faf7;box-shadow:0 8px 24px #174f4220;animation:town-guide-glow 2.4s ease-in-out 2}
+.town-spotlight-picture{position:relative;width:100%;aspect-ratio:16/9;background:#214d48;overflow:hidden}
+.town-spotlight-picture img{display:block;width:100%;height:100%;object-fit:cover}
+.town-spotlight-caption{position:absolute;bottom:12px;left:12px;right:12px;width:fit-content;background:#082d25e8;color:#fff;padding:6px 10px;border-radius:6px;font-size:14px;line-height:1.4}
+.town-spotlight-copy{padding:22px}
+.visitor-choice-card.town-guide-spotlight small{color:#176052;font-size:14px}
+.visitor-choice-card.town-guide-spotlight h2{font-size:clamp(1.45rem,2.2vw,2rem);line-height:1.15;margin:10px 0}
+.visitor-choice-card.town-guide-spotlight p{font-size:16px;line-height:1.6;color:#344f46}
+.town-spotlight-button{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#0d6354;color:#fff;padding:13px 16px;border-radius:9px;margin-top:18px;font-size:16px;font-weight:700}
+.town-spotlight-credit{display:block;margin-top:12px;font-size:12px;color:#4d665d}
+.town-guide-spotlight:focus-visible{outline:3px solid #d49322;outline-offset:5px}
+@keyframes town-guide-glow{50%{box-shadow:0 0 0 5px #37a98b25,0 10px 26px #174f4228}}
+@media(prefers-reduced-motion:reduce){.visitor-choice-card.town-guide-spotlight{animation:none;transition:none}}
