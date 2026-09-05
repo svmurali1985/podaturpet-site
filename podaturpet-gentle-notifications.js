@@ -478,6 +478,7 @@
     window.clearTimeout(hideTimer);
     window.clearTimeout(speechTimer);
     notice.classList.remove("is-visible");
+    document.body.classList.remove("has-podaturpet-notice");
     notice.setAttribute("aria-hidden", "true");
     activeMessage = null;
     shownAt = 0;
@@ -507,6 +508,7 @@
     action.href = "https://wa.me/918778836385?text=" + encodeURIComponent(message.whatsapp);
     notice.setAttribute("aria-hidden", "false");
     notice.classList.add("is-visible");
+    document.body.classList.add("has-podaturpet-notice");
 
     activeMessage = message;
     hasShownThisSession = true;
@@ -541,6 +543,7 @@
     window.clearTimeout(hideTimer);
     window.clearTimeout(speechTimer);
     notice.classList.remove("is-visible");
+    document.body.classList.remove("has-podaturpet-notice");
     notice.setAttribute("aria-hidden", "true");
 
     if ("speechSynthesis" in window) {
