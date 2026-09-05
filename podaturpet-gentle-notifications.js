@@ -11,13 +11,13 @@
   var copy = document.getElementById("gentle-notice-copy");
   var tamil = document.getElementById("gentle-notice-tamil");
   var action = document.getElementById("gentle-notice-action");
-  var rotationStorageKey = "podaturpet-gentle-notice-next-message-v4";
-  var nextAppearanceStorageKey = "podaturpet-gentle-notice-next-appearance-v4";
+  var rotationStorageKey = "podaturpet-gentle-notice-next-message-v5";
+  var nextAppearanceStorageKey = "podaturpet-gentle-notice-next-appearance-v5";
   var soundStorageKey = "podaturpet-gentle-notice-sound-enabled";
-  var shownStorageKey = "podaturpet-gentle-notice-shown-v1";
-  var pauseStorageKey = "podaturpet-gentle-notice-paused-until-v4";
+  var shownStorageKey = "podaturpet-gentle-notice-shown-v2";
+  var pauseStorageKey = "podaturpet-gentle-notice-paused-until-v5";
   var rotationInterval = 3 * 60 * 1000;
-  var firstAppearanceDelay = 60 * 1000;
+  var firstAppearanceDelay = 12 * 1000;
   var visibleDuration = 22000;
   var dismissalPauseDuration = rotationInterval;
   var pausedUntil = 0;
@@ -34,6 +34,24 @@
   var shownAt = 0;
 
   var messages = [
+    {
+        "type": "lungi",
+        "label": "Wholesale buyer invitation",
+        "title": "Looking for lungis your customers will remember?",
+        "copy": "Explore original checked designs from the Podaturpet textile region. Tell us your quantity and destination to request available options.",
+        "tamil": "தரமான லுங்கிகளை மொத்தமாக வாங்க வேண்டுமா? உங்கள் தேவையை எங்களுக்கு அனுப்புங்கள்.",
+        "action": "Request wholesale options",
+        "whatsapp": "Hello Podaturpet Textile Team, I am interested in wholesale lungis. Country or city: ____ Required quantity: ____ Preferred design: ____ Please share available options and quotation."
+    },
+    {
+        "type": "lungi",
+        "label": "Try before a larger order",
+        "title": "Begin with designs, samples and clear details.",
+        "copy": "Ask about available patterns, sample possibilities, packing and commercial terms before planning your bulk order.",
+        "tamil": "பெரிய ஆர்டருக்கு முன் டிசைன், சாம்பிள் மற்றும் விவரங்களை கேட்டுத் தெரிந்து கொள்ளுங்கள்.",
+        "action": "Ask about samples",
+        "whatsapp": "Hello Podaturpet Textile Team, I would like to ask about lungi designs and sample options before a bulk order. Destination: ____ Approximate bulk quantity: ____"
+    },
     {
         "type": "advertising",
         "label": "Grocery and provision stores",
@@ -306,8 +324,8 @@
 
     notice.setAttribute("data-ad-theme", theme);
     promoVisual.querySelector(".ad-promo-icon").textContent = icon;
-    promoVisual.querySelector(".ad-promo-caption").textContent = message.type === "advertising" ? "Featured local business" : "Discover Podaturpet";
-    promoVisual.querySelector(".ad-promo-subtitle").textContent = message.type === "advertising" ? "Reach more customers in Podaturpet" : "Helpful information from our town";
+    promoVisual.querySelector(".ad-promo-caption").textContent = message.type === "lungi" ? "Podaturpet wholesale collection" : (message.type === "advertising" ? "Featured local business" : "Discover Podaturpet");
+    promoVisual.querySelector(".ad-promo-subtitle").textContent = message.type === "lungi" ? "Original designs for retailers and distributors" : (message.type === "advertising" ? "Reach more customers in Podaturpet" : "Helpful information from our town");
     progress.innerHTML = '<div class="ad-promo-progress-bar"></div>';
   }
 
