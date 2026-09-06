@@ -73,6 +73,7 @@ body:not(.guide-body) .nav-links .nav-cta {
 /* Hero: clear business purpose, real photographs, no oversized empty area. */
 body:not(.guide-body) .hero {
   min-height: 0;
+  padding: 0 !important;
   color: #fff;
   background:
     radial-gradient(circle at 16% 84%, rgba(226, 173, 63, .16), transparent 28%),
@@ -94,9 +95,9 @@ body:not(.guide-body) .hero-layout {
   grid-template-columns: minmax(0, .96fr) minmax(430px, 1.04fr);
   align-items: center;
   gap: clamp(48px, 7vw, 92px);
-  min-height: 680px;
-  padding-top: 72px;
-  padding-bottom: 72px;
+  min-height: 720px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 body:not(.guide-body) .hero-inner { max-width: 650px; padding: 0; }
@@ -116,7 +117,7 @@ body:not(.guide-body) .hero h1 {
   margin-top: 25px;
   color: #fff;
   font-family: var(--pp-serif);
-  font-size: clamp(3.25rem, 5.8vw, 5.45rem);
+  font-size: clamp(3.1rem, 4.8vw, 4.7rem);
   font-weight: 500;
   line-height: .98;
   letter-spacing: -.055em;
@@ -133,12 +134,12 @@ body:not(.guide-body) .hero-copy {
   margin-top: 25px;
   color: #d9e5ec;
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 1.68;
 }
 body:not(.guide-body) .brand-promise { color: var(--pp-gold-soft); font-size: .83rem; letter-spacing: .055em; }
 body:not(.guide-body) .hero .btn { min-height: 50px; border-radius: 8px; }
 body:not(.guide-body) .hero .btn-primary { background: var(--pp-gold); color: #12212b; }
-body:not(.guide-body) .hero .btn-secondary { border-color: rgba(255, 255, 255, .3); background: rgba(255, 255, 255, .065); }
+body:not(.guide-body) .hero .btn-secondary { border-color: rgba(255, 255, 255, .3); background: rgba(255, 255, 255, .065); color: #fff !important; }
 body:not(.guide-body) .hero-story-link { color: #d7e5ec; }
 body:not(.guide-body) .hero-proof .proof {
   border-color: rgba(255, 255, 255, .15);
