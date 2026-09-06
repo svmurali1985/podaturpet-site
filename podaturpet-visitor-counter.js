@@ -44,7 +44,12 @@
 
   panel.appendChild(toggle);
   panel.appendChild(details);
-  document.body.appendChild(panel);
+  var footer = document.querySelector("footer");
+  if (footer) {
+    footer.appendChild(panel);
+  } else {
+    document.body.appendChild(panel);
+  }
 
   toggle.addEventListener("click", function () {
     var willCollapse = panel.getAttribute("data-collapsed") !== "true";
