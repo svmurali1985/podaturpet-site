@@ -294,8 +294,28 @@ body:not(.guide-body) .quote-panel,
 body:not(.guide-body) .contact-card { border-radius: 16px; }
 body:not(.guide-body) .journey-section { background: var(--pp-ivory); }
 body:not(.guide-body) .journey-step { border-radius: 12px; }
-body:not(.guide-body) .market-section { background: #f3eee3; }
-body:not(.guide-body) .market-card { border-radius: 12px; }
+body:not(.guide-body) .market-section {
+  color: #fff;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(226, 173, 63, .15), transparent 28%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, .018) 0 1px, transparent 1px 14px),
+    linear-gradient(135deg, #061725 0%, #0d2f49 100%);
+}
+body:not(.guide-body) .market-section .section-head h2 { color: #fff; }
+body:not(.guide-body) .market-section .section-head p { color: #cfdee6; }
+body:not(.guide-body) .global-buyer-promise {
+  border-color: rgba(226, 173, 63, .38);
+  background: linear-gradient(120deg, rgba(226, 173, 63, .12), rgba(255, 255, 255, .055));
+}
+body:not(.guide-body) .market-card {
+  border-color: rgba(255, 255, 255, .15);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .065);
+}
+body:not(.guide-body) .market-card h3 { color: #fff; }
+body:not(.guide-body) .market-card p { color: #cfdee6; }
+body:not(.guide-body) .market-card a,
+body:not(.guide-body) .market-card small { color: var(--pp-gold-soft); }
 body:not(.guide-body) .town-advertising { background: var(--pp-paper); }
 body:not(.guide-body) .town-ad-frame {
   border: 0;
