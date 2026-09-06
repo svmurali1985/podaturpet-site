@@ -1,6 +1,9 @@
 (function () {
   "use strict";
 
+  // Promotions are limited to the local directory; wholesale pages stay quiet.
+  if (window.location.pathname !== "/podaturpet-local-business-directory.html") return;
+
   var notice = document.getElementById("gentle-notice");
   if (!notice) return;
 
@@ -266,7 +269,8 @@
     if (Number.isFinite(savedMessageIndex) && savedMessageIndex >= 0) {
       messageIndex = savedMessageIndex % messages.length;
     }
-    soundEnabled = window.sessionStorage.getItem(soundStorageKey) === "on";
+    // Voice requires an explicit sound-button click on each page visit.
+    soundEnabled = false;
     hasShownThisSession = window.sessionStorage.getItem(shownStorageKey) === "yes";
     pausedUntil = Number(window.sessionStorage.getItem(pauseStorageKey)) || 0;
     nextAppearanceAt = Number(window.sessionStorage.getItem(nextAppearanceStorageKey)) || 0;
@@ -453,14 +457,6 @@
     return true;
   }
 
-  function handleFirstInteraction() {
-    if (!unlockAudio()) return;
-
-    if (activeMessage && notice.classList.contains("is-visible")) {
-      announceMessage(activeMessage);
-    }
-  }
-
   function scheduleNext(delay) {
     window.clearTimeout(showTimer);
     showTimer = window.setTimeout(showNotice, Math.max(0, delay));
@@ -585,9 +581,6 @@
     else playGentleChime();
   });
 
-  document.addEventListener("pointerdown", handleFirstInteraction, { once: true, capture: true });
-  document.addEventListener("touchstart", handleFirstInteraction, { once: true, capture: true, passive: true });
-  document.addEventListener("keydown", handleFirstInteraction, { once: true, capture: true });
 
   document.addEventListener("visibilitychange", function () {
     if (document.hidden && notice.classList.contains("is-visible")) {
