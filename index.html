@@ -627,6 +627,29 @@
     .market-card h3{margin-top:9px;color:#fff;font-size:1.22rem}
     .market-card p{margin-top:8px;color:#d2ded8;font-size:.87rem;line-height:1.65}
     .market-card a{display:inline-block;margin-top:15px;color:#f0cf8f;font-size:.83rem;font-weight:900}
+    .local-discovery{padding:88px 0;background:radial-gradient(circle at 8% 5%,rgba(24,166,124,.12),transparent 30%),linear-gradient(180deg,#f8fbf9 0%,#eef7f3 100%);border-top:1px solid #dce8e3}
+    .local-discovery-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}
+    .local-discovery-head .section-head{margin-bottom:0}
+    .local-discovery-head .section-head p{max-width:720px;font-size:1.02rem}
+    .local-discovery-badge{padding:10px 15px;border-radius:999px;background:#dff4eb;color:#0b604b;font-weight:900;white-space:nowrap}
+    .local-discovery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .local-card{min-height:250px;border:1px solid #d5e6df;border-radius:24px;background:#fff;overflow:hidden;position:relative;display:flex;flex-direction:column;box-shadow:0 16px 42px rgba(7,44,35,.08);transition:.22s ease}
+    .local-card:hover{transform:translateY(-5px);box-shadow:0 23px 52px rgba(7,44,35,.14)}
+    .local-card img{width:100%;height:165px;object-fit:cover}
+    .local-card-copy{padding:23px;display:flex;flex:1;flex-direction:column}
+    .local-card small{color:var(--green);font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    .local-card h3{margin-top:6px;color:var(--ink);font-size:1.42rem;line-height:1.16}
+    .local-card p{margin-top:10px;color:var(--muted);font-size:.94rem}
+    .local-card-action{margin-top:auto;padding-top:16px;color:#08765a;font-weight:900}
+    .local-card.is-advertise{grid-column:span 2;display:grid;grid-template-columns:1.05fr .95fr;background:linear-gradient(145deg,#061b16,#0b3a2e);border:0;color:#fff}
+    .local-card.is-advertise img{width:100%;height:100%;min-height:310px;object-fit:cover}
+    .local-card.is-advertise .local-card-copy{padding:34px;justify-content:center}
+    .local-card.is-advertise small,.local-card.is-advertise .local-card-action{color:#f2cd70}
+    .local-card.is-advertise h3{color:#fff;font-size:clamp(1.8rem,3vw,2.6rem)}
+    .local-card.is-advertise p{color:#cfe1da;font-size:1rem}
+    .local-card.is-advertise .local-card-action{display:inline-flex;align-self:flex-start;padding:12px 17px;margin-top:22px;border-radius:12px;background:var(--gold);color:#14231f}
+    .local-card.is-quick{min-height:220px;padding:28px}
+    .local-card.is-quick .local-card-copy{padding:0}
     #india-buyers{background:var(--paper)}
     #india-buyers .cards{grid-template-columns:repeat(3,1fr);gap:12px}
     #india-buyers .card{padding:16px}
@@ -672,6 +695,9 @@
       .product-grid{grid-template-columns:1fr 1fr}
       .product-tile{min-height:320px}
       .market-grid,.journey-grid{grid-template-columns:1fr 1fr}
+      .local-discovery-head{display:block}.local-discovery-badge{display:inline-block;margin-top:16px}
+      .local-discovery-grid{grid-template-columns:1fr 1fr}
+      .local-card.is-advertise{grid-column:span 2}
       .global-buyer-promise{grid-template-columns:1fr}
       .loom-film-grid{grid-template-columns:1fr;gap:23px}
       .quote-panel{grid-template-columns:1fr;gap:16px;padding:29px}
@@ -735,6 +761,11 @@
       .buyer-faq{padding:58px 0}
       .buyer-faq-card{padding:18px}
       .market-grid,.journey-grid,#india-buyers .cards{grid-template-columns:1fr}
+      .local-discovery{padding:60px 0}
+      .local-discovery-grid{grid-template-columns:1fr}
+      .local-card.is-advertise{grid-column:auto;display:flex}
+      .local-card.is-advertise img{height:210px;min-height:0}
+      .local-card.is-advertise .local-card-copy{padding:25px}
       .global-buyer-promise{padding:22px 18px}.global-buyer-points{grid-template-columns:1fr}.global-buyer-action{width:100%}
       .manufacturer-ad-copy,.buyer-panel,.enquiry-card{padding:23px}
       .manufacturer-ad-visual{min-height:360px}
@@ -829,10 +860,11 @@
         <a href="/lungi-product-catalogue.html">Catalogue</a>
         <a href="#podaturpet-supplier-network">Manufacturing</a>
         <a href="#buyer-faq">Buyer Guide</a>
+        <a href="#explore-podaturpet">Explore Podaturpet</a>
         <a class="nav-cta" href="#quick-quote">Get a Quote</a>
       </div>
     </nav>
-    <nav class="mobile-shortcuts" aria-label="Quick website navigation"><a href="#products">Lungi wholesale</a><a href="#quick-quote">Get a quote</a><a href="/lungi-product-catalogue.html">Collection</a><a href="#podaturpet-supplier-network">Manufacturing</a><a href="#buyer-faq">Buyer guide</a></nav>
+    <nav class="mobile-shortcuts" aria-label="Quick website navigation"><a href="#products">Lungi wholesale</a><a href="#quick-quote">Get a quote</a><a href="/lungi-product-catalogue.html">Collection</a><a href="#podaturpet-supplier-network">Manufacturing</a><a href="#buyer-faq">Buyer guide</a><a href="#explore-podaturpet">Explore Podaturpet</a></nav>
   </div>
 </header>
 
@@ -1031,6 +1063,55 @@
 <article class="market-card"><small>International Buyers</small><h3>Malaysia</h3><p>Traditional checked lungi sourcing for Malaysian wholesalers, retailers and distributors.</p><a href="/wholesale-lungis-malaysia.html">Explore buyer page →</a></article>
 <article class="market-card"><small>International Buyers</small><h3>Sri Lanka</h3><p>Wholesale sourcing enquiries for checked cotton lungis and textile trade connections.</p><a href="/wholesale-lungis-sri-lanka.html">Explore buyer page →</a></article>
 <article class="market-card"><small>International Buyers</small><h3>Singapore</h3><p>Bulk lungi enquiries for Singapore retailers, textile traders and distributors.</p><a href="/wholesale-lungis-singapore.html">Explore buyer page →</a></article></div>
+    </div>
+  </section>
+
+
+  <section class="local-discovery" id="explore-podaturpet" aria-labelledby="explore-podaturpet-title">
+    <div class="container">
+      <div class="local-discovery-head">
+        <div class="section-head">
+          <div class="kicker">For residents, visitors and local businesses</div>
+          <h2 id="explore-podaturpet-title">Explore Podaturpet.</h2>
+          <p>Find local shops, visitor information, nearby tourist places, useful town resources and stories from the Podaturpet community. Local businesses can also promote their services to people exploring this website.</p>
+        </div>
+        <span class="local-discovery-badge">Local information hub</span>
+      </div>
+
+      <div class="local-discovery-grid">
+        <a class="local-card is-advertise" href="https://wa.me/918778836385?text=Hello%20Podaturpet%20Team%2C%20I%20want%20to%20advertise%20my%20local%20business%20on%20Podaturpet.com.%20Business%20name%3A%20____%20Category%3A%20____%20Location%3A%20____" target="_blank" rel="noopener noreferrer">
+          <div class="local-card-copy">
+            <small>Local business advertising</small>
+            <h3>Make your business easier to discover.</h3>
+            <p>Promote your shop, service, travel business, property, vehicle service or special offer to people looking for Podaturpet information.</p>
+            <span class="local-card-action">Ask about advertising →</span>
+          </div>
+          <img src="/images/advertise-business-illustration.webp" alt="Illustration representing local business advertising in Podaturpet" width="1100" height="619" loading="lazy" decoding="async">
+        </a>
+
+        <a class="local-card" href="/podaturpet-town-guide.html">
+          <img src="/images/nagari-hills-town-guide.jpg" alt="Nagari Hills featured in the Podaturpet regional town guide" width="1100" height="618" loading="lazy" decoding="async">
+          <div class="local-card-copy"><small>Town guide</small><h3>Podaturpet information in one place.</h3><p>Start with transport, public offices, emergency contacts, local facilities and regional travel information.</p><span class="local-card-action">Open Town Guide →</span></div>
+        </a>
+
+        <a class="local-card" href="/podaturpet-local-business-directory.html">
+          <img src="/images/local-shops-illustration.webp" alt="Illustration of local shops and services in Podaturpet" width="1100" height="619" loading="lazy" decoding="async">
+          <div class="local-card-copy"><small>Local directory</small><h3>Find shops and everyday services.</h3><p>Explore local shopping, food, healthcare, transport, repairs and independent services.</p><span class="local-card-action">Explore Local Shops →</span></div>
+        </a>
+
+        <a class="local-card" href="/podaturpet-tourist-places.html">
+          <img src="/images/nagari-hills-town-guide.jpg" alt="Hill landscape near the Podaturpet region" width="1100" height="618" loading="lazy" decoding="async">
+          <div class="local-card-copy"><small>Tourist places</small><h3>Plan a regional day trip.</h3><p>Discover temples, hills, waterfalls and visitor destinations around the Tamil Nadu–Andhra Pradesh border region.</p><span class="local-card-action">See Tourist Places →</span></div>
+        </a>
+
+        <a class="local-card is-quick" href="/podaturpet-stories-and-culture.html">
+          <div class="local-card-copy"><small>Local stories &amp; updates</small><h3>Community, culture and weaving stories.</h3><p>Read original town stories, local traditions, festivals and updates added to the Podaturpet guide.</p><span class="local-card-action">Read Local Stories →</span></div>
+        </a>
+
+        <a class="local-card is-quick" href="/podaturpet-useful-information.html">
+          <div class="local-card-copy"><small>Useful information</small><h3>Transport, services and public contacts.</h3><p>Find practical information for residents and visitors, including travel connections and essential facilities.</p><span class="local-card-action">View Useful Information →</span></div>
+        </a>
+      </div>
     </div>
   </section>
 
