@@ -591,7 +591,8 @@ body:not(.guide-body) .hero-main-photo {
   height: calc(100% - 36px);
   border: 1px solid rgba(255, 255, 255, .24);
   border-radius: 30px;
-  object-position: center;
+  object-position: 50% center;
+  filter: saturate(1.04) contrast(1.02);
 }
 
 body:not(.guide-body) .hero-detail-photo {
@@ -827,6 +828,7 @@ body:not(.guide-body) .local-card.is-advertise {
     width: calc(100% - 18px);
     height: calc(100% - 18px);
     border-radius: 20px;
+    object-position: 52% center;
   }
   body:not(.guide-body) .hero-detail-photo {
     left: 0;
