@@ -1,0 +1,558 @@
+/*
+  Podaturpet premium visual system — September 2026
+  A contemporary South Indian textile-house direction using indigo, turmeric
+  gold, warm ivory and subtle woven-line patterns.
+*/
+
+:root {
+  --pp-ink: #071b2b;
+  --pp-indigo: #0d2b45;
+  --pp-indigo-2: #173f5e;
+  --pp-gold: #e2ad3f;
+  --pp-gold-soft: #f4d78f;
+  --pp-ivory: #fbf7ee;
+  --pp-paper: #fffdf8;
+  --pp-text: #182c39;
+  --pp-muted: #66737b;
+  --pp-line: rgba(13, 43, 69, .13);
+  --pp-shadow: 0 24px 70px rgba(7, 27, 43, .13);
+  --pp-serif: Georgia, "Times New Roman", serif;
+}
+
+html { scroll-padding-top: 88px; }
+
+body,
+.guide-body {
+  color: var(--pp-text);
+  background:
+    linear-gradient(rgba(13, 43, 69, .018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 43, 69, .018) 1px, transparent 1px),
+    var(--pp-paper);
+  background-size: 32px 32px;
+}
+
+.container { width: min(1216px, calc(100% - 48px)); }
+
+/* Main-site navigation */
+body:not(.guide-body) > header {
+  background: rgba(255, 253, 248, .93);
+  border-bottom: 1px solid var(--pp-line);
+  box-shadow: 0 10px 34px rgba(7, 27, 43, .06);
+  backdrop-filter: blur(18px);
+}
+
+body:not(.guide-body) > header::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pp-indigo), var(--pp-gold) 48%, var(--pp-indigo));
+}
+
+body:not(.guide-body) header nav { min-height: 82px; }
+body:not(.guide-body) .site-logo-img { width: 58px; height: 58px; }
+body:not(.guide-body) .nav-links { gap: 22px; }
+body:not(.guide-body) .nav-links a {
+  color: #344957;
+  font-size: .8rem;
+  font-weight: 760;
+  letter-spacing: .015em;
+}
+body:not(.guide-body) .nav-links a:hover { color: var(--pp-indigo); }
+body:not(.guide-body) .nav-links .nav-cta {
+  min-height: 44px;
+  padding: 11px 18px;
+  border-radius: 8px;
+  background: var(--pp-indigo);
+  color: #fff !important;
+  box-shadow: 0 9px 24px rgba(7, 27, 43, .16);
+}
+
+/* Hero: clear business purpose, real photographs, no oversized empty area. */
+body:not(.guide-body) .hero {
+  min-height: 0;
+  color: #fff;
+  background:
+    radial-gradient(circle at 16% 84%, rgba(226, 173, 63, .16), transparent 28%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, .022) 0 1px, transparent 1px 14px),
+    linear-gradient(135deg, #061725 0%, #0a2941 56%, #153d5a 100%);
+}
+
+body:not(.guide-body) .hero::before {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 5px;
+  z-index: 2;
+  background: linear-gradient(90deg, transparent, var(--pp-gold), transparent);
+}
+
+body:not(.guide-body) .hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .96fr) minmax(430px, 1.04fr);
+  align-items: center;
+  gap: clamp(48px, 7vw, 92px);
+  min-height: 680px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+body:not(.guide-body) .hero-inner { max-width: 650px; padding: 0; }
+body:not(.guide-body) .hero .eyebrow {
+  padding: 8px 12px;
+  border-color: rgba(244, 215, 143, .38);
+  background: rgba(255, 255, 255, .055);
+  color: var(--pp-gold-soft);
+  font-size: .68rem;
+  font-weight: 850;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+body:not(.guide-body) .hero h1 {
+  max-width: 680px;
+  margin-top: 25px;
+  color: #fff;
+  font-family: var(--pp-serif);
+  font-size: clamp(3.25rem, 5.8vw, 5.45rem);
+  font-weight: 500;
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+body:not(.guide-body) .hero h1 strong {
+  display: block;
+  margin-top: 10px;
+  color: var(--pp-gold-soft);
+  font-style: italic;
+  font-weight: 500;
+}
+body:not(.guide-body) .hero-copy {
+  max-width: 580px;
+  margin-top: 25px;
+  color: #d9e5ec;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+body:not(.guide-body) .brand-promise { color: var(--pp-gold-soft); font-size: .83rem; letter-spacing: .055em; }
+body:not(.guide-body) .hero .btn { min-height: 50px; border-radius: 8px; }
+body:not(.guide-body) .hero .btn-primary { background: var(--pp-gold); color: #12212b; }
+body:not(.guide-body) .hero .btn-secondary { border-color: rgba(255, 255, 255, .3); background: rgba(255, 255, 255, .065); }
+body:not(.guide-body) .hero-story-link { color: #d7e5ec; }
+body:not(.guide-body) .hero-proof .proof {
+  border-color: rgba(255, 255, 255, .15);
+  background: rgba(255, 255, 255, .055);
+  color: #dce8ee;
+}
+
+body:not(.guide-body) .hero-visual { min-height: 500px; }
+body:not(.guide-body) .hero-main-photo {
+  inset: 0 0 32px 48px;
+  width: calc(100% - 48px);
+  height: calc(100% - 32px);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 220px 220px 24px 24px;
+  box-shadow: 0 36px 90px rgba(0, 0, 0, .32);
+}
+body:not(.guide-body) .hero-detail-photo {
+  width: 39%;
+  height: 190px;
+  border: 7px solid var(--pp-ivory);
+  border-radius: 14px;
+}
+body:not(.guide-body) .hero-stamp {
+  right: -4px;
+  bottom: 55px;
+  border-color: rgba(226, 173, 63, .55);
+  border-radius: 10px;
+  background: rgba(7, 27, 43, .94);
+}
+
+/* Four clear entry points, one visual language. */
+body:not(.guide-body) .visitor-choice {
+  padding: 68px 0 72px;
+  background: var(--pp-ivory);
+}
+body:not(.guide-body) .visitor-choice-intro { margin-bottom: 24px; }
+body:not(.guide-body) .visitor-choice-intro strong {
+  color: var(--pp-indigo);
+  font-family: var(--pp-serif);
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+body:not(.guide-body) .visitor-choice-intro span { color: var(--pp-muted); font-size: .79rem; }
+body:not(.guide-body) .visitor-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+body:not(.guide-body) .visitor-choice-card,
+body:not(.guide-body) .visitor-choice-card.is-primary-business {
+  position: relative;
+  grid-column: auto;
+  min-height: 330px;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 16px;
+  background: var(--pp-indigo);
+  box-shadow: 0 16px 45px rgba(7, 27, 43, .11);
+  transform: none;
+}
+body:not(.guide-body) .visitor-choice-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(7, 27, 43, .2);
+}
+body:not(.guide-body) .visitor-choice-card.is-primary-business {
+  display: flex;
+  align-items: end;
+  padding: 25px;
+  background:
+    linear-gradient(180deg, rgba(5, 20, 32, .12), rgba(5, 20, 32, .95)),
+    url("/images/lungi-colors.jpeg") center/cover no-repeat;
+}
+body:not(.guide-body) .visitor-choice-card .town-spotlight-picture { position: absolute; inset: 0; height: 100%; }
+body:not(.guide-body) .visitor-choice-card .town-spotlight-picture::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 20, 32, .08) 25%, rgba(5, 20, 32, .93) 100%);
+}
+body:not(.guide-body) .visitor-choice-card .town-spotlight-picture img { width: 100%; height: 100%; object-fit: cover; }
+body:not(.guide-body) .visitor-choice-card .town-spotlight-copy,
+body:not(.guide-body) .visitor-choice-card.is-primary-business > div {
+  position: relative;
+  z-index: 2;
+  align-self: end;
+  padding: 24px;
+  color: #fff;
+}
+body:not(.guide-body) .visitor-choice-card.is-primary-business > div { padding: 0; }
+body:not(.guide-body) .visitor-choice-card small,
+body:not(.guide-body) .visitor-choice-card.is-primary-business small { color: var(--pp-gold-soft); font-size: .62rem; letter-spacing: .13em; }
+body:not(.guide-body) .visitor-choice-card h2,
+body:not(.guide-body) .visitor-choice-card:not(.is-primary-business) h2,
+body:not(.guide-body) .visitor-choice-card.is-primary-business h2 {
+  margin: 9px 0 7px;
+  color: #fff;
+  font-family: var(--pp-serif);
+  font-size: 1.65rem;
+  font-weight: 500;
+  line-height: 1.08;
+}
+body:not(.guide-body) .visitor-choice-card p { color: #d9e5eb; font-size: .78rem; line-height: 1.6; }
+body:not(.guide-body) .town-spotlight-button,
+body:not(.guide-body) .visitor-choice-arrow {
+  display: inline-flex;
+  margin-top: 15px;
+  color: var(--pp-gold-soft);
+  font-size: .73rem;
+  font-weight: 850;
+}
+body:not(.guide-body) .visitor-choice-arrow { position: absolute; right: 22px; bottom: 22px; z-index: 3; }
+body:not(.guide-body) .town-spotlight-credit,
+body:not(.guide-body) .town-spotlight-caption { display: none; }
+
+/* Main page content hierarchy */
+body:not(.guide-body) section { padding: 78px 0; }
+body:not(.guide-body) .strip { background: var(--pp-indigo); border: 0; }
+body:not(.guide-body) .strip-grid { padding: 24px 0; }
+body:not(.guide-body) .strip-item { border-color: rgba(255, 255, 255, .13); }
+body:not(.guide-body) .strip-item b { color: #fff; }
+body:not(.guide-body) .strip-item span { color: #aebfcc; }
+body:not(.guide-body) .section-head h2,
+body:not(.guide-body) .manufacturer-ad h2,
+body:not(.guide-body) .contact h2 {
+  color: var(--pp-ink);
+  font-family: var(--pp-serif);
+  font-weight: 500;
+}
+body:not(.guide-body) .kicker { color: #a16f17; }
+body:not(.guide-body) .product-showcase { background: var(--pp-paper); }
+body:not(.guide-body) .product-grid { gap: 18px; }
+body:not(.guide-body) .product-tile {
+  min-height: 380px;
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 13px 34px rgba(7, 27, 43, .11);
+}
+body:not(.guide-body) .product-tile:hover { transform: translateY(-5px); box-shadow: var(--pp-shadow); }
+body:not(.guide-body) .product-copy h3 { font-family: var(--pp-serif); font-size: 1.38rem; font-weight: 500; }
+body:not(.guide-body) .product-actions .product-quote { background: var(--pp-gold); color: var(--pp-ink); }
+body:not(.guide-body) .loom-film,
+body:not(.guide-body) .contact {
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, .02) 0 1px, transparent 1px 13px),
+    linear-gradient(135deg, #061725, #0d2f49);
+}
+body:not(.guide-body) .loom-player { border-radius: 14px; }
+body:not(.guide-body) .manufacturer-ad { background: #f3eee3; }
+body:not(.guide-body) .manufacturer-ad-copy,
+body:not(.guide-body) .quote-panel,
+body:not(.guide-body) .contact-card { border-radius: 16px; }
+body:not(.guide-body) .journey-section { background: var(--pp-ivory); }
+body:not(.guide-body) .journey-step { border-radius: 12px; }
+body:not(.guide-body) .market-section { background: #f3eee3; }
+body:not(.guide-body) .market-card { border-radius: 12px; }
+body:not(.guide-body) .town-advertising { background: var(--pp-paper); }
+body:not(.guide-body) .town-ad-frame {
+  border: 0;
+  border-radius: 16px;
+  background:
+    linear-gradient(100deg, rgba(7, 27, 43, .98), rgba(13, 43, 69, .91)),
+    url("/images/advertise-business-illustration.webp") center/cover;
+  box-shadow: var(--pp-shadow);
+}
+body:not(.guide-body) .town-ad-label,
+body:not(.guide-body) .town-ad-copy h2,
+body:not(.guide-body) .town-ad-copy h3,
+body:not(.guide-body) .town-ad-copy p { color: #fff; }
+body:not(.guide-body) .town-ad-label,
+body:not(.guide-body) .town-ad-phone { color: var(--pp-gold-soft) !important; }
+body:not(.guide-body) .town-ad-copy + .town-ad-copy { border-color: rgba(255, 255, 255, .2); }
+body:not(.guide-body) .advertising-categories span { border-color: rgba(255, 255, 255, .18); color: #dbe6ec; }
+body:not(.guide-body) .town-ad-button { background: var(--pp-gold); color: var(--pp-ink) !important; }
+body:not(.guide-body) .contact h2 { color: #fff; }
+
+/* Keep privacy-first visitor activity available without covering content. */
+.pvc-panel {
+  left: 16px;
+  bottom: 16px;
+  z-index: 980;
+  width: min(245px, calc(100vw - 32px));
+  border-color: rgba(226, 173, 63, .45);
+  border-radius: 12px;
+  background: rgba(255, 253, 248, .98);
+  box-shadow: 0 14px 38px rgba(7, 27, 43, .18);
+}
+.pvc-toggle { min-height: 54px; padding: 10px 12px; background: linear-gradient(135deg, #071b2b, #123a57); }
+.pvc-toggle-copy small { color: var(--pp-gold-soft); font-size: 8px; }
+.pvc-toggle-copy strong { margin-top: 1px; font-size: 12px; }
+.pvc-count { min-width: 38px; padding: 6px 8px; background: var(--pp-gold); font-size: 13px; }
+.pvc-details { max-height: min(390px, calc(100vh - 110px)); overflow-y: auto; }
+
+/* Auto-promotional modal is intentionally suppressed on the premium layout. */
+.gentle-notice { display: none !important; }
+
+/* Shared premium shell for the retail directory and town guide. */
+.guide-body .guide-header {
+  z-index: 50;
+  border-bottom: 0;
+  background: rgba(7, 27, 43, .96);
+  box-shadow: 0 10px 35px rgba(7, 27, 43, .08);
+  backdrop-filter: blur(18px);
+}
+.guide-body .guide-header::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pp-indigo), var(--pp-gold), var(--pp-indigo));
+}
+.guide-body .guide-shell { width: min(1180px, calc(100% - 48px)); }
+.guide-body .guide-header-inner { min-height: 78px; }
+.guide-body .guide-brand img { width: 180px; }
+.guide-body .guide-header-link { color: var(--pp-gold-soft); }
+.guide-body .guide-subnav { border-color: var(--pp-line); background: #f7f1e6; }
+.guide-body .guide-subnav a { color: #4a5a64; }
+.guide-body .guide-subnav a[aria-current="page"] { color: #9a6815; }
+
+/* Retail: a modern local-market directory, rather than a text database. */
+.guide-body .retail-market-hero {
+  min-height: 520px;
+  display: grid;
+  align-items: center;
+  padding: 76px 0;
+  background:
+    linear-gradient(90deg, rgba(6, 23, 37, .98) 0%, rgba(9, 39, 59, .94) 46%, rgba(9, 39, 59, .64) 72%, rgba(9, 39, 59, .45) 100%),
+    url("/images/local-shops-illustration.webp") center right/cover no-repeat;
+}
+.guide-body .retail-market-hero h1 {
+  max-width: 720px;
+  margin: 18px 0;
+  font-family: var(--pp-serif);
+  font-size: clamp(3rem, 6.7vw, 5.5rem);
+  font-weight: 500;
+  letter-spacing: -.05em;
+}
+.guide-body .retail-market-hero .guide-lead { max-width: 620px; color: #d9e5ec; }
+.guide-body .retail-hero-pills span { border-color: rgba(244, 215, 143, .26); background: rgba(255, 255, 255, .07); color: #eef4f7; }
+.guide-body .guide-main { padding: 68px 0 90px; background: transparent; }
+.guide-body .guide-section-title,
+.guide-body .retail-directory-cta h2 { color: var(--pp-ink); font-family: var(--pp-serif); font-weight: 500; }
+.guide-body .retail-search {
+  min-height: 52px;
+  border-color: var(--pp-line);
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(7, 27, 43, .06);
+}
+.guide-body .retail-filter { border-radius: 7px; border-color: var(--pp-line); color: var(--pp-indigo); }
+.guide-body .retail-filter.is-active { border-color: var(--pp-indigo); background: var(--pp-indigo); }
+.guide-body .retail-grid { gap: 16px; }
+.guide-body .retail-card {
+  min-height: 250px;
+  border-color: var(--pp-line);
+  border-radius: 12px;
+  box-shadow: 0 9px 28px rgba(7, 27, 43, .055);
+}
+.guide-body .retail-card:hover { border-color: rgba(226, 173, 63, .55); box-shadow: 0 19px 44px rgba(7, 27, 43, .12); }
+.guide-body .retail-icon { border-radius: 10px; background: #f5eddb; }
+.guide-body .retail-badge { color: #7a591d; background: #f8f0dd; }
+.guide-body .retail-card h3 { color: var(--pp-ink); font-family: var(--pp-serif); font-size: 1.35rem; font-weight: 500; }
+.guide-body .retail-card-link { color: var(--pp-indigo); }
+.guide-body .retail-directory-cta {
+  border-radius: 14px;
+  background: linear-gradient(135deg, #071b2b, #123d5c);
+  box-shadow: var(--pp-shadow);
+}
+.guide-body .retail-directory-cta h2 { color: #fff; }
+
+/* Town guide: editorial regional destination with photographic presence. */
+.guide-body .hub-hero {
+  min-height: 600px;
+  display: grid;
+  align-items: center;
+  padding: 82px 0;
+  background:
+    linear-gradient(90deg, rgba(5, 20, 32, .96), rgba(8, 34, 53, .83) 55%, rgba(8, 34, 53, .46)),
+    url("/images/nagari-hills-town-guide.jpg") center/cover no-repeat;
+}
+.guide-body .hub-hero-grid { grid-template-columns: 1.12fr .72fr; align-items: center; gap: 64px; }
+.guide-body .hub-hero h1 {
+  margin: 18px 0;
+  color: #fff;
+  font-family: var(--pp-serif);
+  font-size: clamp(3.25rem, 6.8vw, 6rem);
+  font-weight: 500;
+  line-height: .96;
+  letter-spacing: -.055em;
+}
+.guide-body .hub-hero p { color: #dce8ee; }
+.guide-body .hub-search label { display: block; margin-bottom: 8px; color: var(--pp-gold-soft); }
+.guide-body .hub-search input {
+  min-height: 53px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 15px 36px rgba(0, 0, 0, .17);
+}
+.guide-body .hub-fact {
+  min-height: 110px;
+  border-color: rgba(244, 215, 143, .28);
+  border-radius: 10px;
+  background: rgba(7, 27, 43, .62);
+  backdrop-filter: blur(9px);
+}
+.guide-body .hub-fact strong { color: var(--pp-gold-soft); font-family: var(--pp-serif); font-size: 1.65rem; font-weight: 500; }
+.guide-body .hub-nav { top: 80px; border-color: var(--pp-line); background: rgba(255, 253, 248, .96); backdrop-filter: blur(12px); }
+.guide-body .hub-nav-inner { gap: 7px; }
+.guide-body .hub-nav a { border: 1px solid var(--pp-line); border-radius: 7px; background: #fff; color: var(--pp-indigo); }
+.guide-body .hub-main { padding: 76px 0 100px; background: transparent; }
+.guide-body .hub-section { margin-bottom: 78px; }
+.guide-body .hub-section-head { grid-template-columns: .8fr 1.2fr; align-items: end; padding-bottom: 22px; border-bottom: 1px solid var(--pp-line); }
+.guide-body .hub-section-head h2 { color: var(--pp-ink); font-family: var(--pp-serif); font-weight: 500; }
+.guide-body .hub-grid { gap: 16px; }
+.guide-body .hub-card {
+  border-color: var(--pp-line);
+  border-radius: 12px;
+  background: rgba(255, 253, 248, .92);
+  box-shadow: 0 9px 26px rgba(7, 27, 43, .055);
+}
+.guide-body .hub-card:hover { transform: translateY(-4px); border-color: rgba(226, 173, 63, .5); box-shadow: 0 18px 42px rgba(7, 27, 43, .1); }
+.guide-body .hub-card .icon {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  place-items: center;
+  border-radius: 10px;
+  background: #f4ead3;
+}
+.guide-body .hub-card small { color: #946415; }
+.guide-body .hub-card h3 { color: var(--pp-ink); font-family: var(--pp-serif); font-size: 1.35rem; font-weight: 500; }
+.guide-body .hub-card a { color: var(--pp-indigo); }
+.guide-body .festival-panel {
+  border-radius: 14px;
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, .025) 0 1px, transparent 1px 13px),
+    linear-gradient(135deg, #071b2b, #123d5c);
+  box-shadow: var(--pp-shadow);
+}
+.guide-body .festival-panel h3 { font-family: var(--pp-serif); font-weight: 500; }
+.guide-body .festival-facts div { border: 1px solid rgba(244, 215, 143, .2); border-radius: 9px; }
+.guide-body .photo-card { border-radius: 12px; box-shadow: var(--pp-shadow); }
+.guide-body .source-note { border-left-color: var(--pp-gold); background: #fffaf0; }
+.guide-body .updates-panel > div { border-radius: 12px; }
+.guide-body .update-submit { background: #edf2f5; }
+.guide-body .update-actions a { border-radius: 7px; background: var(--pp-indigo); }
+.guide-body .hub-footer,
+.guide-body .guide-footer { background: var(--pp-ink); color: #c9d7df; }
+.guide-body .hub-footer a,
+.guide-body .guide-footer a { color: var(--pp-gold-soft); }
+
+@media (max-width: 1050px) {
+  body:not(.guide-body) .nav-links { gap: 13px; }
+  body:not(.guide-body) .nav-links a { font-size: .72rem; }
+  body:not(.guide-body) .visitor-choice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 820px) {
+  .container,
+  .guide-body .guide-shell { width: min(100% - 32px, 1180px); }
+  body:not(.guide-body) .hero-layout { grid-template-columns: 1fr; gap: 38px; min-height: 0; padding-top: 58px; padding-bottom: 58px; }
+  body:not(.guide-body) .hero-visual { min-height: 470px; }
+  body:not(.guide-body) .strip-grid { grid-template-columns: repeat(2, 1fr); gap: 0; }
+  body:not(.guide-body) .strip-item { padding: 13px 10px; }
+  body:not(.guide-body) .strip-item:nth-child(2) { border-right: 0; }
+  body:not(.guide-body) .visitor-choice-card,
+  body:not(.guide-body) .visitor-choice-card.is-primary-business { min-height: 300px; }
+  .guide-body .hub-hero { min-height: 0; }
+  .guide-body .hub-hero-grid { grid-template-columns: 1fr; gap: 35px; }
+  .guide-body .hub-facts { max-width: 620px; }
+  .guide-body .hub-nav { top: 78px; }
+}
+
+@media (max-width: 600px) {
+  html { scroll-padding-top: 72px; }
+  .container,
+  .guide-body .guide-shell { width: min(100% - 24px, 1180px); }
+  body:not(.guide-body) header nav { min-height: 68px; }
+  body:not(.guide-body) .site-logo-img { width: 43px; height: 43px; }
+  body:not(.guide-body) .hero-layout { padding-top: 44px; padding-bottom: 45px; }
+  body:not(.guide-body) .hero h1 { font-size: clamp(2.75rem, 13vw, 4.1rem); }
+  body:not(.guide-body) .hero-copy { font-size: .93rem; line-height: 1.72; }
+  body:not(.guide-body) .hero-visual { min-height: 390px; }
+  body:not(.guide-body) .hero-main-photo { left: 24px; width: calc(100% - 24px); }
+  body:not(.guide-body) .hero-detail-photo { width: 45%; height: 145px; }
+  body:not(.guide-body) .hero-stamp { right: 0; bottom: 38px; padding: 12px; }
+  body:not(.guide-body) .visitor-choice { padding: 50px 0; }
+  body:not(.guide-body) .visitor-choice-intro { display: block; }
+  body:not(.guide-body) .visitor-choice-intro span { display: block; margin-top: 4px; text-align: left; }
+  body:not(.guide-body) .visitor-choice-grid { grid-template-columns: 1fr; }
+  body:not(.guide-body) .visitor-choice-card,
+  body:not(.guide-body) .visitor-choice-card.is-primary-business { min-height: 280px; }
+  body:not(.guide-body) section { padding: 60px 0; }
+  body:not(.guide-body) .product-head { display: block; }
+  body:not(.guide-body) .product-head > .text-link { display: inline-block; margin-bottom: 28px; }
+  body:not(.guide-body) .town-ad-frame { padding: 24px 20px; }
+  .pvc-panel { left: 10px; bottom: 72px; width: min(210px, calc(100vw - 82px)); }
+  .pvc-details { max-height: 235px; }
+  .guide-body .guide-header-inner { min-height: 68px; }
+  .guide-body .guide-brand img { width: 140px; }
+  .guide-body .retail-market-hero,
+  .guide-body .hub-hero { min-height: 0; padding: 60px 0; background-position: 62% center; }
+  .guide-body .retail-market-hero h1,
+  .guide-body .hub-hero h1 { font-size: clamp(2.8rem, 13vw, 4.2rem); }
+  .guide-body .hub-facts { gap: 8px; }
+  .guide-body .hub-fact { min-height: 95px; padding: 13px; }
+  .guide-body .hub-nav { top: 68px; }
+  .guide-body .hub-main,
+  .guide-body .guide-main { padding: 54px 0 72px; }
+  .guide-body .hub-section { margin-bottom: 58px; }
+  .guide-body .hub-section-head { display: block; }
+  .guide-body .hub-section-head p { margin-top: 12px; }
+  .guide-body .retail-card { min-height: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}

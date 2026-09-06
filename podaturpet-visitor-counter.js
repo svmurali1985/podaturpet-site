@@ -12,7 +12,7 @@
   var panel = document.createElement("aside");
   panel.className = "pvc-panel";
   panel.setAttribute("aria-label", "Podaturpet website visitor activity");
-  panel.setAttribute("data-collapsed", window.innerWidth <= 700 ? "true" : "false");
+  panel.setAttribute("data-collapsed", "true");
 
   var toggle = document.createElement("button");
   toggle.className = "pvc-toggle";
