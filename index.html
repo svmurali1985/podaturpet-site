@@ -273,14 +273,6 @@
     @media(max-width:820px){.innovation-partner-inner{grid-template-columns:1fr}.innovation-partner-inner a{justify-self:start}}
     @media(max-width:560px){.global-concept-images{grid-template-columns:1fr 1fr}.global-concept-images img{height:135px}.global-concept-images img:first-child{grid-column:span 2;grid-row:auto;height:230px}.innovation-partner-inner{padding:24px}.innovation-partner-inner a{white-space:normal;text-align:center}}
 
-    .floating-whatsapp{
-      position:fixed;right:20px;bottom:20px;z-index:900;
-      width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
-      background:#19a974;color:#fff;font-size:1.55rem;
-      box-shadow:0 14px 30px rgba(0,0,0,.22)
-    }
-
-
     .buyer-section{background:linear-gradient(135deg,#fff8e9,#f6fbf8)}
     .buyer-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:stretch}
     .buyer-panel{padding:38px;border-radius:28px;background:#071b17;color:#fff;box-shadow:var(--shadow)}
@@ -320,7 +312,6 @@
       section{padding:70px 0}
       .strip-grid{grid-template-columns:1fr 1fr}
       .card,.business-box,.feature,.contact-card{padding:24px}
-      .floating-whatsapp{width:54px;height:54px;right:14px;bottom:14px}
     }
   
 
@@ -688,8 +679,6 @@
     .photo-grid{gap:12px}
     .place-photo{border-radius:17px}
     .contact{background:linear-gradient(135deg,#102b25,#19473a)}
-    .floating-whatsapp{width:auto;height:54px;padding:0 18px;border-radius:999px;background:#17694f;font-size:.87rem;font-weight:900}
-    .floating-whatsapp span{margin-left:8px}
     .mobile-contact-dock{display:none}
     @media(max-width:1000px){
       .hero-layout{grid-template-columns:1fr .85fr;gap:35px}
@@ -725,11 +714,9 @@
       #faq .feature-stack{grid-template-columns:1fr}
       .manufacturer-ad-wrap{grid-template-columns:1fr}
       .manufacturer-ad-visual{min-height:450px}
-      .floating-whatsapp{bottom:16px;right:14px}
       .mobile-contact-dock{position:fixed;right:0;bottom:0;left:0;z-index:1000;display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:10px max(12px,env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));border-top:1px solid rgba(16,43,37,.12);background:rgba(255,253,249,.97);box-shadow:0 -8px 30px rgba(16,43,37,.08)}
       .mobile-contact-dock a{display:grid;min-height:46px;place-items:center;border:1px solid var(--border);border-radius:10px;background:#fff;color:var(--ink);font-size:.81rem;font-weight:900}
       .mobile-contact-dock a:last-child{border-color:var(--green);background:var(--green);color:#fff}
-      .floating-whatsapp{display:none}
       footer{padding-bottom:85px}
     }
     @media(max-width:560px){
@@ -788,7 +775,6 @@
       .global-buyer-promise{padding:22px 18px}.global-buyer-points{grid-template-columns:1fr}.global-buyer-action{width:100%}
       .manufacturer-ad-copy,.buyer-panel,.enquiry-card{padding:23px}
       .manufacturer-ad-visual{min-height:360px}
-      .floating-whatsapp{height:48px;padding:0 14px;font-size:.76rem}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important}}
 
@@ -860,7 +846,7 @@
   <link rel="stylesheet" href="/podaturpet-professional-polish.css?v=20260824-centered-rotation">
   <link rel="stylesheet" href="/podaturpet-assistant.css">
 <link rel="stylesheet" href="/podaturpet-visitor-counter.css?v=20260906">
-<link rel="stylesheet" href="/podaturpet-premium-2026.css?v=20260906-attraction">
+<link rel="stylesheet" href="/podaturpet-premium-2026.css?v=20260906-live-refine">
 </head>
 
 <body>
@@ -1238,11 +1224,6 @@
 </footer>
 
 <nav class="mobile-contact-dock" aria-label="Quick contact actions"><a href="#quick-quote">Request a quote</a><a href="https://wa.me/918778836385?text=Hello%20Podaturpet%20Team%2C%20I%20would%20like%20to%20discuss%20a%20wholesale%20lungi%20enquiry." target="_blank" rel="noopener noreferrer">WhatsApp us</a></nav>
-
-<a class="floating-whatsapp"
-   href="https://wa.me/918778836385?text=Hello%20Podaturpet%20Team%2C%20I%20found%20you%20through%20Podaturpet.com."
-   aria-label="WhatsApp Our Team"
-   target="_blank" rel="noopener noreferrer">💬 <span>WhatsApp us</span></a>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
