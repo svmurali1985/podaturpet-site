@@ -1,0 +1,20 @@
+MODERN LUNGI — RUNWAY VIDEO PROMPTS
+===================================
+
+Recommended: image-to-video, 16:9, 8 seconds each, Gen-4 Turbo.
+Keep garment checks, facial identity and body proportions consistent. No text, logos or watermark.
+
+VIDEO 01 — GLOBAL CITY REVEAL
+Reference image: images/modern-lungi/modern-lungi-global-city.webp
+Prompt: A confident adult fashion model walks naturally toward camera on a clean modern city street while wearing the exact checked utility lungi shown in the reference. Subtle fabric movement, realistic daylight, premium commercial fashion cinematography. The camera slowly tracks backward, then moves to a close detail of the adjustable waistband and secure side pocket before the model makes a gentle half turn. Preserve the garment pattern, length, closure and model identity. Natural motion, no morphing, no extra limbs, no text.
+
+VIDEO 02 — HOW TO WEAR IN FOUR MOVES
+Reference image: images/modern-lungi/modern-lungi-how-to-wear.webp
+Prompt: Clean bright studio demonstration of one adult model putting on the exact modern checked lungi from the reference in four smooth actions: centre the garment, adjust the waist, wrap the front panel, press the secure snap, then place a phone safely in the zipped pocket. Locked camera with gentle close-up cuts, accurate hands, realistic cloth physics, instructional pacing. Preserve the same person, garment and check pattern. No text, no morphing, no extra fingers.
+
+VIDEO 03 — ONE LUNGI, MANY LIVES
+Reference image: images/modern-lungi/modern-lungi-unisex-couple.webp
+Prompt: Energetic premium fashion montage showing modern lungi styling for global everyday life. Begin with the referenced couple walking through an urban park, then use clean match cuts to suggest airport travel, cold-weather layering, resort relaxation and youthful streetwear. Diverse adult models, confident natural movement, respectful styling, realistic woven fabric and consistent checked garments. Smooth handheld camera, bright cinematic colour, no text, no logos, no warped bodies.
+
+FREE-PLAN CREDIT NOTE
+Three 8-second Gen-4 Turbo clips would use approximately 120 credits at 5 credits per second. Generate each clip once, review it, and only rerun a clip that has visible hand, face or garment errors.
