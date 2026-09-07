@@ -3,7 +3,7 @@
 
   if (document.getElementById('podaturpet-assistant-launcher')) return;
 
-  var phone = '918778836385';
+  var phone = '14793201970';
   var email = 'svmuralicenterton@gmail.com';
   var pageIndex = [
     { path: '/index.html', title: 'Podaturpet lungi wholesale', terms: 'lungi wholesale manufacturer supplier bulk order cotton handloom powerloom quote price export' },
@@ -22,7 +22,7 @@
   ];
   var knowledge = [
     { match: /\b(pin\s*code|pincode|postal|zip\s*code|631208)\b|பின்|அஞ்சல்/i, answer: 'The PIN code of Podaturpet is 631208. Podaturpet is in Tiruvallur district, Tamil Nadu, India.', path: '/podaturpet-travel-pin-code.html', label: 'View travel and PIN details' },
-    { match: /\b(contact|phone|mobile\s*number|call|whatsapp|email|reach)\b|தொடர்பு|நம்பர்/i, answer: 'Contact the Podaturpet team on +91 87788 36385 or email ' + email + '. You can also send your enquiry directly through WhatsApp.', path: 'https://wa.me/' + phone, label: 'Contact us on WhatsApp' },
+    { match: /\b(contact|phone|mobile\s*number|call|whatsapp|email|reach)\b|தொடர்பு|நம்பர்/i, answer: 'Contact the Podaturpet team on +1 479-320-1970 or email ' + email + '. You can also send your enquiry directly through WhatsApp.', path: 'https://wa.me/' + phone, label: 'Contact us on WhatsApp' },
     { match: /\b(price|cost|rate|minimum|moq|piece|pieces|quantity)\b|விலை|எவ்வளவு/i, answer: 'Lungi prices, minimum quantities, fabric details, availability, and delivery charges depend on the supplier and your order. Share your preferred design, approximate quantity, and destination to request a quote.', path: '/#quick-quote', label: 'Request a wholesale quote' },
     { match: /\b(add|list|register|promote)\b.*\b(shop|business|store)\b|\b(shop|business)\b.*\b(add|list|register)\b/i, answer: 'To add your shop, send your business name, category, location, and public contact number to the Podaturpet team. Individual listings are published after the details are checked.', path: 'https://wa.me/' + phone + '?text=' + encodeURIComponent('Hello Podaturpet Team, I would like to add my shop to the retail directory.'), label: 'Add your shop through WhatsApp' },
     { match: /\b(retail|shop|shops|grocery|store|stores|pharmacy|medical|restaurant|bakery|jewell?ery|hardware)\b|கடை|ஷாப்/i, answer: 'The Podaturpet retail directory includes grocery, clothing, restaurants, pharmacies, mobile shops, jewellery, hardware, vehicle services, and other local shop categories.', path: '/podaturpet-local-business-directory.html', label: 'Explore retail shops' },

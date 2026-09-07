@@ -8,8 +8,8 @@ import xml.etree.ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parent
-PHONE = "+91 87788 36385"
-WHATSAPP = "918778836385"
+PHONE = "+1 479-320-1970"
+WHATSAPP = "14793201970"
 TODAY = date.today().isoformat()
 
 PAGES = {
@@ -176,8 +176,8 @@ town_section = f'''
 
   <section class="town-advertising" id="advertise" aria-labelledby="advertise-title">
     <div class="container"><div class="town-ad-frame">
-      <div class="town-ad-copy" lang="en"><span class="town-ad-label">Independent advertising enquiries</span><h2 id="advertise-title">Give your business a place to be seen.</h2><p>Advertise your company, local shop, service or special offer on Podaturpet.com. Advertising enquiries are handled separately from textile sales and business directory listings.</p><div class="town-ad-actions"><a class="town-ad-button" href="{whatsapp('Hello Podaturpet Team, I would like to advertise my company or business on Podaturpet.com.')}" target="_blank" rel="noopener noreferrer">Enquire about advertising</a><a class="town-ad-phone" href="tel:+918778836385">{PHONE}</a></div></div>
-      <div class="town-ad-copy" lang="ta"><span class="town-ad-label">விளம்பரத் தொடர்புக்கு</span><h3>உங்கள் வணிகத்தை அதிகமானோரிடம் கொண்டு செல்லுங்கள்.</h3><p>உங்கள் நிறுவனம், கடை, சேவைகள் அல்லது சிறப்புச் சலுகைகளை Podaturpet.com இணையதளத்தில் விளம்பரம் செய்யுங்கள்.</p><p><strong>விளம்பரம் செய்ய விருப்பமா? எங்களைத் தொடர்புகொள்ளுங்கள்.</strong></p><div class="town-ad-actions"><a class="town-ad-phone" href="tel:+918778836385">தொடர்புக்கு: {PHONE}</a></div></div>
+      <div class="town-ad-copy" lang="en"><span class="town-ad-label">Independent advertising enquiries</span><h2 id="advertise-title">Give your business a place to be seen.</h2><p>Advertise your company, local shop, service or special offer on Podaturpet.com. Advertising enquiries are handled separately from textile sales and business directory listings.</p><div class="town-ad-actions"><a class="town-ad-button" href="{whatsapp('Hello Podaturpet Team, I would like to advertise my company or business on Podaturpet.com.')}" target="_blank" rel="noopener noreferrer">Enquire about advertising</a><a class="town-ad-phone" href="tel:+14793201970">{PHONE}</a></div></div>
+      <div class="town-ad-copy" lang="ta"><span class="town-ad-label">விளம்பரத் தொடர்புக்கு</span><h3>உங்கள் வணிகத்தை அதிகமானோரிடம் கொண்டு செல்லுங்கள்.</h3><p>உங்கள் நிறுவனம், கடை, சேவைகள் அல்லது சிறப்புச் சலுகைகளை Podaturpet.com இணையதளத்தில் விளம்பரம் செய்யுங்கள்.</p><p><strong>விளம்பரம் செய்ய விருப்பமா? எங்களைத் தொடர்புகொள்ளுங்கள்.</strong></p><div class="town-ad-actions"><a class="town-ad-phone" href="tel:+14793201970">தொடர்புக்கு: {PHONE}</a></div></div>
     </div></div>
   </section>
 

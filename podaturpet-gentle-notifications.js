@@ -505,7 +505,7 @@
     copy.textContent = message.copy;
     tamil.textContent = message.tamil;
     action.textContent = message.action;
-    action.href = "https://wa.me/918778836385?text=" + encodeURIComponent(message.whatsapp);
+    action.href = "https://wa.me/14793201970?text=" + encodeURIComponent(message.whatsapp);
     notice.setAttribute("aria-hidden", "false");
     notice.classList.add("is-visible");
     document.body.classList.add("has-podaturpet-notice");
