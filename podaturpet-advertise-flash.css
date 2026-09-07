@@ -1,0 +1,139 @@
+.podaturpet-ad-flash {
+  position: fixed;
+  left: 18px;
+  bottom: 22px;
+  z-index: 10010;
+  width: min(380px, calc(100vw - 36px));
+  padding: 17px 46px 16px 18px;
+  border: 1px solid rgba(230, 181, 65, .55);
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(7, 29, 46, .98), rgba(15, 61, 82, .98));
+  color: #fff;
+  box-shadow: 0 18px 55px rgba(2, 16, 29, .3);
+  opacity: 0;
+  transform: translateY(18px);
+  visibility: hidden;
+  transition: opacity .35s ease, transform .35s ease, visibility .35s ease;
+}
+
+.podaturpet-ad-flash.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.podaturpet-ad-flash::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 18px;
+  left: 18px;
+  height: 3px;
+  border-radius: 0 0 999px 999px;
+  background: linear-gradient(90deg, #e6b541, #fff0ad, #e6b541);
+}
+
+.podaturpet-ad-flash-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #f2ce76;
+  font-size: .66rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.podaturpet-ad-flash strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.podaturpet-ad-flash p {
+  margin: 7px 0 0;
+  color: #dce8ee;
+  font-size: .79rem;
+  line-height: 1.5;
+}
+
+.podaturpet-ad-flash-tamil {
+  color: #f7e7b7 !important;
+  font-size: .75rem !important;
+}
+
+.podaturpet-ad-flash-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-top: 12px;
+}
+
+.podaturpet-ad-flash-action {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 9px;
+  background: #25d366;
+  color: #062c1a;
+  font-size: .74rem;
+  font-weight: 900;
+}
+
+.podaturpet-ad-flash-phone {
+  color: #fff;
+  font-size: .77rem;
+  font-weight: 800;
+}
+
+.podaturpet-ad-flash-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .1);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.podaturpet-ad-flash-action:focus-visible,
+.podaturpet-ad-flash-phone:focus-visible,
+.podaturpet-ad-flash-close:focus-visible {
+  outline: 3px solid #fff0ad;
+  outline-offset: 3px;
+}
+
+body.has-advertise-flash .floating-whatsapp,
+body.has-advertise-flash .pta-launcher,
+body.has-advertise-flash #podaturpet-assistant-launcher {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+@media (max-width: 600px) {
+  .podaturpet-ad-flash {
+    left: 10px;
+    bottom: 76px;
+    width: calc(100vw - 20px);
+    padding: 15px 43px 14px 15px;
+    border-radius: 14px;
+  }
+
+  .podaturpet-ad-flash strong { font-size: 1.05rem; }
+  .podaturpet-ad-flash p { font-size: .73rem; }
+  .podaturpet-ad-flash-actions { margin-top: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .podaturpet-ad-flash { transition: none; }
+}
