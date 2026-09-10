@@ -62,3 +62,5 @@ body:not(.guide-body) .hero [lang=ta]{line-height:1.65}
 #powerloom-video a:focus-visible,#powerloom-video summary:focus-visible{outline:3px solid #a46712;outline-offset:4px}
 @media(max-width:760px){#powerloom-video .ptcf-grid{grid-template-columns:1fr;gap:24px}#powerloom-video.pt-collection-feature{padding:28px 0}#powerloom-video .ptcf-card img{height:180px}}
 @media(max-width:380px){#powerloom-video .ptcf-photos{gap:9px}#powerloom-video .ptcf-card img{height:150px}}
+
+#products .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dedupe-guide-link{padding:20px 0;font-size:15px;line-height:1.6}.dedupe-guide-link a{color:#194e42;text-decoration:underline}@media(max-width:600px){#products .product-grid{grid-template-columns:1fr}}

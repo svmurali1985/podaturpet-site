@@ -47,3 +47,8 @@ Two existing product photos, shorter headline and a shop enquiry button.
 Original video is collapsed by default under an optional Watch weaving control.
 Closing the video panel pauses playback. New text supports English and Tamil.
 No new third-party photos or footage used.
+
+SITE-WIDE CLEANUP
+See DEDUPLICATION-REVIEW.md for all page decisions and validation.
+The homepage is streamlined and destination pages consolidated with redirects.
+Copy the complete website folder contents into the repository and deploy normally.
