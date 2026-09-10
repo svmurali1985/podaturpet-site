@@ -1,14 +1,28 @@
 (() => {
   'use strict';
+  const videoPanel = document.querySelector('.ptcf-video');
+  videoPanel?.addEventListener('toggle', () => {
+    if (!videoPanel.open) videoPanel.querySelector('video')?.pause();
+  });
   const hero = document.querySelector('.hero');
   const gallery = document.getElementById('lungi-lifestyle-gallery');
   const story = document.getElementById('podaturpet-colour-story');
-  const scopes = [hero, gallery, story].filter(Boolean);
+  const collection = document.getElementById('powerloom-video');
+  const scopes = [hero, gallery, story, collection].filter(Boolean);
   if (!scopes.length) return;
   const bar = document.createElement('nav');
   bar.className = 'pt-language-options';
   bar.setAttribute('aria-label', 'Choose introduction and gallery language');
   const dictionary = {
+    "Patterns worth a closer look": "அருகில் பார்த்து ரசிக்க வேண்டிய வடிவங்கள்",
+    "Bring more colour to your collection.": "உங்கள் தொகுப்பில் மேலும் வண்ணங்களைச் சேருங்கள்.",
+    "Explore blue checks and colourful woven patterns. Choose a style for your shop, then ask us about available designs and bulk prices.": "நீல நிறக் கட்டங்களையும் வண்ணமயமான நெசவு வடிவங்களையும் பாருங்கள். உங்கள் கடைக்கான பாணியைத் தேர்ந்தெடுத்து, கிடைக்கும் வடிவங்கள் மற்றும் மொத்த விலை பற்றி எங்களிடம் கேளுங்கள்.",
+    "Find lungis for my shop": "என் கடைக்கான லுங்கிகளைத் தேர்வு செய்ய",
+    "Explore woven patterns": "நெசவு வடிவங்களைப் பார்க்க",
+    "Watch weaving · Optional video": "நெசவைக் காணுங்கள் · விருப்பக் காணொளி",
+    "Original weaving footage from the existing website.": "இணையதளத்தில் ஏற்கெனவே உள்ள உண்மையான நெசவுக் காணொளி.",
+    "Explore designs & watch weaving": "வடிவங்களையும் நெசவையும் பார்க்க",
+
     "Checks. Colours. Everyday style.": "கட்டங்கள். வண்ணங்கள். அன்றாட அணியும் பாணி.",
     "Podaturpet · Lungis & local life": "பொதட்டூர்பேட்டை · லுங்கிகளும் ஊர் வாழ்க்கையும்",
     "Discover the colours of Podaturpet.": "பொதட்டூர்பேட்டையின் வண்ணங்களைக் கண்டறியுங்கள்.",

@@ -40,3 +40,10 @@ Replaced with a compact textile photo and town introduction in English/Tamil.
 Source for local weaving context: https://townpanchayat.in/podhaturpet
 Existing textile photograph reused; no additional external imagery added.
 Copy received an independent second review.
+
+VIDEO APPEARANCE UPDATE
+Replaced the large CCTV-style video banner with a compact product photo feature.
+Two existing product photos, shorter headline and a shop enquiry button.
+Original video is collapsed by default under an optional Watch weaving control.
+Closing the video panel pauses playback. New text supports English and Tamil.
+No new third-party photos or footage used.

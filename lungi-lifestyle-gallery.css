@@ -42,3 +42,23 @@ body:not(.guide-body) .hero [lang=ta]{line-height:1.65}
 #podaturpet-colour-story .pcs-secondary{border:1px solid #173d39;color:#173d39;background:transparent}
 #podaturpet-colour-story a:focus-visible{outline:3px solid #a36510;outline-offset:4px}
 @media(max-width:760px){#podaturpet-colour-story .pcs-layout{grid-template-columns:1fr;gap:22px}#podaturpet-colour-story img{height:230px}#podaturpet-colour-story{padding:28px 0}}
+
+/* Product-led alternative to the oversized video banner. */
+#powerloom-video.pt-collection-feature{padding:40px 0;background:#edf3f0;color:#173d39}
+#powerloom-video .ptcf-grid{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:32px}
+#powerloom-video .ptcf-kicker{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:#59694f;margin:0 0 12px}
+#powerloom-video h2{font-family:inherit;font-size:clamp(27px,3.1vw,39px);font-weight:750;line-height:1.18;letter-spacing:-.025em;color:#173d39;margin:0 0 16px}
+#powerloom-video .ptcf-copy>p:not(.ptcf-kicker){font-size:16px;line-height:1.7;color:#465b51;margin:0 0 20px}
+#powerloom-video .ptcf-button{display:inline-block;padding:13px 18px;border-radius:7px;background:#173d39;color:#fff;font-size:14px;font-weight:750;text-decoration:none}
+#powerloom-video .ptcf-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px;min-width:0}
+#powerloom-video .ptcf-card{display:block;border-radius:14px;overflow:hidden;background:#fff;color:#173d39;text-decoration:none;box-shadow:0 7px 20px #163c3510}
+#powerloom-video .ptcf-card img{display:block;width:100%;height:220px;object-fit:cover}
+#powerloom-video .ptcf-card span{display:flex;justify-content:space-between;gap:8px;font-size:14px;line-height:1.5;font-weight:750;padding:14px}
+#powerloom-video .ptcf-video{border-top:1px solid #cad9d0;margin-top:24px;padding-top:16px}
+#powerloom-video .ptcf-video summary{cursor:pointer;font-size:14px;line-height:1.6;font-weight:700;color:#345a4b;width:fit-content}
+#powerloom-video .ptcf-video-inner{max-width:760px;margin:18px auto 0}
+#powerloom-video .ptcf-video video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#111;border-radius:10px}
+#powerloom-video .ptcf-video-inner p{font-size:13px;color:#52675c;line-height:1.6;margin-top:10px}
+#powerloom-video a:focus-visible,#powerloom-video summary:focus-visible{outline:3px solid #a46712;outline-offset:4px}
+@media(max-width:760px){#powerloom-video .ptcf-grid{grid-template-columns:1fr;gap:24px}#powerloom-video.pt-collection-feature{padding:28px 0}#powerloom-video .ptcf-card img{height:180px}}
+@media(max-width:380px){#powerloom-video .ptcf-photos{gap:9px}#powerloom-video .ptcf-card img{height:150px}}
