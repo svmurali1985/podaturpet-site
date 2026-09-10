@@ -52,3 +52,5 @@ SITE-WIDE CLEANUP
 See DEDUPLICATION-REVIEW.md for all page decisions and validation.
 The homepage is streamlined and destination pages consolidated with redirects.
 Copy the complete website folder contents into the repository and deploy normally.
+
+Latest update: see RESEARCH-UPDATE-README.txt for buyer journey improvements and deployment steps.

@@ -1,19 +1,6 @@
 (() => {
-  'use strict';
-  const videoPanel = document.querySelector('.ptcf-video');
-  videoPanel?.addEventListener('toggle', () => {
-    if (!videoPanel.open) videoPanel.querySelector('video')?.pause();
-  });
-  const hero = document.querySelector('.hero');
-  const gallery = document.getElementById('lungi-lifestyle-gallery');
-  const story = document.getElementById('podaturpet-colour-story');
-  const collection = document.getElementById('powerloom-video');
-  const scopes = [hero, gallery, story, collection].filter(Boolean);
-  if (!scopes.length) return;
-  const bar = document.createElement('nav');
-  bar.className = 'pt-language-options';
-  bar.setAttribute('aria-label', 'Choose introduction and gallery language');
-  const dictionary = {
+'use strict';
+const dictionary = {
     "Patterns worth a closer look": "அருகில் பார்த்து ரசிக்க வேண்டிய வடிவங்கள்",
     "Bring more colour to your collection.": "உங்கள் தொகுப்பில் மேலும் வண்ணங்களைச் சேருங்கள்.",
     "Explore blue checks and colourful woven patterns. Choose a style for your shop, then ask us about available designs and bulk prices.": "நீல நிறக் கட்டங்களையும் வண்ணமயமான நெசவு வடிவங்களையும் பாருங்கள். உங்கள் கடைக்கான பாணியைத் தேர்ந்தெடுத்து, கிடைக்கும் வடிவங்கள் மற்றும் மொத்த விலை பற்றி எங்களிடம் கேளுங்கள்.",
@@ -58,38 +45,43 @@
     'Browse actual product photographs': 'உண்மையான தயாரிப்புப் படங்களைப் பார்க்க',
     ', then share your quantity and destination. Confirm samples, fabric, colours and availability before placing an order.': ' பின்னர் தேவையான எண்ணிக்கை மற்றும் விநியோக இடத்தைத் தெரிவியுங்கள். ஆர்டர் செய்வதற்கு முன் மாதிரி, துணி, நிறங்கள் மற்றும் கையிருப்பை உறுதிப்படுத்துங்கள்.'
   };
-  const nodes = [];
-  scopes.forEach(scope => {
-    const walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT);
-    while (walker.nextNode()) {
-      const node = walker.currentNode;
-      const key = node.textContent.trim();
-      if (dictionary[key]) nodes.push([node, node.textContent, dictionary[key]]);
-    }
+
+  dictionary["Weaving story"] = "நெசவின் கதை";
+  Object.assign(dictionary, {"Browse Lungi Designs": "லுங்கி வடிவங்களைப் பார்க்க", "Request a quote": "விலை விவரம் கேட்க", "Get a Quote": "விலை விவரம் கேட்க", "Get a quote": "விலை விவரம் கேட்க", "Home": "முகப்பு", "Products": "தயாரிப்புகள்", "Catalogue": "தயாரிப்புப் பட்டியல்", "Lungi Wholesale": "மொத்த லுங்கி விற்பனை", "Capabilities": "நெசவு பற்றி", "Buyer Guide": "வாங்குபவர் வழிகாட்டி", "Buyer guide": "வாங்குபவர் வழிகாட்டி", "Buyer Markets": "வாங்குபவர் சந்தைகள்", "Buyer markets": "வாங்குபவர் சந்தைகள்", "Explore checked lungi designs from Podaturpet. Choose your reference, quantity and destination to discuss a wholesale order with our team.": "பொதட்டூர்பேட்டையின் கட்டம் போட்ட லுங்கி வடிவங்களைப் பாருங்கள். வடிவ எண், எண்ணிக்கை, விநியோக இடத்தைத் தேர்ந்தெடுத்து எங்கள் குழுவிடம் மொத்த ஆர்டர் பற்றி பேசுங்கள்.", "AI lifestyle illustration. Explore the catalogue for product photographs.": "AI மூலம் உருவாக்கப்பட்ட அணியும் பாணிப் படம். தயாரிப்புப் படங்களைப் பட்டியலில் பாருங்கள்.", "The Podaturpet collection": "பொதட்டூர்பேட்டைத் தொகுப்பு", "Real designs.": "உண்மையான வடிவங்கள்.", "Ready to start a conversation.": "உங்கள் தேவையைப் பேசலாம்.", "Browse original lungi photographs, compare checked patterns and border details, then tell us which design, approximate quantity and destination your business requires.": "லுங்கிப் படங்கள், கட்டங்கள், கரை வடிவங்களை ஒப்பிட்டுப் பாருங்கள். தேவையான வடிவம், எண்ணிக்கை, விநியோக இடத்தை எங்களிடம் தெரிவியுங்கள்.", "Send a wholesale requirement": "மொத்த விற்பனைத் தேவையை அனுப்ப", "Watch the weaving process": "நெசவைக் காண", "Classic White Checks": "வெள்ளை நிறக் கட்டங்கள்", "White & Blue Border": "வெள்ளை மற்றும் நீலக் கரை", "Everyday Colour": "அன்றாட வண்ணங்கள்", "Heritage Checks": "பாரம்பரியக் கட்டங்கள்", "Blue Check Designs": "நீலக் கட்ட வடிவங்கள்", "Understated Checks": "எளிய கட்ட வடிவங்கள்", "White checked": "வெள்ளைக் கட்டங்கள்", "Blue border": "நீலக் கரை", "Colourful checks": "வண்ணக் கட்டங்கள்", "Traditional styles": "பாரம்பரியப் பாணிகள்", "Powerloom sourcing": "விசைத்தறி லுங்கிகள்", "Neutral patterns": "மென்மையான நிற வடிவங்கள்", "View details →": "விவரங்களைப் பார்க்க →", "Ask for a quote": "விலை விவரம் கேட்க", "Colours:": "நிறங்கள்:", "Pattern:": "வடிவம்:", "Price / samples:": "விலை / மாதிரிகள்:", "Fabric / price:": "துணி / விலை:", "Method / price:": "நெசவு முறை / விலை:", "Ask for details": "விவரம் கேளுங்கள்", "Confirm directly": "நேரில் உறுதிப்படுத்துங்கள்", "White, blue and grey": "வெள்ளை, நீலம், சாம்பல்", "White and bright blue": "வெள்ளை, அடர் நீலம்", "Mixed bright shades": "பல வண்ணங்கள்", "Traditional mixed tones": "பாரம்பரிய நிறக் கலவைகள்", "Blue and mixed lines": "நீலம் மற்றும் கலப்பு கோடுகள்", "Grey and neutral shades": "சாம்பல் மற்றும் மென்மையான நிறங்கள்", "Fine woven checks": "மெல்லிய நெசவுக் கட்டங்கள்", "Checks with blue border": "நீலக் கரையுடன் கட்டங்கள்", "Heritage-style checks": "பாரம்பரியக் கட்டங்கள்", "Traditional blue checks": "பாரம்பரிய நீலக் கட்டங்கள்", "Subtle woven checks": "மென்மையான நெசவுக் கட்டங்கள்", "Fine blue and grey checked lines across a clean white background.": "வெள்ளைத் துணியில் மெல்லிய நீல, சாம்பல் நிறக் கட்டக் கோடுகள்.", "A light checked white design distinguished by a vivid blue edge.": "வெள்ளைக் கட்ட வடிவத்தில் அழகான நீலக் கரை.", "Bold checked colour combinations for everyday textile discussions.": "அன்றாடப் பயன்பாட்டுக்கான வண்ணக் கட்ட வடிவங்கள்.", "Traditional pattern references inspired by the region's weaving identity.": "இந்தப் பகுதியின் நெசவு அடையாளத்தை வெளிப்படுத்தும் பாரம்பரிய வடிவங்கள்.", "Distinctive blue checks for buyers exploring powerloom sourcing.": "விசைத்தறி லுங்கிகளைத் தேடுபவர்களுக்கான நீலக் கட்ட வடிவங்கள்.", "A quieter checked palette for buyers comparing traditional styles.": "பாரம்பரியப் பாணிகளை ஒப்பிட மென்மையான நிறக் கட்டங்கள்.", "Make your first enquiry count.": "உங்கள் தேவையைத் தெளிவாகத் தெரிவியுங்கள்.", "Useful details make it easier to discuss the right textile sourcing opportunity.": "சரியான தயாரிப்பைத் தேர்ந்தெடுக்க இந்த விவரங்கள் உதவும்.", "Your preferred photographed design.": "நீங்கள் விரும்பும் படத்தில் உள்ள வடிவம்.", "Approximate quantity and business type.": "தேவையான எண்ணிக்கை மற்றும் வணிக வகை.", "Delivery city, state or country.": "விநியோக நகரம், மாநிலம் அல்லது நாடு.", "Preferred size, colour and packing.": "தேவையான அளவு, நிறம் மற்றும் பேக்கிங்.", "Fabric composition and sample requirements.": "துணியின் வகை மற்றும் மாதிரித் தேவைகள்.", "Questions about supplier credentials and terms.": "விற்பனையாளர் மற்றும் விற்பனை நிபந்தனைகள் பற்றிய கேள்விகள்.", "Photographs show design references. Confirm availability, fabric, dimensions, price and delivery for your order.": "படங்கள் வடிவங்களை அடையாளம் காண உதவும். கையிருப்பு, துணி, அளவு, விலை, விநியோகத்தை உங்கள் ஆர்டருக்காக உறுதிப்படுத்துங்கள்.", "Found a design your customers might love?": "உங்கள் வாடிக்கையாளர்களுக்குப் பிடித்த வடிவம் கிடைத்ததா?", "Share the pattern, quantity and destination. We will help you start a clear sourcing conversation.": "வடிவம், எண்ணிக்கை, விநியோக இடத்தைத் தெரிவியுங்கள். உங்கள் தேவையைப் பேசலாம்.", "Start your wholesale enquiry": "மொத்த விற்பனை விசாரணையைத் தொடங்க", "Tell us what you need": "உங்கள் தேவையைச் சொல்லுங்கள்", "Your next sourcing conversation starts here.": "உங்கள் அடுத்த ஆர்டர் பற்றி இங்கே பேசலாம்.", "Choose a style, add your quantity and destination, and open a ready-to-send WhatsApp enquiry in moments.": "வடிவம், எண்ணிக்கை, விநியோக இடத்தைத் தெரிவித்து உங்கள் விசாரணைச் செய்தியைத் தயாரியுங்கள்.", "Choose a real photographed product style.": "தயாரிப்புப் படத்தில் உள்ள வடிவத்தைத் தேர்ந்தெடுங்கள்.", "Add your business type and buying destination.": "வணிக வகை, விநியோக இடத்தைச் சேருங்கள்.", "Confirm samples, specifications and terms before ordering.": "ஆர்டருக்கு முன் மாதிரி, விவரங்கள், நிபந்தனைகளை உறுதிப்படுத்துங்கள்.", "Business name": "நிறுவனத்தின் பெயர்", "Lungi design": "லுங்கி வடிவம்", "Approximate quantity": "தேவையான எண்ணிக்கை", "Delivery destination": "விநியோக இடம்", "Business type": "வணிக வகை", "Email": "மின்னஞ்சல்", "(optional)": "(விருப்பம்)", "Additional requirements": "கூடுதல் தேவைகள்", "Select a product": "தயாரிப்பைத் தேர்ந்தெடுங்கள்", "Select your business": "வணிக வகையைத் தேர்ந்தெடுங்கள்", "Retailer or shop": "சில்லறைக் கடை", "Wholesaler": "மொத்த விற்பனையாளர்", "Distributor": "விநியோகஸ்தர்", "Textile trader": "ஜவுளி வியாபாரி", "Other buyer": "மற்ற வாங்குபவர்", "Mixed designs or another requirement": "கலப்பு வடிவங்கள் அல்லது மற்ற தேவை", "White checks": "வெள்ளைக் கட்டங்கள்", "Handloom": "கைத்தறி", "Powerloom": "விசைத்தறி", "I agree to share these details using my chosen contact app for this enquiry.": "இந்த விசாரணைக்காக நான் தேர்ந்தெடுத்த செயலி மூலம் இந்த விவரங்களைப் பகிர ஒப்புக்கொள்கிறேன்.", "Continue on WhatsApp": "வாட்ஸ்அப்பில் தொடர", "Continue by email": "மின்னஞ்சலில் தொடர", "Review and send the message in your chosen app. Opening an app does not submit an order.": "நீங்கள் தேர்ந்தெடுத்த செயலியில் செய்தியைப் பார்த்து அனுப்புங்கள். செயலியைத் திறப்பது ஆர்டரைச் சமர்ப்பிக்காது.", "Your shop or company": "உங்கள் கடை அல்லது நிறுவனம்", "For example: 500 pieces": "உதாரணம்: 500 துண்டுகள்", "City, state or country": "நகரம், மாநிலம் அல்லது நாடு", "Preferred colours, dimensions, packing or other questions": "தேவையான நிறம், அளவு, பேக்கிங் அல்லது மற்ற கேள்விகள்", "Prepare your enquiry": "உங்கள் விசாரணையைத் தயாரியுங்கள்", "Country": "நாடு", "City / destination details": "நகரம் / இட விவரங்கள்", "City or another destination": "நகரம் அல்லது மற்ற இடம்", "Design or colour": "வடிவம் அல்லது நிறம்", "Design reference or preferred colours": "வடிவ எண் அல்லது விருப்ப நிறங்கள்", "You choose whether to send the message in WhatsApp.": "வாட்ஸ்அப்பில் செய்தியை அனுப்ப வேண்டுமா என்பதை நீங்கள் முடிவு செய்யலாம்.", "Browse product designs": "தயாரிப்பு வடிவங்களைப் பார்க்க", "Source lungis for your market.": "உங்கள் சந்தைக்கான லுங்கிகளைத் தேர்ந்தெடுங்கள்.", "Choose your destination and tell us about your business. Browse the catalogue once, then send a country-specific enquiry.": "விநியோக இடத்தைத் தேர்ந்தெடுத்து உங்கள் வணிகத்தைப் பற்றிச் சொல்லுங்கள். பட்டியலைப் பார்த்து உங்கள் நாட்டுக்கான விசாரணையை அனுப்புங்கள்.", "Discuss delivery arrangements, documentation and packing for your destination with the team.": "விநியோகம், ஆவணங்கள், பேக்கிங் பற்றி எங்கள் குழுவிடம் பேசுங்கள்.", "One place for wholesale lungi enquiries across India.": "இந்தியா முழுவதும் மொத்த லுங்கி விசாரணைகளுக்கான ஒரே இடம்.", "Sample and bulk order guide": "மாதிரி மற்றும் மொத்த ஆர்டர் வழிகாட்டி", "India buyer enquiries": "இந்திய வாங்குபவர் விசாரணைகள்", "Worldwide buyer enquiries": "வெளிநாட்டு வாங்குபவர் விசாரணைகள்", "Other country": "மற்ற நாடு", "Other destination": "மற்ற இடம்", "Start with our white checked designs.": "வெள்ளைக் கட்ட வடிவங்களிலிருந்து தொடங்குங்கள்.", "Explore classic white checks and blue borders, or open the catalogue for the full collection.": "வெள்ளைக் கட்டங்கள், நீலக் கரை வடிவங்களைப் பாருங்கள். முழுத் தொகுப்புக்குப் பட்டியலைத் திறக்கவும்.", "Browse the complete catalogue →": "முழுப் பட்டியலைப் பார்க்க →", "White essentials": "வெள்ளை நிறத் தேர்வுகள்", "Blue border detail": "நீலக் கரை விவரம்", "Original Designs": "அசல் வடிவங்கள்", "Photographed product references": "படங்களில் உள்ள தயாரிப்பு வடிவங்கள்", "Clear Specifications": "தயாரிப்பு விவரங்கள்", "Confirm fabric, size and packing": "துணி, அளவு, பேக்கிங்கை உறுதிப்படுத்துங்கள்", "Sample Discussion": "மாதிரி பற்றி பேசுங்கள்", "Ask before placing a bulk order": "மொத்த ஆர்டருக்கு முன் கேளுங்கள்", "Direct Contact": "நேரடித் தொடர்பு", "Speak with the sourcing team": "எங்கள் குழுவிடம் பேசுங்கள்", "Privacy & Visitor Tracking Notice:": "தனியுரிமை மற்றும் பார்வையாளர் தகவல்:", "Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.": "பொதுவாகக் காட்டப்படும் புள்ளிவிவரங்களில் மொத்த எண்ணிக்கையும் தோராயமான இடமும் மட்டுமே இருக்கும். பெயர்களும் IP முகவரிகளும் காட்டப்படாது. மேலும் அறிய தனியுரிமைக் கொள்கையைப் பாருங்கள்.", "Read our Privacy Policy": "தனியுரிமைக் கொள்கையைப் படிக்க", "Call +1 479-320-1970": "அழைக்க +1 479-320-1970", "How Checked Lungis Are Made": "கட்டம் போட்ட லுங்கிகள் உருவாகும் முறை", "Wholesale Lungi Sample & Order Guide": "மொத்த லுங்கி மாதிரி மற்றும் ஆர்டர் வழிகாட்டி", "See lungi lifestyle inspiration →": "லுங்கி அணியும் பாணிகளைப் பார்க்க →", "PT-WC-01 · Classic White Checks": "PT-WC-01 · வெள்ளை நிறக் கட்டங்கள்", "Reference PT-WC-01": "வடிவ எண் PT-WC-01", "PT-BB-02 · White & Blue Border": "PT-BB-02 · வெள்ளை மற்றும் நீலக் கரை", "Reference PT-BB-02": "வடிவ எண் PT-BB-02", "PT-CC-03 · Everyday Colour": "PT-CC-03 · அன்றாட வண்ணங்கள்", "Reference PT-CC-03": "வடிவ எண் PT-CC-03", "PT-HC-04 · Heritage Checks": "PT-HC-04 · பாரம்பரியக் கட்டங்கள்", "Reference PT-HC-04": "வடிவ எண் PT-HC-04", "PT-PC-05 · Blue Check Designs": "PT-PC-05 · நீலக் கட்ட வடிவங்கள்", "Reference PT-PC-05": "வடிவ எண் PT-PC-05", "PT-NC-06 · Understated Checks": "PT-NC-06 · எளிய கட்ட வடிவங்கள்", "Reference PT-NC-06": "வடிவ எண் PT-NC-06"});
+  const bar=document.createElement('nav');bar.className='pt-language-options';bar.setAttribute('aria-label','Choose language');
+  const records=[];const attributes=[];
+  // Freeze option values before translating labels, so enquiry values never depend on UI text.
+  document.querySelectorAll('option').forEach(o=>{if(!o.hasAttribute('value'))o.value=o.textContent;});
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  const candidates=[];
+  while(walker.nextNode()){
+    const n=walker.currentNode;
+    if(n.parentElement.closest('script,style,noscript,textarea,svg'))continue;
+    const key=n.textContent.trim();if(dictionary[key])candidates.push([n,key]);
+  }
+  candidates.forEach(([node,key])=>{
+    if(node.parentElement.tagName==='OPTION'){records.push([node,node.textContent,dictionary[key],node.parentElement]);return;}
+    const span=document.createElement('span');node.replaceWith(span);span.append(node);records.push([node,node.textContent,dictionary[key],span]);
   });
-  const buttons = [];
-  const setLanguage = lang => {
-    nodes.forEach(([node, en, ta]) => { node.textContent = lang === 'ta' ? ta : en; node.parentElement.lang = lang; });
-    buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === lang)));
-    try { localStorage.setItem('podaturpet-intro-language', lang); } catch (_) {}
+  document.querySelectorAll('[placeholder],[aria-label]').forEach(el=>['placeholder','aria-label'].forEach(attr=>{const v=el.getAttribute(attr);if(dictionary[v])attributes.push([el,attr,v,dictionary[v]]);}));
+  const buttons=[];
+  const setLanguage=lang=>{
+    document.documentElement.dataset.buyerLanguage=lang;
+    records.forEach(([n,en,ta,el])=>{n.textContent=lang==='ta'?en.replace(en.trim(),ta):en;el.lang=lang;});
+    attributes.forEach(([el,a,en,ta])=>el.setAttribute(a,lang==='ta'?ta:en));
+    buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.language===lang)));
+    try{localStorage.setItem('podaturpet-intro-language',lang);}catch(_){}
+    document.dispatchEvent(new CustomEvent('podaturpet:language',{detail:{language:lang}}));
   };
-  [['en', 'English'], ['ta', 'தமிழ்']].forEach(([lang, label]) => {
-    const button = document.createElement('button');
-    button.type = 'button'; button.textContent = label; button.lang = lang;
-    button.dataset.language = lang; button.addEventListener('click', () => setLanguage(lang));
-    buttons.push(button); bar.append(button);
-  });
-  const more = document.createElement('a');
-  more.textContent = 'More languages / பிற மொழிகள்';
-  more.href = 'https://translate.google.com/translate?sl=auto&tl=en&u=' + encodeURIComponent('https://podaturpet.com' + location.pathname);
-  more.target = '_blank'; more.rel = 'noopener noreferrer';
-  bar.append(more);
-  const note = document.createElement('small');
-  note.textContent = 'English / தமிழ்: introduction, town story & gallery. More languages: translate the website.';
-  bar.append(note);
-  const placement = hero?.querySelector('.hero-inner') || gallery?.querySelector('.ll-wrap') || scopes[0];
-  placement.prepend(bar);
-  let saved = 'en';
-  try { saved = localStorage.getItem('podaturpet-intro-language') || 'en'; } catch (_) {}
-  setLanguage(saved === 'ta' ? 'ta' : 'en');
+  [['en','English'],['ta','தமிழ்']].forEach(([lang,label])=>{const b=document.createElement('button');b.type='button';b.textContent=label;b.lang=lang;b.dataset.language=lang;b.addEventListener('click',()=>setLanguage(lang));buttons.push(b);bar.append(b);});
+  const label=document.createElement('label');label.textContent='Translate / மொழிபெயர்க்க ';const select=document.createElement('select');select.setAttribute('aria-label','Choose another translation language');
+  [['','More languages'],['hi','Hindi'],['te','Telugu'],['ml','Malayalam'],['kn','Kannada'],['ar','Arabic'],['ms','Malay'],['si','Sinhala'],['fr','French'],['de','German'],['es','Spanish'],['fi','Finnish']].forEach(([v,t])=>select.add(new Option(t,v)));
+  label.append(select);bar.append(label);
+  const translate=document.createElement('a');translate.textContent='Open translation';translate.target='_blank';translate.rel='noopener noreferrer';translate.hidden=true;
+  select.addEventListener('change',()=>{translate.hidden=!select.value;translate.href='https://translate.google.com/translate?sl=en&tl='+encodeURIComponent(select.value)+'&u='+encodeURIComponent('https://podaturpet.com'+location.pathname+location.search);});bar.append(translate);
+  const note=document.createElement('small');note.textContent='English / தமிழ்: buying controls and selected content. Other languages open external translation.';bar.append(note);
+  const hero=document.querySelector('.hero-inner');
+  if(hero)hero.prepend(bar);else{const wrap=document.createElement('div');wrap.className='buyer-language-wrap';wrap.append(bar);const main=document.querySelector('main');if(main)main.prepend(wrap);else document.body.prepend(wrap);}
+  let lang=new URLSearchParams(location.search).get('lang');try{lang=lang||localStorage.getItem('podaturpet-intro-language');}catch(_){}setLanguage(lang==='ta'?'ta':'en');
+  document.querySelector('.ptcf-video')?.addEventListener('toggle',e=>{if(!e.currentTarget.open)e.currentTarget.querySelector('video')?.pause();});
 })();

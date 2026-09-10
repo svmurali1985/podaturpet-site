@@ -12,12 +12,21 @@
     return;
   }
 
+  function safeReferrer() {
+    try { return document.referrer ? new URL(document.referrer).origin : ""; }
+    catch (_) { return ""; }
+  }
+  document.addEventListener("podaturpet:enquiry-handoff", function (event) {
+    if (event.detail && event.detail.channel === "email") track("email_click");
+    else if (event.detail && event.detail.channel === "whatsapp") track("whatsapp_click");
+  });
+
   function track(eventName) {
     var payload = JSON.stringify({
       event: eventName,
       page: window.location.origin + window.location.pathname,
       title: document.title,
-      referrer: document.referrer
+      referrer: safeReferrer()
     });
 
     if (navigator.sendBeacon) {
