@@ -33,3 +33,10 @@ Automatic translations may contain errors. No paid API was added.
 CHECKS
 Updated page structure, new asset references, WhatsApp destinations and
 JavaScript syntax checked. No browser visual test was performed.
+
+TOWN STORY UPDATE
+Removed the entire Buyer Confidence section and its transparency note.
+Replaced with a compact textile photo and town introduction in English/Tamil.
+Source for local weaving context: https://townpanchayat.in/podhaturpet
+Existing textile photograph reused; no additional external imagery added.
+Copy received an independent second review.

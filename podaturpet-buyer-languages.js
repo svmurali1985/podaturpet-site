@@ -2,12 +2,21 @@
   'use strict';
   const hero = document.querySelector('.hero');
   const gallery = document.getElementById('lungi-lifestyle-gallery');
-  const scopes = [hero, gallery].filter(Boolean);
+  const story = document.getElementById('podaturpet-colour-story');
+  const scopes = [hero, gallery, story].filter(Boolean);
   if (!scopes.length) return;
   const bar = document.createElement('nav');
   bar.className = 'pt-language-options';
   bar.setAttribute('aria-label', 'Choose introduction and gallery language');
   const dictionary = {
+    "Checks. Colours. Everyday style.": "கட்டங்கள். வண்ணங்கள். அன்றாட அணியும் பாணி.",
+    "Podaturpet · Lungis & local life": "பொதட்டூர்பேட்டை · லுங்கிகளும் ஊர் வாழ்க்கையும்",
+    "Discover the colours of Podaturpet.": "பொதட்டூர்பேட்டையின் வண்ணங்களைக் கண்டறியுங்கள்.",
+    "Get to know a Tamil Nadu town where handloom and powerloom weaving are part of local life. Then explore the checks, stripes and colours in our lungi collection.": "கைத்தறி மற்றும் விசைத்தறி நெசவு ஊர் வாழ்க்கையின் ஒரு பகுதியாக இருக்கும் பொதட்டூர்பேட்டையை அறிந்துகொள்ளுங்கள். எங்கள் லுங்கித் தொகுப்பில் உள்ள கட்டங்கள், கோடுகள் மற்றும் வண்ணங்களைப் பாருங்கள்.",
+    "From subtle everyday patterns to bold colour combinations, find a look to share with your customers—or discover the places and community behind Podaturpet.": "எளிமையான அன்றாட வடிவங்கள் முதல் கவர்ச்சியான வண்ணக் கலவைகள் வரை, உங்கள் வாடிக்கையாளர்களுக்கான பாணியைத் தேர்ந்தெடுங்கள். பொதட்டூர்பேட்டையின் இடங்களையும் சமூக வாழ்க்கையையும் அறிந்துகொள்ளுங்கள்.",
+    "Explore Lungi Designs": "லுங்கி வடிவங்களைப் பார்க்க",
+    "Discover Podaturpet": "பொதட்டூர்பேட்டையை அறிய",
+
     'Discover Podaturpet Lungis.': 'பொதட்டூர்பேட்டை லுங்கிகளை அறிமுகப்படுத்துகிறோம்.',
     'Buy. Sell. Grow Together.': 'வாங்குங்கள். விற்பனை செய்யுங்கள். இணைந்து வளருங்கள்.',
     'Buy lungis wholesale, promote your lungi business, or explore investment and partnership opportunities. Connect with us to discuss your needs.': 'லுங்கிகளை மொத்தமாக வாங்க, உங்கள் லுங்கி வணிகத்தை விளம்பரப்படுத்த, அல்லது முதலீடு மற்றும் கூட்டாண்மை வாய்ப்புகளைப் பற்றி அறிய எங்களைத் தொடர்பு கொள்ளுங்கள்.',
@@ -62,7 +71,7 @@
   more.target = '_blank'; more.rel = 'noopener noreferrer';
   bar.append(more);
   const note = document.createElement('small');
-  note.textContent = 'English / தமிழ்: introduction & gallery. More languages: translate the website.';
+  note.textContent = 'English / தமிழ்: introduction, town story & gallery. More languages: translate the website.';
   bar.append(note);
   const placement = hero?.querySelector('.hero-inner') || gallery?.querySelector('.ll-wrap') || scopes[0];
   placement.prepend(bar);
