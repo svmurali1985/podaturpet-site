@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="/podaturpet-assistant.css">
   <link rel="stylesheet" href="/podaturpet-premium-2026.css?v=20260906">
 <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+<link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
 </head>
 <body class="guide-body">
   <header class="guide-header">
@@ -172,5 +173,6 @@
 (function(){var search=document.getElementById('retail-search'),cards=Array.prototype.slice.call(document.querySelectorAll('.retail-card')),buttons=Array.prototype.slice.call(document.querySelectorAll('.retail-filter')),count=document.getElementById('retail-count'),empty=document.getElementById('retail-empty'),active='all';function refresh(){var query=search.value.toLowerCase().trim(),visible=0;cards.forEach(function(card){var matchesCategory=active==='all'||card.getAttribute('data-category')===active,matchesSearch=!query||card.getAttribute('data-search').indexOf(query)!==-1,show=matchesCategory&&matchesSearch;card.hidden=!show;if(show)visible++;});count.textContent='Showing '+visible+' shop categor'+(visible===1?'y':'ies');empty.classList.toggle('is-visible',visible===0);}buttons.forEach(function(button){button.addEventListener('click',function(){active=button.getAttribute('data-filter');buttons.forEach(function(item){item.classList.toggle('is-active',item===button);});refresh();});});search.addEventListener('input',refresh);})();
 </script>
 <script src="/podaturpet-assistant.js" defer></script>
-<script src="/podaturpet-buyer-languages.js?v=20260910-research" defer></script><script src="/podaturpet-buyer-journey.js?v=20260910" defer></script></body>
+<script src="/podaturpet-buyer-languages.js?v=20260910-research" defer></script><script src="/podaturpet-buyer-journey.js?v=20260910" defer></script><script src="/podaturpet-feedback.js?v=20260910" defer></script>
+</body>
 </html>
