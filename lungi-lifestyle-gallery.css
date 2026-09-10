@@ -1,0 +1,28 @@
+#lungi-lifestyle-gallery{background:#102f36;color:#fff;padding:48px 20px;font-family:system-ui,sans-serif}
+#lungi-lifestyle-gallery *{box-sizing:border-box}
+#lungi-lifestyle-gallery .ll-wrap{max-width:1180px;margin:auto}
+#lungi-lifestyle-gallery .ll-label{color:#f2d294;font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:700}
+#lungi-lifestyle-gallery h2{font-size:clamp(26px,4vw,38px);line-height:1.2;color:#fff;margin:10px 0 14px}
+#lungi-lifestyle-gallery .ll-intro{max-width:760px;color:#d6e5e7;line-height:1.65;margin:0 0 24px}
+#lungi-lifestyle-gallery .ll-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+#lungi-lifestyle-gallery .ll-card{background:#fff;color:#163239;border-radius:14px;overflow:hidden;margin:0}
+#lungi-lifestyle-gallery img{display:block;width:100%;height:auto;aspect-ratio:3/2}
+#lungi-lifestyle-gallery .ll-body{padding:20px}
+#lungi-lifestyle-gallery h3{font-size:21px;line-height:1.3;margin:8px 0 10px;color:#163239}
+#lungi-lifestyle-gallery .ll-note{font-size:12px;font-weight:600;color:#52656a}
+#lungi-lifestyle-gallery .ll-copy{font-size:14px;line-height:1.6;color:#40595f;margin:0 0 18px}
+#lungi-lifestyle-gallery .ll-button{display:block;padding:13px 14px;background:#12564d;border-radius:7px;color:#fff;text-align:center;font-weight:700;font-size:14px;text-decoration:none;line-height:1.5}
+#lungi-lifestyle-gallery a:focus-visible{outline:3px solid #dfad47;outline-offset:4px}
+#lungi-lifestyle-gallery .ll-button:hover{background:#0c4039}
+#lungi-lifestyle-gallery .ll-footer{margin:24px 0 0;font-size:14px;line-height:1.7;color:#d6e5e7}
+#lungi-lifestyle-gallery .ll-footer a{color:#f2d294;text-decoration:underline;font-weight:700}
+@media(max-width:760px){#lungi-lifestyle-gallery .ll-grid{grid-template-columns:1fr}#lungi-lifestyle-gallery{padding:32px 16px}}
+.pt-language-options{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 20px;font-family:system-ui,sans-serif}.pt-language-options button,.pt-language-options a{display:inline-block;background:#fff;color:#133a40;border:1px solid #82989b;border-radius:6px;padding:10px 12px;font-size:14px;line-height:1.4;cursor:pointer;text-decoration:none}.pt-language-options button[aria-pressed=true]{background:#f2d294;color:#17393b;border-color:#f2d294}.pt-language-options small{flex-basis:100%;font-size:12px;line-height:1.6;color:inherit}.pt-language-options :focus-visible{outline:3px solid #deae46;outline-offset:3px}
+
+/* Keep bilingual introduction readable on desktop and phones. */
+body:not(.guide-body) .hero h1{font-size:clamp(2rem,4.1vw,3.5rem);line-height:1.18;overflow-wrap:break-word}
+body:not(.guide-body) .hero h1 strong{font-size:.78em;line-height:1.3;display:block;margin-top:12px}
+body:not(.guide-body) .hero .buttons{display:flex;flex-wrap:wrap;gap:10px}
+body:not(.guide-body) .hero .buttons .btn{white-space:normal;text-align:center;line-height:1.45;max-width:100%;padding:13px 18px}
+body:not(.guide-body) .hero [lang=ta]{line-height:1.65}
+@media(max-width:600px){body:not(.guide-body) .hero .buttons .btn{width:100%}}
