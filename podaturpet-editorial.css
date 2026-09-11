@@ -54,7 +54,7 @@ body.studio-site{--studio-ink:#132b48;--studio-blue:#123f78;--studio-gold:#e5b95
 .studio-site .studio-product-photo img{width:100%;height:auto;aspect-ratio:1.15;object-fit:contain;border-radius:4px;transition:transform .2s ease}
 .studio-site .studio-product-photo:hover img{transform:scale(1.025)}
 .studio-site .studio-product-info{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
-.studio-site .studio-product-info span{font-size:.75rem;letter-spacing:.08em;color:#6a7a8c}
+.studio-site .studio-product-info>div>span{font-size:.75rem;letter-spacing:.08em;color:#6a7a8c}
 .studio-site .studio-product-info h3{font:650 1.1rem/1.5 system-ui,sans-serif;margin:3px 0;color:#1b3552}
 .studio-site .studio-product-enquire{flex-shrink:0;color:#174d8e;text-decoration:underline;font-size:.875rem;text-underline-offset:4px}
 .studio-site .studio-section-end{display:flex;justify-content:center;padding-top:28px}
@@ -70,13 +70,13 @@ body.studio-site{--studio-ink:#132b48;--studio-blue:#123f78;--studio-gold:#e5b95
 .studio-site .studio-destination{position:relative;display:flex;align-items:flex-end;min-height:470px;overflow:hidden;border-radius:8px;background:#123b52;color:#fff;text-decoration:none}
 .studio-site .studio-destination>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .studio-site .studio-destination>div{position:relative;z-index:1;width:100%;padding:100px 32px 28px;background:linear-gradient(transparent,rgba(3,20,35,.94))}
-.studio-site .studio-destination span{font-size:.75rem;letter-spacing:.13em;color:#ffe5a8}
+.studio-site .studio-destination>div>span{font-size:.75rem;letter-spacing:.13em;color:#ffe5a8}
 .studio-site .studio-destination h3{font:500 2.1rem/1.25 Georgia,serif;margin:10px 0;color:#fff}
 .studio-site .studio-destination p{margin:8px 0 0;color:#fff}
 .studio-site .studio-discovery-links{display:grid;align-content:stretch}
 .studio-site .studio-discovery-links a{display:block;padding:23px 12px;border-bottom:1px solid var(--studio-line);color:#203d5d;text-decoration:none}
 .studio-site .studio-discovery-links a:first-child{padding-top:8px}.studio-site .studio-discovery-links a:hover{background:#f3f6fa}
-.studio-site .studio-discovery-links span{font-size:.75rem;letter-spacing:.1em;color:#687c92}
+.studio-site .studio-discovery-links a>span{font-size:.75rem;letter-spacing:.1em;color:#687c92}
 .studio-site .studio-discovery-links h3{font:500 1.65rem/1.3 Georgia,serif;margin:10px 0;color:#143c68}
 .studio-site .studio-discovery-links p{font-size:.95rem;margin:0;color:#546c83}
 .studio-site .studio-modern{padding:60px 0;background:#eef1f8}
@@ -177,7 +177,7 @@ html[data-buyer-language=ta] .studio-site h2{font-size:clamp(1.5rem,2.4vw,2.1rem
 }
 @media(max-width:520px){
  .studio-site .studio-route-strip .studio-wrap{grid-template-columns:1fr}.studio-site .studio-route-strip a{padding:12px 0;border-right:0;border-bottom:1px solid #e0e6ee;font-size:.95rem}
- .studio-site .studio-products{gap:20px 12px}.studio-site .studio-product-photo{padding:6px}.studio-site .studio-product-info h3{font-size:1rem}.studio-site .studio-product-info span{font-size:.75rem}
+ .studio-site .studio-products{gap:20px 12px}.studio-site .studio-product-photo{padding:6px}.studio-site .studio-product-info h3{font-size:1rem}.studio-site .studio-product-info>div>span{font-size:.75rem}
  .studio-site .studio-discovery-links h3{font-size:1.4rem}.studio-site .studio-destination h3{font-size:1.8rem}
  .studio-site .studio-quote .quote-form{padding:18px}.studio-site .studio-actions a{width:100%}
  .studio-site .brand-hero-lead{font-size:1rem}.studio-site .brand-photo-label strong{font-size:1.1rem}
@@ -218,3 +218,36 @@ html[data-buyer-language=ta] .studio-site h2{font-size:clamp(1.5rem,2.4vw,2.1rem
 .studio-home .mobile-contact-dock{display:none}
 .studio-home .studio-fold[hidden],.studio-site .studio-fold[hidden]{display:none!important}
 @media(max-width:760px){.studio-home .contact-wrap{grid-template-columns:1fr;gap:24px}.studio-home .footer-row{display:block}.studio-home .footer-resources{margin-top:18px}.studio-home .quote-form{grid-template-columns:minmax(0,1fr)}.studio-home .quote-field,.studio-home .quote-submit{grid-column:1/-1}.studio-home .mobile-contact-dock{position:fixed;bottom:0;left:0;right:0;display:flex;z-index:50;background:#fff;border-top:1px solid #a9bdd2;padding:8px 12px calc(8px + env(safe-area-inset-bottom));gap:10px}.studio-home .mobile-contact-dock a{flex:1;text-align:center;min-height:44px;padding:10px;background:#143f70;border-radius:5px;color:#fff;font-weight:650;text-decoration:none}.studio-home footer{padding-bottom:88px}}
+
+/* Refine the collection, town links and enquiry sections without changing their flows. */
+.studio-home :is(.studio-product-info h3,.studio-discovery-links h3,.studio-destination h3) span[lang]{font-size:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;letter-spacing:inherit;color:inherit}
+.studio-home #products .studio-product{background:#fff;border:1px solid #d9e3eb;border-radius:12px;overflow:hidden;box-shadow:0 6px 20px #183b5810}
+.studio-home #products .studio-product-photo{border:0;border-bottom:1px solid #e0e7eb;border-radius:0;background:#edf1f3;padding:14px}
+.studio-home #products .studio-product-info{padding:18px;align-items:start}
+.studio-home #products .studio-product-info h3{font-size:1.12rem;line-height:1.5;margin-top:6px}
+.studio-home #products .studio-product-enquire{background:#e8f0f4;padding:8px 10px;border-radius:5px;min-height:40px;text-decoration:none;color:#1c4b68;white-space:nowrap}
+.studio-home #explore-podaturpet{background:#f0f5f3;border:1px solid #dce6e1;border-radius:16px;padding:40px;margin-top:50px;margin-bottom:50px}
+.studio-home .studio-discovery-links{gap:12px}
+.studio-home .studio-discovery-links a{border:1px solid #d9e4df;border-left:3px solid #b79656;border-radius:8px;background:#fff;padding:22px!important}
+.studio-home .studio-discovery-links a:hover{background:#e7f0eb}
+.studio-home .studio-discovery-links h3{font-size:1.5rem;margin:10px 0 12px;color:#173c50}
+.studio-home .studio-destination h3{font-size:2rem;line-height:1.3}
+.studio-home .studio-quote{background:#f3f6f8;border-top:1px solid #dce5eb;border-bottom:1px solid #dce5eb}
+.studio-home .studio-quote .quote-panel{gap:28px;align-items:start}
+.studio-home .studio-quote .quote-copy{background:#153947;padding:32px;border-radius:12px;color:#e0eaf0}
+.studio-home .studio-quote .quote-copy h2{color:#fff;font-size:clamp(1.9rem,3vw,2.7rem);margin:16px 0 24px}
+.studio-home .studio-quote .quote-copy :is(p,li){color:#d6e4e9}
+.studio-home .studio-quote .quote-copy .kicker{color:#edce93;letter-spacing:.06em}
+.studio-home .studio-quote .quote-form{background:#fff;border-color:#cbdbe5;padding:28px;box-shadow:0 8px 26px #173c5810}
+.studio-home :is(.quote-field,.market-select-wrap) select{-webkit-appearance:none;appearance:none;display:block;width:100%;min-height:48px;height:auto;padding:12px 42px 12px 13px!important;border:1px solid #a9bdce!important;border-radius:6px;background-color:#fff!important;color:#173b56!important;font:400 1rem/1.5 system-ui,sans-serif!important;background-image:linear-gradient(45deg,transparent 50%,#355970 50%),linear-gradient(135deg,#355970 50%,transparent 50%);background-position:calc(100% - 20px) center,calc(100% - 14px) center;background-size:6px 6px;background-repeat:no-repeat}
+.studio-home .quote-field>span{display:inline;font-size:inherit;line-height:1.5}
+.studio-home .quote-field :is(input,textarea)::placeholder{color:#607486;opacity:1;font-weight:400}
+.studio-home .studio-market{background:#eaf0f5;border-bottom:1px solid #d6e1ea;padding:48px 0}
+.studio-home .studio-market .market-selector-card{border-top:4px solid #b89b5e;border-radius:10px;padding:28px;box-shadow:0 6px 20px #183b5810}
+.studio-home .studio-market h2{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.25}
+.studio-home .market-choice{margin-top:18px;padding-top:18px;border-top:1px solid #dee7ed}
+@media(max-width:820px){.studio-home #explore-podaturpet{padding:26px 20px;margin-top:30px;margin-bottom:30px}.studio-home .studio-discovery-links h3{font-size:1.35rem}.studio-home .studio-quote .quote-copy{padding:25px}.studio-home #products .studio-product-info{padding:14px;display:block}.studio-home #products .studio-product-enquire{display:inline-block;margin-top:10px}}
+@media(max-width:520px){.studio-home .studio-quote .quote-form{padding:18px}.studio-home .studio-market .market-selector-card{padding:20px}.studio-home #products .studio-product-info h3{font-size:1rem}.studio-home #products .studio-product-photo{padding:8px}.studio-home #explore-podaturpet .studio-section-heading h2{font-size:1.8rem}}
+.studio-home .quote-field{display:block}
+.studio-home .quote-field>:is(input,select,textarea){display:block;margin-top:8px}
+.studio-home .quote-field :is(small,.optional){display:inline;font-size:.875em;line-height:1.5}
