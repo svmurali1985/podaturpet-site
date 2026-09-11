@@ -25,7 +25,7 @@ def product(code,compact):
   rows.append((label,val or 'Ask for confirmation'))
  table='<div class="pt-table-wrap"><table class="pt-specs"><caption>'+esc(v['name'])+'</caption><tbody>'+''.join('<tr><th scope="row">'+esc(a)+'</th><td>'+esc(b)+'</td></tr>' for a,b in rows)+'</tbody></table></div>'
  title='<summary>View specifications</summary>' if compact else '<h2>Product specifications</h2>'
- return title+table+'<p>Photographs identify the design. Confirm the sample and written order details before purchase.</p><a class="pt-button" href="/podaturpet-textile-supplier-enquiry.html?product='+quote(code)+'">Ask about this design</a>'
+ return title+table+'<p>Photographs identify the design. Confirm the sample and written order details before purchase.</p><a class="pt-button" href="/?product='+quote(code)+'#quick-quote">Ask about this design</a>'
 def business_content():
  approved=[b for b in businesses if b.get('approved') is True]
  cards=[]

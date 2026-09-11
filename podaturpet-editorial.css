@@ -251,3 +251,20 @@ html[data-buyer-language=ta] .studio-site h2{font-size:clamp(1.5rem,2.4vw,2.1rem
 .studio-home .quote-field{display:block}
 .studio-home .quote-field>:is(input,select,textarea){display:block;margin-top:8px}
 .studio-home .quote-field :is(small,.optional){display:inline;font-size:.875em;line-height:1.5}
+
+/* Wholesale buyer routes: keep the existing blue editorial theme. */
+.studio-site .pt-wholesale-bridge{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin:32px 0;padding:24px;border:1px solid #cbd9e8;border-left:4px solid #123f78;border-radius:8px;background:#edf2f8;color:#173a61}
+.studio-site .pt-wholesale-bridge>div{flex:1 1 260px;min-width:0}
+.studio-site .pt-wholesale-bridge h2{margin:0 0 12px;font:500 1.8rem/1.2 Georgia,serif;color:#163d65}
+.studio-site .pt-wholesale-bridge p{margin:0;font-size:1rem}
+.studio-site .pt-bridge-actions{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.studio-site .pt-bridge-actions>a:not(.pt-button){text-decoration:underline;text-underline-offset:3px}
+.studio-site .pt-wholesale-faq{margin:36px 0}
+.studio-site .pt-wholesale-faq details{border-bottom:1px solid #cbd9e8;padding:16px 0}
+.studio-site .pt-wholesale-faq summary{cursor:pointer;font-weight:650;font-size:1rem}
+.studio-site .pt-wholesale-faq p{font-size:1rem;max-width:80ch;margin:12px 0}
+.studio-site .pt-order-steps{padding-left:24px;font-size:1rem}
+.studio-site .pt-order-steps li{margin:12px 0}
+.studio-site .pt-wholesale-bridge a:focus-visible,.studio-site .pt-wholesale-faq summary:focus-visible{outline:3px solid #1b67a8;outline-offset:4px}
+.studio-site.studio-catalogue .product-specs,.studio-site.studio-catalogue .design-actions a{font-size:.875rem}
+@media(max-width:520px){.studio-site.studio-catalogue .catalogue{grid-template-columns:1fr}.studio-site .pt-wholesale-bridge{padding:20px}}
