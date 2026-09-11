@@ -1,3 +1,16 @@
+LATEST UPDATE — TEXTILE SHOWCASE HOMEPAGE
+
+Copy ALL files into your existing website folder, replacing matching files.
+This includes the new podaturpet-home-showcase.css and images/podaturpet-emblem.svg.
+
+- Dark textile-colour hero with the existing courtyard lifestyle image.
+- Visible AI illustration label; separate previews of actual products below.
+- Compact English/Tamil controls in the header, with other languages in an expandable menu.
+- Readable woven emblem in the shared navigation across all content pages.
+- Catalogue, town pages, forms and right-side page explorer retained.
+
+The appearance has not been tested in a browser here. Preview before publishing.
+
 PODATURPET — FULL PRESENTATION REDESIGN
 11 September 2026
 

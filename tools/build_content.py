@@ -14,7 +14,7 @@ site=read('site.json');products=read('products.json');businesses=read('businesse
 if not re.fullmatch(r'\d{8,15}',site['whatsapp']):raise ValueError('WhatsApp must contain digits including country code')
 def header(page):
  links=''.join('<a href="'+esc(url)+'"'+(' aria-current="page"' if (url=='/' and page=='index.html') or url=='/'+page else '')+'>'+esc(label)+'</a>' for label,url in site['navigation'])
- return '<div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-logo.svg" alt="" width="44" height="44"><strong>'+esc(site['name'])+'</strong></a><nav class="pt-nav" aria-label="Main navigation">'+links+'</nav></div>'
+ return '<div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>'+esc(site['name'])+'</strong></a><nav class="pt-nav" aria-label="Main navigation">'+links+'</nav></div>'
 def contact():
  return '<div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+'+esc(site['whatsapp'])+'">'+esc(site['phone'])+'</a><a href="https://wa.me/'+esc(site['whatsapp'])+'">WhatsApp</a><a href="mailto:'+esc(site['email'])+'">Email the team</a></div>'
 def product(code,compact):

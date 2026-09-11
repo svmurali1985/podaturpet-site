@@ -23,3 +23,5 @@ Limits:
 - The tracking Worker and database were not included. New reporting fields/events require backend verification before use.
 - External government and travel information retains its supplied source links; this code update does not independently reconfirm each phone number or schedule.
 - Real town photos, interviews, business listings, event dates and commercial product specifications require genuine source material.
+
+Latest showcase update: all local references and script syntax checked after replacing the hero and regenerating shared headers. Lifestyle imagery is labelled AI; real product previews use supplied photographs. The woven SVG emblem reuses the existing logo artwork.

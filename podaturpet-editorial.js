@@ -1,5 +1,22 @@
 (() => {
   'use strict';
+  if (document.body.classList.contains('studio-home')) {
+    const bar = document.querySelector('.pt-language-options');
+    const header = document.querySelector('.pt-site-header');
+    if (bar && header) {
+      const strip = document.createElement('div');strip.className='showcase-language-strip';
+      const label = document.createElement('span');label.className='showcase-header-note';label.textContent='Lungi wholesale · Town & culture';strip.append(label);
+      const more = document.createElement('details');more.className='showcase-more-languages';
+      const summary = document.createElement('summary');summary.textContent='More languages';more.append(summary);
+      const panel = document.createElement('div');panel.className='showcase-language-panel';
+      [...bar.children].forEach(child => {if(child.tagName !== 'BUTTON') panel.append(child);});
+      more.append(panel);bar.append(more);strip.append(bar);header.append(strip);
+      const emptyWrap = document.querySelector('.buyer-language-wrap');if(emptyWrap && !emptyWrap.textContent.trim()) emptyWrap.remove();
+      more.addEventListener('keydown',event=>{if(event.key==='Escape'){more.open=false;summary.focus();}});
+      document.addEventListener('pointerdown',event=>{if(!more.contains(event.target))more.open=false;});
+    }
+  }
+
   // Keep deep links into collapsed reference sections accessible.
   function revealHash() {
     let id;
