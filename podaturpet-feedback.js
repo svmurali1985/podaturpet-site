@@ -44,7 +44,7 @@
     // Only the public page path is shared; query parameters and fragments are omitted.
     const page='https://podaturpet.com'+location.pathname;
     const text='Podaturpet website feedback\nType: '+words.en[type]+'\nPage: '+page+'\n\n'+message;
-    seen();window.location.assign('https://wa.me/14793201970?text='+encodeURIComponent(text));
+    seen();document.dispatchEvent(new CustomEvent('podaturpet:feedback-handoff'));window.location.assign('https://wa.me/14793201970?text='+encodeURIComponent(text));
   });
   translate(language);
   try{autoShown=sessionStorage.getItem('pt-feedback-seen')==='1';}catch(_){}

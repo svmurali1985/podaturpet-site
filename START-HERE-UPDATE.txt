@@ -1,0 +1,43 @@
+PODATURPET WEBSITE UPDATE — 11 SEPTEMBER 2026
+
+This is the complete updated website. It has not been published to podaturpet.com.
+No paid services, new accounts or website framework are required.
+
+INSTALL
+1. Extract this ZIP.
+2. Open its website folder. This folder contains index.html, images and the other pages.
+3. Copy the CONTENTS of website into your existing website project folder, replacing the matching files. Do not put another website folder inside your existing website folder.
+4. Preview from the project folder with:
+   python3 -m http.server 8000
+   Open http://localhost:8000 in your browser. Opening index.html directly will not resolve root-relative links correctly.
+5. In your normal GitHub project, review the changes and use your usual git add, commit and push workflow when you are ready to publish. CNAME and the existing page URLs are preserved.
+6. After publishing, reload the page to fetch the updated styles and scripts.
+
+WHAT CHANGED
+- Consistent Home / Lungi Catalogue / Explore Podaturpet / Local Directory / Contact navigation on all 26 content pages. The 14 redirect pages retain their existing redirects.
+- The homepage leads with an original collection photo and separate wholesale and town entry points. Town discovery appears earlier. AI styling images remain clearly identified in the lifestyle gallery.
+- Advertising and partnership enquiries are available farther down the homepage.
+- Shared navigation and a shared wholesale-contact footer render into static HTML and work without JavaScript.
+- Six catalogue designs have expandable specification tables. The two dedicated product pages have matching tables. Unconfirmed fabric, sizes, MOQ, packing, samples and dispatch details are not invented.
+- Town guide: compact discovery links and a contribution form for photos, stories, businesses, events and corrections.
+- Stories page: existing weaving video, link to the yarn-to-lungi guide, and ways to contribute a day-in-town photo story, a weaver interview, or then-and-now photographs.
+- Business directory: retains 24 searchable categories and supports reviewed individual records with public contact, map, hours and verification date.
+- Event calendar: supports reviewed dated records. Past events are excluded when rebuilding, and expiry is checked when a page opens.
+- Search/filter status, keyboard focus styling, responsive shared navigation, image dimensions and deferred video loading improved.
+- Existing bilingual controls and feedback retained; translations added for new navigation, product controls and contribution form labels. Selected content is bilingual; this is not a claim that every new paragraph is translated.
+- Sitemap modification dates updated. The archived version-one homepage is marked noindex to reduce duplicate indexing.
+
+WHAT STILL NEEDS YOUR REAL INFORMATION
+- Original Podaturpet street / market / food / festival photos, including dates and publishing permission.
+- Three first-hand weaver interviews with permission and correct names or approved anonymity.
+- Ten real business records: name, category, address, public phone, hours, map, source and verification date.
+- Confirmed current events with organiser, date/time, source and publication permission.
+- Confirmed product composition, sizes, minimum order, packing, sample terms and dispatch estimates.
+
+No fictitious shops, dates, interviews, reviews or product claims have been added.
+A contribution opens WhatsApp for the visitor to review and send. It does not automatically publish anything.
+
+MAINTENANCE
+See CONTENT-MAINTENANCE.md for the editable records and update command.
+See ANALYTICS-NOTES.md for group sharing links and reporting limits.
+See VALIDATION.md for checks performed and remaining limits.

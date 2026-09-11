@@ -1,0 +1,74 @@
+{
+  "PT-WC-01": {
+    "name": "Classic White Checks",
+    "colours": "White, blue and grey",
+    "pattern": "Fine woven checks",
+    "fabric": null,
+    "dimensions": null,
+    "minimum_order": null,
+    "packing": null,
+    "samples": null,
+    "lead_time": null,
+    "verified_on": null
+  },
+  "PT-BB-02": {
+    "name": "White & Blue Border",
+    "colours": "White and bright blue",
+    "pattern": "Checks with a blue border",
+    "fabric": null,
+    "dimensions": null,
+    "minimum_order": null,
+    "packing": null,
+    "samples": null,
+    "lead_time": null,
+    "verified_on": null
+  },
+  "PT-CC-03": {
+    "name": "Everyday Colour",
+    "colours": "Mixed bright shades",
+    "pattern": "Colourful checks",
+    "fabric": null,
+    "dimensions": null,
+    "minimum_order": null,
+    "packing": null,
+    "samples": null,
+    "lead_time": null,
+    "verified_on": null
+  },
+  "PT-HC-04": {
+    "name": "Heritage Checks",
+    "colours": "Traditional mixed tones",
+    "pattern": "Heritage-style checks",
+    "fabric": null,
+    "dimensions": null,
+    "minimum_order": null,
+    "packing": null,
+    "samples": null,
+    "lead_time": null,
+    "verified_on": null
+  },
+  "PT-PC-05": {
+    "name": "Blue Check Designs",
+    "colours": "Blue and mixed lines",
+    "pattern": "Traditional blue checks",
+    "fabric": null,
+    "dimensions": null,
+    "minimum_order": null,
+    "packing": null,
+    "samples": null,
+    "lead_time": null,
+    "verified_on": null
+  },
+  "PT-NC-06": {
+    "name": "Understated Checks",
+    "colours": "Grey and neutral shades",
+    "pattern": "Subtle woven checks",
+    "fabric": null,
+    "dimensions": null,
+    "minimum_order": null,
+    "packing": null,
+    "samples": null,
+    "lead_time": null,
+    "verified_on": null
+  }
+}

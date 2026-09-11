@@ -1,0 +1,13 @@
+{
+  "name": "PODATURPET",
+  "phone": "+1 479-320-1970",
+  "whatsapp": "14793201970",
+  "email": "svmuralicenterton@gmail.com",
+  "navigation": [
+    ["Home", "/"],
+    ["Lungi Catalogue", "/lungi-product-catalogue.html"],
+    ["Explore Podaturpet", "/podaturpet-town-guide.html"],
+    ["Local Directory", "/podaturpet-local-business-directory.html"],
+    ["Contact", "/#contact"]
+  ]
+}

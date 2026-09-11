@@ -22,11 +22,20 @@
   });
 
   function track(eventName) {
+    var path = window.location.pathname;
+    var journey = /town|stories|tourist|local-business|government|useful-information|travel-pin/.test(path) ? "town" : path === "/" || path === "/index.html" ? "home" : "wholesale";
+    var params = new URLSearchParams(window.location.search);
+    // Only known campaign tags are recorded; arbitrary query strings and form data are excluded.
+    var allowed = {utm_source:["whatsapp","facebook","instagram","email"],utm_medium:["social","group","email"],utm_campaign:["wholesale-buyers","town-community","local-businesses"]};
+    var campaign = {};
+    Object.keys(allowed).forEach(function(key){var value=params.get(key);if(allowed[key].indexOf(value)!==-1)campaign[key]=value;});
     var payload = JSON.stringify({
       event: eventName,
       page: window.location.origin + window.location.pathname,
       title: document.title,
-      referrer: safeReferrer()
+      referrer: safeReferrer(),
+      journey: journey,
+      campaign: campaign
     });
 
     if (navigator.sendBeacon) {
@@ -73,6 +82,8 @@
   }
 
   track("page_view");
+  document.addEventListener("podaturpet:feedback-handoff", function () { track("feedback_handoff"); });
+  document.addEventListener("podaturpet:community-handoff", function () { track("community_handoff"); });
 
   document.addEventListener("click", function (event) {
     var link = event.target.closest("a[href], button");
@@ -83,6 +94,10 @@
 
     var href = (link.getAttribute("href") || "").toLowerCase();
     var context = linkContext(link);
+    if (link.dataset.track === "directions_click") context = "directions_click";
+    else if (/podaturpet-stories-and-culture/.test(href)) context = "story_click";
+    else if (/podaturpet-town-guide/.test(href) && !/contribute=/.test(href)) context = "town_guide_click";
+    else if (/contribute=business/.test(href)) context = "listing_request_click";
     var contactEvent = "";
 
     if (/wa\.me|whatsapp/.test(href)) {
