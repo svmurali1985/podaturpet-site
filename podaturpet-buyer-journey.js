@@ -11,7 +11,14 @@
     if (selected) quote.elements.product.value=selected;
     if (market) quote.elements.destination.value=market;
     const sync=()=>document.querySelectorAll('[data-product-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.productChoice===quote.elements.product.value)));
-    quote.elements.product.addEventListener('change',sync);sync();
+    quote.elements.product.addEventListener('change',sync);
+    document.querySelectorAll('[data-product-choice]').forEach(button => button.addEventListener('click', () => {
+      const value = button.dataset.productChoice;
+      if ([...quote.elements.product.options].some(option => option.value === value)) {
+        quote.elements.product.value = value;sync();
+      }
+    }));
+    sync();
   }
   if (marketForm) {
     if (market) {

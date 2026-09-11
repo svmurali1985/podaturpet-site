@@ -1,17 +1,25 @@
-# Validation — 11 September 2026
+# Validation — full presentation redesign
+
+11 September 2026
 
 Passed:
 
-- All 40 top-level HTML pages checked for local navigation, fragments, scripts, image sources, responsive image variants and video posters; none missing.
-- All 26 content pages have one H1 and one shared primary navigation, with no duplicate IDs. Fourteen existing redirect pages preserved.
-- All 12 root JavaScript files and executable inline scripts pass Node syntax checks. JSON-LD blocks parse successfully.
-- Content generation tested in a temporary copy: unapproved businesses and expired events excluded; HTML escaped; incomplete approved records rejected; repeat generation leaves output unchanged. Test records are not in the deliverable.
-- Isolated JavaScript checks cover event-specific form requirements, whitespace rejection, encoded WhatsApp handoffs and expired-event hiding. No messages were sent.
-- Isolated tracker checks cover approved campaign tags, query/form-data exclusion, distinct community handoffs, and privacy opt-out behaviour. No live analytics requests were made.
+- All 40 top-level HTML pages checked for local links, anchors, script sources, image sources, responsive variants and video posters; no missing references.
+- All 26 content pages have one H1 and one shared primary navigation; no duplicate IDs. Fourteen existing redirects preserved.
+- All 14 root JavaScript files and executable inline scripts pass Node syntax checks. JSON-LD parses.
+- Existing main-content paragraphs on the town guide, stories, tourist places, useful information and government offices pages are preserved.
+- Product-selection shortcuts update the product value and pressed state.
+- Deep links open the correct expandable reference section. Town search opens matching sections, hides nonmatches and restores the previous state when cleared.
+- Content publishing checks still pass: unapproved businesses and expired events excluded; text escaped; incomplete approved records rejected; repeat generation does not change the HTML. Test records were used only in a temporary copy.
+- Earlier isolated checks cover event-specific form requirements, whitespace rejection, encoded WhatsApp handoffs and expired-event hiding. No actual messages were sent.
+- Earlier isolated tracker checks cover approved campaign tags, query/form-data exclusion and privacy opt-out. No live analytics requests were made.
+
+The homepage HTML is 37,083 bytes before final documentation updates, compared with 83,537 bytes before this redesign. Its large inline stylesheet and three legacy presentation stylesheet imports were removed. This is a source-size improvement, not a measured loading-speed score.
 
 Limits:
 
-- No live deployment, authenticated analytics access, backend integration test, Lighthouse measurement or browser visual/device test was performed.
-- Responsive CSS is included, but final appearance and native app opening should be checked on your phone and desktop after local preview or publication.
-- External map, government and contact links retain the supplied sources; current business hours and events were not independently collected for this code update.
-- New town photos, interviews, verified businesses, event dates and product specifications remain dependent on real material from you or contributors.
+- No browser/device visual test, live deployment, Lighthouse measurement, authenticated analytics access or backend integration test was performed.
+- The design includes responsive rules, but the final appearance and native app opening should be checked on a phone and desktop after preview/publication.
+- The tracking Worker and database were not included. New reporting fields/events require backend verification before use.
+- External government and travel information retains its supplied source links; this code update does not independently reconfirm each phone number or schedule.
+- Real town photos, interviews, business listings, event dates and commercial product specifications require genuine source material.
