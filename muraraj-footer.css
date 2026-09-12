@@ -38,3 +38,38 @@
   .mr-footer-credit { padding-inline: 16px; gap: 10px; }
   .mr-footer-credit strong { display: block; }
 }
+
+/* Compact developer credit directly below the main header. */
+.mr-top-credit {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+  padding: 10px 16px;
+  background: #f5f7fa;
+  border-bottom: 1px solid #dce3eb;
+  color: #213b55;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.mr-top-credit img {
+  display: block;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 7px;
+  box-shadow: none;
+}
+.mr-top-credit strong { color: inherit; font-size: inherit; font-weight: 700; }
+@media (max-width: 420px) {
+  .mr-top-credit strong { display: block; }
+}
