@@ -6,7 +6,7 @@ html{scroll-padding-top:150px}body{font-size:16px}
 .pt-site-header .pt-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:5px;padding:0;background:transparent}
 .pt-nav a{font:600 .95rem/1.5 system-ui,sans-serif!important;padding:10px 12px;color:#eef8f4!important;border-radius:6px;text-decoration:none;white-space:normal}
 .pt-nav a:hover,.pt-nav a[aria-current=page]{background:#225548;color:#ffe4a0!important}
-.pt-skip{position:fixed;top:8px;left:8px;transform:translateY(-160%);z-index:10000;background:#fff;color:#082c26;padding:12px}.pt-skip:focus{transform:none}
+.pt-skip,.skip-to-content{position:fixed;top:8px;left:8px;transform:translateY(-160%);z-index:10000;background:#fff;color:#082c26;padding:12px}.pt-skip:focus,.skip-to-content:focus{transform:none}
 :focus-visible{outline:3px solid #b36a12;outline-offset:4px}
 .pt-shared-contact{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;padding:20px;margin:20px auto;max-width:1160px;background:#082c26;color:#fff;border-radius:10px;font:400 1rem/1.6 system-ui,sans-serif}.pt-shared-contact a{color:#ffe4a0!important;text-decoration:underline;overflow-wrap:anywhere}
 .pt-feature{max-width:1160px;margin:32px auto;padding:clamp(22px,4vw,44px);background:#edf5f1;border:1px solid #c7dbd1;border-radius:18px;color:#173d31;font:400 1rem/1.7 system-ui,sans-serif}
