@@ -1,0 +1,40 @@
+/* Original MuraRaj footer credit; styles apply only to this component. */
+.mr-footer-credit {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 1120px;
+  margin: 20px auto 0;
+  padding: 18px 20px 0;
+  border-top: 1px solid currentColor;
+  color: inherit;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: left;
+}
+.mr-footer-credit .mr-footer-logo {
+  display: block;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: none;
+}
+.mr-footer-credit strong {
+  display: inline;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 700;
+}
+@media (max-width: 420px) {
+  .mr-footer-credit { padding-inline: 16px; gap: 10px; }
+  .mr-footer-credit strong { display: block; }
+}

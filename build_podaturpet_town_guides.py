@@ -56,6 +56,7 @@ def page(key: str, title: str, description: str, heading: str, lead: str, conten
   <meta property="og:url" content="https://podaturpet.com/{escape(filename)}">
   <link rel="icon" href="/images/podaturpet-logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/podaturpet-town-guide.css">
+<link rel="stylesheet" href="/muraraj-footer.css">
 </head>
 <body class="guide-body">
   <header class="guide-header">
@@ -67,7 +68,8 @@ def page(key: str, title: str, description: str, heading: str, lead: str, conten
   </header>
   <section class="guide-hero"><div class="guide-shell"><div class="guide-kicker">Podaturpet · Tiruvallur · Tamil Nadu</div><h1>{escape(heading)}</h1><p class="guide-lead">{escape(lead)}</p></div></section>
   <main class="guide-main"><div class="guide-shell">{content}</div></main>
-  <footer class="guide-footer"><div class="guide-shell guide-footer-inner"><div>© Podaturpet.com · Independent town information</div><div><a href="/#advertise">Advertising enquiries</a> · <a href="/">Return home</a></div></div></footer>
+  <footer class="guide-footer"><div class="guide-shell guide-footer-inner"><div>© Podaturpet.com · Independent town information</div><div><a href="/#advertise">Advertising enquiries</a> · <a href="/">Return home</a></div></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
+</footer>
 </body>
 </html>
 '''
@@ -152,7 +154,9 @@ index = index_path.read_text(encoding="utf-8")
 
 stylesheet = '  <link rel="stylesheet" href="/podaturpet-town-guide.css">\n'
 if stylesheet not in index:
-    index = index.replace("</head>", stylesheet + "</head>", 1)
+    index = index.replace("<link rel="stylesheet" href="/muraraj-footer.css">
+</head>", stylesheet + "<link rel="stylesheet" href="/muraraj-footer.css">
+</head>", 1)
 
 index = index.replace('<a href="#weaving">Our Weaving</a>', '<a href="#town-guide">Town Guide</a>', 1)
 old_mobile = '<a href="#international-buyers">Worldwide</a></nav>'
