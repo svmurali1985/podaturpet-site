@@ -4,10 +4,33 @@
   "whatsapp": "14793201970",
   "email": "svmuralicenterton@gmail.com",
   "navigation": [
-    ["Home", "/"],
-    ["Lungi Catalogue", "/lungi-product-catalogue.html"],
-    ["Explore Podaturpet", "/podaturpet-town-guide.html"],
-    ["Local Directory", "/podaturpet-local-business-directory.html"],
-    ["Contact", "/#contact"]
+    [
+      "Home",
+      "/"
+    ],
+    [
+      "Lungi Catalogue",
+      "/lungi-product-catalogue.html"
+    ],
+    [
+      "Explore Podaturpet",
+      "/podaturpet-town-guide.html"
+    ],
+    [
+      "Local Directory",
+      "/podaturpet-local-business-directory.html"
+    ],
+    [
+      "Advertise",
+      "/advertise-on-podaturpet.html"
+    ],
+    [
+      "Need a website?",
+      "/business-website-development.html"
+    ],
+    [
+      "Contact",
+      "/#contact"
+    ]
   ]
 }
