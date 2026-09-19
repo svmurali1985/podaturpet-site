@@ -1,0 +1,24 @@
+'use strict';
+const assert=require('node:assert/strict'),C=require('../core.js'),D=require('../content.js');let count=0;function test(name,fn){fn();console.log('PASS',name);count++;}
+test('leap dates and invalid dates',()=>{assert.notEqual(C.day('2028-02-29'),null);assert.equal(C.day('2027-02-29'),null);assert.equal(C.day('2026-13-01'),null);assert.equal(C.day(''),null);});
+test('calendar arithmetic crosses year and DST boundaries',()=>{assert.equal(C.addDays('2027-01-01',-3),'2026-12-29');assert.equal(C.daysUntil('2026-03-09','2026-03-07'),2);assert.equal(C.addMonths('2026-08-31',6),'2027-02-28');});
+test('all time buckets use departure, arrival is separate',()=>{const t={departure:'2026-10-31',arrival:'2026-11-02'};for(const n of [30,14,7,3,0])assert.equal(C.taskStatus({stage:n},t,'2026-10-01').due,C.addDays(t.departure,-n));assert.equal(C.taskStatus({stage:-1},t).due,t.arrival);});
+test('due and overdue boundaries and missing dates',()=>{let t={departure:'2026-10-31'};assert.equal(C.taskStatus({stage:30},t,'2026-10-01').status,'today');assert.equal(C.taskStatus({stage:30},t,'2026-10-02').status,'overdue');assert.equal(C.taskStatus({stage:14},t,'2026-10-01').status,'upcoming');assert.equal(C.taskStatus({stage:-1},t).status,'undated');});
+test('invalid itinerary order',()=>{assert.deepEqual(C.tripErrors({departure:'2026-10-02',arrival:'2026-10-01',returnDate:'2026-09-30'}),['arrivalOrder','returnOrder']);});
+test('route and parent filtering',()=>{const base={direction:'us-in',parents:false};assert(!C.visibleTasks(D.tasks,base).some(t=>t.id==='us-i94'||t.parents));assert(C.visibleTasks(D.tasks,{direction:'in-us',parents:true}).some(t=>t.id==='us-i94'));assert(C.visibleTasks(D.tasks,{direction:'in-us',parents:true}).some(t=>t.parents));});
+const trip={direction:'in-us',departure:'2026-10-01',arrival:'2026-10-02',returnDate:'2026-12-01'};const p={passport:'2030-01-01',visaMode:'none',visa:'',admitUntil:''};const codes=(p,t=trip)=>C.documentAlerts(p,t,'2026-09-20').map(x=>x.code);
+test('expired passport',()=>assert(codes({...p,passport:'2026-09-19'}).includes('passportExpired')));
+test('passport expires on arrival',()=>assert(codes({...p,passport:'2026-10-02'}).includes('passportBeforeArrival')));
+test('passport expires before return',()=>assert(codes({...p,passport:'2026-11-01'}).includes('passportBeforeReturn')));
+test('six-month reminder, not eligibility',()=>assert(codes({...p,passport:'2027-03-01'}).includes('passportBuffer')));
+test('passport expires soon without itinerary',()=>assert(codes({...p,passport:'2026-10-01'},{}).includes('passportSoon')));
+test('visa before arrival',()=>assert(codes({...p,visaMode:'required',visa:'2026-10-01'}).includes('visaBeforeArrival')));
+test('visa before return is not a stay violation',()=>{const a=codes({...p,visaMode:'required',visa:'2026-11-01'});assert(!a.includes('visaBeforeArrival'));assert(!a.includes('stayBeforeReturn'));});
+test('I-94 shorter than visit',()=>assert(codes({...p,admitUntil:'2026-11-01'}).includes('stayBeforeReturn')));
+test('date and status requirements',()=>{assert(codes({...p,passport:'',visaMode:'required'}).includes('visaMissing'));assert(codes({...p,visaMode:'check'}).includes('visaUnknown'));});
+test('backup round-trip',()=>{const s=C.defaults(D.packing);s.trip=trip;s.trip.label='Family';s.trip.from='USA';s.trip.to='India';s.trip.parents=true;assert.deepEqual(C.clean(JSON.parse(JSON.stringify(s))),s);});
+test('backup rejects malformed schema, version and huge arrays',()=>{assert.throws(()=>C.clean({}));let s=C.defaults(D.packing);s.version=2;assert.throws(()=>C.clean(s));s=C.defaults();s.gifts=new Array(81).fill({});assert.throws(()=>C.clean(s));});
+test('backup rejects duplicate ids and invalid dates',()=>{let s=C.defaults();s.travelers=[{id:'a',name:'Mom',...p},{id:'a',name:'Dad',...p}];assert.throws(()=>C.clean(s));s=C.defaults();s.trip.departure='2026-02-30';assert.throws(()=>C.clean(s));});
+test('backup strips extra metadata and accepts text without execution',()=>{let s=C.defaults();s.passportNumber='DO NOT STORE';s.card.name='<img src=x onerror=alert(1)>';const c=C.clean(s);assert.equal(c.passportNumber,undefined);assert.equal(c.card.name,s.card.name);});
+test('all prompts translated and source references valid',()=>{for(const t of D.tasks){assert(t.en&&t.ta);assert([30,14,7,3,0,-1].includes(t.stage));if(t.source)assert(D.sources.some(s=>s.id===t.source));}for(const s of D.sources)assert(s.url.startsWith('https://'));});
+console.log(`${count} core tests passed.`);

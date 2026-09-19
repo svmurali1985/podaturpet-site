@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "description": "Development tests only; no runtime dependencies",
+  "scripts": {
+    "test": "node core.test.cjs && node dom.test.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}
