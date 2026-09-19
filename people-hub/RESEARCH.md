@@ -1,21 +1,67 @@
-# Research and prioritization — 20 September 2026
+# Tamil Life Assistant: research and launch priorities
 
-This is a usefulness-led information directory, not a converter or calculator. No paid keyword API, scraping pipeline, copied database or Google Images was used. Research used public search and manual reading of official pages. No numerical search-volume data or Search Console export was supplied. The priorities below are reasoned inferences, not a “most searched” ranking or a traffic promise.
+Research review: 19 September 2026. This is a qualitative product investigation, not a search-volume study. No paid keyword tool, search-volume figure, traffic forecast or claim of proven market demand is used. The source snapshot is not a promise that a portal or rule will remain unchanged.
 
-## Evidence and decisions
-1. **Government services first:** India's national portal currently highlights Aadhaar, DigiLocker, passport and driving-licence searches, and organizes citizen services by life task. This supports starting with document access, certificates, schemes and public-service gateways. This is portal demand signaling, not independently measured Google volume. Source: https://www.india.gov.in/
-2. **Travel planning and official booking routes:** Google/Kantar's November 2025 India travel research describes Google and YouTube as major travel-planning touchpoints. We prioritize preparation and official temple booking routes; we do not infer exact temple keyword volume from that study. Source: https://business.google.com/en-all/think/consumer-insights/travel-trends-marketing-india/
-3. **Education and jobs:** NCS, TNPSC, NTA and the National Scholarship Portal expose recurring search/apply/notice workflows. We prioritize finding the original notice and avoiding old forwarded messages. These portals establish usefulness and authority, not comparative search volumes. Sources: https://www.ncs.gov.in/ ; https://www.tnpsc.gov.in/ ; https://www.nta.ac.in/ ; https://scholarships.gov.in/
-4. **Global access:** USA.gov, GOV.UK, Canada.ca, Australian myGov, Singapore gov.sg and the EU portal support a global starting collection. An explicit region selector avoids assuming that Tamil users live in India. The collection is selected coverage, not every country/service.
-5. **Today and important dates:** Country calendars and weather notices are frequent repeat decisions, but live claims require live data. This release shows a device-derived date and directs users to current official calendars/weather pages. It never fabricates today's closures or local weather.
-6. **Plain-language explanations:** Five original explanations address practical confusion: phishing, visa expiry versus stay, eligibility versus approval, corrigendum, and observed holidays. Source-linked descriptions are short, contextual and bilingual.
-7. **Local verification:** Tiruvallur's official Local Bodies page lists Pothatturpettai as a town panchayat. That specific spelling is surfaced to help users find the right office. No local phone, festival, transport timetable, population or distance is guessed. Source: https://tiruvallur.nic.in/administrative-setup/local-bodies/
+## What the evidence supports
 
-## Google Trends limitation
-Google Trends/Year in Search was consulted for broad context, but retrieved pages did not provide a reproducible current keyword-volume comparison for these tasks. Trending searches are not the same as highest absolute volume. No unsupported ranking is displayed. https://trends.google.com/trends/ and https://trends.withgoogle.com/
+1. **Navigation is a real problem worth testing.** India Portal surfaces Aadhaar, DigiLocker and passport services in its own trending-search interface. This supports topic selection, but does not establish a number of searches or a Tamil-specific ranking. UIDAI exposes separate update, status and help pathways. The product therefore explains a next step and returns the user to the official service rather than collecting an ID or recreating an application.
+2. **Jobs deserve fraud-aware routing, not copied vacancies.** NCS publishes fraud warnings and official international-job pathways. NTA publishes changing examination notices. The implementation routes users to current official notices; it does not promise jobs, aggregate vacancies, charge for government access or scrape adverts.
+3. **Education involves both procedure and a family budget.** NSP has applicant/institution stages, authentication guidance and changing announcements. The new calculator uses a household's own confirmed figures. Unapproved scholarships never automatically reduce the funding gap. No loan recommendation is made.
+4. **Diaspora needs are jurisdiction-specific.** The Tamil Nadu Non-Resident Tamils portal describes welfare and support routes; it already has Tamil support. MEA/MADAD serve Indian consular needs, not every Tamil speaker's nationality. The guide names this limitation and directs urgent danger to the user's local emergency services without hardcoding worldwide numbers.
+5. **Remittance comparisons need total cost, not a headline rate.** World Bank Remittance Prices Worldwide provides comparison context. CFPB describes fees, exchange rates and the recipient amount in its US consumer guidance. The tool performs original arithmetic from two user-supplied quotes, with no provider ranking, live rate, guaranteed entitlement or imported dataset.
+6. **Local discovery needs verified supply before promotion.** The current ZIP contains 24 service categories and an empty approved business dataset. Tiruvallur's official local-body page identifies Pothatturpettai. That does not verify any shop, its hours or its services. We retain honest empty listings and improve the existing directory instead of inventing providers.
 
-## Deliberately excluded
-Copied government form instructions, scraped job listings, hardcoded admission/deadline dates, inferred visa eligibility, live ticket availability, real-time local alerts, unofficial agents, affiliate links, paid APIs and user document collection. Existing invoice and travel tools remain available as separate tools.
+## Tamil language opportunity: hypothesis, not an absence claim
 
-## Success evaluation after launch
-Assess aggregate hub-page usage using your hosting-level reports, along with voluntary user feedback, without recording search terms or personal data. Do not interpret bot requests as real people or enquiries. Add new guides after repeated demonstrated needs and source verification. No first-page ranking or enquiry guarantee is made.
+NSP offers Tamil language support; NRT and Tiruvallur have Tamil routes. We must not claim official Tamil services do not exist. The proposed gap is cross-service plain-language navigation, family-oriented calculation and consistent mobile interaction. Ratings below are editorial judgments. Validate with Tamil-speaking parents, students, workers and overseas families before treating them as demonstrated demand. This build's Tamil copy is original and reviewed for interface consistency; independent native-speaker usability review remains advisable.
+
+## Opportunity model
+
+Score = sum(weight × rating / 5) − risk penalty. Ratings: 1 low, 5 high. Weights: recurrence 25%, problem severity 25%, Tamil guidance gap 15%, ethical commercial intent 15%, primary-source quality 10%, practical delivery 10%. Risk deduction: 0–15 for harm, volatile rules, uncertain supply or jurisdiction. Commercial intent never overrides privacy or safety. A high score is not permission to automate a high-stakes decision.
+
+| Opportunity | R / Pain / Tamil / Intent / Source / Delivery | Risk | Score / 100 | Decision |
+|---|---|---:|---:|---|
+| Government document navigation | 5 / 5 / 4 / 3 / 4 / 5 | 4 | 85.0 | Extend existing Aadhaar, DigiLocker, eSevai and scheme guides |
+| Remittance quote comparison | 5 / 4 / 3 / 4 / 5 / 5 | 6 | 80.0 | Add arithmetic comparison using user quotes |
+| Education funding and scholarship steps | 4 / 4 / 4 / 3 / 5 / 5 | 2 | 79.0 | Add education cost planning; reuse scholarship/exam guides |
+| Jobs and overseas recruitment checks | 4 / 5 / 4 / 2 / 4 / 5 | 5 | 76.0 | Extend existing jobs guides; add overseas recruitment route |
+| Local services and reviewed listings | 5 / 4 / 4 / 5 / 2 / 3 | 8 | 74.0 | Improve existing directory; verified supply gate remains |
+| Parents and family travel | 3 / 4 / 4 / 3 / 4 / 5 | 4 | 70.0 | Reuse existing Family Travel Planner |
+| Diaspora welfare routing | 3 / 5 / 4 / 1 / 4 / 5 | 4 | 69.0 | Add NRT / mission / MADAD route |
+| Temple and local visit planning | 3 / 3 / 4 / 3 / 4 / 5 | 3 | 66.0 | Reuse reviewed temple and local guides |
+| Daily date / holidays discovery | 5 / 2 / 2 / 1 / 4 / 5 | 2 | 60.0 | Keep existing date and official calendar links |
+| Tax, visa eligibility or medical decisions | 3 / 5 / 4 / 4 / 2 / 1 | 15 | 55.0 | Do not automate personalized decisions |
+
+Changing recurrence or Tamil-gap ratings by one point moves a score by 5 or 3 points. Adjacent scores should not be read as statistically significant. Supply and safety gates take precedence over ranking. No user interview, Search Console report or conversion dataset was supplied.
+
+## Primary-source evidence ledger
+
+All observations below were reviewed in this task. “Readable” means relevant public content could be read, not that every transaction was tested. No source text, design, screenshot, logo or code is republished.
+
+| Source | Observation and product consequence | Access |
+|---|---|---|
+| [India Portal](https://www.india.gov.in/) | Public service pathways and its own trending-search labels; prioritize existing documents guidance | Readable |
+| [UIDAI](https://uidai.gov.in/) | Separate update/status/centre/help paths; no hardcoded charges or eligibility | Readable; redirected to Hindi |
+| [NCS](https://www.ncs.gov.in/) | Fraud warnings and international job routes; avoid copied vacancies | Readable |
+| [NSP](https://scholarships.gov.in/) | Application stages and changing notices; Tamil already available | Readable |
+| [NTA](https://www.nta.ac.in/) | Exam-specific dated notices; direct users to original notice | Readable |
+| [Non-Resident Tamils](https://nrtamils.tn.gov.in/en/) | Welfare support pathways; link official eligibility and contact routes | Readable |
+| [MEA](https://www.mea.gov.in/) | Indian mission context; retain existing route | Readable earlier in session; repeat access failed |
+| [eMigrate](https://emigrate.gov.in/) | Official route linked through NCS; do not claim individual recruiter checked | Limited shell / repeat fetch failed |
+| [MADAD](https://www.madad.gov.in/madad/) | Indian consular grievance route; no transaction or case outcome verified | Limited JavaScript shell |
+| [World Bank remittance prices](https://remittanceprices.worldbank.org/) | Compare total transfer costs; no rates or dataset copied | Readable |
+| [CFPB sending money](https://www.consumerfinance.gov/consumer-tools/sending-money/) | Quoted fees/rate/recipient amount matter; US scope, no worldwide legal claim | Readable |
+| [Tiruvallur local bodies](https://tiruvallur.nic.in/administrative-setup/local-bodies/) | Pothatturpettai appears as a town panchayat; no shop verification implied | Readable |
+| [TTD](https://www.tirumala.org/) | Official temple information and booking routes; retain existing guide | Readable |
+| [Tamil Nadu eSevai](https://www.tnesevai.tn.gov.in/) / [TNeGA](https://tnega.tn.gov.in/) | Retain existing official links; do not assert present service availability | Timed out |
+| [TNPSC](https://www.tnpsc.gov.in/) | Preserve official examination route; no deadline imported | Fetch failed in this task |
+| [FTC native advertising guide](https://www.ftc.gov/business-guidance/resources/native-advertising-guide-businesses) | Paid placement must be distinguishable from editorial material; US guidance, not global legal certification | Readable |
+| [MDN localService](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/localService) | Use only a voice marked local; no microphone or cloud speech API | Readable |
+
+## Validation after launch
+
+Recruit a small consented usability group across Tamil Nadu and diaspora families. Give concrete tasks: find the official document-update route, compare two transfer quotes, calculate a tuition gap, and revoke a help request. Record task completion and confusion without names, questions or documents. The optional in-device counts can support a single testing session; they cannot measure website-wide demand. Use aggregate Search Console queries only after owner-authorized access, with no export of personally identifying queries. Re-score after actual evidence; do not retrofit invented volume estimates.
+
+## Maintenance
+
+The existing content.json remains the source of truth. It now contains 36 guides and 45 sources. Source dates are review observations, not live guarantees. Read/limited labels stay visible and reviews older than 90 days show a warning. Review high-change routes monthly and before campaigns; verify local listings directly before approval. Keep fees, deadlines, vacancies, eligibility and rates on official sites. Rebuild both pages with `python3 people-hub/build.py`. Adding a language requires complete guide/UI translation, a reviewed locale route, hreflang and accessibility tests; do not silently machine-translate legal or eligibility text.

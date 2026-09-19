@@ -281,3 +281,21 @@ Review scope: authority, URL and directory purpose. No service login, applicatio
 - Review date: 2026-09-20
 - Access status: read
 - Evidence/scope: Official page content accessible; directory purpose checked.
+
+
+## Tamil Life Assistant additions — 19 September 2026
+
+- **Non-Resident Tamils Welfare** — https://nrtamils.tn.gov.in/en/
+  - Reviewed: 2026-09-19; access: read. Official welfare and service categories read; eligibility and live availability not inferred.
+
+- **eMigrate** — https://emigrate.gov.in/
+  - Reviewed: 2026-09-19; access: limited. Official portal requires JavaScript; also linked from National Career Service international job routes.
+
+- **MEA MADAD** — https://www.madad.gov.in/madad/
+  - Reviewed: 2026-09-19; access: limited. Official portal shell accessible; case workflow requires browser/login.
+
+- **World Bank Remittance Prices Worldwide** — https://remittanceprices.worldbank.org/
+  - Reviewed: 2026-09-19; access: read. Cost comparison purpose checked; no current exchange rate or price imported.
+
+- **CFPB — Sending money** — https://www.consumerfinance.gov/consumer-tools/sending-money/
+  - Reviewed: 2026-09-19; access: read. Official consumer guidance; specific eligibility or legal deadlines not reproduced.

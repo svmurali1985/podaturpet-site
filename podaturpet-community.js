@@ -46,9 +46,8 @@
       location.assign(url);
     });
   }
-  document.querySelectorAll('.retail-filter').forEach(button => {
-    button.addEventListener('click', () => document.querySelectorAll('.retail-filter').forEach(b => b.setAttribute('aria-pressed',String(b===button))));
-  });
+  // Consolidated category filtering, including Tamil aliases.
+  (function(){var search=document.getElementById('retail-search'),cards=Array.prototype.slice.call(document.querySelectorAll('.retail-card')),buttons=Array.prototype.slice.call(document.querySelectorAll('.retail-filter')),count=document.getElementById('retail-count'),empty=document.getElementById('retail-empty'),active='all';if(!search)return;function refresh(){var query=search.value.normalize('NFC').toLowerCase().trim(),visible=0;cards.forEach(function(card){var matchesCategory=active==='all'||card.getAttribute('data-category')===active,matchesSearch=!query||(card.getAttribute('data-search')+' '+card.textContent).normalize('NFC').toLowerCase().indexOf(query)!==-1,show=matchesCategory&&matchesSearch;card.hidden=!show;if(show)visible++;});count.textContent='Showing '+visible+' shop categor'+(visible===1?'y':'ies');empty.classList.toggle('is-visible',visible===0);}buttons.forEach(function(button){button.addEventListener('click',function(){active=button.getAttribute('data-filter');buttons.forEach(function(item){item.classList.toggle('is-active',item===button);item.setAttribute('aria-pressed',String(item===button));});refresh();});});search.addEventListener('input',refresh);refresh();})();
   const townSearch = document.getElementById('town-search');
   if (townSearch) {
     const status = document.createElement('p');status.id='pt-town-search-status';status.setAttribute('role','status');

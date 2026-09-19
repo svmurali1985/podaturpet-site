@@ -281,6 +281,41 @@
       "reviewed": "2026-09-20",
       "status": "read",
       "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "nrt": {
+      "name": "Non-Resident Tamils Welfare",
+      "url": "https://nrtamils.tn.gov.in/en/",
+      "status": "read",
+      "evidence": "Official welfare and service categories read; eligibility and live availability not inferred.",
+      "reviewed": "2026-09-19"
+    },
+    "emigrate": {
+      "name": "eMigrate",
+      "url": "https://emigrate.gov.in/",
+      "status": "limited",
+      "evidence": "Official portal requires JavaScript; also linked from National Career Service international job routes.",
+      "reviewed": "2026-09-19"
+    },
+    "madad": {
+      "name": "MEA MADAD",
+      "url": "https://www.madad.gov.in/madad/",
+      "status": "limited",
+      "evidence": "Official portal shell accessible; case workflow requires browser/login.",
+      "reviewed": "2026-09-19"
+    },
+    "remittance": {
+      "name": "World Bank Remittance Prices Worldwide",
+      "url": "https://remittanceprices.worldbank.org/",
+      "status": "read",
+      "evidence": "Cost comparison purpose checked; no current exchange rate or price imported.",
+      "reviewed": "2026-09-19"
+    },
+    "cfpb": {
+      "name": "CFPB — Sending money",
+      "url": "https://www.consumerfinance.gov/consumer-tools/sending-money/",
+      "status": "read",
+      "evidence": "Official consumer guidance; specific eligibility or legal deadlines not reproduced.",
+      "reviewed": "2026-09-19"
     }
   },
   "entries": [
@@ -321,7 +356,8 @@
         "india-calendar",
         "tn"
       ],
-      "keywords": "holiday vidumurai leave festival pongal diwali deepavali விடுமுறை பொங்கல் தீபாவளி"
+      "keywords": "holiday vidumurai leave festival pongal diwali deepavali விடுமுறை பொங்கல் தீபாவளி",
+      "askTerms": "holiday vidumurai leave festival pongal diwali deepavali விடுமுறை பொங்கல் தீபாவளி"
     },
     {
       "id": "world-holidays",
@@ -359,7 +395,8 @@
         "uk-holidays",
         "us-holidays"
       ],
-      "keywords": "dates calendar bank holiday today today date தேதி நாள்காட்டி"
+      "keywords": "dates calendar bank holiday today today date தேதி நாள்காட்டி",
+      "askTerms": "dates calendar bank holiday today today date தேதி நாள்காட்டி"
     },
     {
       "id": "weather-check",
@@ -398,7 +435,8 @@
         "imd",
         "district"
       ],
-      "keywords": "rain cyclone mazhai weather மழை புயல் வானிலை"
+      "keywords": "rain cyclone mazhai weather மழை புயல் வானிலை",
+      "askTerms": "rain cyclone mazhai weather மழை புயல் வானிலை"
     },
     {
       "id": "travel-advice",
@@ -437,7 +475,8 @@
         "advice-us",
         "mea"
       ],
-      "keywords": "visa passport flight transit travel பயணம் விசா விமானம்"
+      "keywords": "visa passport flight transit travel பயணம் விசா விமானம்",
+      "askTerms": "visa passport flight transit travel பயணம் விசா விமானம்"
     },
     {
       "id": "passport-india",
@@ -476,7 +515,8 @@
         "passport",
         "mea"
       ],
-      "keywords": "passport renewal renew tatkal tatkaal பாஸ்போர்ட் புதுப்பிப்பு"
+      "keywords": "passport renewal renew tatkal tatkaal பாஸ்போர்ட் புதுப்பிப்பு",
+      "askTerms": "passport renewal renew tatkal tatkaal பாஸ்போர்ட் புதுப்பிப்பு"
     },
     {
       "id": "tirumala",
@@ -515,7 +555,8 @@
         "ttd",
         "ttd-book"
       ],
-      "keywords": "tirupati tirumala darshan ttd temple திருப்பதி திருமலை தரிசனம் கோவில்"
+      "keywords": "tirupati tirumala darshan ttd temple திருப்பதி திருமலை தரிசனம் கோவில்",
+      "askTerms": "tirupati tirumala darshan ttd temple திருப்பதி திருமலை தரிசனம் கோவில்"
     },
     {
       "id": "tiruttani",
@@ -555,7 +596,8 @@
         "hrce",
         "district"
       ],
-      "keywords": "thiruthani tiruttani murugan temple தரிசனம் திருத்தணி முருகன்"
+      "keywords": "thiruthani tiruttani murugan temple தரிசனம் திருத்தணி முருகன்",
+      "askTerms": "thiruthani tiruttani murugan temple தரிசனம் திருத்தணி முருகன்"
     },
     {
       "id": "aadhaar",
@@ -593,7 +635,8 @@
       "sources": [
         "uidai"
       ],
-      "keywords": "aadhar adhar aadhaar update address mobile ஆதார் முகவரி"
+      "keywords": "aadhar adhar aadhaar update address mobile ஆதார் முகவரி",
+      "askTerms": "aadhar adhar aadhaar update address mobile ஆதார் முகவரி"
     },
     {
       "id": "digilocker",
@@ -631,7 +674,8 @@
       "sources": [
         "digi"
       ],
-      "keywords": "digilocker digital certificate documents சான்றிதழ் ஆவணம்"
+      "keywords": "digilocker digital certificate documents சான்றிதழ் ஆவணம்",
+      "askTerms": "digilocker digital certificate documents சான்றிதழ் ஆவணம்"
     },
     {
       "id": "esevai",
@@ -669,7 +713,8 @@
         "esevai",
         "tn"
       ],
-      "keywords": "esevai e sevai income community certificate வருமான சாதி சான்றிதழ் இ சேவை"
+      "keywords": "esevai e sevai income community certificate வருமான சாதி சான்றிதழ் இ சேவை",
+      "askTerms": "esevai e sevai income community certificate வருமான சாதி சான்றிதழ் இ சேவை"
     },
     {
       "id": "schemes",
@@ -708,7 +753,8 @@
         "scheme",
         "india"
       ],
-      "keywords": "scheme benefits subsidy thittam திட்டம் நலத்திட்டம்"
+      "keywords": "scheme benefits subsidy thittam திட்டம் நலத்திட்டம்",
+      "askTerms": "scheme benefits subsidy thittam திட்டம் நலத்திட்டம்"
     },
     {
       "id": "us-services",
@@ -745,7 +791,8 @@
       "sources": [
         "usa"
       ],
-      "keywords": "us government benefits documents அரசு சேவை"
+      "keywords": "us government benefits documents அரசு சேவை",
+      "askTerms": "us government benefits documents அரசு சேவை"
     },
     {
       "id": "uk-services",
@@ -782,7 +829,8 @@
       "sources": [
         "uk"
       ],
-      "keywords": "uk government benefits documents அரசு சேவை"
+      "keywords": "uk government benefits documents அரசு சேவை",
+      "askTerms": "uk government benefits documents அரசு சேவை"
     },
     {
       "id": "canada-services",
@@ -819,7 +867,8 @@
       "sources": [
         "canada"
       ],
-      "keywords": "canada government benefits documents அரசு சேவை"
+      "keywords": "canada government benefits documents அரசு சேவை",
+      "askTerms": "canada government benefits documents அரசு சேவை"
     },
     {
       "id": "australia-services",
@@ -856,7 +905,8 @@
       "sources": [
         "australia"
       ],
-      "keywords": "australia government benefits documents அரசு சேவை"
+      "keywords": "australia government benefits documents அரசு சேவை",
+      "askTerms": "australia government benefits documents அரசு சேவை"
     },
     {
       "id": "singapore-services",
@@ -893,7 +943,8 @@
       "sources": [
         "singapore"
       ],
-      "keywords": "singapore government benefits documents அரசு சேவை"
+      "keywords": "singapore government benefits documents அரசு சேவை",
+      "askTerms": "singapore government benefits documents அரசு சேவை"
     },
     {
       "id": "eu-services",
@@ -930,7 +981,8 @@
       "sources": [
         "eu"
       ],
-      "keywords": "eu government benefits documents அரசு சேவை"
+      "keywords": "eu government benefits documents அரசு சேவை",
+      "askTerms": "eu government benefits documents அரசு சேவை"
     },
     {
       "id": "find-country",
@@ -967,7 +1019,8 @@
       "sources": [
         "phishing"
       ],
-      "keywords": "world global countries worldwide international உலகம் நாடுகள்"
+      "keywords": "world global countries worldwide international உலகம் நாடுகள்",
+      "askTerms": "world global countries worldwide international உலகம் நாடுகள்"
     },
     {
       "id": "jobs-india",
@@ -1005,7 +1058,8 @@
       "sources": [
         "ncs"
       ],
-      "keywords": "jobs velai vacancy recruitment வேலை வேலைவாய்ப்பு"
+      "keywords": "jobs velai vacancy recruitment வேலை வேலைவாய்ப்பு",
+      "askTerms": "jobs velai vacancy recruitment வேலை வேலைவாய்ப்பு"
     },
     {
       "id": "tnpsc",
@@ -1042,7 +1096,8 @@
       "sources": [
         "tnpsc"
       ],
-      "keywords": "tnpsc group 1 group 2 group 4 government exam தேர்வு அரசு வேலை"
+      "keywords": "tnpsc group 1 group 2 group 4 government exam தேர்வு அரசு வேலை",
+      "askTerms": "tnpsc group 1 group 2 group 4 government exam தேர்வு அரசு வேலை"
     },
     {
       "id": "exam-notices",
@@ -1080,7 +1135,8 @@
       "sources": [
         "nta"
       ],
-      "keywords": "neet jee cuet results admit card exam தேர்வு முடிவு ஹால் டிக்கெட்"
+      "keywords": "neet jee cuet results admit card exam தேர்வு முடிவு ஹால் டிக்கெட்",
+      "askTerms": "neet jee cuet results admit card exam தேர்வு முடிவு ஹால் டிக்கெட்"
     },
     {
       "id": "scholarships",
@@ -1118,7 +1174,8 @@
       "sources": [
         "scholarships"
       ],
-      "keywords": "scholarship education fees student உதவித்தொகை கல்வி மாணவர்"
+      "keywords": "scholarship education fees student உதவித்தொகை கல்வி மாணவர்",
+      "askTerms": "scholarship education fees student உதவித்தொகை கல்வி மாணவர்"
     },
     {
       "id": "learn-online",
@@ -1155,7 +1212,8 @@
       "sources": [
         "swayam"
       ],
-      "keywords": "online course learn skills study படிப்பு கற்றல் திறன்"
+      "keywords": "online course learn skills study படிப்பு கற்றல் திறன்",
+      "askTerms": "online course learn skills study படிப்பு கற்றல் திறன்"
     },
     {
       "id": "jobs-abroad",
@@ -1196,7 +1254,8 @@
         "jobbank",
         "ukjobs"
       ],
-      "keywords": "jobs abroad overseas work employment வேலை வெளிநாடு"
+      "keywords": "jobs abroad overseas work employment வேலை வெளிநாடு",
+      "askTerms": "jobs abroad overseas work employment வேலை வெளிநாடு"
     },
     {
       "id": "phishing",
@@ -1233,7 +1292,8 @@
       "sources": [
         "phishing"
       ],
-      "keywords": "scam fraud fake phishing meaning meaning enna மோசடி பொருள் அர்த்தம்"
+      "keywords": "scam fraud fake phishing meaning meaning enna மோசடி பொருள் அர்த்தம்",
+      "askTerms": "scam fraud fake phishing meaning meaning enna மோசடி பொருள் அர்த்தம்"
     },
     {
       "id": "visa-expiry",
@@ -1270,7 +1330,8 @@
       "sources": [
         "visa"
       ],
-      "keywords": "visa validity i94 duration stay expiry பொருள் விசா காலாவதி"
+      "keywords": "visa validity i94 duration stay expiry பொருள் விசா காலாவதி",
+      "askTerms": "visa validity i94 duration stay expiry பொருள் விசா காலாவதி"
     },
     {
       "id": "eligibility",
@@ -1307,7 +1368,8 @@
       "sources": [
         "scheme"
       ],
-      "keywords": "eligibility eligible approval meaning தகுதி ஒப்புதல் அர்த்தம்"
+      "keywords": "eligibility eligible approval meaning தகுதி ஒப்புதல் அர்த்தம்",
+      "askTerms": "eligibility eligible approval meaning தகுதி ஒப்புதல் அர்த்தம்"
     },
     {
       "id": "corrigendum",
@@ -1344,7 +1406,8 @@
       "sources": [
         "tnpsc"
       ],
-      "keywords": "corrigendum addendum notification meaning திருத்தம் அறிவிப்பு பொருள்"
+      "keywords": "corrigendum addendum notification meaning திருத்தம் அறிவிப்பு பொருள்",
+      "askTerms": "corrigendum addendum notification meaning திருத்தம் அறிவிப்பு பொருள்"
     },
     {
       "id": "observed-holiday",
@@ -1382,7 +1445,8 @@
         "uk-holidays",
         "us-holidays"
       ],
-      "keywords": "observed holiday substitute meaning விடுமுறை மாற்று பொருள்"
+      "keywords": "observed holiday substitute meaning விடுமுறை மாற்று பொருள்",
+      "askTerms": "observed holiday substitute meaning விடுமுறை மாற்று பொருள்"
     },
     {
       "id": "podaturpet-services",
@@ -1420,7 +1484,8 @@
         "localbodies",
         "contacts"
       ],
-      "keywords": "podaturpet podhaturpet pothatturpettai pettai பொதட்டூர்பேட்டை பொதட்டூர் பேட்டை அலுவலகம்"
+      "keywords": "podaturpet podhaturpet pothatturpettai pettai பொதட்டூர்பேட்டை பொதட்டூர் பேட்டை அலுவலகம்",
+      "askTerms": "podaturpet podhaturpet pothatturpettai pettai பொதட்டூர்பேட்டை பொதட்டூர் பேட்டை அலுவலகம்"
     },
     {
       "id": "local-notices",
@@ -1459,7 +1524,8 @@
         "localjobs",
         "district"
       ],
-      "keywords": "tiruvallur thiruvallur district news school holiday jobs திருவள்ளூர் செய்திகள் அறிவிப்பு"
+      "keywords": "tiruvallur thiruvallur district news school holiday jobs திருவள்ளூர் செய்திகள் அறிவிப்பு",
+      "askTerms": "tiruvallur thiruvallur district news school holiday jobs திருவள்ளூர் செய்திகள் அறிவிப்பு"
     },
     {
       "id": "postal-code",
@@ -1497,7 +1563,166 @@
       "sources": [
         "post"
       ],
-      "keywords": "pin code pincode post office 631208 அஞ்சல் குறியீடு பின் கோடு"
+      "keywords": "pin code pincode post office 631208 அஞ்சல் குறியீடு பின் கோடு",
+      "askTerms": "pin code pincode post office 631208 அஞ்சல் குறியீடு பின் கோடு"
+    },
+    {
+      "id": "diaspora-help",
+      "category": "services",
+      "regions": [
+        "world"
+      ],
+      "title": {
+        "en": "Tamil diaspora: official support routes",
+        "ta": "அயலகத் தமிழர்கள்: அதிகாரப்பூர்வ உதவி வழிகள்"
+      },
+      "summary": {
+        "en": "Start with Tamil Nadu’s Non-Resident Tamils service and the responsible Indian mission for your situation.",
+        "ta": "உங்கள் தேவைக்கு அயலகத் தமிழர் நலத்துறையிலும் சம்பந்தப்பட்ட இந்தியத் தூதரகத்திலும் தொடங்குங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Choose the relevant service on the Non-Resident Tamils portal; check its current eligibility and instructions.",
+          "ta": "அயலகத் தமிழர் தளத்தில் தேவையான சேவையைத் தேர்ந்தெடுத்து தற்போதைய தகுதி மற்றும் வழிமுறைகளைப் பாருங்கள்."
+        },
+        {
+          "en": "For a consular issue, check the mission and MADAD route through official MEA channels.",
+          "ta": "தூதரகப் பிரச்சினைக்கு அதிகாரப்பூர்வ MEA வழியில் தூதரகம் மற்றும் MADAD சேவையைப் பாருங்கள்."
+        },
+        {
+          "en": "Keep case numbers and identity documents private; do not place them in this assistant.",
+          "ta": "புகார் எண்களையும் அடையாள ஆவணங்களையும் தனியாக வைத்திருங்கள்; இந்த உதவியாளரில் உள்ளிடாதீர்கள்."
+        }
+      ],
+      "caution": {
+        "en": "Indian mission and MADAD routes are for relevant Indian consular matters, not every Tamil speaker. Check the official service’s eligibility. For immediate danger, contact local emergency services in your country.",
+        "ta": "இந்தியத் தூதரகம் மற்றும் MADAD வழிகள் பொருத்தமான இந்தியத் தூதரக விவகாரங்களுக்கானவை; எல்லாத் தமிழர்களுக்கும் பொருந்தாது. அதிகாரப்பூர்வ சேவையின் தகுதியைச் சரிபார்க்கவும். உடனடி ஆபத்தில் உங்கள் நாட்டின் அவசரச் சேவையைத் தொடர்புகொள்ளுங்கள்."
+      },
+      "sources": [
+        "nrt",
+        "mea",
+        "madad"
+      ],
+      "keywords": "diaspora overseas nri nrt madad gulf tamil abroad அயலகம் வெளிநாடு தமிழர் உதவி",
+      "askTerms": "diaspora overseas nri nrt madad gulf tamil abroad அயலகம் வெளிநாடு தமிழர் உதவி"
+    },
+    {
+      "id": "overseas-recruitment",
+      "category": "learn",
+      "regions": [
+        "world"
+      ],
+      "title": {
+        "en": "Before paying an overseas recruiter",
+        "ta": "வெளிநாட்டு வேலை முகவருக்குப் பணம் கொடுக்கும் முன்"
+      },
+      "summary": {
+        "en": "Verify the recruiter and the written offer using official routes, not a forwarded advertisement.",
+        "ta": "பகிரப்பட்ட விளம்பரத்தை மட்டும் நம்பாமல் அதிகாரப்பூர்வ வழியில் முகவரையும் எழுத்துப்பூர்வ வேலை வாய்ப்பையும் சரிபாருங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Use NCS international-job guidance and eMigrate to check the relevant recruitment route.",
+          "ta": "சம்பந்தப்பட்ட வேலைவாய்ப்பு வழியை அறிய NCS வெளிநாட்டு வேலை வழிகாட்டி மற்றும் eMigrate-ஐப் பயன்படுத்துங்கள்."
+        },
+        {
+          "en": "Verify employer identity, contract, deductions and the required work permission independently.",
+          "ta": "நிறுவன அடையாளம், ஒப்பந்தம், பிடித்தம் மற்றும் வேலை அனுமதியைத் தனியாக உறுதி செய்யுங்கள்."
+        },
+        {
+          "en": "Ask an official authority about unclear terms before paying or handing over original documents.",
+          "ta": "பணம் அல்லது மூல ஆவணங்களைத் தரும் முன் புரியாத நிபந்தனைகளை அதிகாரப்பூர்வ அமைப்பிடம் கேளுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "No recruiter listed here is endorsed. The assistant does not promise a job, visa or recovery of money.",
+        "ta": "இங்கே எந்த முகவருக்கும் பரிந்துரை வழங்கப்படவில்லை. வேலை, விசா அல்லது பணம் திரும்பக் கிடைக்கும் என உதவியாளர் உறுதி செய்யாது."
+      },
+      "sources": [
+        "ncs",
+        "emigrate",
+        "mea"
+      ],
+      "keywords": "overseas recruiter agent abroad job visa sponsor recruitment வெளிநாட்டு வேலை முகவர் ஏஜென்ட்",
+      "askTerms": "overseas recruiter agent abroad job visa sponsor recruitment வெளிநாட்டு வேலை முகவர் ஏஜென்ட்"
+    },
+    {
+      "id": "education-cost",
+      "category": "learn",
+      "regions": [
+        "world"
+      ],
+      "title": {
+        "en": "Plan the full cost of a course",
+        "ta": "படிப்பின் மொத்தச் செலவைத் திட்டமிடுங்கள்"
+      },
+      "summary": {
+        "en": "Add tuition, living costs and one-off expenses before comparing confirmed funding.",
+        "ta": "உறுதியான நிதியுடன் ஒப்பிடும் முன் கல்விக் கட்டணம், வாழ்வுச் செலவு மற்றும் ஒருமுறைச் செலவுகளைச் சேருங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Get current written costs from the institution, including mandatory charges.",
+          "ta": "கட்டாயக் கட்டணங்கள் உட்பட தற்போதைய செலவுகளை கல்வி நிறுவனத்திடமிருந்து எழுத்தில் பெறுங்கள்."
+        },
+        {
+          "en": "Use the cost planner with your own figures, in one currency, and include the full study period.",
+          "ta": "உங்கள் சொந்தத் தொகைகளை ஒரே நாணயத்தில் செலவுத் திட்டத்தில் உள்ளிட்டு முழுப் படிப்புக் காலத்தையும் சேருங்கள்."
+        },
+        {
+          "en": "Check scholarship conditions separately; count only funding already confirmed.",
+          "ta": "உதவித்தொகை நிபந்தனைகளைத் தனியாகப் பாருங்கள்; ஏற்கனவே உறுதியான நிதியை மட்டுமே கணக்கிடுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "The estimate does not determine loan affordability, admission or scholarship eligibility. No fee or interest rate is supplied by the assistant.",
+        "ta": "இந்த மதிப்பீடு கடன் செலுத்தும் திறன், சேர்க்கை அல்லது உதவித்தொகைத் தகுதியை நிர்ணயிக்காது. உதவியாளர் கட்டணம் அல்லது வட்டி விகிதத்தை வழங்குவதில்லை."
+      },
+      "sources": [
+        "scholarships",
+        "swayam"
+      ],
+      "keywords": "education cost college fees tuition budget study monthly savings கல்வி செலவு கட்டணம் படிப்பு சேமிப்பு",
+      "askTerms": "education cost college fees tuition budget study monthly savings கல்வி செலவு கட்டணம் படிப்பு சேமிப்பு"
+    },
+    {
+      "id": "remittance-quotes",
+      "category": "services",
+      "regions": [
+        "world"
+      ],
+      "title": {
+        "en": "Compare two money-transfer quotes",
+        "ta": "இரண்டு பணப் பரிமாற்றக் கோட்டுகளை ஒப்பிடுங்கள்"
+      },
+      "summary": {
+        "en": "Compare the same total sending budget and the amount expected to reach the recipient.",
+        "ta": "அனுப்பும் ஒரே மொத்தத் தொகையையும் பெறுநருக்குக் கிடைக்கும் எனக் கூறப்படும் தொகையையும் ஒப்பிடுங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Obtain both quotes at roughly the same time for the same sending and receiving currencies.",
+          "ta": "ஒரே அனுப்பும் மற்றும் பெறும் நாணயங்களுக்கு ஏறக்குறைய ஒரே நேரத்தில் இரண்டு கோட்டுகளையும் பெறுங்கள்."
+        },
+        {
+          "en": "Include sending fees and any known receiving-side deduction. Enter each quoted rate yourself.",
+          "ta": "அனுப்பும் கட்டணத்தையும் தெரிந்த பெறுநர் பிடித்தத்தையும் சேருங்கள். ஒவ்வொரு கோட்டின் விகிதத்தையும் நீங்களே உள்ளிடுங்கள்."
+        },
+        {
+          "en": "Check delivery time, provider terms and any missing charges before deciding.",
+          "ta": "முடிவு செய்யும் முன் கிடைக்கும் நேரம், நிறுவன நிபந்தனைகள் மற்றும் விடுபட்ட கட்டணங்களைப் பாருங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "No live rate, transfer service or provider recommendation. Results use only your inputs and can differ from the final transaction.",
+        "ta": "நேரடி விகிதம், பணப் பரிமாற்ற சேவை அல்லது நிறுவனப் பரிந்துரை இல்லை. முடிவுகள் உங்கள் உள்ளீடுகளை மட்டுமே பயன்படுத்தும்; உண்மையான பரிமாற்றம் மாறலாம்."
+      },
+      "sources": [
+        "remittance",
+        "cfpb"
+      ],
+      "keywords": "remittance exchange transfer money send rate fee currency பணம் அனுப்பு பரிமாற்றம் டாலர் ரூபாய்",
+      "askTerms": "remittance exchange transfer money send rate fee currency பணம் அனுப்பு பரிமாற்றம் டாலர் ரூபாய்"
     }
   ]
 }

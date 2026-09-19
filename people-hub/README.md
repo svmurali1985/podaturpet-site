@@ -1,37 +1,41 @@
-# People Information Hub / மக்கள் தகவல் மையம்
+# Tamil Life Assistant + People Information Hub
 
-32 original bilingual guides, six categories, 40 official source records. English: `/people-information-hub.html`. Tamil: `/people-information-hub-ta.html`.
+A free bilingual, static-first extension of the existing hub. No new duplicate hub URL, directory, floating assistant, CSS bundle, ad network or analytics backend.
 
-## Use
-Search in English, Tamil or supported spelling aliases. Select a region and category. General guides remain visible with each region. India and Tamil Nadu filters include relevant national and Tamil Nadu guidance. “General / worldwide” shows only general guides; it is not the same as All regions.
+English: https://podaturpet.com/people-information-hub.html#life-assistant
+Tamil: https://podaturpet.com/people-information-hub-ta.html#life-assistant
+Directory: https://podaturpet.com/podaturpet-local-business-directory.html
 
-Save shortcuts for the current page visit, or explicitly choose Keep shortcuts on this device. Only public guide IDs persist. Forget removes this hub's key only. There is no login, sync, search history, location permission, live API or background data fetching. Language links open separate static pages; unsaved session-only shortcuts/search filters do not transfer across a page navigation. Device-saved shortcuts are shared by both languages.
+## What works
 
-Today uses the device clock and the selected time zone; it is not a public-holiday or events feed. Fees, deadlines, results, vacancies, temple schedules and travel rules are intentionally obtained from official links. A source's review date is not a live-rule guarantee. After 90 days, a review-due warning appears. Limited-access sources are labelled separately even before 90 days.
+- Ask in Tamil or English: original local topic matching across 36 bilingual guides, with clear fallback. It is not a cloud AI, legal adviser or government application service.
+- Reuse official guide steps, dated source records, older-review warnings, country filters, bookmarks, larger text and existing print controls.
+- Education cost/funding-gap/monthly-saving plan and same-budget remittance quote comparison. User inputs only; no rates, fees or deadlines supplied by the tool.
+- Human help: explicit consent → exact message preview → user-selected WhatsApp/email draft → user sends in their own app. Editing or withdrawing consent destroys the links. No external message was sent during testing.
+- Optional on-device read-aloud if the browser exposes a matching local voice; typed interaction always available. No microphone.
+- Optional, deletable and exportable device-only funnel counts; off by default. No network analytics on hub pages.
+- Existing directory filtering consolidated into podaturpet-community.js, with Tamil search aliases. Sponsored records are labelled by the existing publisher; no example businesses were published.
+- Existing Family Travel Planner, invoice tool, lungi pages, ads and visitor counter remain in place. Lungi-specific enquiries retain their existing assistant paths; government/diaspora topics route to the hub.
 
-Print one guide or the visible results, then choose Save as PDF in your browser. No PDF service or upload is involved. Permalinks include only a known guide ID; Copy never includes the search query.
+## Maintain
 
-## Editing and building
-Edit `content.json` (guides and source register) and `locales.json` (UI/category/region strings). Run from the website directory:
-```
+Edit content.json / locales.json, then run from website root:
+
+```bash
 python3 people-hub/build.py
 ```
-This builds both HTML pages and data.js deterministically. Upload rendered files; Python is not needed by visitors. Do not manually edit generated pages or data.js. No network request occurs during the build. The existing tools/build_content.py is not run or changed by this update.
 
-## More languages
-Content fields are keyed by language and guide IDs are language-neutral. To add a language: add translated guide/UI/category/region fields, a slug in build.py's SLUGS, update hub.js language selection and core.js Intl locale mapping, generate all hreflang alternatives, add the new URL to sitemap.xml, then test labels, dates, font coverage and RTL layout where applicable. Do not publish machine-translated official rules as authoritative. This release supports English and Tamil only; no unsupported language button is shown.
+life_template.py contains the new original interface markup. Shared assistant/tracking scripts detect hub mode. hub.js remains the existing search/bookmark/print implementation. core.js contains pure matching and arithmetic helpers. Official-source content is never fetched in the visitor's browser. CSP prevents hub network connections and form uploads; link navigation remains available.
 
-## Maintenance
-Review the source register monthly and before promoting a time-sensitive topic. Reopen each source, check its authority and function, review the original bilingual wording, and update only that source's date/evidence/status. Never advance review dates automatically. Remove or replace broken sources and regenerate. Keep figures, fees, vacancies, examination results and annual calendars out of static copy unless a dated editorial process is explicitly introduced. No submission endpoint or notification service exists in this release.
+Tests (development only; npm requires network to install jsdom):
 
-## Testing and preview
-Requires Node 18+ for development tests only:
+```bash
+cd people-hub/tests
+npm install --ignore-scripts
+npm test
+python3 directory.test.py
 ```
-node people-hub/tests/core.test.cjs
-npm install --prefix people-hub/tests --ignore-scripts --no-audit --no-fund
-npm test --prefix people-hub/tests
-python3 -m http.server 8000
-```
-Open http://localhost:8000/people-information-hub.html and the Tamil page. Test files' .gitignore excludes node_modules and generated package-lock. Website runtime has no npm dependencies.
 
-See RESEARCH.md, SOURCES.md, FACT-CHECK-AND-PRIVACY.md, COPYRIGHT-LICENSE-REPORT.md, TEST-REPORT.md and CHANGES.md for scope and validation limits.
+Tests do not send messages or contact providers. Do not commit node_modules. The directory publisher test uses an isolated temporary folder. See TEST-REPORT.md for exact scope and unverified browser behaviors.
+
+Before publishing, preview both language pages in your browser. Verify that the existing contact recipient in content/site.json is the intended Podaturpet team; the generated hub uses it. Read REVENUE-AND-OPERATIONS.md before accepting leads or paid listings. No blanket regulatory or historical-asset copyright certification is claimed.

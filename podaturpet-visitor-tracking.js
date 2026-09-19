@@ -1,5 +1,24 @@
 (function () {
   "use strict";
+  // The hub has no network analytics. Explicit opt-in, device-only funnel totals.
+  if (document.getElementById('life-count-consent')) { localLifeCounts(); return; }
+  function localLifeCounts(){
+    const box=document.getElementById('life-count-consent'),out=document.getElementById('life-counts'),button=document.getElementById('life-count-export'),status=document.getElementById('life-count-status');
+    const U=window.PeopleHubData.ui[document.documentElement.lang==='ta'?'ta':'en'];
+    const key='podaturpet.life.counts.v1',stages=['view','ask','guide','calculate','official','preview','handoff'],labels=['view','askStage','guideStage','calculateStage','officialStage','previewStage','handoffStage'];
+    let counts=Object.fromEntries(stages.map(s=>[s,0])),enabled=false;
+    const blocked=navigator.globalPrivacyControl===true||navigator.doNotTrack==='1';
+    function render(){out.replaceChildren();stages.forEach((s,i)=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=U[labels[i]];dd.textContent=String(counts[s]);out.append(dt,dd);});box.checked=enabled;button.disabled=!enabled;}
+    function failure(){enabled=false;status.textContent=U.metricsFail;render();}
+    function save(){try{localStorage.setItem(key,JSON.stringify({version:1,counts}));}catch(_){failure();}}
+    function increment(stage){if(!enabled||!stages.includes(stage))return;counts[stage]=Math.min(1000000,counts[stage]+1);save();render();}
+    try{if(blocked){localStorage.removeItem(key);box.disabled=true;status.textContent=U.metricsFail;}else{const raw=localStorage.getItem(key);if(raw){const d=JSON.parse(raw);if(d.version===1&&d.counts&&stages.every(s=>Number.isInteger(d.counts[s])&&d.counts[s]>=0&&d.counts[s]<=1000000)){counts=Object.fromEntries(stages.map(s=>[s,d.counts[s]]));enabled=true;}}}}catch(_){failure();}
+    box.addEventListener('change',()=>{if(blocked)return;enabled=box.checked;if(enabled){status.textContent='';increment('view');}else{counts=Object.fromEntries(stages.map(s=>[s,0]));try{localStorage.removeItem(key);}catch(_){failure();}}render();});
+    document.addEventListener('podaturpet:life-event',e=>increment(e.detail&&e.detail.stage));
+    button.addEventListener('click',()=>{if(!enabled)return;const url=URL.createObjectURL(new Blob([JSON.stringify({scope:'this device only; steps, not people or leads',version:1,counts},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='podaturpet-device-counts.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+    if(enabled)increment('view');render();
+  }
+
 
   var endpoint = "https://podaturpet-visitor-tracker.svmuralicenterton.workers.dev/track";
   var trackedHostnames = ["podaturpet.com", "www.podaturpet.com"];

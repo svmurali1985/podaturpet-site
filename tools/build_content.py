@@ -27,15 +27,19 @@ def product(code,compact):
  title='<summary>View specifications</summary>' if compact else '<h2>Product specifications</h2>'
  return title+table+'<p>Photographs identify the design. Confirm the sample and written order details before purchase.</p><a class="pt-button" href="/?product='+quote(code)+'#quick-quote">Ask about this design</a>'
 def business_content():
- approved=[b for b in businesses if b.get('approved') is True]
+ approved=sorted([b for b in businesses if b.get('approved') is True], key=lambda b:str(b.get('name','')).casefold())
  cards=[]
  for b in approved:
   for k in ['name','category','address','public_phone','hours','verified_on','source_url','map_url']:
    if not b.get(k):raise ValueError('Business requires '+k)
-  date.fromisoformat(b['verified_on'])
+  if 'sponsored' in b and not isinstance(b['sponsored'],bool):raise ValueError('Sponsored must be true or false')
+  checked=date.fromisoformat(b['verified_on'])
+  if checked>date.today():raise ValueError('Business verification cannot be in the future')
+  if b.get('sponsored') is True and b.get('public_listing_consent') is not True:raise ValueError('Sponsored listing requires public listing consent')
+  if b.get('sponsored') is True and (date.today()-checked).days>90:raise ValueError('Recheck sponsored listing before publication')
   phone=re.sub(r'[^+\d]','',b['public_phone'])
   if not re.fullmatch(r'\+?\d{8,15}',phone):raise ValueError('Invalid business phone')
-  cards.append('<article class="pt-card" data-business-record><h3>'+esc(b['name'])+'</h3><p>'+esc(b['category'])+'<br>'+esc(b['address'])+'</p><p>Hours: '+esc(b['hours'])+'<br>Last checked: '+esc(b['verified_on'])+'</p><a href="tel:'+esc(phone)+'">'+esc(b['public_phone'])+'</a> · <a data-track="directions_click" href="'+safe_url(b['map_url'])+'" target="_blank" rel="noopener noreferrer">Directions</a> · <a href="'+safe_url(b['source_url'])+'" target="_blank" rel="noopener noreferrer">Source</a></article>')
+  cards.append('<article class="pt-card" data-business-record>'+('<p><strong>Sponsored / கட்டண விளம்பரம்</strong></p>' if b.get('sponsored') is True else '')+'<h3>'+esc(b['name'])+'</h3><p>'+esc(b['category'])+'<br>'+esc(b['address'])+'</p><p>Hours: '+esc(b['hours'])+'<br>Last checked: '+esc(b['verified_on'])+'</p><a href="tel:'+esc(phone)+'">'+esc(b['public_phone'])+'</a> · <a data-track="directions_click" href="'+safe_url(b['map_url'])+'" target="_blank" rel="noopener noreferrer">Directions</a> · <a href="'+safe_url(b['source_url'])+'" target="_blank" rel="noopener noreferrer">Source</a></article>')
  if not cards:return '<p class="pt-empty">Business listings are being collected. Browse the service categories below, or send your shop details for review.</p>'
  return '<label for="pt-business-search">Search listed businesses</label><input class="retail-search" id="pt-business-search" type="search" placeholder="Name, category or address"><p id="pt-business-count" role="status">'+str(len(cards))+' businesses</p><div class="pt-grid">'+''.join(cards)+'</div>'
 def event_content():
@@ -56,7 +60,12 @@ business_html=business_content()
 event_html=event_content()
 for code in products:product(code,False)
 count=0
-for p in R.glob('*.html'):
+import argparse
+parser=argparse.ArgumentParser(description='Refresh existing content markers')
+parser.add_argument('--only', nargs='+', help='Root HTML filenames to rebuild; omitted means all')
+args=parser.parse_args()
+if args.only and any(Path(n).name!=n or not n.endswith('.html') or not (R/n).is_file() for n in args.only):parser.error('Use existing root HTML filenames only')
+for p in ([R/n for n in args.only] if args.only else R.glob('*.html')):
  text=p.read_text()
  def render(m):
   kind,key=m.group(1).split(':',1)

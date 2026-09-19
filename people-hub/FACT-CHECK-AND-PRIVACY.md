@@ -1,26 +1,25 @@
-# Fact-check and privacy review
+# Fact-check, privacy and security review
 
-## Factual boundaries
-- Each of 32 guides links to at least one official source. Source identity, review date and full/limited-access status are retained in content.json and SOURCES.md.
-- Sources were reviewed on 20 September 2026. Some official portals require browser scripting or blocked retrieval; those entries visibly say access was limited. They are not represented as fully verified transactions.
-- Local claim checked: the Tiruvallur district Local Bodies table lists Pothatturpettai under Town Panchayats. The guide gives the source and search spelling, not an invented local contact. Official URL: https://tiruvallur.nic.in/administrative-setup/local-bodies/
-- Tiruttani temple's HR&CE subdomain is corroborated by official search results; direct retrieval was unavailable. TTD's official information site confirms its booking domain. No schedule, price, quota or availability is republished.
-- USA visa validity and permission to stay are distinguished with State Department guidance; no individual status conclusion is provided.
-- NCS's no-service-fee statement is attributed to NCS. Government or portal listing is not presented as a guarantee of employer safety, employment, sponsorship or eligibility.
-- Holiday scope is distinguished by region/institution. The date card is explicitly device-derived and not a live events/holiday feed. No universal government-domain suffix is asserted.
-- Original Tamil explanations are not official translations. Current authority wording governs. Site-wide historical factual claims remain unchanged and are not certified by this hub review.
+Review: 19 September 2026.
 
-## Data flow
-1. The browser requests static page, JS, CSS, original SVG and an existing locally served licensed font.
-2. Search text and filters remain in JavaScript memory. They are not written to storage, URLs, console logs, cookies or remote services.
-3. Optional persistence stores `{version:1, ids:[public guide IDs]}` under `podaturpet.people-hub.shortcuts.v1`. The parser validates types/size, deduplicates and ignores unknown IDs and fields. No identity, query, region or time zone is saved.
-4. Removing shortcuts touches only that key. Existing invoice and travel-planner keys are unchanged. Saved IDs are not encrypted; other browser users, extensions or same-origin scripts may access them.
-5. Public guide-link copying uses a constant canonical host and known IDs. It never propagates incoming URL parameters or search text. Language navigation also omits query strings.
-6. Print uses the local browser dialog. There is no upload, PDF API, account, geo/IP lookup, advertising SDK or analytics script on the two new hub pages. Existing pages retain all their scripts/analytics/ads.
-7. Hosting providers can log ordinary requests. If the hosting platform injects analytics outside the repository, its behavior requires separate live verification. External official links use noreferrer/noopener, open in a new tab and follow the destination's privacy policy.
+## Information boundaries
 
-## Security and accessibility checks
-CSP meta restricts resources to local assets, blocks connect/form/object sources, and disables a foreign base URL. No dynamic untrusted HTML insertion, eval, fetch, sendBeacon or network library. Search content is never rendered as markup. Buttons have labels/states; controls have associated labels; status updates use live regions; keyboard focus is visible; filters have empty states; navigation uses normal links. Large text and narrow CSS layouts are provided, but real assistive-technology/device testing remains outstanding.
+The existing 32 guides remain, with four original bilingual additions: diaspora support, overseas recruiter checks, education cost planning and remittance quote comparison. Sources are HTTPS links with explicit access notes and review dates. Older existing dates are not silently renewed. Limited or failed access is not labelled full verification. Research.md records primary-source observations and gaps. Dynamic fees, vacancies, rates, deadlines and eligibility are not imported into calculations or presented as live data.
 
-## Maintenance and limitations
-This is a helpful directory and general explanation layer, not live status or legal/medical/immigration advice. Monthly source review is recommended. Do not batch-advance source dates without opening them. A compromised official site or future redirect cannot be ruled out permanently; check destinations again before submitting sensitive information.
+The India-related diaspora pathways are not universal services for all Tamil-speaking nationalities. The new guide says to check jurisdiction and eligibility. Local-body identification is supported by the Tiruvallur district page; it is not a verification of any shop. businesses.json remains empty. No personal legal, medical, visa, tax or investment decision is automated. Sources and a disclaimer remain visible in both languages.
+
+## Privacy boundaries checked
+
+- Hub questions and numbers stay in the current DOM; not written to storage, logs, URLs or outbound analytics. Matching uses the built local index.
+- Optional shortcuts contain public guide IDs only. Optional funnel counts contain seven bounded integers plus schema version. No question, topic ID, financial value, message or identity is stored in those counts.
+- Counting is off by default; GPC/DNT block it. Turning it off deletes only its key. Storage failure leaves search/calculators working. Same-origin scripts/extensions/shared users can access browser storage; it is not encrypted.
+- Consent is required before a help draft appears. A changed field or revoked checkbox removes both links and the preview. Clicking WhatsApp/email passes the displayed draft to the chosen third party; sending is an additional action in that app. Contact identity becomes visible when the message is sent. Initial consent covers the Podaturpet / MuraRaj team only, not marketing or referrals.
+- No document upload, account, password, payment, geolocation, microphone or cloud speech API. Local voice availability is browser-dependent.
+- Automatic sensitive-input screening catches common long-number/email/URL patterns, not every personal fact. UI explicitly asks users not to enter private information. The team must minimize retention and obtain separate permission for any named-provider referral.
+- Existing hosting logs, external link destinations and other site pages retain their own privacy behavior. Ordinary static-page hosting requests are not anonymous guarantees.
+
+## Security checks
+
+Answers, user notes and calculations are rendered through textContent, not interpolated as HTML. Message query values are URL-encoded; recipients come from existing configuration. Region/help choices and bounded numbers are validated. Calculations reject negatives, malformed input, invalid months, invalid rates and impossible deductions. Public sources use rel=noopener/noreferrer and the hub has no-referrer policy. Existing CSP remains default-deny with self-hosted scripts/styles/fonts and connect-src none. No secrets or new runtime third-party packages were introduced.
+
+The existing directory publisher escapes record text, restricts URLs, validates phones/dates and now labels sponsored records with publication-consent and recency gates. Tests use fixtures only in a temporary directory. This is a scoped implementation review, not a penetration test of the hosting platform or a legal compliance certification.
