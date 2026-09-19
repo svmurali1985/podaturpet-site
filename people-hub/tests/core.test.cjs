@@ -1,0 +1,27 @@
+'use strict';
+const assert=require('node:assert/strict'),C=require('../core.js'),D=require('../content.json');let n=0;function test(s,f){f();console.log('PASS',s);n++;}
+const item={id:'p',category:'travel',regions:['india'],search:'Passport பாஸ்போர்ட் renewal'},base={query:'',category:'all',region:'all',savedOnly:false,saved:[]};
+test('case and whitespace insensitive search',()=>assert(C.matches(item,{...base,query:'  PASSport   renewal '})));
+test('Tamil search retains vowel marks',()=>{assert(C.matches(item,{...base,query:'பாஸ்போர்ட்'}));assert.notEqual(C.normalize('கா'),C.normalize('க'));});
+test('Unicode normalization',()=>assert.equal(C.normalize('cafe\u0301'),C.normalize('café')));
+test('all query words required',()=>assert(!C.matches(item,{...base,query:'passport scholarship'})));
+test('category isolates results',()=>assert(!C.matches(item,{...base,category:'meaning'})));
+test('Tamil Nadu includes India guides',()=>assert(C.matches(item,{...base,region:'tamil'})));
+test('India includes Tamil Nadu guides',()=>assert(C.matches({...item,regions:['tamil']},{...base,region:'india'})));
+test('country excludes unrelated specific regions',()=>assert(!C.matches(item,{...base,region:'canada'})));
+test('general guides available in every region',()=>assert(C.matches({...item,regions:['world']},{...base,region:'singapore'})));
+test('general-only excludes national guides',()=>assert(!C.matches(item,{...base,region:'world'})));
+test('saved filter only returns selected',()=>{assert(!C.matches(item,{...base,savedOnly:true}));assert(C.matches(item,{...base,savedOnly:true,saved:['p']}));});
+test('saved schema stores only valid public IDs',()=>assert.equal(C.saveData(['p','p','unknown'],['p']),'{"version":1,"ids":["p"]}'));
+test('valid backup handles removed and duplicate IDs',()=>assert.deepEqual(C.parseSaved('{"version":1,"ids":["p","p","gone"]}',['p']),['p']));
+test('invalid storage rejected',()=>{for(const raw of ['bad','null','{}','{"version":2,"ids":[]}','{"version":1,"ids":[{}]}','x'.repeat(12001)])assert.throws(()=>C.parseSaved(raw,['p']));});
+test('unknown sensitive properties ignored',()=>assert.deepEqual(C.parseSaved('{"version":1,"ids":["p"],"query":"private"}',['p']),['p']));
+test('stale review changes after 90 days',()=>{assert.equal(C.reviewState('2026-09-20',new Date('2026-12-18Z')),'current');assert.equal(C.reviewState('2026-09-20',new Date('2026-12-20Z')),'old');});
+test('malformed and future review dates not fresh',()=>{for(const d of ['2026-02-30','bad','2028-01-01'])assert.equal(C.reviewState(d,new Date('2026-09-20Z')),'invalid');});
+test('calendar date respects India midnight',()=>{const d=new Date('2026-09-19T20:00:00Z');assert(C.today(d,'Asia/Kolkata','en').includes('20 September'));assert(C.today(d,'America/Chicago','en').includes('19 September'));});
+test('Tamil date is localized',()=>assert(/[\u0b80-\u0bff]/.test(C.today(new Date('2026-09-20Z'),'UTC','ta'))));
+test('invalid timezone fails safely to caller',()=>assert.throws(()=>C.today(new Date(),'bogus','en')));
+test('hashes allow only known guides and categories',()=>{assert.deepEqual(C.validHash('#guide-p',['p'],['travel']),{type:'guide',id:'p'});assert.deepEqual(C.validHash('#category-travel',['p'],['travel']),{type:'category',id:'travel'});assert.equal(C.validHash('#guide-<script>',['p'],['travel']),null);});
+test('all guide IDs unique with translated content',()=>{assert.equal(new Set(D.entries.map(e=>e.id)).size,D.entries.length);for(const e of D.entries)for(const l of ['en','ta']){assert(e.title[l]);assert(e.summary[l]);assert(e.caution[l]);assert(e.steps.every(s=>s[l]));}});
+test('every source reference resolves to HTTPS and has evidence',()=>{for(const e of D.entries){assert(e.sources.length);for(const id of e.sources){const s=D.sources[id];assert(s);assert.equal(new URL(s.url).protocol,'https:');assert(s.evidence);assert(['read','limited'].includes(s.status));}}});
+console.log(n+' core tests passed.');

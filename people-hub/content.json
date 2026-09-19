@@ -1,0 +1,1503 @@
+{
+  "version": 1,
+  "reviewed": "2026-09-20",
+  "sources": {
+    "india": {
+      "name": "National Portal of India",
+      "url": "https://www.india.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "india-calendar": {
+      "name": "India Portal calendar",
+      "url": "https://www.india.gov.in/calendar",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "tn": {
+      "name": "Government of Tamil Nadu",
+      "url": "https://www.tn.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "uk-holidays": {
+      "name": "GOV.UK bank holidays",
+      "url": "https://www.gov.uk/bank-holidays",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "us-holidays": {
+      "name": "US Office of Personnel Management",
+      "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "imd": {
+      "name": "India Meteorological Department",
+      "url": "https://mausam.imd.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "usa": {
+      "name": "USA.gov",
+      "url": "https://www.usa.gov/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "uk": {
+      "name": "GOV.UK",
+      "url": "https://www.gov.uk/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "canada": {
+      "name": "Government of Canada",
+      "url": "https://www.canada.ca/en.html",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "australia": {
+      "name": "Australian Government myGov",
+      "url": "https://my.gov.au/en/services",
+      "reviewed": "2026-09-20",
+      "status": "limited",
+      "evidence": "Official australia.gov.au redirected here; limited page text accessible."
+    },
+    "singapore": {
+      "name": "Singapore Government",
+      "url": "https://www.gov.sg/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "eu": {
+      "name": "European Union",
+      "url": "https://european-union.europa.eu/live-work-study_en",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "uidai": {
+      "name": "UIDAI — Aadhaar",
+      "url": "https://uidai.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "digi": {
+      "name": "DigiLocker",
+      "url": "https://www.digilocker.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "passport": {
+      "name": "Passport Seva",
+      "url": "https://www.passportindia.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "limited",
+      "evidence": "Official portal/title accessible; service content requires a browser."
+    },
+    "esevai": {
+      "name": "Tamil Nadu e-Sevai",
+      "url": "https://www.tnesevai.tn.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "limited",
+      "evidence": "Direct fetch timed out; government search results and Tamil Nadu district pages corroborate purpose."
+    },
+    "scheme": {
+      "name": "myScheme",
+      "url": "https://www.myscheme.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "ncs": {
+      "name": "National Career Service",
+      "url": "https://www.ncs.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "tnpsc": {
+      "name": "Tamil Nadu Public Service Commission",
+      "url": "https://www.tnpsc.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "nta": {
+      "name": "National Testing Agency",
+      "url": "https://www.nta.ac.in/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "scholarships": {
+      "name": "National Scholarship Portal",
+      "url": "https://scholarships.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "swayam": {
+      "name": "SWAYAM",
+      "url": "https://swayam.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "usajobs": {
+      "name": "USAJOBS",
+      "url": "https://www.usajobs.gov/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "jobbank": {
+      "name": "Canada Job Bank",
+      "url": "https://www.jobbank.gc.ca/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "ukjobs": {
+      "name": "GOV.UK — Find a job",
+      "url": "https://www.gov.uk/find-a-job",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "advice-us": {
+      "name": "US travel advisories",
+      "url": "https://travel.state.gov/en/international-travel/travel-advisories.html",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "advice-uk": {
+      "name": "GOV.UK travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "mea": {
+      "name": "Ministry of External Affairs, India",
+      "url": "https://www.mea.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "ttd": {
+      "name": "Tirumala Tirupati Devasthanams",
+      "url": "https://www.tirumala.org/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "ttd-book": {
+      "name": "TTD official booking portal",
+      "url": "https://ttdevasthanams.ap.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "limited",
+      "evidence": "Title accessible; tirumala.org confirms booking domain. Live transactions not tested."
+    },
+    "tiruttani": {
+      "name": "Tiruttani temple — HR&CE",
+      "url": "https://tiruttanimurugan.hrce.tn.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "limited",
+      "evidence": "Official HR&CE subdomain identified in official search results; direct fetch unavailable. No hours or fees reproduced."
+    },
+    "hrce": {
+      "name": "Tamil Nadu HR&CE",
+      "url": "https://hrce.tn.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "limited",
+      "evidence": "Official portal responded without readable page content."
+    },
+    "district": {
+      "name": "Tiruvallur District",
+      "url": "https://tiruvallur.nic.in/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "localbodies": {
+      "name": "Tiruvallur — Local bodies",
+      "url": "https://tiruvallur.nic.in/administrative-setup/local-bodies/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "contacts": {
+      "name": "Tiruvallur — Contact directory",
+      "url": "https://tiruvallur.nic.in/contact-directory/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "notices": {
+      "name": "Tiruvallur — Announcements",
+      "url": "https://tiruvallur.nic.in/notice_category/announcements/",
+      "reviewed": "2026-09-20",
+      "status": "limited",
+      "evidence": "Official directory accessible, but retrieved snapshot older; no current notice claims are made."
+    },
+    "localjobs": {
+      "name": "Tiruvallur — Recruitment",
+      "url": "https://tiruvallur.nic.in/notice_category/recruitment/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "post": {
+      "name": "India Post",
+      "url": "https://www.indiapost.gov.in/",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "phishing": {
+      "name": "US FTC — Phishing guidance",
+      "url": "https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    },
+    "visa": {
+      "name": "US State Department — Visa expiry",
+      "url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/visa-expiration-date.html",
+      "reviewed": "2026-09-20",
+      "status": "read",
+      "evidence": "Official page content accessible; directory purpose checked."
+    }
+  },
+  "entries": [
+    {
+      "id": "india-holidays",
+      "category": "today",
+      "regions": [
+        "india",
+        "tamil"
+      ],
+      "title": {
+        "en": "Is it a holiday in India?",
+        "ta": "இந்தியாவில் இன்று விடுமுறையா?"
+      },
+      "summary": {
+        "en": "Check the calendar for the right state and institution before making a trip.",
+        "ta": "செல்லும் முன் சரியான மாநிலம் மற்றும் அலுவலகத்தின் விடுமுறையைப் பாருங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Choose the year in India Portal’s calendar.",
+          "ta": "இந்தியா போர்டல் காலண்டரில் ஆண்டைத் தேர்ந்தெடுங்கள்."
+        },
+        {
+          "en": "For Tamil Nadu, check the state government’s holiday notification.",
+          "ta": "தமிழ்நாட்டிற்கு மாநில அரசின் விடுமுறை அறிவிப்பைப் பாருங்கள்."
+        },
+        {
+          "en": "Confirm separately with your school, bank or office before travelling.",
+          "ta": "பள்ளி, வங்கி அல்லது அலுவலகத்தில் தனியாக உறுதி செய்துவிட்டுச் செல்லுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "A festival or national observance does not mean every office is closed. No live closure status is shown here.",
+        "ta": "பண்டிகை நாள் என்றால் எல்லா அலுவலகங்களும் மூடப்படும் என்று அர்த்தமில்லை. இங்கே நேரடி திறப்பு நிலை காட்டப்படவில்லை."
+      },
+      "sources": [
+        "india-calendar",
+        "tn"
+      ],
+      "keywords": "holiday vidumurai leave festival pongal diwali deepavali விடுமுறை பொங்கல் தீபாவளி"
+    },
+    {
+      "id": "world-holidays",
+      "category": "today",
+      "regions": [
+        "world"
+      ],
+      "title": {
+        "en": "Important dates when you live abroad",
+        "ta": "வெளிநாட்டில் இருக்கும்போது முக்கிய தேதிகள்"
+      },
+      "summary": {
+        "en": "Use the relevant country’s calendar; a holiday in one region may be a normal working day elsewhere.",
+        "ta": "அந்த நாட்டின் காலண்டரைப் பயன்படுத்துங்கள்; ஒரு பகுதியின் விடுமுறை மற்றொரு பகுதிக்குப் பொருந்தாமல் இருக்கலாம்."
+      },
+      "steps": [
+        {
+          "en": "UK: choose England and Wales, Scotland or Northern Ireland.",
+          "ta": "UK: England and Wales, Scotland அல்லது Northern Ireland பகுதியைத் தேர்ந்தெடுங்கள்."
+        },
+        {
+          "en": "USA: use the OPM list for federal holidays; ask your own institution about closures.",
+          "ta": "USA: மத்திய அரசு விடுமுறைகளுக்கு OPM பட்டியலைப் பாருங்கள்; உங்கள் நிறுவனத்தின் மூடல் நாட்களை அதனிடம் கேளுங்கள்."
+        },
+        {
+          "en": "Elsewhere, use your government portal and your school or employer’s calendar.",
+          "ta": "மற்ற நாடுகளில் அரசு போர்டல், பள்ளி அல்லது நிறுவன காலண்டரைப் பாருங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "These links show official calendars. This hub does not store annual holiday dates.",
+        "ta": "இந்த இணைப்புகளில் அதிகாரப்பூர்வ காலண்டர்கள் உள்ளன. ஆண்டுதோறும் மாறும் விடுமுறை தேதிகளை இந்த மையம் சேமிப்பதில்லை."
+      },
+      "sources": [
+        "uk-holidays",
+        "us-holidays"
+      ],
+      "keywords": "dates calendar bank holiday today today date தேதி நாள்காட்டி"
+    },
+    {
+      "id": "weather-check",
+      "category": "today",
+      "regions": [
+        "india",
+        "tamil"
+      ],
+      "title": {
+        "en": "Check weather before leaving home",
+        "ta": "வெளியே செல்லும் முன் வானிலை பாருங்கள்"
+      },
+      "summary": {
+        "en": "Look up the destination and the time of the forecast, not just your home town.",
+        "ta": "உங்கள் ஊர் மட்டுமல்லாமல் செல்லும் இடத்தையும் முன்னறிவிப்பு நேரத்தையும் பாருங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Open IMD and select the relevant state or district.",
+          "ta": "IMD தளத்தில் மாநிலம் அல்லது மாவட்டத்தைத் தேர்ந்தெடுங்கள்."
+        },
+        {
+          "en": "Read warnings and their issue/validity times.",
+          "ta": "எச்சரிக்கையையும் வெளியிட்ட நேரம் மற்றும் செல்லுபடியாகும் நேரத்தையும் படியுங்கள்."
+        },
+        {
+          "en": "For local disruptions, check the district administration’s announcements.",
+          "ta": "உள்ளூர் பாதிப்புகளுக்கு மாவட்ட நிர்வாக அறிவிப்புகளைப் பாருங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "No live weather or emergency alert feed is provided here. Follow local authority instructions.",
+        "ta": "இங்கே நேரடி வானிலை அல்லது அவசர எச்சரிக்கை வழங்கப்படுவதில்லை. உள்ளூர் அதிகாரிகளின் அறிவுரையைப் பின்பற்றுங்கள்."
+      },
+      "sources": [
+        "imd",
+        "district"
+      ],
+      "keywords": "rain cyclone mazhai weather மழை புயல் வானிலை"
+    },
+    {
+      "id": "travel-advice",
+      "category": "travel",
+      "regions": [
+        "world"
+      ],
+      "title": {
+        "en": "Before an international trip",
+        "ta": "வெளிநாட்டுப் பயணத்திற்கு முன்"
+      },
+      "summary": {
+        "en": "A useful starting order: destination advice, entry rules, transit rules, then your airline.",
+        "ta": "முதலில் செல்லும் நாட்டின் அறிவுரை, நுழைவு விதி, இடைநிறுத்த விதி, பிறகு விமான நிறுவனத் தகவலைப் பாருங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Read your government’s advice for the destination. UK and US directories are linked as examples.",
+          "ta": "செல்லும் இடத்திற்கான உங்கள் நாட்டின் பயண அறிவுரையைப் பாருங்கள். UK, US பட்டியல்கள் எடுத்துக்காட்டாக இணைக்கப்பட்டுள்ளன."
+        },
+        {
+          "en": "Confirm entry requirements with the destination authority for your nationality and travel document.",
+          "ta": "உங்கள் குடியுரிமை மற்றும் பயண ஆவணத்திற்கு ஏற்ற நுழைவு விதிகளை செல்லும் நாட்டின் அதிகாரியிடம் உறுதி செய்யுங்கள்."
+        },
+        {
+          "en": "Check every transit country and ask your airline about boarding documents.",
+          "ta": "ஒவ்வொரு இடைநிறுத்த நாட்டின் விதியையும் விமானத்தில் ஏறத் தேவையான ஆவணங்களையும் சரிபாருங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "Advice is nationality-specific and can change quickly. This guide does not establish visa eligibility.",
+        "ta": "அறிவுரை குடியுரிமையைப் பொறுத்தது; விரைவில் மாறலாம். இந்த வழிகாட்டி விசா தகுதியை நிர்ணயிக்காது."
+      },
+      "sources": [
+        "advice-uk",
+        "advice-us",
+        "mea"
+      ],
+      "keywords": "visa passport flight transit travel பயணம் விசா விமானம்"
+    },
+    {
+      "id": "passport-india",
+      "category": "travel",
+      "regions": [
+        "india",
+        "tamil"
+      ],
+      "title": {
+        "en": "Indian passport: find the right service",
+        "ta": "இந்திய பாஸ்போர்ட்: சரியான சேவையைக் கண்டறியுங்கள்"
+      },
+      "summary": {
+        "en": "Start from Passport Seva instead of a sponsored agent listing.",
+        "ta": "விளம்பர முகவர் இணைப்புக்கு பதிலாக Passport Seva தளத்தில் தொடங்குங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Choose the service that matches your situation, such as a fresh passport or reissue.",
+          "ta": "புதிய பாஸ்போர்ட் அல்லது மறுவழங்கல் போன்ற உங்கள் தேவைக்கான சேவையைத் தேர்ந்தெடுங்கள்."
+        },
+        {
+          "en": "Read the current document list, fees and appointment instructions on the portal.",
+          "ta": "தற்போதைய ஆவணப் பட்டியல், கட்டணம், சந்திப்பு வழிமுறைகளை அங்கே படியுங்கள்."
+        },
+        {
+          "en": "If you live abroad, check the responsible Indian mission through MEA.",
+          "ta": "வெளிநாட்டில் வசித்தால் சம்பந்தப்பட்ட இந்தியத் தூதரகத்தை MEA மூலம் கண்டறியுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "We do not collect passport details, book appointments or promise processing times.",
+        "ta": "நாங்கள் பாஸ்போர்ட் விவரங்களைப் பெறுவதில்லை; சந்திப்பு பதிவு செய்வதில்லை; முடியும் நேரத்தை உறுதியளிப்பதில்லை."
+      },
+      "sources": [
+        "passport",
+        "mea"
+      ],
+      "keywords": "passport renewal renew tatkal tatkaal பாஸ்போர்ட் புதுப்பிப்பு"
+    },
+    {
+      "id": "tirumala",
+      "category": "travel",
+      "regions": [
+        "india",
+        "tamil"
+      ],
+      "title": {
+        "en": "Tirumala: plan through TTD",
+        "ta": "திருமலை: TTD மூலம் திட்டமிடுங்கள்"
+      },
+      "summary": {
+        "en": "Use TTD’s own information and booking route for a temple visit.",
+        "ta": "கோவில் பயணத்திற்கு TTD-யின் தகவல் மற்றும் பதிவு வழியைப் பயன்படுத்துங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Read announcements on the official TTD website.",
+          "ta": "அதிகாரப்பூர்வ TTD தளத்தின் அறிவிப்புகளைப் படியுங்கள்."
+        },
+        {
+          "en": "Use the official booking portal to check your date and category.",
+          "ta": "உங்கள் தேதி மற்றும் பிரிவை அதிகாரப்பூர்வ பதிவு தளத்தில் சரிபாருங்கள்."
+        },
+        {
+          "en": "Confirm identification, reporting instructions and accessibility arrangements before leaving.",
+          "ta": "அடையாள ஆவணம், வர வேண்டிய வழிமுறை, அணுகல் வசதி ஆகியவற்றை கிளம்பும் முன் உறுதி செய்யுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "No ticket availability, queue duration, quota release date or fee is quoted here. Avoid unofficial payment requests.",
+        "ta": "டிக்கெட் இருப்பு, காத்திருப்பு நேரம், ஒதுக்கீடு திறக்கும் நாள், கட்டணம் இங்கே தரப்படவில்லை. அதிகாரப்பூர்வமற்ற பணக் கோரிக்கைகளைத் தவிர்க்கவும்."
+      },
+      "sources": [
+        "ttd",
+        "ttd-book"
+      ],
+      "keywords": "tirupati tirumala darshan ttd temple திருப்பதி திருமலை தரிசனம் கோவில்"
+    },
+    {
+      "id": "tiruttani",
+      "category": "travel",
+      "regions": [
+        "tamil",
+        "india"
+      ],
+      "title": {
+        "en": "Tiruttani temple visit",
+        "ta": "திருத்தணி கோவில் பயணம்"
+      },
+      "summary": {
+        "en": "Use the temple’s HR&CE page and the district tourism information as your starting points.",
+        "ta": "கோவிலின் HR&CE பக்கத்தையும் மாவட்ட சுற்றுலாத் தகவலையும் முதலில் பாருங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Find the temple in the official HR&CE directory.",
+          "ta": "அதிகாரப்பூர்வ HR&CE பட்டியலில் கோவிலைக் கண்டறியுங்கள்."
+        },
+        {
+          "en": "Check the current notice for the day you intend to visit.",
+          "ta": "நீங்கள் செல்லும் நாளுக்கான தற்போதைய அறிவிப்பைப் பாருங்கள்."
+        },
+        {
+          "en": "Ask the temple directly about access needs and arrangements for older visitors.",
+          "ta": "அணுகல் தேவைகள் மற்றும் முதியோருக்கான வசதிகளை கோவிலிடம் நேரடியாகக் கேளுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "Festival arrangements and opening times can differ. This page does not promise a particular timing or facility.",
+        "ta": "விழா ஏற்பாடுகளும் திறப்பு நேரங்களும் மாறலாம். குறிப்பிட்ட நேரம் அல்லது வசதியை இந்தப் பக்கம் உறுதியளிக்காது."
+      },
+      "sources": [
+        "tiruttani",
+        "hrce",
+        "district"
+      ],
+      "keywords": "thiruthani tiruttani murugan temple தரிசனம் திருத்தணி முருகன்"
+    },
+    {
+      "id": "aadhaar",
+      "category": "services",
+      "regions": [
+        "india",
+        "tamil"
+      ],
+      "title": {
+        "en": "Aadhaar: update or find a centre",
+        "ta": "ஆதார்: திருத்தம் அல்லது மையம் தேடுதல்"
+      },
+      "summary": {
+        "en": "Find the current process directly through UIDAI.",
+        "ta": "தற்போதைய நடைமுறையை UIDAI மூலம் நேரடியாக அறியுங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Open UIDAI and choose the enrolment or update service you need.",
+          "ta": "UIDAI தளத்தில் தேவையான பதிவு அல்லது திருத்த சேவையைத் தேர்ந்தெடுங்கள்."
+        },
+        {
+          "en": "Check whether the change can be made online or needs a centre visit.",
+          "ta": "திருத்தத்தை இணையத்தில் செய்யலாமா அல்லது மையத்திற்குச் செல்ல வேண்டுமா என்று பாருங்கள்."
+        },
+        {
+          "en": "Read the official document and fee instructions before attending.",
+          "ta": "செல்லும் முன் அதிகாரப்பூர்வ ஆவண மற்றும் கட்டண வழிமுறைகளைப் படியுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "Do not enter Aadhaar numbers, OTPs or document scans in this hub.",
+        "ta": "ஆதார் எண், OTP அல்லது ஆவணப் படங்களை இந்த மையத்தில் உள்ளிடாதீர்கள்."
+      },
+      "sources": [
+        "uidai"
+      ],
+      "keywords": "aadhar adhar aadhaar update address mobile ஆதார் முகவரி"
+    },
+    {
+      "id": "digilocker",
+      "category": "services",
+      "regions": [
+        "india",
+        "tamil"
+      ],
+      "title": {
+        "en": "Find documents in DigiLocker",
+        "ta": "DigiLocker-ல் ஆவணங்களைப் பெறுதல்"
+      },
+      "summary": {
+        "en": "Use the official service to find documents from participating issuers.",
+        "ta": "பங்கேற்கும் வழங்குநர்களிடமிருந்து ஆவணங்களைப் பெற அதிகாரப்பூர்வ சேவையைப் பயன்படுத்துங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Sign in only on the official DigiLocker service.",
+          "ta": "அதிகாரப்பூர்வ DigiLocker சேவையில் மட்டுமே உள்நுழையுங்கள்."
+        },
+        {
+          "en": "Look for the issuing organisation and the document you need.",
+          "ta": "ஆவணத்தை வழங்கிய நிறுவனம் மற்றும் தேவையான ஆவணத்தைத் தேடுங்கள்."
+        },
+        {
+          "en": "Check the receiving organisation’s requirements before sharing a document.",
+          "ta": "பகிர்வதற்கு முன் பெறும் நிறுவனத்தின் தேவைகளைச் சரிபாருங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "A file you upload yourself is not automatically the same as a document issued through the service.",
+        "ta": "நீங்களே பதிவேற்றிய கோப்பு, சேவை மூலம் வழங்கப்பட்ட ஆவணத்திற்கு தானாகச் சமமாகாது."
+      },
+      "sources": [
+        "digi"
+      ],
+      "keywords": "digilocker digital certificate documents சான்றிதழ் ஆவணம்"
+    },
+    {
+      "id": "esevai",
+      "category": "services",
+      "regions": [
+        "tamil"
+      ],
+      "title": {
+        "en": "Tamil Nadu certificates through e-Sevai",
+        "ta": "e-Sevai மூலம் தமிழ்நாடு சான்றிதழ்கள்"
+      },
+      "summary": {
+        "en": "Check the service name and requirements before applying for a certificate.",
+        "ta": "சான்றிதழுக்கு விண்ணப்பிக்கும் முன் சேவையின் பெயரையும் தேவைகளையும் பாருங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Open the official e-Sevai citizen portal.",
+          "ta": "அதிகாரப்பூர்வ e-Sevai குடிமக்கள் தளத்தைத் திறக்கவும்."
+        },
+        {
+          "en": "Choose the certificate and read its current eligibility and document requirements.",
+          "ta": "சான்றிதழைத் தேர்ந்தெடுத்து தற்போதைய தகுதி மற்றும் ஆவணத் தேவைகளைப் படியுங்கள்."
+        },
+        {
+          "en": "Keep your application acknowledgement privately and use official status/help routes.",
+          "ta": "விண்ணப்ப ஒப்புகையைத் தனிப்பட்ட முறையில் வைத்திருந்து அதிகாரப்பூர்வ நிலை/உதவி வழியைப் பயன்படுத்துங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "Available services and the responsible authority vary. This hub does not issue certificates.",
+        "ta": "கிடைக்கும் சேவைகளும் பொறுப்பான அதிகாரியும் மாறலாம். இந்த மையம் சான்றிதழ்களை வழங்காது."
+      },
+      "sources": [
+        "esevai",
+        "tn"
+      ],
+      "keywords": "esevai e sevai income community certificate வருமான சாதி சான்றிதழ் இ சேவை"
+    },
+    {
+      "id": "schemes",
+      "category": "services",
+      "regions": [
+        "india",
+        "tamil"
+      ],
+      "title": {
+        "en": "Find a government scheme",
+        "ta": "அரசுத் திட்டத்தைக் கண்டறியுங்கள்"
+      },
+      "summary": {
+        "en": "Use myScheme to explore options, then verify the scheme with its implementing department.",
+        "ta": "myScheme-ல் வாய்ப்புகளைப் பார்த்துவிட்டு, செயல்படுத்தும் துறையிடம் திட்டத்தை உறுதி செய்யுங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Start with the category or eligibility finder on myScheme.",
+          "ta": "myScheme-ல் பிரிவு அல்லது தகுதி தேடலில் தொடங்குங்கள்."
+        },
+        {
+          "en": "Read the scheme’s eligibility, benefits and application route.",
+          "ta": "திட்டத்தின் தகுதி, பயன், விண்ணப்பிக்கும் வழியைப் படியுங்கள்."
+        },
+        {
+          "en": "Confirm the current notification with the department before sharing documents.",
+          "ta": "ஆவணங்களைப் பகிரும் முன் தற்போதைய அறிவிப்பை சம்பந்தப்பட்ட துறையிடம் உறுதி செய்யுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "A search match does not mean your application will be approved.",
+        "ta": "தேடலில் திட்டம் வந்ததால் உங்கள் விண்ணப்பம் ஏற்கப்படும் என்று அர்த்தமில்லை."
+      },
+      "sources": [
+        "scheme",
+        "india"
+      ],
+      "keywords": "scheme benefits subsidy thittam திட்டம் நலத்திட்டம்"
+    },
+    {
+      "id": "us-services",
+      "category": "services",
+      "regions": [
+        "us"
+      ],
+      "title": {
+        "en": "United States services",
+        "ta": "அமெரிக்க அரசு சேவைகள்"
+      },
+      "summary": {
+        "en": "Find the responsible public service through its government gateway.",
+        "ta": "அரசின் முதன்மைத் தளம் மூலம் பொறுப்பான சேவையைக் கண்டறியுங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Choose the topic that matches your need.",
+          "ta": "உங்கள் தேவைக்கான தலைப்பைத் தேர்ந்தெடுங்கள்."
+        },
+        {
+          "en": "Follow the link to the responsible department and read its current requirements.",
+          "ta": "பொறுப்பான துறையின் இணைப்பிற்குச் சென்று தற்போதைய தேவைகளைப் படியுங்கள்."
+        },
+        {
+          "en": "Apply only on that official service; save any acknowledgement privately.",
+          "ta": "அந்த அதிகாரப்பூர்வ சேவையில் மட்டுமே விண்ணப்பியுங்கள்; ஒப்புகையைத் தனியாகச் சேமியுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "Federal, state and local services can have different eligibility rules.",
+        "ta": "மத்திய, மாநில, உள்ளூர் சேவைகளின் தகுதி விதிகள் வேறுபடலாம்."
+      },
+      "sources": [
+        "usa"
+      ],
+      "keywords": "us government benefits documents அரசு சேவை"
+    },
+    {
+      "id": "uk-services",
+      "category": "services",
+      "regions": [
+        "uk"
+      ],
+      "title": {
+        "en": "United Kingdom services",
+        "ta": "ஐக்கிய இராச்சிய அரசு சேவைகள்"
+      },
+      "summary": {
+        "en": "Find the responsible public service through its government gateway.",
+        "ta": "அரசின் முதன்மைத் தளம் மூலம் பொறுப்பான சேவையைக் கண்டறியுங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Choose the topic that matches your need.",
+          "ta": "உங்கள் தேவைக்கான தலைப்பைத் தேர்ந்தெடுங்கள்."
+        },
+        {
+          "en": "Follow the link to the responsible department and read its current requirements.",
+          "ta": "பொறுப்பான துறையின் இணைப்பிற்குச் சென்று தற்போதைய தேவைகளைப் படியுங்கள்."
+        },
+        {
+          "en": "Apply only on that official service; save any acknowledgement privately.",
+          "ta": "அந்த அதிகாரப்பூர்வ சேவையில் மட்டுமே விண்ணப்பியுங்கள்; ஒப்புகையைத் தனியாகச் சேமியுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "Rules can differ across England, Scotland, Wales and Northern Ireland.",
+        "ta": "England, Scotland, Wales, Northern Ireland பகுதிகளின் விதிகள் வேறுபடலாம்."
+      },
+      "sources": [
+        "uk"
+      ],
+      "keywords": "uk government benefits documents அரசு சேவை"
+    },
+    {
+      "id": "canada-services",
+      "category": "services",
+      "regions": [
+        "canada"
+      ],
+      "title": {
+        "en": "Canada services",
+        "ta": "கனடா அரசு சேவைகள்"
+      },
+      "summary": {
+        "en": "Find the responsible public service through its government gateway.",
+        "ta": "அரசின் முதன்மைத் தளம் மூலம் பொறுப்பான சேவையைக் கண்டறியுங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Choose the topic that matches your need.",
+          "ta": "உங்கள் தேவைக்கான தலைப்பைத் தேர்ந்தெடுங்கள்."
+        },
+        {
+          "en": "Follow the link to the responsible department and read its current requirements.",
+          "ta": "பொறுப்பான துறையின் இணைப்பிற்குச் சென்று தற்போதைய தேவைகளைப் படியுங்கள்."
+        },
+        {
+          "en": "Apply only on that official service; save any acknowledgement privately.",
+          "ta": "அந்த அதிகாரப்பூர்வ சேவையில் மட்டுமே விண்ணப்பியுங்கள்; ஒப்புகையைத் தனியாகச் சேமியுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "Check whether a service is federal, provincial or territorial.",
+        "ta": "சேவை மத்திய, மாகாண அல்லது பிராந்திய அரசைச் சேர்ந்ததா என்று பாருங்கள்."
+      },
+      "sources": [
+        "canada"
+      ],
+      "keywords": "canada government benefits documents அரசு சேவை"
+    },
+    {
+      "id": "australia-services",
+      "category": "services",
+      "regions": [
+        "australia"
+      ],
+      "title": {
+        "en": "Australia services",
+        "ta": "ஆஸ்திரேலிய அரசு சேவைகள்"
+      },
+      "summary": {
+        "en": "Find the responsible public service through its government gateway.",
+        "ta": "அரசின் முதன்மைத் தளம் மூலம் பொறுப்பான சேவையைக் கண்டறியுங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Choose the topic that matches your need.",
+          "ta": "உங்கள் தேவைக்கான தலைப்பைத் தேர்ந்தெடுங்கள்."
+        },
+        {
+          "en": "Follow the link to the responsible department and read its current requirements.",
+          "ta": "பொறுப்பான துறையின் இணைப்பிற்குச் சென்று தற்போதைய தேவைகளைப் படியுங்கள்."
+        },
+        {
+          "en": "Apply only on that official service; save any acknowledgement privately.",
+          "ta": "அந்த அதிகாரப்பூர்வ சேவையில் மட்டுமே விண்ணப்பியுங்கள்; ஒப்புகையைத் தனியாகச் சேமியுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "myGov is a starting point; also check your state or territory’s services.",
+        "ta": "myGov ஒரு தொடக்க வழி; உங்கள் மாநிலம் அல்லது பிராந்திய சேவைகளையும் பாருங்கள்."
+      },
+      "sources": [
+        "australia"
+      ],
+      "keywords": "australia government benefits documents அரசு சேவை"
+    },
+    {
+      "id": "singapore-services",
+      "category": "services",
+      "regions": [
+        "singapore"
+      ],
+      "title": {
+        "en": "Singapore services",
+        "ta": "சிங்கப்பூர் அரசு சேவைகள்"
+      },
+      "summary": {
+        "en": "Find the responsible public service through its government gateway.",
+        "ta": "அரசின் முதன்மைத் தளம் மூலம் பொறுப்பான சேவையைக் கண்டறியுங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Choose the topic that matches your need.",
+          "ta": "உங்கள் தேவைக்கான தலைப்பைத் தேர்ந்தெடுங்கள்."
+        },
+        {
+          "en": "Follow the link to the responsible department and read its current requirements.",
+          "ta": "பொறுப்பான துறையின் இணைப்பிற்குச் சென்று தற்போதைய தேவைகளைப் படியுங்கள்."
+        },
+        {
+          "en": "Apply only on that official service; save any acknowledgement privately.",
+          "ta": "அந்த அதிகாரப்பூர்வ சேவையில் மட்டுமே விண்ணப்பியுங்கள்; ஒப்புகையைத் தனியாகச் சேமியுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "Use the responsible ministry or agency linked from the government portal.",
+        "ta": "அரசு போர்டல் இணைக்கும் சம்பந்தப்பட்ட அமைச்சகம் அல்லது அமைப்பைப் பயன்படுத்துங்கள்."
+      },
+      "sources": [
+        "singapore"
+      ],
+      "keywords": "singapore government benefits documents அரசு சேவை"
+    },
+    {
+      "id": "eu-services",
+      "category": "services",
+      "regions": [
+        "eu"
+      ],
+      "title": {
+        "en": "Living, working or studying in the EU",
+        "ta": "EU-வில் வாழ்தல், வேலை, படிப்பு"
+      },
+      "summary": {
+        "en": "Find the responsible public service through its government gateway.",
+        "ta": "அரசின் முதன்மைத் தளம் மூலம் பொறுப்பான சேவையைக் கண்டறியுங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Choose the topic that matches your need.",
+          "ta": "உங்கள் தேவைக்கான தலைப்பைத் தேர்ந்தெடுங்கள்."
+        },
+        {
+          "en": "Follow the link to the responsible department and read its current requirements.",
+          "ta": "பொறுப்பான துறையின் இணைப்பிற்குச் சென்று தற்போதைய தேவைகளைப் படியுங்கள்."
+        },
+        {
+          "en": "Apply only on that official service; save any acknowledgement privately.",
+          "ta": "அந்த அதிகாரப்பூர்வ சேவையில் மட்டுமே விண்ணப்பியுங்கள்; ஒப்புகையைத் தனியாகச் சேமியுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "Country rules and nationality matter; an EU overview is not a residence or work permit.",
+        "ta": "நாட்டின் விதியும் குடியுரிமையும் முக்கியம்; EU விளக்கப் பக்கம் வசிப்பு அல்லது வேலை அனுமதி அல்ல."
+      },
+      "sources": [
+        "eu"
+      ],
+      "keywords": "eu government benefits documents அரசு சேவை"
+    },
+    {
+      "id": "find-country",
+      "category": "services",
+      "regions": [
+        "world"
+      ],
+      "title": {
+        "en": "Your country is not listed?",
+        "ta": "உங்கள் நாடு பட்டியலில் இல்லையா?"
+      },
+      "summary": {
+        "en": "The starting collection covers selected regions. You can still use this method anywhere.",
+        "ta": "தொடக்கத் தொகுப்பில் சில பகுதிகளே உள்ளன. இந்த முறையை எந்த நாட்டிலும் பயன்படுத்தலாம்."
+      },
+      "steps": [
+        {
+          "en": "Find your national government’s main website, then follow its service or ministry directory.",
+          "ta": "உங்கள் தேசிய அரசின் முதன்மைத் தளத்தைக் கண்டறிந்து அதன் சேவை அல்லது அமைச்சகப் பட்டியலைப் பின்பற்றுங்கள்."
+        },
+        {
+          "en": "Cross-check a service link with a second official government page before submitting documents.",
+          "ta": "ஆவணங்களை அனுப்பும் முன் அந்த இணைப்பை மற்றொரு அதிகாரப்பூர்வ அரசுப் பக்கத்துடன் ஒப்பிடுங்கள்."
+        },
+        {
+          "en": "Do not assume a search advertisement or padlock icon proves government ownership.",
+          "ta": "தேடல் விளம்பரம் அல்லது பூட்டு குறியீடு மட்டும் அரசு தளம் என்பதற்கான சான்று என்று நினைக்காதீர்கள்."
+        }
+      ],
+      "caution": {
+        "en": "There is no single government-domain ending used by every country. This is a discovery method, not a complete world directory.",
+        "ta": "எல்லா நாடுகளும் ஒரே அரசு டொமைன் முடிவைப் பயன்படுத்துவதில்லை. இது கண்டறியும் முறை; முழு உலகப் பட்டியல் அல்ல."
+      },
+      "sources": [
+        "phishing"
+      ],
+      "keywords": "world global countries worldwide international உலகம் நாடுகள்"
+    },
+    {
+      "id": "jobs-india",
+      "category": "learn",
+      "regions": [
+        "india",
+        "tamil"
+      ],
+      "title": {
+        "en": "Find jobs without chasing forwarded messages",
+        "ta": "பகிரப்பட்ட செய்திகளை மட்டும் நம்பாமல் வேலை தேடுங்கள்"
+      },
+      "summary": {
+        "en": "Start with National Career Service and verify the employer and job notice.",
+        "ta": "National Career Service-ல் தொடங்கி நிறுவனத்தையும் வேலை அறிவிப்பையும் சரிபாருங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Search by role and location on NCS.",
+          "ta": "NCS-ல் வேலை வகை மற்றும் இடத்தை வைத்து தேடுங்கள்."
+        },
+        {
+          "en": "Read the employer, duties, location and application route carefully.",
+          "ta": "நிறுவனம், பணி, இடம், விண்ணப்பிக்கும் வழியை கவனமாகப் படியுங்கள்."
+        },
+        {
+          "en": "Verify an offer independently before sharing identity or bank documents.",
+          "ta": "அடையாள அல்லது வங்கி ஆவணங்களைப் பகிரும் முன் வேலை வாய்ப்பைத் தனியாக உறுதி செய்யுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "NCS says its services are free. A listing is not a job guarantee or proof that every employer is safe.",
+        "ta": "NCS தனது சேவைகள் இலவசம் என்று கூறுகிறது. பட்டியல் இருப்பது வேலை உறுதி அல்லது ஒவ்வொரு நிறுவனமும் பாதுகாப்பானது என்பதற்கான சான்றல்ல."
+      },
+      "sources": [
+        "ncs"
+      ],
+      "keywords": "jobs velai vacancy recruitment வேலை வேலைவாய்ப்பு"
+    },
+    {
+      "id": "tnpsc",
+      "category": "learn",
+      "regions": [
+        "tamil"
+      ],
+      "title": {
+        "en": "TNPSC notifications and exam updates",
+        "ta": "TNPSC அறிவிப்புகள் மற்றும் தேர்வுத் தகவல்"
+      },
+      "summary": {
+        "en": "Use the original notification and later corrections together.",
+        "ta": "மூல அறிவிப்பையும் பின்னர் வந்த திருத்தங்களையும் சேர்த்துப் பாருங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Find the examination or post on TNPSC’s official website.",
+          "ta": "TNPSC அதிகாரப்பூர்வ தளத்தில் தேர்வு அல்லது பதவியைத் தேடுங்கள்."
+        },
+        {
+          "en": "Read eligibility, dates and application instructions in the notification.",
+          "ta": "அறிவிப்பில் தகுதி, தேதிகள், விண்ணப்ப வழிமுறைகளைப் படியுங்கள்."
+        },
+        {
+          "en": "Check for corrigenda or revised schedules before acting.",
+          "ta": "செயல்படும் முன் திருத்த அறிவிப்பு அல்லது மாற்றிய அட்டவணை உள்ளதா பாருங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "We do not reproduce deadlines or advertise open vacancies. Check the live notice each time.",
+        "ta": "கடைசித் தேதிகள் அல்லது காலியிடங்கள் இங்கே வெளியிடப்படுவதில்லை. ஒவ்வொரு முறையும் தற்போதைய அறிவிப்பைப் பாருங்கள்."
+      },
+      "sources": [
+        "tnpsc"
+      ],
+      "keywords": "tnpsc group 1 group 2 group 4 government exam தேர்வு அரசு வேலை"
+    },
+    {
+      "id": "exam-notices",
+      "category": "learn",
+      "regions": [
+        "india",
+        "tamil"
+      ],
+      "title": {
+        "en": "Entrance exams: find the original notice",
+        "ta": "நுழைவுத் தேர்வு: மூல அறிவிப்பைக் கண்டறியுங்கள்"
+      },
+      "summary": {
+        "en": "For an NTA-run examination, start with the agency and the relevant exam page.",
+        "ta": "NTA நடத்தும் தேர்வுக்கு அந்த அமைப்பின் தளத்திலும் சம்பந்தப்பட்ட தேர்வுப் பக்கத்திலும் தொடங்குங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Check that NTA is the body conducting your examination.",
+          "ta": "உங்கள் தேர்வை NTA நடத்துகிறதா என்பதைச் சரிபாருங்கள்."
+        },
+        {
+          "en": "Read the information bulletin and any revised notice.",
+          "ta": "தகவல் கையேட்டையும் திருத்தப்பட்ட அறிவிப்பையும் படியுங்கள்."
+        },
+        {
+          "en": "Follow official links for registration, admit cards and results; check the exam year.",
+          "ta": "பதிவு, அனுமதி அட்டை, முடிவுகளுக்கு அதிகாரப்பூர்வ இணைப்பைப் பின்பற்றுங்கள்; தேர்வு ஆண்டையும் பாருங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "NTA does not conduct every exam. This hub does not display results or collect roll numbers.",
+        "ta": "எல்லா தேர்வுகளையும் NTA நடத்துவதில்லை. இந்த மையம் முடிவுகளைக் காட்டுவதில்லை; பதிவு எண்களைப் பெறுவதில்லை."
+      },
+      "sources": [
+        "nta"
+      ],
+      "keywords": "neet jee cuet results admit card exam தேர்வு முடிவு ஹால் டிக்கெட்"
+    },
+    {
+      "id": "scholarships",
+      "category": "learn",
+      "regions": [
+        "india",
+        "tamil"
+      ],
+      "title": {
+        "en": "Scholarships: check the right scheme and year",
+        "ta": "கல்வி உதவித்தொகை: சரியான திட்டம் மற்றும் ஆண்டு"
+      },
+      "summary": {
+        "en": "Use the National Scholarship Portal for participating schemes, then check your institution’s role.",
+        "ta": "பங்கேற்கும் திட்டங்களுக்கு National Scholarship Portal-ஐப் பயன்படுத்தி உங்கள் கல்வி நிறுவனத்தின் பங்கையும் சரிபாருங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Choose the academic year and scheme relevant to you.",
+          "ta": "உங்களுக்கான கல்வி ஆண்டு மற்றும் திட்டத்தைத் தேர்ந்தெடுங்கள்."
+        },
+        {
+          "en": "Read eligibility, document requirements and verification steps.",
+          "ta": "தகுதி, ஆவணத் தேவைகள், சரிபார்ப்பு படிகளைப் படியுங்கள்."
+        },
+        {
+          "en": "Confirm the application and institution-verification deadlines on the live portal.",
+          "ta": "விண்ணப்ப மற்றும் கல்வி நிறுவன சரிபார்ப்புக் காலக்கெடுவை தற்போதைய தளத்தில் உறுதி செய்யுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "Not every scholarship is on this portal; an application does not guarantee funding.",
+        "ta": "எல்லா உதவித்தொகைகளும் இந்தத் தளத்தில் இல்லை; விண்ணப்பம் நிதி கிடைப்பதை உறுதி செய்யாது."
+      },
+      "sources": [
+        "scholarships"
+      ],
+      "keywords": "scholarship education fees student உதவித்தொகை கல்வி மாணவர்"
+    },
+    {
+      "id": "learn-online",
+      "category": "learn",
+      "regions": [
+        "world"
+      ],
+      "title": {
+        "en": "Explore learning through SWAYAM",
+        "ta": "SWAYAM மூலம் கற்றல் வாய்ப்புகள்"
+      },
+      "summary": {
+        "en": "Compare the course language, level and schedule before enrolling.",
+        "ta": "பதிவு செய்வதற்கு முன் பாட மொழி, நிலை, அட்டவணையை ஒப்பிடுங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Search the official course catalogue for your topic.",
+          "ta": "அதிகாரப்பூர்வ பாடப் பட்டியலில் உங்கள் தலைப்பைத் தேடுங்கள்."
+        },
+        {
+          "en": "Read prerequisites, teaching language and the current schedule.",
+          "ta": "முன்தேவைகள், கற்பிக்கும் மொழி, தற்போதைய அட்டவணையைப் படியுங்கள்."
+        },
+        {
+          "en": "Check certification, examination fees and access conditions on the course page.",
+          "ta": "சான்றிதழ், தேர்வுக் கட்டணம், அணுகல் நிபந்தனைகளை பாடப் பக்கத்தில் பாருங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "Course access, assessments and certificates can have different conditions. Do not assume every certificate is free or accepted everywhere.",
+        "ta": "பாட அணுகல், மதிப்பீடு, சான்றிதழ்களுக்கு வெவ்வேறு நிபந்தனைகள் இருக்கலாம். எல்லா சான்றிதழும் இலவசம் அல்லது எல்லா இடத்திலும் ஏற்கப்படும் என்று நினைக்காதீர்கள்."
+      },
+      "sources": [
+        "swayam"
+      ],
+      "keywords": "online course learn skills study படிப்பு கற்றல் திறன்"
+    },
+    {
+      "id": "jobs-abroad",
+      "category": "learn",
+      "regions": [
+        "us",
+        "canada",
+        "uk"
+      ],
+      "title": {
+        "en": "Official job routes: USA, Canada and UK",
+        "ta": "அதிகாரப்பூர்வ வேலை வழிகள்: USA, கனடா, UK"
+      },
+      "summary": {
+        "en": "Use a public job portal as a starting point, then read the individual vacancy.",
+        "ta": "அரசு வேலைத் தளத்தில் தொடங்கி ஒவ்வொரு வேலை அறிவிப்பையும் படியுங்கள்."
+      },
+      "steps": [
+        {
+          "en": "USAJOBS lists US federal jobs; Canada Job Bank and GOV.UK provide their own job-search routes.",
+          "ta": "USAJOBS-ல் அமெரிக்க மத்திய அரசு வேலைகள் உள்ளன; Canada Job Bank, GOV.UK தங்களுக்கான வேலை தேடும் வழிகளை வழங்குகின்றன."
+        },
+        {
+          "en": "Check citizenship, residency, location and qualification requirements for each vacancy.",
+          "ta": "ஒவ்வொரு வேலைக்கும் குடியுரிமை, வசிப்பிடம், பணியிடம், தகுதித் தேவைகளைப் பாருங்கள்."
+        },
+        {
+          "en": "Verify the employer and apply through the route in the original notice.",
+          "ta": "நிறுவனத்தை உறுதி செய்து மூல அறிவிப்பில் உள்ள வழியில் விண்ணப்பியுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "A job listing does not provide work permission or guarantee visa sponsorship.",
+        "ta": "வேலை அறிவிப்பு வேலை அனுமதி அல்லது விசா ஸ்பான்சர்ஷிப்பை உறுதி செய்யாது."
+      },
+      "sources": [
+        "usajobs",
+        "jobbank",
+        "ukjobs"
+      ],
+      "keywords": "jobs abroad overseas work employment வேலை வெளிநாடு"
+    },
+    {
+      "id": "phishing",
+      "category": "meaning",
+      "regions": [
+        "world"
+      ],
+      "title": {
+        "en": "What does “phishing” mean?",
+        "ta": "“Phishing” என்றால் என்ன?"
+      },
+      "summary": {
+        "en": "It is a trick that uses a message or fake page to get you to reveal information or take an unsafe action.",
+        "ta": "செய்தி அல்லது போலிப் பக்கம் மூலம் தகவலைப் பெறவோ பாதுகாப்பற்ற செயலைச் செய்ய வைக்கவோ பயன்படுத்தப்படும் மோசடி இது."
+      },
+      "steps": [
+        {
+          "en": "Pause when a message creates urgency or asks for account details.",
+          "ta": "அவசரப்படுத்தும் அல்லது கணக்கு விவரங்கள் கேட்கும் செய்தியைப் பார்த்தால் நிதானியுங்கள்."
+        },
+        {
+          "en": "Open the organisation’s known website yourself instead of using the message link.",
+          "ta": "செய்தியின் இணைப்பைப் பயன்படுத்தாமல் அந்த அமைப்பின் தெரிந்த தளத்தை நீங்களே திறக்கவும்."
+        },
+        {
+          "en": "If you acted on the message, use the organisation’s official help route promptly.",
+          "ta": "செய்தியை நம்பி செயல்பட்டிருந்தால் அந்த அமைப்பின் அதிகாரப்பூர்வ உதவியை உடனே நாடுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "A familiar logo, sender name or secure-looking page is not proof of authenticity.",
+        "ta": "தெரிந்த லோகோ, அனுப்புநர் பெயர் அல்லது பாதுகாப்பாகத் தோன்றும் பக்கம் மட்டும் உண்மைத்தன்மைக்கு சான்றல்ல."
+      },
+      "sources": [
+        "phishing"
+      ],
+      "keywords": "scam fraud fake phishing meaning meaning enna மோசடி பொருள் அர்த்தம்"
+    },
+    {
+      "id": "visa-expiry",
+      "category": "meaning",
+      "regions": [
+        "us"
+      ],
+      "title": {
+        "en": "Visa expiry ≠ permission to stay in the USA",
+        "ta": "விசா காலாவதி ≠ USA-வில் தங்கும் அனுமதி"
+      },
+      "summary": {
+        "en": "The visa’s expiry date and the period you are allowed to stay are different concepts.",
+        "ta": "விசாவின் காலாவதி நாளும் தங்க அனுமதிக்கப்பட்ட காலமும் வேறுபட்டவை."
+      },
+      "steps": [
+        {
+          "en": "Read the State Department explanation of visa validity.",
+          "ta": "விசா செல்லுபடியைப் பற்றிய State Department விளக்கத்தைப் படியுங்கள்."
+        },
+        {
+          "en": "Check your admission record and any conditions that apply to you.",
+          "ta": "உங்கள் நுழைவுப் பதிவையும் உங்களுக்கான நிபந்தனைகளையும் சரிபாருங்கள்."
+        },
+        {
+          "en": "Get qualified advice if your documents or dates are unclear.",
+          "ta": "ஆவணங்கள் அல்லது தேதிகளில் குழப்பம் இருந்தால் தகுதியான நிபுணரிடம் ஆலோசனை பெறுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "This is a general explanation, not a calculation of your lawful stay or individual immigration advice.",
+        "ta": "இது பொதுவான விளக்கம் மட்டுமே; உங்கள் சட்டபூர்வ தங்கும் காலக் கணக்கீடு அல்லது தனிப்பட்ட குடிவரவு ஆலோசனை அல்ல."
+      },
+      "sources": [
+        "visa"
+      ],
+      "keywords": "visa validity i94 duration stay expiry பொருள் விசா காலாவதி"
+    },
+    {
+      "id": "eligibility",
+      "category": "meaning",
+      "regions": [
+        "world"
+      ],
+      "title": {
+        "en": "Eligibility is not approval",
+        "ta": "தகுதி இருப்பது ஒப்புதல் கிடைத்ததாகாது"
+      },
+      "summary": {
+        "en": "Eligibility describes the conditions for consideration. Approval is the authority’s decision on an application.",
+        "ta": "பரிசீலனைக்கான நிபந்தனைகளே தகுதி. விண்ணப்பத்தின் மீது அதிகாரி எடுக்கும் முடிவே ஒப்புதல்."
+      },
+      "steps": [
+        {
+          "en": "Read every condition, not only the headline benefit.",
+          "ta": "தலைப்பில் உள்ள பயன் மட்டுமல்லாமல் எல்லா நிபந்தனைகளையும் படியுங்கள்."
+        },
+        {
+          "en": "Check the evidence required and whether the rules apply to your location or category.",
+          "ta": "தேவையான சான்றுகளையும் விதிகள் உங்கள் பகுதி அல்லது பிரிவுக்குப் பொருந்துகிறதா என்பதையும் பாருங்கள்."
+        },
+        {
+          "en": "Wait for the official decision rather than treating a search result as acceptance.",
+          "ta": "தேடல் முடிவை ஒப்புதலாகக் கருதாமல் அதிகாரப்பூர்வ முடிவிற்காகக் காத்திருங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "The exact meaning and decision process depend on the service. myScheme is an example of eligibility discovery.",
+        "ta": "சரியான பொருளும் முடிவெடுக்கும் முறையும் சேவையைப் பொறுத்தவை. தகுதி கண்டறிதலுக்கு myScheme ஒரு எடுத்துக்காட்டு."
+      },
+      "sources": [
+        "scheme"
+      ],
+      "keywords": "eligibility eligible approval meaning தகுதி ஒப்புதல் அர்த்தம்"
+    },
+    {
+      "id": "corrigendum",
+      "category": "meaning",
+      "regions": [
+        "world"
+      ],
+      "title": {
+        "en": "What is a corrigendum?",
+        "ta": "திருத்த அறிவிப்பு என்றால் என்ன?"
+      },
+      "summary": {
+        "en": "It is a correction to an earlier document. Read it alongside the original, not as a separate application.",
+        "ta": "முன்பு வெளியிட்ட ஆவணத்திற்கான திருத்தம் இது. தனி விண்ணப்பமாக அல்லாமல் மூல ஆவணத்துடன் சேர்த்துப் படியுங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Match the notice number, examination or service to the original document.",
+          "ta": "அறிவிப்பு எண், தேர்வு அல்லது சேவையை மூல ஆவணத்துடன் ஒப்பிடுங்கள்."
+        },
+        {
+          "en": "Check which paragraph, date or requirement was changed.",
+          "ta": "எந்தப் பத்தி, தேதி அல்லது தேவை மாறியுள்ளது என்பதைப் பாருங்கள்."
+        },
+        {
+          "en": "Use the issuing authority’s latest relevant notice if a forwarded copy differs.",
+          "ta": "பகிரப்பட்ட நகல் வேறுபட்டால் வெளியிட்ட அதிகாரியின் சமீபத்திய பொருத்தமான அறிவிப்பைப் பயன்படுத்துங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "A correction may change only one part of a notice. TNPSC is linked as an official notice example.",
+        "ta": "ஒரு திருத்தம் அறிவிப்பின் ஒரு பகுதியை மட்டும் மாற்றலாம். அதிகாரப்பூர்வ அறிவிப்பின் எடுத்துக்காட்டாக TNPSC இணைக்கப்பட்டுள்ளது."
+      },
+      "sources": [
+        "tnpsc"
+      ],
+      "keywords": "corrigendum addendum notification meaning திருத்தம் அறிவிப்பு பொருள்"
+    },
+    {
+      "id": "observed-holiday",
+      "category": "meaning",
+      "regions": [
+        "world"
+      ],
+      "title": {
+        "en": "“Observed holiday” explained",
+        "ta": "“Observed holiday” என்றால் என்ன?"
+      },
+      "summary": {
+        "en": "The date an institution recognises a holiday can differ from the date of the occasion itself.",
+        "ta": "ஒரு நிகழ்வின் உண்மையான நாளும் நிறுவனம் விடுமுறையாகக் கடைப்பிடிக்கும் நாளும் வேறுபடலாம்."
+      },
+      "steps": [
+        {
+          "en": "Look for a substitute or observed date in the official calendar.",
+          "ta": "அதிகாரப்பூர்வ காலண்டரில் மாற்று அல்லது கடைப்பிடிக்கும் தேதியைப் பாருங்கள்."
+        },
+        {
+          "en": "Check which region and organisation the calendar covers.",
+          "ta": "காலண்டர் எந்த பகுதி மற்றும் அமைப்புக்குப் பொருந்துகிறது என்பதைப் பாருங்கள்."
+        },
+        {
+          "en": "Confirm opening hours directly if you need an appointment.",
+          "ta": "சந்திப்பு தேவைப்பட்டால் திறப்பு நேரத்தை நேரடியாக உறுதி செய்யுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "Do not apply another country’s substitution rule to your own country.",
+        "ta": "வேறொரு நாட்டின் மாற்று விடுமுறை விதியை உங்கள் நாட்டிற்குப் பயன்படுத்தாதீர்கள்."
+      },
+      "sources": [
+        "uk-holidays",
+        "us-holidays"
+      ],
+      "keywords": "observed holiday substitute meaning விடுமுறை மாற்று பொருள்"
+    },
+    {
+      "id": "podaturpet-services",
+      "category": "local",
+      "regions": [
+        "tamil"
+      ],
+      "title": {
+        "en": "Podaturpet: find the responsible office",
+        "ta": "பொதட்டூர்பேட்டை: பொறுப்பான அலுவலகம்"
+      },
+      "summary": {
+        "en": "The district lists the town panchayat as Pothatturpettai. Use that spelling when looking up local administration.",
+        "ta": "மாவட்டப் பட்டியலில் பேரூராட்சி Pothatturpettai என்று உள்ளது. உள்ளாட்சி விவரங்களைத் தேடும்போது அந்தப் பெயரையும் பயன்படுத்துங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Open the district local-body list and look for Pothatturpettai under Town Panchayats.",
+          "ta": "மாவட்ட உள்ளாட்சிப் பட்டியலில் Town Panchayats பிரிவில் Pothatturpettai என்று பாருங்கள்."
+        },
+        {
+          "en": "Confirm the service belongs to the town panchayat, revenue office or another department.",
+          "ta": "சேவை பேரூராட்சி, வருவாய் அலுவலகம் அல்லது வேறு துறையைச் சேர்ந்ததா என்பதை உறுதி செய்யுங்கள்."
+        },
+        {
+          "en": "Use the currently published official contact to confirm location, hours and documents.",
+          "ta": "தற்போது வெளியிடப்பட்ட அதிகாரப்பூர்வ தொடர்பு மூலம் இடம், நேரம், ஆவணங்களை உறுதி செய்யுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "Confirm current contact details and visiting arrangements with the responsible office before travelling.",
+        "ta": "செல்லும் முன் தற்போதைய தொடர்பு விவரங்களையும் வருகை ஏற்பாடுகளையும் சம்பந்தப்பட்ட அலுவலகத்திடம் உறுதி செய்யுங்கள்."
+      },
+      "sources": [
+        "localbodies",
+        "contacts"
+      ],
+      "keywords": "podaturpet podhaturpet pothatturpettai pettai பொதட்டூர்பேட்டை பொதட்டூர் பேட்டை அலுவலகம்"
+    },
+    {
+      "id": "local-notices",
+      "category": "local",
+      "regions": [
+        "tamil"
+      ],
+      "title": {
+        "en": "Tiruvallur district announcements",
+        "ta": "திருவள்ளூர் மாவட்ட அறிவிப்புகள்"
+      },
+      "summary": {
+        "en": "Find the original district notice instead of relying on an old screenshot.",
+        "ta": "பழைய திரைப்பிடிப்பை மட்டும் நம்பாமல் மாவட்டத்தின் மூல அறிவிப்பைக் கண்டறியுங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Open the district announcements or recruitment section.",
+          "ta": "மாவட்ட அறிவிப்புகள் அல்லது வேலைவாய்ப்புப் பிரிவைத் திறக்கவும்."
+        },
+        {
+          "en": "Check publication date, end date, affected area and issuing department.",
+          "ta": "வெளியிட்ட நாள், முடிவு நாள், பொருந்தும் பகுதி, வெளியிட்ட துறை ஆகியவற்றைப் பாருங்கள்."
+        },
+        {
+          "en": "Read the attached official document and any later revision.",
+          "ta": "இணைக்கப்பட்ட அதிகாரப்பூர்வ ஆவணத்தையும் பின்னர் வந்த திருத்தத்தையும் படியுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "No current vacancy, school closure or local event is asserted by this card.",
+        "ta": "தற்போதைய காலியிடம், பள்ளி விடுமுறை அல்லது உள்ளூர் நிகழ்வு இருப்பதாக இந்த அட்டை கூறுவதில்லை."
+      },
+      "sources": [
+        "notices",
+        "localjobs",
+        "district"
+      ],
+      "keywords": "tiruvallur thiruvallur district news school holiday jobs திருவள்ளூர் செய்திகள் அறிவிப்பு"
+    },
+    {
+      "id": "postal-code",
+      "category": "local",
+      "regions": [
+        "tamil",
+        "india"
+      ],
+      "title": {
+        "en": "Check a PIN code or post office",
+        "ta": "PIN code அல்லது அஞ்சலகம் சரிபார்த்தல்"
+      },
+      "summary": {
+        "en": "Use India Post’s locator when an address has multiple spellings.",
+        "ta": "முகவரிக்கு பல எழுத்து வடிவங்கள் இருந்தால் India Post தேடலைப் பயன்படுத்துங்கள்."
+      },
+      "steps": [
+        {
+          "en": "Open India Post and look for its post-office or PIN-code search.",
+          "ta": "India Post-ல் அஞ்சலகம் அல்லது PIN code தேடலைத் திறக்கவும்."
+        },
+        {
+          "en": "Match the locality, district and delivery office, not just a similar name.",
+          "ta": "ஒத்த பெயர் மட்டும் அல்லாமல் ஊர், மாவட்டம், விநியோக அலுவலகத்தை ஒப்பிடுங்கள்."
+        },
+        {
+          "en": "Confirm the complete address with the recipient before sending important mail.",
+          "ta": "முக்கிய அஞ்சல் அனுப்பும் முன் பெறுநரிடம் முழு முகவரியை உறுதி செய்யுங்கள்."
+        }
+      ],
+      "caution": {
+        "en": "This hub does not guess a PIN code from your location or collect addresses.",
+        "ta": "இந்த மையம் உங்கள் இருப்பிடத்திலிருந்து PIN code-ஐ ஊகிப்பதில்லை; முகவரிகளைப் பெறுவதில்லை."
+      },
+      "sources": [
+        "post"
+      ],
+      "keywords": "pin code pincode post office 631208 அஞ்சல் குறியீடு பின் கோடு"
+    }
+  ]
+}

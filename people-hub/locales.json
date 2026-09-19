@@ -1,0 +1,224 @@
+{
+  "ui": {
+    "en": {
+      "name": "People Information Hub",
+      "eyebrow": "PODATURPET · EVERYDAY KNOWLEDGE",
+      "headline": "Less searching.\nA clearer next step.",
+      "intro": "Practical guides, plain-language answers and official places to check. For life in Tamil Nadu, India and beyond.",
+      "independent": "Independent guide · Free to use · No login",
+      "skip": "Skip to guides",
+      "home": "Podaturpet home",
+      "search": "What do you need help with?",
+      "placeholder": "Try passport, scholarship, திருப்பதி…",
+      "privateSearch": "Search stays in this page. Please do not enter personal details.",
+      "region": "Information for",
+      "regionHint": "Selected-region results also include general guides. This does not set your location.",
+      "large": "A+ Larger text",
+      "normal": "A− Standard text",
+      "all": "All guides",
+      "clear": "Clear filters",
+      "quick": "Start with a question",
+      "browse": "A little guidance goes a long way.",
+      "results": "guides found",
+      "empty": "No matching guides. Try a shorter word, another region or clear the filters.",
+      "steps": "Read the guide",
+      "next": "Your next steps",
+      "sources": "Official sources",
+      "checked": "Source review",
+      "read": "Directory purpose checked",
+      "limited": "Limited access during review; check the portal directly.",
+      "old": "Review due — recheck the official source",
+      "invalidDate": "Review date unavailable — check the source",
+      "sourceNote": "Review dates describe this directory check, not live verification of rules. Official links open in a new tab.",
+      "current": "Rules, fees, dates and availability: check the official source.",
+      "bookmark": "Save shortcut",
+      "bookmarked": "Shortcut saved",
+      "shelf": "Your useful corner",
+      "shelfText": "Keep the guides you use often close by. Shortcuts last for this page visit unless you choose to keep them on this device.",
+      "savedOnly": "Saved shortcuts only",
+      "persist": "Keep shortcuts on this device",
+      "persistOn": "Device saving is on",
+      "delete": "Forget my shortcuts",
+      "forgetConfirm": "Remove this hub’s saved shortcuts from this device? Other website tools are not affected.",
+      "savedMessage": "Shortcut selection updated.",
+      "persistMessage": "Only guide IDs are saved in this browser. Search text is never saved.",
+      "forgetMessage": "Hub shortcuts removed from this device.",
+      "storageError": "Device storage is unavailable. Shortcuts work for this page visit only.",
+      "corrupt": "The saved shortcut file could not be read. Your current visit still works; choose Keep shortcuts to replace it.",
+      "copy": "Copy guide link",
+      "copied": "Guide link copied. No search text is included.",
+      "copyFail": "Copy is unavailable. Use the permanent link below.",
+      "permalink": "Permanent link",
+      "print": "Print this guide / Save PDF",
+      "printList": "Print visible guides / Save PDF",
+      "printHint": "Use your browser’s print dialog to save as PDF. No file is uploaded.",
+      "noPrint": "There are no visible guides to print. Clear filters first.",
+      "printFail": "Printing is unavailable in this browser. Use its Share or Print menu.",
+      "dateTitle": "Today, where you are",
+      "zone": "Calendar time zone",
+      "localZone": "This device’s time zone",
+      "deviceClock": "From your device clock. Not a live event or holiday feed.",
+      "clockFail": "Date unavailable. Check your device clock.",
+      "datesLink": "Find official calendars →",
+      "weekly": "Before you act",
+      "weeklyText": "Check the original notice. Match the year and region. Look for a later correction.",
+      "privacyTitle": "Private by design. Clear about limits.",
+      "privacyText": "No account, document upload, location permission or search tracking. Optional shortcuts store only guide IDs in this browser; anyone using it, extensions or other same-site scripts may access them. Use Forget my shortcuts to remove them. No cross-device sync. Hosting providers may log ordinary page requests; linked sites have their own policies. Existing Podaturpet pages retain their usual analytics.",
+      "disclaimerTitle": "A guide, not a government office",
+      "disclaimer": "Independent, original summaries in English and Tamil. We do not represent an authority, process applications, guarantee jobs or decide eligibility. We do not provide individual legal, medical or immigration advice. Rules and services can change. Read the current official notice; official wording takes priority over our explanation. No payment or sensitive information is requested here.",
+      "privacyLink": "Website privacy policy",
+      "ownTools": "More from Podaturpet",
+      "planner": "US ↔ India family travel planner",
+      "invoice": "Invoice maker",
+      "localGuide": "Podaturpet town guide",
+      "noscript": "All guides and official links work without JavaScript. Enable it for local search, filters, today’s date and saved shortcuts.",
+      "footer": "Built for everyday questions. Developed & maintained by MuraRaj Technologies.",
+      "backTop": "Back to top",
+      "coming": "Selected regions today. More languages can be added without changing guide IDs."
+    },
+    "ta": {
+      "name": "மக்கள் தகவல் மையம்",
+      "eyebrow": "பொதட்டூர்பேட்டை · அன்றாடத் தகவல்கள்",
+      "headline": "தேடலை எளிதாக்கி,\nஅடுத்த படியை அறியுங்கள்.",
+      "intro": "பயனுள்ள வழிகாட்டிகள், எளிய விளக்கங்கள், சரிபார்க்க அதிகாரப்பூர்வ தளங்கள். தமிழ்நாடு, இந்தியா மற்றும் உலகெங்கும் வாழ்வோருக்காக.",
+      "independent": "சுயாதீன வழிகாட்டி · இலவசம் · உள்நுழைவு இல்லை",
+      "skip": "வழிகாட்டிகளுக்குச் செல்லுங்கள்",
+      "home": "பொதட்டூர்பேட்டை முகப்பு",
+      "search": "எதைப் பற்றி அறிய விரும்புகிறீர்கள்?",
+      "placeholder": "பாஸ்போர்ட், உதவித்தொகை, திருப்பதி…",
+      "privateSearch": "தேடல் இந்தப் பக்கத்திலேயே இருக்கும். தனிப்பட்ட விவரங்களை உள்ளிடாதீர்கள்.",
+      "region": "தகவல் தேவைப்படும் பகுதி",
+      "regionHint": "தேர்ந்தெடுத்த பகுதியுடன் பொதுவான வழிகாட்டிகளும் வரும். இது உங்கள் இருப்பிடத்தை அமைப்பதில்லை.",
+      "large": "A+ பெரிய எழுத்து",
+      "normal": "A− வழக்கமான எழுத்து",
+      "all": "அனைத்து வழிகாட்டிகள்",
+      "clear": "வடிகட்டிகளை நீக்கு",
+      "quick": "ஒரு கேள்வியுடன் தொடங்குங்கள்",
+      "browse": "சிறிய வழிகாட்டுதல். பெரிய உதவி.",
+      "results": "வழிகாட்டிகள் கிடைத்தன",
+      "empty": "பொருத்தமான வழிகாட்டி இல்லை. சுருக்கமான சொல், வேறு பகுதி அல்லது வடிகட்டிகளை நீக்கி முயலுங்கள்.",
+      "steps": "வழிகாட்டியைப் படியுங்கள்",
+      "next": "அடுத்த படிகள்",
+      "sources": "அதிகாரப்பூர்வ ஆதாரங்கள்",
+      "checked": "ஆதார ஆய்வு",
+      "read": "தளத்தின் பயன்பாடு சரிபார்க்கப்பட்டது",
+      "limited": "ஆய்வின்போது முழு அணுகல் கிடைக்கவில்லை; தளத்தை நேரடியாகச் சரிபாருங்கள்.",
+      "old": "மறு ஆய்வு தேவை — அதிகாரப்பூர்வ ஆதாரத்தைச் சரிபாருங்கள்",
+      "invalidDate": "ஆய்வு தேதி இல்லை — ஆதாரத்தைச் சரிபாருங்கள்",
+      "sourceNote": "ஆய்வு தேதி இந்தப் பட்டியலைச் சரிபார்த்த நாளே; விதிகளின் நேரடி சரிபார்ப்பு அல்ல. அதிகாரப்பூர்வ இணைப்புகள் புதிய தாவலில் திறக்கும்.",
+      "current": "விதி, கட்டணம், தேதி, இருப்பு: அதிகாரப்பூர்வ ஆதாரத்தில் பாருங்கள்.",
+      "bookmark": "இணைப்பைச் சேமி",
+      "bookmarked": "இணைப்பு சேமிக்கப்பட்டது",
+      "shelf": "உங்கள் பயனுள்ள இணைப்புகள்",
+      "shelfText": "அடிக்கடி பயன்படுத்தும் வழிகாட்டிகளைச் சேருங்கள். சாதனத்தில் வைத்திருக்கத் தேர்ந்தெடுக்காவிட்டால் இந்தப் பக்க வருகை வரை மட்டுமே இருக்கும்.",
+      "savedOnly": "சேமித்த இணைப்புகள் மட்டும்",
+      "persist": "இணைப்புகளை இந்தச் சாதனத்தில் வை",
+      "persistOn": "சாதனத்தில் சேமித்தல் இயங்குகிறது",
+      "delete": "என் இணைப்புகளை நீக்கு",
+      "forgetConfirm": "இந்தச் சாதனத்தில் உள்ள இந்த மையத்தின் இணைப்புகளை நீக்கவா? மற்ற கருவிகள் பாதிக்கப்படாது.",
+      "savedMessage": "இணைப்புத் தேர்வு புதுப்பிக்கப்பட்டது.",
+      "persistMessage": "வழிகாட்டி அடையாளங்கள் மட்டுமே இந்த உலாவியில் சேமிக்கப்படும். தேடல் சொற்கள் சேமிக்கப்படாது.",
+      "forgetMessage": "இந்தச் சாதனத்திலிருந்து மையத்தின் இணைப்புகள் நீக்கப்பட்டன.",
+      "storageError": "சாதனச் சேமிப்பை அணுக முடியவில்லை. இந்தப் பக்க வருகைக்கு மட்டும் இணைப்புகள் செயல்படும்.",
+      "corrupt": "சேமித்த இணைப்புகளைப் படிக்க முடியவில்லை. தற்போதைய பக்கம் செயல்படும்; மாற்றிச் சேமிக்க சாதனத்தில் வை என்பதைத் தேர்ந்தெடுங்கள்.",
+      "copy": "வழிகாட்டி இணைப்பை நகலெடு",
+      "copied": "வழிகாட்டி இணைப்பு நகலெடுக்கப்பட்டது. தேடல் சொற்கள் சேர்க்கப்படவில்லை.",
+      "copyFail": "நகலெடுக்க முடியவில்லை. கீழே உள்ள நிரந்தர இணைப்பைப் பயன்படுத்துங்கள்.",
+      "permalink": "நிரந்தர இணைப்பு",
+      "print": "இந்த வழிகாட்டியை அச்சிடு / PDF சேமி",
+      "printList": "காணும் வழிகாட்டிகளை அச்சிடு / PDF சேமி",
+      "printHint": "PDF சேமிக்க உலாவியின் அச்சு வசதியைப் பயன்படுத்துங்கள். கோப்பு பதிவேற்றப்படாது.",
+      "noPrint": "அச்சிட வழிகாட்டிகள் இல்லை. முதலில் வடிகட்டிகளை நீக்குங்கள்.",
+      "printFail": "இந்த உலாவியில் அச்சிட முடியவில்லை. அதன் Share அல்லது Print பட்டியலைப் பயன்படுத்துங்கள்.",
+      "dateTitle": "நீங்கள் இருக்கும் இடத்தில் இன்று",
+      "zone": "தேதிக்கான நேர மண்டலம்",
+      "localZone": "இந்தச் சாதனத்தின் நேர மண்டலம்",
+      "deviceClock": "உங்கள் சாதனக் கடிகாரத்திலிருந்து. நேரடி நிகழ்வு அல்லது விடுமுறைத் தகவல் அல்ல.",
+      "clockFail": "தேதி கிடைக்கவில்லை. சாதனக் கடிகாரத்தைச் சரிபாருங்கள்.",
+      "datesLink": "அதிகாரப்பூர்வ காலண்டர்கள் →",
+      "weekly": "செயல்படும் முன்",
+      "weeklyText": "மூல அறிவிப்பைப் பாருங்கள். ஆண்டையும் பகுதியையும் ஒப்பிடுங்கள். பிந்தைய திருத்தம் உள்ளதா பாருங்கள்.",
+      "privacyTitle": "தனியுரிமையும் தெளிவான வரம்புகளும்.",
+      "privacyText": "கணக்கு, ஆவணப் பதிவேற்றம், இருப்பிட அனுமதி, தேடல் கண்காணிப்பு இல்லை. விருப்ப இணைப்புகளின் அடையாளங்கள் மட்டுமே இந்த உலாவியில் சேமிக்கப்படும்; இதைப் பயன்படுத்துவோர், நீட்சிகள் அல்லது இதே தள நிரல்கள் அவற்றை அணுகலாம். நீக்க இணைப்புகளை நீக்கு என்பதைப் பயன்படுத்துங்கள். சாதனங்களுக்கு இடையே ஒத்திசைவு இல்லை. ஹோஸ்டிங் நிறுவனம் வழக்கமான பக்கக் கோரிக்கைகளைப் பதிவு செய்யலாம்; இணைக்கப்பட்ட தளங்களுக்கு தனிக் கொள்கைகள் உள்ளன. பழைய பொதட்டூர்பேட்டை பக்கங்களின் வழக்கமான கண்காணிப்பு தொடரும்.",
+      "disclaimerTitle": "வழிகாட்டி மட்டுமே; அரசு அலுவலகம் அல்ல",
+      "disclaimer": "ஆங்கிலம் மற்றும் தமிழில் சுயாதீனமான சொந்த விளக்கங்கள். நாங்கள் அதிகார அமைப்பின் பிரதிநிதி அல்ல; விண்ணப்பங்களைச் செயல்படுத்தவோ வேலை உறுதியளிக்கவோ தகுதியை நிர்ணயிக்கவோ செய்வதில்லை. தனிப்பட்ட சட்ட, மருத்துவ அல்லது குடிவரவு ஆலோசனை வழங்குவதில்லை. விதிகளும் சேவைகளும் மாறலாம். தற்போதைய அதிகாரப்பூர்வ அறிவிப்பைப் படியுங்கள்; எங்கள் விளக்கத்தைவிட அதிகாரப்பூர்வ உரைக்கே முன்னுரிமை. இங்கே பணமோ தனிப்பட்ட முக்கியத் தகவலோ கேட்கப்படாது.",
+      "privacyLink": "இணையதளத் தனியுரிமைக் கொள்கை",
+      "ownTools": "பொதட்டூர்பேட்டையின் மற்ற சேவைகள்",
+      "planner": "US ↔ இந்தியா குடும்பப் பயணத் திட்டம்",
+      "invoice": "இன்வாய்ஸ் கருவி",
+      "localGuide": "பொதட்டூர்பேட்டை ஊர் வழிகாட்டி",
+      "noscript": "JavaScript இல்லாமலும் வழிகாட்டிகளும் இணைப்புகளும் செயல்படும். தேடல், வடிகட்டி, இன்றைய தேதி, சேமித்த இணைப்புகளுக்கு அதை இயக்குங்கள்.",
+      "footer": "அன்றாடக் கேள்விகளுக்காக. உருவாக்கம் மற்றும் பராமரிப்பு: MuraRaj Technologies.",
+      "backTop": "மேலே செல்லுங்கள்",
+      "coming": "இப்போது தேர்ந்தெடுத்த பகுதிகள். வழிகாட்டி அடையாளங்களை மாற்றாமல் மேலும் மொழிகளைச் சேர்க்கலாம்."
+    }
+  },
+  "categories": {
+    "today": {
+      "en": "Today & important dates",
+      "ta": "இன்று & முக்கிய தேதிகள்"
+    },
+    "travel": {
+      "en": "Travel & temples",
+      "ta": "பயணம் & கோவில்கள்"
+    },
+    "services": {
+      "en": "Government services",
+      "ta": "அரசு சேவைகள்"
+    },
+    "learn": {
+      "en": "Education & jobs",
+      "ta": "கல்வி & வேலை"
+    },
+    "meaning": {
+      "en": "What does this mean?",
+      "ta": "இதன் பொருள் என்ன?"
+    },
+    "local": {
+      "en": "Podaturpet & Tamil Nadu",
+      "ta": "பொதட்டூர்பேட்டை & தமிழ்நாடு"
+    }
+  },
+  "regions": {
+    "all": {
+      "en": "All regions",
+      "ta": "அனைத்துப் பகுதிகள்"
+    },
+    "world": {
+      "en": "General / worldwide",
+      "ta": "பொது / உலகம்"
+    },
+    "india": {
+      "en": "India",
+      "ta": "இந்தியா"
+    },
+    "tamil": {
+      "en": "Tamil Nadu / Podaturpet",
+      "ta": "தமிழ்நாடு / பொதட்டூர்பேட்டை"
+    },
+    "us": {
+      "en": "United States",
+      "ta": "அமெரிக்கா"
+    },
+    "uk": {
+      "en": "United Kingdom",
+      "ta": "ஐக்கிய இராச்சியம்"
+    },
+    "canada": {
+      "en": "Canada",
+      "ta": "கனடா"
+    },
+    "australia": {
+      "en": "Australia",
+      "ta": "ஆஸ்திரேலியா"
+    },
+    "singapore": {
+      "en": "Singapore",
+      "ta": "சிங்கப்பூர்"
+    },
+    "eu": {
+      "en": "European Union",
+      "ta": "ஐரோப்பிய ஒன்றியம்"
+    }
+  }
+}
