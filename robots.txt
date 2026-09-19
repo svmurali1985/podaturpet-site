@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
+# Historical local copies are not public navigation destinations.
+Disallow: /invoice-backup-20260919-124050/
+Disallow: /invoice-backup-20260919-124146/
+Disallow: /tamil-life-backup-20260919-142332-1yd7hy5l/
+Disallow: /travel-planner-backup-20260919-131909-J8d3om/
+Disallow: /website-update/
+Disallow: /podaturpet-site-v1/
+
 Sitemap: https://podaturpet.com/sitemap.xml

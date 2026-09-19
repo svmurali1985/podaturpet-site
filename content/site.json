@@ -5,44 +5,56 @@
   "email": "svmuralicenterton@gmail.com",
   "navigation": [
     [
-      "Home",
-      "/"
-    ],
-    [
-      "Lungi Catalogue",
-      "/lungi-product-catalogue.html"
-    ],
-    [
-      "Explore Podaturpet",
-      "/podaturpet-town-guide.html"
-    ],
-    [
-      "Services & Directory",
-      "/podaturpet-local-business-directory.html"
-    ],
-    [
-      "Advertise",
-      "/advertise-on-podaturpet.html"
-    ],
-    [
-      "Need a website?",
-      "/business-website-development.html"
-    ],
-    [
-      "Free invoice",
-      "/free-invoice.html"
-    ],
-    [
-      "Travel planner",
-      "/us-india-family-travel-planner.html"
-    ],
-    [
-      "Information Hub",
+      "People & information",
       "/people-information-hub.html"
     ],
     [
-      "Contact",
-      "/#contact"
+      "Find a service",
+      "/podaturpet-local-business-directory.html"
+    ],
+    [
+      "Advertise with us",
+      "/advertise-on-podaturpet.html"
+    ],
+    [
+      "Lungis & textiles",
+      "/lungi-product-catalogue.html"
+    ],
+    [
+      "Podaturpet local",
+      "/podaturpet-town-guide.html"
     ]
+  ],
+  "areas": [
+    {
+      "key": "people",
+      "en": "People & information",
+      "ta": "மக்கள் தகவல்",
+      "url": "/people-information-hub.html"
+    },
+    {
+      "key": "services",
+      "en": "Find a service",
+      "ta": "சேவைகள்",
+      "url": "/podaturpet-local-business-directory.html"
+    },
+    {
+      "key": "advertise",
+      "en": "Advertise with us",
+      "ta": "விளம்பரம்",
+      "url": "/advertise-on-podaturpet.html"
+    },
+    {
+      "key": "textiles",
+      "en": "Lungis & textiles",
+      "ta": "லுங்கி · நெசவு",
+      "url": "/lungi-product-catalogue.html"
+    },
+    {
+      "key": "local",
+      "en": "Podaturpet local",
+      "ta": "நம்ம ஊர்",
+      "url": "/podaturpet-town-guide.html"
+    }
   ]
 }

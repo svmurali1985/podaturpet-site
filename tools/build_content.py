@@ -2,6 +2,7 @@
 """Refresh static navigation, contacts, reviewed listings and specifications. Standard library only."""
 from pathlib import Path
 from marketplace_model import dataset
+from site_layout import header as shared_header, footer as shared_footer, apply_layout
 from marketplace_template import render as render_marketplace
 import json,re,html
 from urllib.parse import quote,urlparse
@@ -15,8 +16,7 @@ def safe_url(s):
 site=read('site.json');products=read('products.json');businesses=read('businesses.json');events=read('events.json')
 if not re.fullmatch(r'\d{8,15}',site['whatsapp']):raise ValueError('WhatsApp must contain digits including country code')
 def header(page):
- links=''.join('<a href="'+esc(url)+'"'+(' aria-current="page"' if (url=='/' and page=='index.html') or url=='/'+page else '')+'>'+esc(label)+'</a>' for label,url in site['navigation'])
- return '<div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>'+esc(site['name'])+'</strong></a><nav class="pt-nav" aria-label="Main navigation">'+links+'</nav></div>'
+ return shared_header(page)
 def contact(page=None):
  label="Directory / service enquiries" if page=="podaturpet-local-business-directory.html" else "Wholesale enquiries"
  return '<div class="pt-shared-contact" aria-label="'+esc(label)+'"><span>'+esc(label)+'</span><a href="tel:+'+esc(site['whatsapp'])+'">'+esc(site['phone'])+'</a><a href="https://wa.me/'+esc(site['whatsapp'])+'">WhatsApp</a><a href="mailto:'+esc(site['email'])+'">Email the team</a></div>'
@@ -74,9 +74,10 @@ for p in ([R/n for n in args.only] if args.only else R.glob('*.html')):
  text=p.read_text()
  def render(m):
   kind,key=m.group(1).split(':',1)
-  value=header(p.name) if key=='header' and kind=='shared' else contact(p.name) if key=='contact' and kind=='shared' else business_html if key=='businesses' else event_html if key=='events' else product(key,p.name=='lungi-product-catalogue.html')
+  value=m.group(0).split(':START -->',1)[1].rsplit('<!-- PT:',1)[0] if kind=='shared' and key=='header' and p.name in ['people-information-hub.html','people-information-hub-ta.html','us-india-family-travel-planner.html'] else shared_footer(p.name) if key=='footer' and kind=='shared' else header(p.name) if key=='header' and kind=='shared' else contact(p.name) if key=='contact' and kind=='shared' else business_html if key=='businesses' else event_html if key=='events' else product(key,p.name=='lungi-product-catalogue.html')
   return '<!-- PT:'+m.group(1)+':START -->'+value+'<!-- PT:'+m.group(1)+':END -->'
  new=re.sub(r'<!-- PT:([^ ]+):START -->.*?<!-- PT:\1:END -->',render,text,flags=re.S)
  new=re.sub(r'(data-whatsapp=")[^"]*(")',lambda m:m[1]+site['whatsapp']+m[2],new)
+ new=apply_layout(new,p.name)
  if new!=text:p.write_text(new);count+=1
 print('Refreshed',count,'pages. Upload the rendered HTML and assets; Python is only for maintenance.')

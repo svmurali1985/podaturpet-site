@@ -1,22 +1,5 @@
 (() => {
   'use strict';
-  if (document.body.classList.contains('studio-home')) {
-    const bar = document.querySelector('.pt-language-options');
-    const header = document.querySelector('.pt-site-header');
-    if (bar && header) {
-      const strip = document.createElement('div');strip.className='showcase-language-strip';
-      const label = document.createElement('span');label.className='showcase-header-note';label.textContent='Lungi wholesale · Town & culture';strip.append(label);
-      const more = document.createElement('details');more.className='showcase-more-languages';
-      const summary = document.createElement('summary');summary.textContent='More languages';more.append(summary);
-      const panel = document.createElement('div');panel.className='showcase-language-panel';
-      [...bar.children].forEach(child => {if(child.tagName !== 'BUTTON') panel.append(child);});
-      more.append(panel);bar.append(more);strip.append(bar);header.append(strip);
-      const emptyWrap = document.querySelector('.buyer-language-wrap');if(emptyWrap && !emptyWrap.textContent.trim()) emptyWrap.remove();
-      more.addEventListener('keydown',event=>{if(event.key==='Escape'){more.open=false;summary.focus();}});
-      document.addEventListener('pointerdown',event=>{if(!more.contains(event.target))more.open=false;});
-    }
-  }
-
   // Keep deep links into collapsed reference sections accessible.
   function revealHash() {
     let id;
@@ -59,4 +42,39 @@
       if (!details.open) details.querySelectorAll('video').forEach(video => video.pause());
     });
   });
+})();
+/* Shared shell, extending the existing presentation controller. */
+(() => {
+ 'use strict';
+ const shell=document.querySelector('[data-site-shell]');if(!shell)return;
+ const menu=shell.querySelector('.site-menu-toggle');
+ shell.classList.add('site-enhanced');menu.hidden=false;
+ const media=typeof matchMedia==='function'?matchMedia('(max-width:720px)'):null;
+ const setMenu=open=>{shell.classList.toggle('site-menu-open',open);menu.setAttribute('aria-expanded',String(open));};
+ menu.addEventListener('click',()=>setMenu(menu.getAttribute('aria-expanded')!=='true'));
+ shell.addEventListener('keydown',e=>{if(e.key==='Escape'&&shell.classList.contains('site-menu-open')){setMenu(false);menu.focus();}});
+ shell.querySelectorAll('#site-main-nav a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+ if(media){const reset=()=>{setMenu(false);menu.hidden=!media.matches;};media.addEventListener?media.addEventListener('change',reset):media.addListener(reset);reset();}
+ function language(lang){
+  lang=lang==='ta'?'ta':'en';document.body.dataset.siteLang=lang;
+  document.querySelectorAll('[data-site-en][data-site-ta]').forEach(e=>{e.textContent=lang==='ta'?e.dataset.siteTa:e.dataset.siteEn;e.lang=lang;});
+  shell.querySelectorAll('[data-site-language]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.siteLanguage===lang)));
+  document.querySelectorAll('a[href^="/people-information-hub"]').forEach(a=>{if(a.hasAttribute('data-language'))return;const u=new URL(a.href,location.href);if(/^\/people-information-hub(?:-ta)?\.html$/.test(u.pathname)){u.pathname='/people-information-hub'+(lang==='ta'?'-ta':'')+'.html';a.setAttribute('href',u.pathname+u.search+u.hash);}});
+ }
+ shell.querySelectorAll('[data-site-language]').forEach(b=>b.addEventListener('click',()=>{
+  const lang=b.dataset.siteLanguage;
+  if(typeof window.PodaturpetSetLanguage==='function')window.PodaturpetSetLanguage(lang);
+  else{language(lang);try{localStorage.setItem('podaturpet-intro-language',lang);}catch(_){}document.dispatchEvent(new CustomEvent('podaturpet:language',{detail:{language:lang}}));}
+ }));
+ document.addEventListener('podaturpet:language',e=>language(e.detail.language));
+ let initial=document.documentElement.lang==='ta'?'ta':new URLSearchParams(location.search).get('lang');
+ if(!initial)try{initial=localStorage.getItem('podaturpet-intro-language');}catch(_){}
+ language(initial==='ta'?'ta':'en');
+ new MutationObserver(()=>{if(!shell.querySelector('[data-site-language]'))language(document.documentElement.lang);}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+ const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
+})();
+// Reuse the existing feedback trigger in the footer instead of a second floating tab.
+(() => {
+ const button=document.getElementById('pt-feedback-button'),footer=document.querySelector('.site-footer-inner');
+ if(button&&footer){const slot=document.createElement('div');slot.className='site-feedback-slot';slot.append(button);footer.insertBefore(slot,footer.querySelector('.site-footer-bottom'));}
 })();

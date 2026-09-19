@@ -65,7 +65,7 @@ const dictionary = {
   const candidates=[];
   while(walker.nextNode()){
     const n=walker.currentNode;
-    if(n.parentElement.closest('script,style,noscript,textarea,svg'))continue;
+    if(n.parentElement.closest('script,style,noscript,textarea,svg,[data-site-en]'))continue;
     const key=n.textContent.trim();if(dictionary[key])candidates.push([n,key]);
   }
   candidates.forEach(([node,key])=>{
@@ -82,7 +82,8 @@ const dictionary = {
     try{localStorage.setItem('podaturpet-intro-language',lang);}catch(_){}
     document.dispatchEvent(new CustomEvent('podaturpet:language',{detail:{language:lang}}));
   };
-  [['en','English'],['ta','தமிழ்']].forEach(([lang,label])=>{const b=document.createElement('button');b.type='button';b.textContent=label;b.lang=lang;b.dataset.language=lang;b.addEventListener('click',()=>setLanguage(lang));buttons.push(b);bar.append(b);});
+  window.PodaturpetSetLanguage=setLanguage;
+  [['en','English'],['ta','தமிழ்']].forEach(([lang,label])=>{const b=document.createElement('button');b.type='button';b.textContent=label;b.lang=lang;b.dataset.language=lang;b.addEventListener('click',()=>setLanguage(lang));buttons.push(b);if(!document.querySelector('[data-site-shell]'))bar.append(b);});
   const label=document.createElement('label');label.textContent='Translate / மொழிபெயர்க்க ';const select=document.createElement('select');select.setAttribute('aria-label','Choose another translation language');
   [['','More languages'],['hi','Hindi'],['te','Telugu'],['ml','Malayalam'],['kn','Kannada'],['ar','Arabic'],['ms','Malay'],['si','Sinhala'],['fr','French'],['de','German'],['es','Spanish'],['fi','Finnish']].forEach(([v,t])=>select.add(new Option(t,v)));
   label.append(select);bar.append(label);
@@ -90,7 +91,7 @@ const dictionary = {
   select.addEventListener('change',()=>{translate.hidden=!select.value;translate.href='https://translate.google.com/translate?sl=en&tl='+encodeURIComponent(select.value)+'&u='+encodeURIComponent('https://podaturpet.com'+location.pathname+location.search);});bar.append(translate);
   const note=document.createElement('small');note.textContent='English / தமிழ்: buying controls and selected content. Other languages open external translation.';bar.append(note);
   const hero=document.querySelector('.hero-inner');
-  if(hero)hero.prepend(bar);else{const wrap=document.createElement('div');wrap.className='buyer-language-wrap';wrap.append(bar);const main=document.querySelector('main');if(main)main.prepend(wrap);else document.body.prepend(wrap);}
+  if(hero)hero.prepend(bar);else{const home=document.body.classList.contains('reorg-home');const wrap=document.createElement(home?'details':'div');wrap.className='buyer-language-wrap';if(home){const summary=document.createElement('summary');summary.textContent='More language options / கூடுதல் மொழிகள்';wrap.append(summary);}wrap.append(bar);const main=document.querySelector('main');if(main)main.prepend(wrap);else document.body.prepend(wrap);}
   let lang=new URLSearchParams(location.search).get('lang');try{lang=lang||localStorage.getItem('podaturpet-intro-language');}catch(_){}setLanguage(lang==='ta'?'ta':'en');
   document.querySelector('.ptcf-video')?.addEventListener('toggle',e=>{if(!e.currentTarget.open)e.currentTarget.querySelector('video')?.pause();});
 })();

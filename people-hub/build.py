@@ -53,3 +53,11 @@ for lang,slug in SLUGS.items():
 <section class="trust-grid"><div><h2>{t('privacyTitle')}</h2><p>{t('privacyText')}</p><a href="/privacy-policy.html">{t('privacyLink')}</a></div><div><h2>{t('disclaimerTitle')}</h2><p>{t('disclaimer')}</p></div></section><section class="more-tools"><h2>{t('ownTools')}</h2><a href="/us-india-family-travel-planner.html">{t('planner')} ↗</a><a href="/free-invoice.html">{t('invoice')} ↗</a><a href="/podaturpet-town-guide.html">{t('localGuide')} ↗</a></section></main><footer><p>{t('footer')}</p><a href="#main">{t('backTop')} ↑</a></footer></body></html>'''
  (R/slug).write_text(page+'\n')
 print('Built English and Tamil static pages plus search index')
+
+# Reuse the site presentation layer when regenerating either language.
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"tools"))
+from site_layout import apply_layout
+for slug in SLUGS.values():
+ p=Path(__file__).resolve().parents[1]/slug
+ p.write_text(apply_layout(p.read_text(),slug))

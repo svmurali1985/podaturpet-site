@@ -31,8 +31,9 @@
   document.querySelectorAll('a[href]').forEach(a=>{
     const u=new URL(a.href,location.href);
     if(u.origin!==location.origin||!(/\.html$/.test(u.pathname)||u.pathname==='/'))return;
-    if(selected&&!u.searchParams.has('product'))u.searchParams.set('product',selected);
-    if(market&&!u.searchParams.has('market'))u.searchParams.set('market',market);
+    const textileTarget=/lungi|textile/.test(u.pathname)||(u.pathname==='/'&&['#quick-quote','#products','#international-buyers'].includes(u.hash));
+    if(textileTarget&&selected&&!u.searchParams.has('product'))u.searchParams.set('product',selected);
+    if(textileTarget&&market&&!u.searchParams.has('market'))u.searchParams.set('market',market);
     ['utm_source','utm_medium','utm_campaign'].forEach(k=>{if(params.get(k))u.searchParams.set(k,clean(params.get(k),80));});
     a.href=u.pathname+u.search+u.hash;
   });
