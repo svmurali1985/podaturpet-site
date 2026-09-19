@@ -4,7 +4,7 @@ import tempfile,shutil,json,subprocess,datetime
 root=Path(__file__).resolve().parents[2]
 with tempfile.TemporaryDirectory() as td:
  r=Path(td)
- shutil.copytree(root/'content',r/'content');(r/'tools').mkdir();shutil.copy2(root/'tools/build_content.py',r/'tools/build_content.py')
+ shutil.copytree(root/'content',r/'content');(r/'tools').mkdir();[shutil.copy2(root/'tools'/name,r/'tools'/name) for name in ['build_content.py','marketplace_model.py','marketplace_template.py']]
  (r/'podaturpet-local-business-directory.html').write_text('<!-- PT:content:businesses:START --><!-- PT:content:businesses:END -->')
  (r/'other.html').write_text('untouched')
  b=dict(name='<Test & business>',category='Test',address='Test address',public_phone='+919876543210',hours='Verify directly',verified_on=datetime.date.today().isoformat(),source_url='https://example.com/',map_url='https://example.com/map',approved=True,sponsored=True,public_listing_consent=True)

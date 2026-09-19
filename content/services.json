@@ -1,0 +1,2251 @@
+{
+  "version": 2,
+  "reviewed": "2026-09-19",
+  "weights": [
+    20,
+    20,
+    15,
+    15,
+    10,
+    10,
+    10
+  ],
+  "dimensions": [
+    "recurrence",
+    "pain",
+    "language_gap",
+    "intent",
+    "source_quality",
+    "verifiable_supply",
+    "feasibility"
+  ],
+  "services": [
+    {
+      "id": "accounting",
+      "name": {
+        "en": "Accountants",
+        "ta": "கணக்காளர்"
+      },
+      "aliases": [
+        "accountant",
+        "accountants",
+        "accounting",
+        "cpa",
+        "chartered accountant",
+        "kanakkalar",
+        "கணக்காளர்",
+        "கணக்காளர் தேவை"
+      ],
+      "group": "business",
+      "launch": true,
+      "risk": "regulated",
+      "need": "CPA / professional accounting help in the relevant jurisdiction",
+      "sources": [
+        "accounts"
+      ],
+      "ratings": [
+        5,
+        5,
+        4,
+        5,
+        5,
+        3,
+        4
+      ],
+      "penalty": 8,
+      "score": 83.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "bookkeeping",
+      "name": {
+        "en": "Bookkeeping",
+        "ta": "வரவு செலவுக் கணக்கு"
+      },
+      "aliases": [
+        "bookkeeping",
+        "bookkeeper",
+        "accounts entry",
+        "kanakku",
+        "வரவு செலவு"
+      ],
+      "group": "business",
+      "launch": true,
+      "risk": "standard",
+      "need": "Recurring small-business records and reconciliation without regulated advice",
+      "sources": [
+        "books"
+      ],
+      "ratings": [
+        5,
+        4,
+        4,
+        5,
+        4,
+        4,
+        5
+      ],
+      "penalty": 3,
+      "score": 86.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "tax-preparation",
+      "name": {
+        "en": "Tax preparation",
+        "ta": "வரி தாக்கல் உதவி"
+      },
+      "aliases": [
+        "tax",
+        "tax filing",
+        "tax preparer",
+        "வரி",
+        "vari"
+      ],
+      "group": "business",
+      "launch": false,
+      "risk": "regulated",
+      "need": "Annual filing support; credentials and country rules matter",
+      "sources": [
+        "tax"
+      ],
+      "ratings": [
+        4,
+        5,
+        4,
+        5,
+        5,
+        2,
+        3
+      ],
+      "penalty": 10,
+      "score": 73.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "payroll",
+      "name": {
+        "en": "Payroll administration",
+        "ta": "ஊதிய நிர்வாகம்"
+      },
+      "aliases": [
+        "payroll",
+        "salary processing",
+        "ஊதியம்"
+      ],
+      "group": "business",
+      "launch": false,
+      "risk": "sensitive",
+      "need": "Repeat employer administration involving sensitive employee records",
+      "sources": [
+        "books"
+      ],
+      "ratings": [
+        5,
+        4,
+        3,
+        5,
+        4,
+        3,
+        3
+      ],
+      "penalty": 8,
+      "score": 72.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "translation",
+      "name": {
+        "en": "Document translation",
+        "ta": "ஆவண மொழிபெயர்ப்பு"
+      },
+      "aliases": [
+        "translator",
+        "translation",
+        "translate",
+        "mozipeyarppu",
+        "மொழிபெயர்ப்பு"
+      ],
+      "group": "language",
+      "launch": true,
+      "risk": "standard",
+      "need": "Understand required translation format before ordering a document service",
+      "sources": [
+        "translation"
+      ],
+      "ratings": [
+        4,
+        4,
+        5,
+        4,
+        5,
+        4,
+        5
+      ],
+      "penalty": 4,
+      "score": 83.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "interpretation",
+      "name": {
+        "en": "Interpretation",
+        "ta": "நேரடி மொழிபெயர்ப்பு"
+      },
+      "aliases": [
+        "interpreter",
+        "interpretation",
+        "interpreting",
+        "மொழிபெயர்ப்பாளர்"
+      ],
+      "group": "language",
+      "launch": true,
+      "risk": "standard",
+      "need": "Spoken-language assistance with clear subject and session boundaries",
+      "sources": [
+        "translation"
+      ],
+      "ratings": [
+        4,
+        5,
+        5,
+        4,
+        5,
+        3,
+        4
+      ],
+      "penalty": 6,
+      "score": 81.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "tamil-tutoring",
+      "name": {
+        "en": "Tamil lessons",
+        "ta": "தமிழ் வகுப்பு"
+      },
+      "aliases": [
+        "tamil teacher",
+        "tamil tutor",
+        "tamil class",
+        "தமிழ் வகுப்பு",
+        "தமிழாசிரியர்",
+        "tamil padikka"
+      ],
+      "group": "learning",
+      "launch": true,
+      "risk": "safeguarding",
+      "need": "Recurring family language learning with guardian-managed contact",
+      "sources": [
+        "education"
+      ],
+      "ratings": [
+        5,
+        3,
+        5,
+        4,
+        3,
+        4,
+        5
+      ],
+      "penalty": 4,
+      "score": 79.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "school-tutoring",
+      "name": {
+        "en": "School tutoring",
+        "ta": "பாடப்பயிற்சி"
+      },
+      "aliases": [
+        "tutor",
+        "tuition",
+        "maths",
+        "math tutor",
+        "பாடப்பயிற்சி",
+        "டியூஷன்"
+      ],
+      "group": "learning",
+      "launch": true,
+      "risk": "safeguarding",
+      "need": "Help with a defined school subject rather than guaranteed grades",
+      "sources": [
+        "education"
+      ],
+      "ratings": [
+        5,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5
+      ],
+      "penalty": 5,
+      "score": 81.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "language-lessons",
+      "name": {
+        "en": "Other language lessons",
+        "ta": "பிற மொழி வகுப்புகள்"
+      },
+      "aliases": [
+        "english class",
+        "language lesson",
+        "spoken english",
+        "ஆங்கில வகுப்பு"
+      ],
+      "group": "learning",
+      "launch": false,
+      "risk": "safeguarding",
+      "need": "Language practice for everyday work and settling in",
+      "sources": [
+        "education"
+      ],
+      "ratings": [
+        5,
+        3,
+        4,
+        3,
+        4,
+        4,
+        5
+      ],
+      "penalty": 4,
+      "score": 75.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "computer-support",
+      "name": {
+        "en": "Computer support",
+        "ta": "கணினி உதவி"
+      },
+      "aliases": [
+        "computer repair",
+        "computer support",
+        "laptop",
+        "கணினி",
+        "மடிக்கணினி"
+      ],
+      "group": "digital",
+      "launch": true,
+      "risk": "standard",
+      "need": "Device and software assistance without asking for passwords in enquiries",
+      "sources": [
+        "it"
+      ],
+      "ratings": [
+        4,
+        4,
+        4,
+        4,
+        5,
+        4,
+        5
+      ],
+      "penalty": 3,
+      "score": 81.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "website-development",
+      "name": {
+        "en": "Website development",
+        "ta": "இணையதள உருவாக்கம்"
+      },
+      "aliases": [
+        "website",
+        "web developer",
+        "web design",
+        "இணையதளம்"
+      ],
+      "group": "digital",
+      "launch": true,
+      "risk": "standard",
+      "need": "Small-business website work with a defined scope and ownership",
+      "sources": [
+        "it"
+      ],
+      "ratings": [
+        3,
+        4,
+        4,
+        5,
+        5,
+        4,
+        5
+      ],
+      "penalty": 2,
+      "score": 81.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "data-entry",
+      "name": {
+        "en": "Data entry and admin",
+        "ta": "தரவு உள்ளீடு மற்றும் நிர்வாகம்"
+      },
+      "aliases": [
+        "data entry",
+        "excel",
+        "bpo",
+        "back office",
+        "தரவு உள்ளீடு"
+      ],
+      "group": "digital",
+      "launch": true,
+      "risk": "standard",
+      "need": "Repeat business administration; no pay-to-get-a-job promises",
+      "sources": [
+        "ncs"
+      ],
+      "ratings": [
+        5,
+        3,
+        3,
+        4,
+        3,
+        4,
+        5
+      ],
+      "penalty": 5,
+      "score": 72.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "design",
+      "name": {
+        "en": "Graphic design",
+        "ta": "வரைகலை வடிவமைப்பு"
+      },
+      "aliases": [
+        "graphic design",
+        "designer",
+        "logo",
+        "வரைகலை"
+      ],
+      "group": "digital",
+      "launch": true,
+      "risk": "standard",
+      "need": "Original business materials with explicit rights and deliverables",
+      "sources": [
+        "media"
+      ],
+      "ratings": [
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        5
+      ],
+      "penalty": 3,
+      "score": 68.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "digital-marketing",
+      "name": {
+        "en": "Digital marketing",
+        "ta": "இணைய விளம்பர சேவை"
+      },
+      "aliases": [
+        "seo",
+        "digital marketing",
+        "social media",
+        "இணைய விளம்பரம்"
+      ],
+      "group": "digital",
+      "launch": false,
+      "risk": "standard",
+      "need": "Promotion with measurable scope, never guaranteed ranking",
+      "sources": [
+        "media"
+      ],
+      "ratings": [
+        4,
+        3,
+        3,
+        5,
+        3,
+        3,
+        4
+      ],
+      "penalty": 6,
+      "score": 66.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "appliance-repair",
+      "name": {
+        "en": "Appliance repair",
+        "ta": "வீட்டு இயந்திரப் பழுது"
+      },
+      "aliases": [
+        "appliance",
+        "fridge",
+        "refrigerator",
+        "washing machine",
+        "குளிர்சாதன பெட்டி",
+        "பழுது"
+      ],
+      "group": "home",
+      "launch": true,
+      "risk": "trade",
+      "need": "Repair decisions when household equipment fails",
+      "sources": [
+        "repair"
+      ],
+      "ratings": [
+        4,
+        5,
+        4,
+        5,
+        5,
+        3,
+        4
+      ],
+      "penalty": 5,
+      "score": 82.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "plumbing",
+      "name": {
+        "en": "Plumbing",
+        "ta": "குழாய் பழுது"
+      },
+      "aliases": [
+        "plumber",
+        "plumbing",
+        "குழாய்",
+        "kuzhai"
+      ],
+      "group": "home",
+      "launch": false,
+      "risk": "regulated",
+      "need": "Urgent household water issues; local licence checks needed",
+      "sources": [
+        "trades"
+      ],
+      "ratings": [
+        4,
+        5,
+        3,
+        5,
+        5,
+        2,
+        3
+      ],
+      "penalty": 9,
+      "score": 71.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "electrical",
+      "name": {
+        "en": "Electrical work",
+        "ta": "மின்சார வேலை"
+      },
+      "aliases": [
+        "electrician",
+        "electrical",
+        "மின்சாரம்",
+        "மின்சார"
+      ],
+      "group": "home",
+      "launch": false,
+      "risk": "regulated",
+      "need": "Safety-critical repairs requiring jurisdiction-specific credentials",
+      "sources": [
+        "trades"
+      ],
+      "ratings": [
+        4,
+        5,
+        3,
+        5,
+        5,
+        2,
+        3
+      ],
+      "penalty": 12,
+      "score": 68.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "cleaning",
+      "name": {
+        "en": "Home cleaning",
+        "ta": "வீடு சுத்தம்"
+      },
+      "aliases": [
+        "cleaner",
+        "cleaning",
+        "house cleaning",
+        "வீடு சுத்தம்",
+        "sutham"
+      ],
+      "group": "home",
+      "launch": true,
+      "risk": "standard",
+      "need": "Recurring household cleaning with scope and access precautions",
+      "sources": [
+        "cleaning"
+      ],
+      "ratings": [
+        5,
+        3,
+        3,
+        4,
+        4,
+        4,
+        5
+      ],
+      "penalty": 3,
+      "score": 76.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "moving",
+      "name": {
+        "en": "Moving services",
+        "ta": "வீடு மாற்றும் சேவை"
+      },
+      "aliases": [
+        "mover",
+        "moving",
+        "packers",
+        "வீடு மாற்ற",
+        "shifting"
+      ],
+      "group": "home",
+      "launch": true,
+      "risk": "trade",
+      "need": "Move coordination, damage terms and an itemized quote",
+      "sources": [
+        "transport"
+      ],
+      "ratings": [
+        3,
+        4,
+        4,
+        5,
+        4,
+        3,
+        4
+      ],
+      "penalty": 6,
+      "score": 71.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "handyman",
+      "name": {
+        "en": "Minor home maintenance",
+        "ta": "சிறு வீட்டு பராமரிப்பு"
+      },
+      "aliases": [
+        "handyman",
+        "home maintenance",
+        "carpenter",
+        "தச்சர்",
+        "வீட்டு பராமரிப்பு"
+      ],
+      "group": "home",
+      "launch": true,
+      "risk": "trade",
+      "need": "Non-regulated minor work; exclude electrical, gas and plumbing tasks",
+      "sources": [
+        "trades"
+      ],
+      "ratings": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        4
+      ],
+      "penalty": 5,
+      "score": 73.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "elder-companionship",
+      "name": {
+        "en": "Elder companionship",
+        "ta": "முதியோர் துணை உதவி"
+      },
+      "aliases": [
+        "elder care",
+        "elderly",
+        "senior care",
+        "முதியோர்"
+      ],
+      "group": "care",
+      "launch": false,
+      "risk": "safeguarding",
+      "need": "Families need trusted companionship; do not confuse it with clinical care",
+      "sources": [
+        "care"
+      ],
+      "ratings": [
+        5,
+        5,
+        5,
+        4,
+        5,
+        1,
+        2
+      ],
+      "penalty": 15,
+      "score": 68.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "childcare",
+      "name": {
+        "en": "Childcare",
+        "ta": "குழந்தைப் பராமரிப்பு"
+      },
+      "aliases": [
+        "childcare",
+        "babysitter",
+        "daycare",
+        "குழந்தை பராமரிப்பு"
+      ],
+      "group": "care",
+      "launch": false,
+      "risk": "safeguarding",
+      "need": "Recurring child supervision requires safeguarding and local authorization",
+      "sources": [
+        "personal"
+      ],
+      "ratings": [
+        5,
+        5,
+        4,
+        5,
+        4,
+        1,
+        2
+      ],
+      "penalty": 15,
+      "score": 66.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "disability-support",
+      "name": {
+        "en": "Disability support",
+        "ta": "மாற்றுத்திறனாளர் உதவி"
+      },
+      "aliases": [
+        "disability support",
+        "மாற்றுத்திறனாளர்"
+      ],
+      "group": "care",
+      "launch": false,
+      "risk": "safeguarding",
+      "need": "Accessible practical help with consent and support boundaries",
+      "sources": [
+        "care"
+      ],
+      "ratings": [
+        5,
+        5,
+        5,
+        3,
+        4,
+        1,
+        2
+      ],
+      "penalty": 15,
+      "score": 63.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "nursing",
+      "name": {
+        "en": "Home nursing",
+        "ta": "வீட்டு செவிலியர் சேவை"
+      },
+      "aliases": [
+        "nurse",
+        "nursing",
+        "செவிலியர்"
+      ],
+      "group": "care",
+      "launch": false,
+      "risk": "clinical",
+      "need": "Clinical need cannot be safely matched without local clinical governance",
+      "sources": [
+        "care"
+      ],
+      "ratings": [
+        5,
+        5,
+        4,
+        4,
+        5,
+        1,
+        1
+      ],
+      "penalty": 20,
+      "score": 58.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "physiotherapy",
+      "name": {
+        "en": "Physiotherapy",
+        "ta": "இயன்முறை மருத்துவம்"
+      },
+      "aliases": [
+        "physiotherapy",
+        "physio",
+        "இயன்முறை"
+      ],
+      "group": "care",
+      "launch": false,
+      "risk": "clinical",
+      "need": "Ongoing rehabilitation requires qualified clinical assessment",
+      "sources": [
+        "care"
+      ],
+      "ratings": [
+        5,
+        5,
+        4,
+        4,
+        5,
+        1,
+        1
+      ],
+      "penalty": 20,
+      "score": 58.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "mental-health",
+      "name": {
+        "en": "Mental health support",
+        "ta": "மனநல உதவி"
+      },
+      "aliases": [
+        "counselling",
+        "therapy",
+        "mental health",
+        "மனநலம்"
+      ],
+      "group": "care",
+      "launch": false,
+      "risk": "clinical",
+      "need": "Language-sensitive care needs licensed clinicians and crisis safeguards",
+      "sources": [
+        "care"
+      ],
+      "ratings": [
+        5,
+        5,
+        5,
+        3,
+        5,
+        1,
+        1
+      ],
+      "penalty": 20,
+      "score": 58.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "legal-advice",
+      "name": {
+        "en": "Legal advice",
+        "ta": "சட்ட ஆலோசனை"
+      },
+      "aliases": [
+        "lawyer",
+        "legal",
+        "solicitor",
+        "வழக்கறிஞர்",
+        "சட்டம்"
+      ],
+      "group": "professional",
+      "launch": false,
+      "risk": "regulated",
+      "need": "High-stakes legal problems require jurisdiction-specific professional status",
+      "sources": [
+        "immigration"
+      ],
+      "ratings": [
+        3,
+        5,
+        5,
+        5,
+        5,
+        1,
+        2
+      ],
+      "penalty": 18,
+      "score": 60.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "immigration-advice",
+      "name": {
+        "en": "Immigration advice",
+        "ta": "குடியேற்ற ஆலோசனை"
+      },
+      "aliases": [
+        "immigration",
+        "visa consultant",
+        "குடியேற்றம்",
+        "விசா ஆலோசகர்"
+      ],
+      "group": "professional",
+      "launch": false,
+      "risk": "regulated",
+      "need": "Official self-service first; paid representatives must be authorized",
+      "sources": [
+        "immigration"
+      ],
+      "ratings": [
+        3,
+        5,
+        5,
+        5,
+        5,
+        1,
+        2
+      ],
+      "penalty": 18,
+      "score": 60.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "insurance",
+      "name": {
+        "en": "Insurance advice",
+        "ta": "காப்பீட்டு ஆலோசனை"
+      },
+      "aliases": [
+        "insurance",
+        "காப்பீடு"
+      ],
+      "group": "professional",
+      "launch": false,
+      "risk": "regulated",
+      "need": "Needs and suitability depend on regulated advice and product disclosure",
+      "sources": [
+        "finance"
+      ],
+      "ratings": [
+        4,
+        5,
+        4,
+        5,
+        4,
+        1,
+        2
+      ],
+      "penalty": 17,
+      "score": 60.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "mortgage-advice",
+      "name": {
+        "en": "Mortgage advice",
+        "ta": "வீட்டுக் கடன் ஆலோசனை"
+      },
+      "aliases": [
+        "mortgage",
+        "home loan",
+        "வீட்டு கடன்"
+      ],
+      "group": "professional",
+      "launch": false,
+      "risk": "regulated",
+      "need": "Large commitments require licensed, conflict-disclosed advice",
+      "sources": [
+        "finance"
+      ],
+      "ratings": [
+        3,
+        5,
+        4,
+        5,
+        4,
+        1,
+        2
+      ],
+      "penalty": 17,
+      "score": 56.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "property-management",
+      "name": {
+        "en": "Property management",
+        "ta": "சொத்து பராமரிப்பு"
+      },
+      "aliases": [
+        "property management",
+        "சொத்து பராமரிப்பு"
+      ],
+      "group": "home",
+      "launch": false,
+      "risk": "regulated",
+      "need": "Remote owners need checked local operators and clear authority",
+      "sources": [
+        "finance"
+      ],
+      "ratings": [
+        5,
+        4,
+        4,
+        5,
+        3,
+        2,
+        3
+      ],
+      "penalty": 10,
+      "score": 69.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "driving-lessons",
+      "name": {
+        "en": "Driving lessons",
+        "ta": "வாகன ஓட்டுநர் பயிற்சி"
+      },
+      "aliases": [
+        "driving school",
+        "driving lesson",
+        "ஓட்டுநர் பயிற்சி"
+      ],
+      "group": "transport",
+      "launch": false,
+      "risk": "regulated",
+      "need": "Learning local road rules needs approved instructors",
+      "sources": [
+        "transport"
+      ],
+      "ratings": [
+        4,
+        4,
+        5,
+        4,
+        4,
+        2,
+        3
+      ],
+      "penalty": 10,
+      "score": 67.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "airport-transfer",
+      "name": {
+        "en": "Airport transfers",
+        "ta": "விமான நிலையப் பயணம்"
+      },
+      "aliases": [
+        "airport taxi",
+        "airport transfer",
+        "விமான நிலையம்"
+      ],
+      "group": "transport",
+      "launch": false,
+      "risk": "regulated",
+      "need": "Arrival travel for families with luggage and accessibility needs",
+      "sources": [
+        "transport"
+      ],
+      "ratings": [
+        3,
+        4,
+        5,
+        4,
+        4,
+        2,
+        3
+      ],
+      "penalty": 10,
+      "score": 63.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "travel-planning",
+      "name": {
+        "en": "Travel planning",
+        "ta": "பயணத் திட்டமிடல்"
+      },
+      "aliases": [
+        "travel agent",
+        "travel planning",
+        "பயண முகவர்"
+      ],
+      "group": "transport",
+      "launch": false,
+      "risk": "standard",
+      "need": "Reuse the existing planner before optional licensed booking support",
+      "sources": [
+        "travel"
+      ],
+      "ratings": [
+        3,
+        3,
+        4,
+        4,
+        4,
+        3,
+        4
+      ],
+      "penalty": 6,
+      "score": 64.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "catering",
+      "name": {
+        "en": "Catering",
+        "ta": "சமையல் சேவை"
+      },
+      "aliases": [
+        "catering",
+        "caterer",
+        "சமையல்",
+        "உணவு சேவை"
+      ],
+      "group": "events",
+      "launch": false,
+      "risk": "regulated",
+      "need": "Family events need food-safety checks and allergy communication",
+      "sources": [
+        "food"
+      ],
+      "ratings": [
+        3,
+        4,
+        5,
+        4,
+        4,
+        2,
+        3
+      ],
+      "penalty": 10,
+      "score": 63.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "photography",
+      "name": {
+        "en": "Photography",
+        "ta": "புகைப்பட சேவை"
+      },
+      "aliases": [
+        "photographer",
+        "photography",
+        "புகைப்படம்"
+      ],
+      "group": "events",
+      "launch": true,
+      "risk": "standard",
+      "need": "Event memories with clear usage and delivery rights",
+      "sources": [
+        "media"
+      ],
+      "ratings": [
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        5
+      ],
+      "penalty": 2,
+      "score": 72.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "tailoring",
+      "name": {
+        "en": "Tailoring and alterations",
+        "ta": "தையல் மற்றும் திருத்தம்"
+      },
+      "aliases": [
+        "tailor",
+        "tailoring",
+        "alteration",
+        "தையல்",
+        "thaiyal"
+      ],
+      "group": "home",
+      "launch": true,
+      "risk": "standard",
+      "need": "Repeat clothing repairs and fitting needs, separate from lungi sales",
+      "sources": [
+        "personal"
+      ],
+      "ratings": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        4,
+        5
+      ],
+      "penalty": 2,
+      "score": 74.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "event-planning",
+      "name": {
+        "en": "Event coordination",
+        "ta": "நிகழ்ச்சி ஒருங்கிணைப்பு"
+      },
+      "aliases": [
+        "event planner",
+        "event planning",
+        "wedding planner",
+        "நிகழ்ச்சி"
+      ],
+      "group": "events",
+      "launch": true,
+      "risk": "standard",
+      "need": "Coordinate vendors with clear cancellation and deposit terms",
+      "sources": [
+        "personal"
+      ],
+      "ratings": [
+        3,
+        3,
+        5,
+        4,
+        3,
+        4,
+        4
+      ],
+      "penalty": 4,
+      "score": 69.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "pet-care",
+      "name": {
+        "en": "Pet care",
+        "ta": "செல்லப்பிராணிப் பராமரிப்பு"
+      },
+      "aliases": [
+        "pet care",
+        "pet sitter",
+        "dog walker",
+        "செல்லப்பிராணி"
+      ],
+      "group": "home",
+      "launch": true,
+      "risk": "standard",
+      "need": "Repeat pet visits with access, welfare and boarding limits",
+      "sources": [
+        "personal"
+      ],
+      "ratings": [
+        5,
+        3,
+        3,
+        4,
+        4,
+        3,
+        4
+      ],
+      "penalty": 5,
+      "score": 70.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    },
+    {
+      "id": "beauty",
+      "name": {
+        "en": "Beauty services",
+        "ta": "அழகு பராமரிப்பு"
+      },
+      "aliases": [
+        "beautician",
+        "salon",
+        "beauty",
+        "அழகு நிலையம்"
+      ],
+      "group": "personal",
+      "launch": false,
+      "risk": "regulated",
+      "need": "Routine appointments with hygiene and relevant licensing checks",
+      "sources": [
+        "personal"
+      ],
+      "ratings": [
+        5,
+        3,
+        4,
+        4,
+        4,
+        2,
+        3
+      ],
+      "penalty": 8,
+      "score": 66.0,
+      "evidence": "Editorial inference from occupational/regulatory context; no measured Tamil search volume."
+    }
+  ],
+  "sources": {
+    "accounts": {
+      "name": "BLS accountants",
+      "url": "https://www.bls.gov/ooh/business-and-financial/accountants-and-auditors.htm",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Occupational evidence; not Tamil consumer demand."
+    },
+    "books": {
+      "name": "BLS bookkeeping",
+      "url": "https://www.bls.gov/ooh/office-and-administrative-support/bookkeeping-accounting-and-auditing-clerks.htm",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Recurring recordkeeping role; employment decline warns against assuming growth."
+    },
+    "education": {
+      "name": "BLS educational occupations",
+      "url": "https://www.bls.gov/ooh/education-training-and-library/home.htm",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Education role context, not tutoring marketplace volume."
+    },
+    "it": {
+      "name": "BLS computer occupations",
+      "url": "https://www.bls.gov/ooh/computer-and-information-technology/home.htm",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Technology service context; no local-language demand measurement."
+    },
+    "repair": {
+      "name": "BLS repair occupations",
+      "url": "https://www.bls.gov/ooh/installation-maintenance-and-repair/home.htm",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Repair work context, not local availability."
+    },
+    "personal": {
+      "name": "BLS personal services",
+      "url": "https://www.bls.gov/ooh/personal-care-and-service/home.htm",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Service occupation context only."
+    },
+    "cleaning": {
+      "name": "BLS cleaning occupations",
+      "url": "https://www.bls.gov/ooh/building-and-grounds-cleaning/home.htm",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Cleaning work context only."
+    },
+    "food": {
+      "name": "BLS food services",
+      "url": "https://www.bls.gov/ooh/food-preparation-and-serving/home.htm",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Food-service context, not food safety approval."
+    },
+    "care": {
+      "name": "BLS home health and personal care",
+      "url": "https://www.bls.gov/ooh/healthcare/home-health-aides-and-personal-care-aides.htm",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Care need context; clinical and safeguarding gates remain."
+    },
+    "trades": {
+      "name": "BLS construction occupations",
+      "url": "https://www.bls.gov/ooh/construction-and-extraction/home.htm",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Trade context, not licence authorization."
+    },
+    "transport": {
+      "name": "BLS transport occupations",
+      "url": "https://www.bls.gov/ooh/transportation-and-material-moving/home.htm",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Transport-role context only."
+    },
+    "media": {
+      "name": "BLS media and communication",
+      "url": "https://www.bls.gov/ooh/media-and-communication/home.htm",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Creative communication work context only."
+    },
+    "translation": {
+      "name": "BLS interpreters and translators",
+      "url": "https://www.bls.gov/ooh/media-and-communication/interpreters-and-translators.htm",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Language-service context; not evidence of demand in each language/city."
+    },
+    "ncs": {
+      "name": "National Career Service",
+      "url": "https://www.ncs.gov.in/",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Official job routes and fraud awareness; do not charge for job promises."
+    },
+    "cpa-on": {
+      "name": "CPA Ontario directories",
+      "url": "https://www.cpaontario.ca/protecting-the-public/directories",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Member, firm and public accounting licence are different checks; old entries may remain."
+    },
+    "icai": {
+      "name": "ICAI",
+      "url": "https://www.icai.org/",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Indian professional institution; moderators must verify individual membership and practice scope."
+    },
+    "tax": {
+      "name": "IRS choosing a tax professional",
+      "url": "https://www.irs.gov/tax-professionals/choosing-a-tax-professional",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "US credential and selection guidance; not worldwide authorization."
+    },
+    "immigration": {
+      "name": "IRCC authorized representatives",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose/authorized.html",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Canada-specific authorization check; do not equate a listing with good standing."
+    },
+    "uk-adviser": {
+      "name": "UK immigration adviser search",
+      "url": "https://www.gov.uk/find-an-immigration-adviser",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "UK-specific official adviser route."
+    },
+    "naati": {
+      "name": "NAATI directory",
+      "url": "https://directory.naati.com.au/",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Australia translation/interpreting credential route; confirm type and validity."
+    },
+    "finance": {
+      "name": "CFPB consumer tools",
+      "url": "https://www.consumerfinance.gov/consumer-tools/",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Official consumer guidance, not a substitute for regulated advice."
+    },
+    "travel": {
+      "name": "India Ministry of External Affairs",
+      "url": "https://www.mea.gov.in/",
+      "reviewed": "2026-09-19",
+      "access": "limited",
+      "note": "Official travel/consular route; no schedules or visa rules imported."
+    },
+    "reviews": {
+      "name": "FTC reviews rule Q&A",
+      "url": "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "No fake or misleading reviews; this build adds no rating/review system."
+    },
+    "currency": {
+      "name": "ISO currency codes",
+      "url": "https://www.iso.org/iso-4217-currency-codes.html",
+      "reviewed": "2026-09-19",
+      "access": "read",
+      "note": "Use explicit currency identifiers; do not mix currencies or invent conversion rates."
+    }
+  },
+  "countries": [
+    "AD",
+    "AE",
+    "AF",
+    "AG",
+    "AI",
+    "AL",
+    "AM",
+    "AO",
+    "AQ",
+    "AR",
+    "AS",
+    "AT",
+    "AU",
+    "AW",
+    "AX",
+    "AZ",
+    "BA",
+    "BB",
+    "BD",
+    "BE",
+    "BF",
+    "BG",
+    "BH",
+    "BI",
+    "BJ",
+    "BL",
+    "BM",
+    "BN",
+    "BO",
+    "BQ",
+    "BR",
+    "BS",
+    "BT",
+    "BV",
+    "BW",
+    "BY",
+    "BZ",
+    "CA",
+    "CC",
+    "CD",
+    "CF",
+    "CG",
+    "CH",
+    "CI",
+    "CK",
+    "CL",
+    "CM",
+    "CN",
+    "CO",
+    "CR",
+    "CU",
+    "CV",
+    "CW",
+    "CX",
+    "CY",
+    "CZ",
+    "DE",
+    "DJ",
+    "DK",
+    "DM",
+    "DO",
+    "DZ",
+    "EC",
+    "EE",
+    "EG",
+    "EH",
+    "ER",
+    "ES",
+    "ET",
+    "FI",
+    "FJ",
+    "FK",
+    "FM",
+    "FO",
+    "FR",
+    "GA",
+    "GB",
+    "GD",
+    "GE",
+    "GF",
+    "GG",
+    "GH",
+    "GI",
+    "GL",
+    "GM",
+    "GN",
+    "GP",
+    "GQ",
+    "GR",
+    "GS",
+    "GT",
+    "GU",
+    "GW",
+    "GY",
+    "HK",
+    "HM",
+    "HN",
+    "HR",
+    "HT",
+    "HU",
+    "ID",
+    "IE",
+    "IL",
+    "IM",
+    "IN",
+    "IO",
+    "IQ",
+    "IR",
+    "IS",
+    "IT",
+    "JE",
+    "JM",
+    "JO",
+    "JP",
+    "KE",
+    "KG",
+    "KH",
+    "KI",
+    "KM",
+    "KN",
+    "KP",
+    "KR",
+    "KW",
+    "KY",
+    "KZ",
+    "LA",
+    "LB",
+    "LC",
+    "LI",
+    "LK",
+    "LR",
+    "LS",
+    "LT",
+    "LU",
+    "LV",
+    "LY",
+    "MA",
+    "MC",
+    "MD",
+    "ME",
+    "MF",
+    "MG",
+    "MH",
+    "MK",
+    "ML",
+    "MM",
+    "MN",
+    "MO",
+    "MP",
+    "MQ",
+    "MR",
+    "MS",
+    "MT",
+    "MU",
+    "MV",
+    "MW",
+    "MX",
+    "MY",
+    "MZ",
+    "NA",
+    "NC",
+    "NE",
+    "NF",
+    "NG",
+    "NI",
+    "NL",
+    "NO",
+    "NP",
+    "NR",
+    "NU",
+    "NZ",
+    "OM",
+    "PA",
+    "PE",
+    "PF",
+    "PG",
+    "PH",
+    "PK",
+    "PL",
+    "PM",
+    "PN",
+    "PR",
+    "PS",
+    "PT",
+    "PW",
+    "PY",
+    "QA",
+    "RE",
+    "RO",
+    "RS",
+    "RU",
+    "RW",
+    "SA",
+    "SB",
+    "SC",
+    "SD",
+    "SE",
+    "SG",
+    "SH",
+    "SI",
+    "SJ",
+    "SK",
+    "SL",
+    "SM",
+    "SN",
+    "SO",
+    "SR",
+    "SS",
+    "ST",
+    "SV",
+    "SX",
+    "SY",
+    "SZ",
+    "TC",
+    "TD",
+    "TF",
+    "TG",
+    "TH",
+    "TJ",
+    "TK",
+    "TL",
+    "TM",
+    "TN",
+    "TO",
+    "TR",
+    "TT",
+    "TV",
+    "TW",
+    "TZ",
+    "UA",
+    "UG",
+    "UM",
+    "US",
+    "UY",
+    "UZ",
+    "VA",
+    "VC",
+    "VE",
+    "VG",
+    "VI",
+    "VN",
+    "VU",
+    "WF",
+    "WS",
+    "YE",
+    "YT",
+    "ZA",
+    "ZM",
+    "ZW"
+  ],
+  "currencies": [
+    "AED",
+    "AFN",
+    "ALL",
+    "AMD",
+    "ANG",
+    "AOA",
+    "ARS",
+    "AUD",
+    "AWG",
+    "AZN",
+    "BAM",
+    "BBD",
+    "BDT",
+    "BGN",
+    "BHD",
+    "BIF",
+    "BMD",
+    "BND",
+    "BOB",
+    "BRL",
+    "BSD",
+    "BTN",
+    "BWP",
+    "BYN",
+    "BZD",
+    "CAD",
+    "CDF",
+    "CHF",
+    "CLP",
+    "CNY",
+    "COP",
+    "CRC",
+    "CUP",
+    "CVE",
+    "CZK",
+    "DJF",
+    "DKK",
+    "DOP",
+    "DZD",
+    "EGP",
+    "ERN",
+    "ETB",
+    "EUR",
+    "FJD",
+    "FKP",
+    "GBP",
+    "GEL",
+    "GHS",
+    "GIP",
+    "GMD",
+    "GNF",
+    "GTQ",
+    "GYD",
+    "HKD",
+    "HNL",
+    "HTG",
+    "HUF",
+    "IDR",
+    "ILS",
+    "INR",
+    "IQD",
+    "IRR",
+    "ISK",
+    "JMD",
+    "JOD",
+    "JPY",
+    "KES",
+    "KGS",
+    "KHR",
+    "KMF",
+    "KPW",
+    "KRW",
+    "KWD",
+    "KYD",
+    "KZT",
+    "LAK",
+    "LBP",
+    "LKR",
+    "LRD",
+    "LSL",
+    "LYD",
+    "MAD",
+    "MDL",
+    "MGA",
+    "MKD",
+    "MMK",
+    "MNT",
+    "MOP",
+    "MRU",
+    "MUR",
+    "MVR",
+    "MWK",
+    "MXN",
+    "MYR",
+    "MZN",
+    "NAD",
+    "NGN",
+    "NIO",
+    "NOK",
+    "NPR",
+    "NZD",
+    "OMR",
+    "PAB",
+    "PEN",
+    "PGK",
+    "PHP",
+    "PKR",
+    "PLN",
+    "PYG",
+    "QAR",
+    "RON",
+    "RSD",
+    "RUB",
+    "RWF",
+    "SAR",
+    "SBD",
+    "SCR",
+    "SDG",
+    "SEK",
+    "SGD",
+    "SHP",
+    "SLE",
+    "SOS",
+    "SRD",
+    "SSP",
+    "STN",
+    "SVC",
+    "SYP",
+    "SZL",
+    "THB",
+    "TJS",
+    "TMT",
+    "TND",
+    "TOP",
+    "TRY",
+    "TTD",
+    "TWD",
+    "TZS",
+    "UAH",
+    "UGX",
+    "USD",
+    "UYU",
+    "UZS",
+    "VES",
+    "VND",
+    "VUV",
+    "WST",
+    "XAF",
+    "XCD",
+    "XOF",
+    "XPF",
+    "YER",
+    "ZAR",
+    "ZMW",
+    "ZWG",
+    "XCG"
+  ],
+  "languages": {
+    "ta": {
+      "en": "Tamil",
+      "ta": "தமிழ்",
+      "aliases": [
+        "tamil",
+        "tamizh",
+        "தமிழ்",
+        "தமிழில்",
+        "thamizh"
+      ]
+    },
+    "en": {
+      "en": "English",
+      "ta": "ஆங்கிலம்",
+      "aliases": [
+        "english",
+        "ஆங்கிலம்"
+      ]
+    },
+    "hi": {
+      "en": "Hindi",
+      "ta": "இந்தி",
+      "aliases": [
+        "hindi",
+        "இந்தி"
+      ]
+    },
+    "te": {
+      "en": "Telugu",
+      "ta": "தெலுங்கு",
+      "aliases": [
+        "telugu",
+        "தெலுங்கு"
+      ]
+    },
+    "ml": {
+      "en": "Malayalam",
+      "ta": "மலையாளம்",
+      "aliases": [
+        "malayalam",
+        "மலையாளம்"
+      ]
+    },
+    "fr": {
+      "en": "French",
+      "ta": "பிரெஞ்சு",
+      "aliases": [
+        "french",
+        "பிரெஞ்சு"
+      ]
+    },
+    "de": {
+      "en": "German",
+      "ta": "ஜெர்மன்",
+      "aliases": [
+        "german",
+        "ஜெர்மன்"
+      ]
+    },
+    "ar": {
+      "en": "Arabic",
+      "ta": "அரபு",
+      "aliases": [
+        "arabic",
+        "அரபு"
+      ]
+    },
+    "si": {
+      "en": "Sinhala",
+      "ta": "சிங்களம்",
+      "aliases": [
+        "sinhala",
+        "சிங்களம்"
+      ]
+    },
+    "ms": {
+      "en": "Malay",
+      "ta": "மலாய்",
+      "aliases": [
+        "malay",
+        "மலாய்"
+      ]
+    }
+  },
+  "cities": [
+    {
+      "city": "Toronto",
+      "country": "CA",
+      "region": "ON",
+      "aliases": [
+        "toronto",
+        "டொராண்டோ",
+        "டொரன்டோ"
+      ]
+    },
+    {
+      "city": "Chennai",
+      "country": "IN",
+      "region": "TN",
+      "aliases": [
+        "chennai",
+        "madras",
+        "சென்னை"
+      ]
+    },
+    {
+      "city": "Podaturpet",
+      "country": "IN",
+      "region": "TN",
+      "aliases": [
+        "podaturpet",
+        "pothatturpettai",
+        "podhaturpet",
+        "பொதட்டூர்பேட்டை"
+      ]
+    },
+    {
+      "city": "Bengaluru",
+      "country": "IN",
+      "region": "KA",
+      "aliases": [
+        "bengaluru",
+        "bangalore",
+        "பெங்களூரு"
+      ]
+    },
+    {
+      "city": "Coimbatore",
+      "country": "IN",
+      "region": "TN",
+      "aliases": [
+        "coimbatore",
+        "kovai",
+        "கோவை"
+      ]
+    },
+    {
+      "city": "Madurai",
+      "country": "IN",
+      "region": "TN",
+      "aliases": [
+        "madurai",
+        "மதுரை"
+      ]
+    },
+    {
+      "city": "Tiruchirappalli",
+      "country": "IN",
+      "region": "TN",
+      "aliases": [
+        "trichy",
+        "tiruchirappalli",
+        "திருச்சி"
+      ]
+    },
+    {
+      "city": "London",
+      "country": "GB",
+      "region": "England",
+      "aliases": [
+        "london",
+        "லண்டன்"
+      ]
+    },
+    {
+      "city": "Singapore",
+      "country": "SG",
+      "region": "",
+      "aliases": [
+        "singapore",
+        "சிங்கப்பூர்"
+      ]
+    },
+    {
+      "city": "Dubai",
+      "country": "AE",
+      "region": "Dubai",
+      "aliases": [
+        "dubai",
+        "துபாய்"
+      ]
+    },
+    {
+      "city": "Kuala Lumpur",
+      "country": "MY",
+      "region": "",
+      "aliases": [
+        "kuala lumpur",
+        "கோலாலம்பூர்"
+      ]
+    },
+    {
+      "city": "Sydney",
+      "country": "AU",
+      "region": "NSW",
+      "aliases": [
+        "sydney",
+        "சிட்னி"
+      ]
+    },
+    {
+      "city": "Melbourne",
+      "country": "AU",
+      "region": "VIC",
+      "aliases": [
+        "melbourne",
+        "மெல்போர்ன்"
+      ]
+    },
+    {
+      "city": "Colombo",
+      "country": "LK",
+      "region": "",
+      "aliases": [
+        "colombo",
+        "கொழும்பு"
+      ]
+    },
+    {
+      "city": "Jaffna",
+      "country": "LK",
+      "region": "",
+      "aliases": [
+        "jaffna",
+        "யாழ்ப்பாணம்"
+      ]
+    },
+    {
+      "city": "Paris",
+      "country": "FR",
+      "region": "",
+      "aliases": [
+        "paris",
+        "பாரிஸ்"
+      ]
+    },
+    {
+      "city": "Berlin",
+      "country": "DE",
+      "region": "",
+      "aliases": [
+        "berlin",
+        "பெர்லின்"
+      ]
+    },
+    {
+      "city": "Helsinki",
+      "country": "FI",
+      "region": "",
+      "aliases": [
+        "helsinki",
+        "ஹெல்சிங்கி"
+      ]
+    },
+    {
+      "city": "New York",
+      "country": "US",
+      "region": "NY",
+      "aliases": [
+        "new york",
+        "நியூயார்க்"
+      ]
+    },
+    {
+      "city": "Bentonville",
+      "country": "US",
+      "region": "AR",
+      "aliases": [
+        "bentonville",
+        "பென்டன்வில்"
+      ]
+    },
+    {
+      "city": "Centerton",
+      "country": "US",
+      "region": "AR",
+      "aliases": [
+        "centerton",
+        "சென்டர்டன்"
+      ]
+    },
+    {
+      "city": "Dallas",
+      "country": "US",
+      "region": "TX",
+      "aliases": [
+        "dallas",
+        "டாலஸ்"
+      ]
+    },
+    {
+      "city": "Muscat",
+      "country": "OM",
+      "region": "",
+      "aliases": [
+        "muscat",
+        "மஸ்கட்"
+      ]
+    },
+    {
+      "city": "Doha",
+      "country": "QA",
+      "region": "",
+      "aliases": [
+        "doha",
+        "தோஹா"
+      ]
+    }
+  ],
+  "registers": [
+    {
+      "services": [
+        "accounting"
+      ],
+      "country": "CA",
+      "region": "ON",
+      "source": "cpa-on"
+    },
+    {
+      "services": [
+        "accounting"
+      ],
+      "country": "IN",
+      "region": "",
+      "source": "icai"
+    },
+    {
+      "services": [
+        "tax-preparation"
+      ],
+      "country": "US",
+      "region": "",
+      "source": "tax"
+    },
+    {
+      "services": [
+        "immigration-advice",
+        "legal-advice"
+      ],
+      "country": "CA",
+      "region": "",
+      "source": "immigration"
+    },
+    {
+      "services": [
+        "immigration-advice"
+      ],
+      "country": "GB",
+      "region": "",
+      "source": "uk-adviser"
+    },
+    {
+      "services": [
+        "translation",
+        "interpretation"
+      ],
+      "country": "AU",
+      "region": "",
+      "source": "naati"
+    }
+  ]
+}

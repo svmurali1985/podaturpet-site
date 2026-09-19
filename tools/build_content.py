@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Refresh static navigation, contacts, reviewed listings and specifications. Standard library only."""
 from pathlib import Path
+from marketplace_model import dataset
+from marketplace_template import render as render_marketplace
 import json,re,html
 from urllib.parse import quote,urlparse
 from datetime import datetime,date,timezone
@@ -15,8 +17,9 @@ if not re.fullmatch(r'\d{8,15}',site['whatsapp']):raise ValueError('WhatsApp mus
 def header(page):
  links=''.join('<a href="'+esc(url)+'"'+(' aria-current="page"' if (url=='/' and page=='index.html') or url=='/'+page else '')+'>'+esc(label)+'</a>' for label,url in site['navigation'])
  return '<div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>'+esc(site['name'])+'</strong></a><nav class="pt-nav" aria-label="Main navigation">'+links+'</nav></div>'
-def contact():
- return '<div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+'+esc(site['whatsapp'])+'">'+esc(site['phone'])+'</a><a href="https://wa.me/'+esc(site['whatsapp'])+'">WhatsApp</a><a href="mailto:'+esc(site['email'])+'">Email the team</a></div>'
+def contact(page=None):
+ label="Directory / service enquiries" if page=="podaturpet-local-business-directory.html" else "Wholesale enquiries"
+ return '<div class="pt-shared-contact" aria-label="'+esc(label)+'"><span>'+esc(label)+'</span><a href="tel:+'+esc(site['whatsapp'])+'">'+esc(site['phone'])+'</a><a href="https://wa.me/'+esc(site['whatsapp'])+'">WhatsApp</a><a href="mailto:'+esc(site['email'])+'">Email the team</a></div>'
 def product(code,compact):
  v=products[code];rows=[('Design reference',code),('Photographed colours',v['colours']),('Pattern',v['pattern'])]
  for key,label in [('fabric','Fabric'),('dimensions','Finished size'),('minimum_order','Minimum order'),('packing','Packing'),('samples','Samples'),('lead_time','Dispatch estimate')]:
@@ -27,7 +30,7 @@ def product(code,compact):
  title='<summary>View specifications</summary>' if compact else '<h2>Product specifications</h2>'
  return title+table+'<p>Photographs identify the design. Confirm the sample and written order details before purchase.</p><a class="pt-button" href="/?product='+quote(code)+'#quick-quote">Ask about this design</a>'
 def business_content():
- approved=sorted([b for b in businesses if b.get('approved') is True], key=lambda b:str(b.get('name','')).casefold())
+ approved=sorted([b for b in businesses if b.get('schema_version')!=2 and b.get('approved') is True], key=lambda b:str(b.get('name','')).casefold())
  cards=[]
  for b in approved:
   for k in ['name','category','address','public_phone','hours','verified_on','source_url','map_url']:
@@ -56,7 +59,8 @@ def event_content():
   cards.append('<article class="pt-card" data-pt-event data-end="'+esc(e['end'])+'"><h3>'+esc(e['title'])+'</h3><p><time datetime="'+esc(e['start'])+'">'+esc(start.strftime('%d %b %Y, %I:%M %p'))+' (local event time)</time><br>'+esc(e['location'])+'<br>Organiser: '+esc(e['organiser'])+'</p><a href="'+safe_url(e['source_url'])+'">Event source and details</a><p>Checked: '+esc(e['verified_on'])+'</p></article>')
  return '<div class="pt-grid">'+''.join(cards)+'</div><p class="pt-empty" data-events-empty'+(' hidden' if cards else '')+'>No verified upcoming events published yet. Send a dated event notice to help build the calendar.</p>'
 # Validate all publishable records before touching any page.
-business_html=business_content()
+market_data=dataset(businesses)
+business_html=render_marketplace(businesses)+(business_content() if any(b.get('schema_version')!=2 and b.get('approved') is True for b in businesses) else '')
 event_html=event_content()
 for code in products:product(code,False)
 count=0
@@ -65,11 +69,12 @@ parser=argparse.ArgumentParser(description='Refresh existing content markers')
 parser.add_argument('--only', nargs='+', help='Root HTML filenames to rebuild; omitted means all')
 args=parser.parse_args()
 if args.only and any(Path(n).name!=n or not n.endswith('.html') or not (R/n).is_file() for n in args.only):parser.error('Use existing root HTML filenames only')
+(R/'content/businesses-public.js').write_text('/* Generated from the existing directory dataset. No private moderation data. */\nwindow.PodaturpetServicesData = '+json.dumps(market_data,ensure_ascii=False,separators=(',',':')).replace('<',r'\u003c')+';\n')
 for p in ([R/n for n in args.only] if args.only else R.glob('*.html')):
  text=p.read_text()
  def render(m):
   kind,key=m.group(1).split(':',1)
-  value=header(p.name) if key=='header' and kind=='shared' else contact() if key=='contact' and kind=='shared' else business_html if key=='businesses' else event_html if key=='events' else product(key,p.name=='lungi-product-catalogue.html')
+  value=header(p.name) if key=='header' and kind=='shared' else contact(p.name) if key=='contact' and kind=='shared' else business_html if key=='businesses' else event_html if key=='events' else product(key,p.name=='lungi-product-catalogue.html')
   return '<!-- PT:'+m.group(1)+':START -->'+value+'<!-- PT:'+m.group(1)+':END -->'
  new=re.sub(r'<!-- PT:([^ ]+):START -->.*?<!-- PT:\1:END -->',render,text,flags=re.S)
  new=re.sub(r'(data-whatsapp=")[^"]*(")',lambda m:m[1]+site['whatsapp']+m[2],new)

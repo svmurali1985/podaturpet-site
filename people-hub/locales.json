@@ -140,7 +140,12 @@
       "calculateStage": "Calculation completed",
       "officialStage": "Official link opened",
       "previewStage": "Request previewed",
-      "handoffStage": "Message app opened"
+      "handoffStage": "Message app opened",
+      "countSearch": "Service searches",
+      "countProfile": "Profiles opened",
+      "countContact": "Contact channels opened",
+      "countPrepared": "Consented drafts prepared",
+      "countEnquiry": "Message drafts opened"
     },
     "ta": {
       "name": "மக்கள் தகவல் மையம்",
@@ -282,7 +287,12 @@
       "calculateStage": "கணக்கு முடிக்கப்பட்டது",
       "officialStage": "அதிகாரப்பூர்வ இணைப்பு திறக்கப்பட்டது",
       "previewStage": "கோரிக்கை முன்னோட்டம் பார்க்கப்பட்டது",
-      "handoffStage": "செய்திச் செயலி திறக்கப்பட்டது"
+      "handoffStage": "செய்திச் செயலி திறக்கப்பட்டது",
+      "countSearch": "சேவைத் தேடல்கள்",
+      "countProfile": "திறந்த சேவையாளர் விவரங்கள்",
+      "countContact": "திறந்த தொடர்பு வழிகள்",
+      "countPrepared": "ஒப்புதலுடன் தயாரித்த வரைவுகள்",
+      "countEnquiry": "திறந்த செய்தி வரைவுகள்"
     }
   },
   "categories": {

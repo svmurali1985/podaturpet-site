@@ -2,7 +2,7 @@
   "private": true,
   "description": "QA only, never loaded by the website",
   "scripts": {
-    "test": "node core.test.cjs && node dom.test.cjs && node life.test.cjs"
+    "test": "node core.test.cjs && node dom.test.cjs && node life.test.cjs && node market.test.cjs"
   },
   "devDependencies": {
     "jsdom": "26.1.0"

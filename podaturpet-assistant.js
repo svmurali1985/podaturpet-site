@@ -17,7 +17,7 @@
       if(!query){answer.textContent=U.noMatch;return;}
       emit('ask');const hits=C.askRank(query,D.items,region);
       $('clear').click();$('hub-search').value=query;$('region').value=region;$('region').dispatchEvent(new Event('change'));
-      const p=document.createElement('p');p.textContent=hits.length?U.choose:U.noMatch;answer.append(p);
+      const p=document.createElement('p');p.textContent=hits.length?U.choose:(window.PodaturpetServicesData&&C.marketParse(query,window.PodaturpetServicesData).service?window.PodaturpetServicesData.ui[lang].recognized:U.noMatch);answer.append(p);
       for(const hit of hits){const item=D.items.find(x=>x.id===hit.id),card=$('guide-'+hit.id),box=document.createElement('article');
         const title=document.createElement('h3');title.textContent=item.title[lang];box.append(title);
         const summary=document.createElement('p');summary.textContent=card.querySelector('.summary').textContent;box.append(summary);
@@ -28,6 +28,15 @@
         answer.append(box);
       }
       if(/parents|family|பெற்றோர்|குடும்ப/i.test(query))link(answer,U.planner+' →','/us-india-family-travel-planner.html');
+      const market=window.PodaturpetServicesData;
+      if(market&&C.marketParse){const parsed=C.marketParse(query,market),MU=market.ui[lang];if(parsed.service&&!parsed.sensitive){
+        const section=document.createElement('section'),heading=document.createElement('h3'),p=document.createElement('p');heading.textContent=market.services.find(x=>x.id===parsed.service).name[lang];section.append(heading);
+        // For information questions, keep official steps ahead of any optional paid help.
+        if(parsed.information){p.textContent=MU.information;section.append(p);for(const source of C.marketRegisters(parsed.service,parsed.country,parsed.region,market)){const a=link(section,source.name+' ↗',source.url);a.target='_blank';a.rel='noopener noreferrer';}}
+        const place=document.createElement('p');place.textContent=[parsed.city,parsed.country,parsed.language?market.languages[parsed.language][lang]:''].filter(Boolean).join(' · ');section.append(place);
+        const note=document.createElement('p');note.textContent=MU.confirmPlace;section.append(note);
+        link(section,MU.directoryLink+' →','/podaturpet-local-business-directory.html#service-'+parsed.service);answer.append(section);
+      }}
       link(answer,U.help+' →','#life-help');spoken=answer.textContent;$('life-listen').hidden=false;
     });
     document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',()=>{$('hub-search').value=b.dataset.ask;$('life-ask-form').dispatchEvent(new Event('submit',{cancelable:true}));}));
@@ -196,6 +205,12 @@
   }
 
   function reply(question) {
+    if(!/lungi|wholesale|textile|லுங்கி|மொத்த/i.test(question)&&/accountant|bookkeeper|plumber|electrician|tutor|translator|computer repair|cleaner|photographer|tailor|கணக்காளர்|தையல்|பாடப்பயிற்சி/i.test(question)){
+      addMessage(question,true);input.value='';
+      if(/\b(?:how|what|meaning|official|apply|job)\b|எப்படி|விண்ணப்ப|அதிகாரப்பூர்வ/i.test(question)){addMessage('Start with official information / முதலில் அதிகாரப்பூர்வ தகவலைப் பாருங்கள்.',false,'/people-information-hub.html#life-assistant','Tamil Life Assistant');return;}
+      addMessage('Find a service by language and place / மொழி, இடம் தேர்ந்தெடுத்து சேவையைத் தேடுங்கள். Confirm country and city before matching.',false,'/podaturpet-local-business-directory.html#service-marketplace','Open service directory / சேவைப் பட்டியல்');return;
+    }
+
     if (!/lungi|wholesale|textile|லுங்கி|மொத்த/i.test(question) && /tamil life|aadhaar|aadhar|scholarship|remittance|diaspora|overseas|education|government|passport|visa|\bjobs?\b|singapore|malaysia|canada|australia|es evai|esevai|tnpsc|ஆதார்|உதவித்தொகை|வெளிநாடு|வேலை|அரசு|கல்வி|விசா|பணம் அனுப்ப/i.test(question)) {
       addMessage(question, true); input.value = '';
       addMessage('Tamil Life Assistant / தமிழ் வாழ்க்கை உதவியாளர்: use the bilingual guides for official steps and optional human help.', false, '/people-information-hub.html#life-assistant', 'Open Tamil Life Assistant');
