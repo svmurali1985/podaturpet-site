@@ -14,19 +14,13 @@ function app(page='index.html',suffix='',full=false){
 }
 try{
  const a=app();
- test('homepage has one heading, five areas and one shared navigation',()=>{assert.equal(a.d.querySelectorAll('h1').length,1);assert.equal(a.d.querySelectorAll('.home-area').length,5);assert.equal(a.d.querySelectorAll('#site-main-nav').length,1);assert.equal(a.d.querySelectorAll('#site-main-nav a').length,5);});
- test('mobile navigation opens, closes with Escape and restores focus',()=>{const b=a.d.querySelector('.site-menu-toggle');assert(!b.hidden);b.click();assert.equal(b.getAttribute('aria-expanded'),'true');b.dispatchEvent(new a.w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));assert.equal(b.getAttribute('aria-expanded'),'false');assert.equal(a.d.activeElement,b);});
- test('Tamil switching translates the complete new homepage paths',()=>{a.d.querySelector('[data-site-language=ta]').click();assert(a.$('home-title').textContent.includes('அன்றாட'));assert.equal(a.d.body.dataset.siteLang,'ta');assert(a.d.querySelector('.home-actions a').href.includes('people-information-hub-ta.html'));});
- test('English switching restores labels and existing English route',()=>{a.d.querySelector('[data-site-language=en]').click();assert(a.$('home-title').textContent.includes('Everyday'));assert(a.d.querySelector('.home-actions a').href.includes('people-information-hub.html'));});
- test('new common navigation never has a private search query',()=>{for(const l of a.d.querySelectorAll('#site-main-nav a'))assert.equal(new URL(l.href).search,'');});
- const deep=app('index.html','?product=PT-WC-01#quick-quote',true);
- test('old quote deep link opens the retained buyer workspace',()=>assert(deep.$('wholesale-details').open));
- test('existing product selection propagates into original quote form',()=>assert.equal(deep.$('wholesale-quote-form').elements.product.value,'PT-WC-01'));
- test('original wholesale quote still prepares its own message',()=>{const f=deep.$('wholesale-quote-form');for(const i of f.elements){if(i.name==='business_name')i.value='QA Shop';if(i.name==='quantity')i.value='100';if(i.name==='destination')i.value='Toronto';if(i.name==='business')i.selectedIndex=1;if(i.name==='email')i.value='qa@example.com';}f.reportValidity=()=>true;f.dispatchEvent(new deep.w.Event('submit',{cancelable:true}));assert(f.querySelector('.enquiry-status a').href.startsWith('https://wa.me/'));assert(decodeURIComponent(f.querySelector('.enquiry-status a').href).includes('PT-WC-01'));});
- test('buyer translation and common shell stay synchronized',()=>{deep.d.querySelector('[data-site-language=ta]').click();assert.equal(deep.d.documentElement.dataset.buyerLanguage,'ta');assert.equal(deep.d.body.dataset.siteLang,'ta');});
- test('homepage preserves video, product cards and global market selector',()=>{assert(deep.d.querySelector('#powerloom-video video'));assert(deep.d.querySelectorAll('[data-product-choice]').length);assert(deep.$('international-buyers').querySelector('select'));});
- test('old removed section anchors still resolve',()=>{for(const id of ['pv-title','showcase-title','pt-page-explorer','pt-people-title','pt-travel-heading','invoice-tool-title'])assert(a.$(id),id);});
- test('homepage has no duplicate page-explorer drawer or duplicate skip link',()=>{assert.equal(a.d.querySelectorAll('details#pt-page-explorer').length,0);assert.equal(a.d.querySelectorAll('.pt-skip,.skip-to-content,.skip').length,1);});
+ test('homepage presents business routes without repeated content sections',()=>{assert.equal(a.d.querySelectorAll('h1').length,1);for(const id of ['collection','services','advertise','town','nearby','contact'])assert.equal(a.d.querySelectorAll('#'+id).length,1);assert.equal(a.d.querySelectorAll('#site-main-nav').length,1);});
+ test('mobile navigation opens, closes with Escape and restores focus',()=>{const b=a.d.querySelector('.site-menu-toggle');b.click();assert.equal(b.getAttribute('aria-expanded'),'true');b.dispatchEvent(new a.w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));assert.equal(b.getAttribute('aria-expanded'),'false');assert.equal(a.d.activeElement,b);});
+ test('Tamil and English switching preserve commercial links',()=>{a.d.querySelector('[data-site-language=ta]').click();assert(a.d.querySelector('h1').textContent.includes('நம்ம ஊர்'));assert.equal(a.d.body.dataset.siteLang,'ta');assert(a.d.querySelector('.rev-actions a').href.includes('lungi-product-catalogue.html'));a.d.querySelector('[data-site-language=en]').click();assert(a.d.querySelector('h1').textContent.includes('Our town.'));});
+ const deep=app('index.html','?product=PT-WC-01',true);
+ test('buyer can reach a dedicated wholesale enquiry from the homepage',()=>assert(deep.d.querySelector('.rev-wholesale a').href.includes('podaturpet-textile-supplier-enquiry.html')));
+ test('regional photographs are local files with attribution',()=>{for(const img of deep.d.querySelectorAll('.rev-region-grid img'))assert(fs.existsSync(path.join(root,new URL(img.src).pathname)));assert.equal(deep.d.querySelectorAll('.rev-region-grid figcaption').length,3);});
+ test('homepage has one skip link and no repeated legacy photo galleries',()=>{assert.equal(a.d.querySelectorAll('.pt-skip,.skip-to-content,.skip').length,1);assert.equal(a.d.querySelectorAll('#lungi-lifestyle-gallery').length,0);});
  for(const page of ['people-information-hub.html','people-information-hub-ta.html','podaturpet-local-business-directory.html','lungi-product-catalogue.html','podaturpet-town-guide.html','advertise-on-podaturpet.html','business-website-development.html','free-invoice.html','us-india-family-travel-planner.html']){
   const b=app(page,'',true);
   test(page+' initializes full existing local scripts without exceptions',()=>assert.deepEqual(b.errors,[]));
@@ -38,5 +32,5 @@ try{
  test('feedback reuses one existing trigger in the footer',()=>{assert.equal(deep.d.querySelectorAll('#pt-feedback-button').length,1);assert(deep.d.querySelector('.site-footer #pt-feedback-button'));});
  test('homepage complete script initialization has no runtime errors',()=>assert.deepEqual(deep.errors,[]));
  const privacy=app('privacy-policy.html');test('privacy page remains reachable and has no added collector',()=>{assert(privacy.d.querySelector('h1').textContent.includes('Privacy'));assert.equal(privacy.network.length,0);});
- console.log(count+' reorganization journey tests passed.');
+ console.log(count+' website journey tests passed.');
 }finally{opened.forEach(d=>d.window.close());}

@@ -3,6 +3,7 @@ from pathlib import Path
 import html,json,re
 ROOT=Path(__file__).resolve().parents[1]
 AREAS=[(a['key'],a['en'],a['ta'],a['url']) for a in json.loads((ROOT/'content/site.json').read_text())['areas']]
+NAV_AREAS=[('advertise','Advertise','விளம்பரம்','/advertise-on-podaturpet.html'),('textiles','Lungis','லுங்கிகள்','/lungi-product-catalogue.html'),('digital','Websites & Automation','இணையதளம் · Automation','/business-website-development.html'),('local','Our town','நம்ம ஊர்','/podaturpet-town-guide.html'),('services','Find services','சேவைகள்','/podaturpet-local-business-directory.html')]
 def word(en,ta):return '<span data-site-en="'+html.escape(en,quote=True)+'" data-site-ta="'+html.escape(ta,quote=True)+'">'+html.escape(en)+'</span>'
 def area(page):
  if page=='index.html':return 'home'
@@ -17,7 +18,7 @@ def localized(markup,page):
  return re.sub(r'(<span data-site-en="[^"]*" data-site-ta="([^"]*)")>[^<]*</span>',lambda m:m[1]+' lang="ta">'+html.escape(html.unescape(m[2]))+'</span>',markup)
 def header(page,controls=''):
  active=area(page)
- links=''.join('<a href="'+(url.replace('.html','-ta.html') if key=='people' and page.endswith('-ta.html') else url)+'"'+(' aria-current="page"' if page==url[1:] or key=='people' and page.endswith('-ta.html') else ' data-section-current="true"' if key==active else '')+'>'+word(en,ta)+'</a>' for key,en,ta,url in AREAS)
+ links=''.join('<a href="'+(url.replace('.html','-ta.html') if key=='people' and page.endswith('-ta.html') else url)+'"'+(' aria-current="page"' if page==url[1:] or key=='people' and page.endswith('-ta.html') else ' data-section-current="true"' if key==active else '')+'>'+word(en,ta)+'</a>' for key,en,ta,url in NAV_AREAS)
  if not controls:controls='<div class="site-language" aria-label="Language / மொழி"><button type="button" data-site-language="en" aria-pressed="true">English</button><button type="button" data-site-language="ta" lang="ta" aria-pressed="false">தமிழ்</button></div>'
  markup='<div class="site-header-row"><a class="site-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" width="38" height="38" alt=""><span>PODATURPET<small>'+word('People. Places. Possibilities.','மக்கள். ஊர். வாய்ப்புகள்.')+'</small></span></a><button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-main-nav" hidden>'+word('Menu','பட்டியல்')+' <span aria-hidden="true">☰</span></button><nav id="site-main-nav" aria-label="Main navigation">'+links+'</nav><div class="site-utilities">'+controls+'</div></div>'
  return localized(markup,page)
@@ -46,10 +47,11 @@ def apply_layout(text,page):
   if f:text=text[:f.start()]+replacement+text[f.end():]
   else:text=text.replace('</body>',replacement+'</body>')
   text=re.sub(r'(<body\b[^>]*)(>)',r'\1 data-site-area="'+area(page)+r'"\2',text,count=1)
- # Put the existing shared presentation stylesheet last; no new CSS stack/file.
+ # Keep the shared shell before the current heritage overrides.
  text=re.sub(r'<link\b[^>]*href=["\'][^"\']*podaturpet-colourful\.css[^"\']*["\'][^>]*>\s*','',text)
  text=re.sub(r'\s*</head>', '</head>', text)
- text=text.replace('</head>','<link rel="stylesheet" href="/podaturpet-colourful.css?v=20260919-reorg">\n</head>')
+ text=re.sub(r'<link[^>]+href="/podaturpet-heritage\.css[^"]*"[^>]*>\s*','',text)
+ text=text.replace('</head>','<link rel="stylesheet" href="/podaturpet-colourful.css?v=20260919-reorg">\n<link rel="stylesheet" href="/podaturpet-heritage.css?v=20260919">\n</head>')
  text=re.sub(r'<script\b[^>]*src=["\'][^"\']*podaturpet-editorial\.js[^"\']*["\'][^>]*>\s*</script>','',text)
  text=re.sub(r'\s*</body>', '</body>', text)
  text=text.replace('</body>','<script src="/podaturpet-editorial.js?v=20260919-reorg" defer></script>\n</body>')
