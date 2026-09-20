@@ -1,0 +1,187 @@
+journey-results.txt
+PASS homepage presents business routes without repeated content sections
+PASS mobile navigation opens, closes with Escape and restores focus
+PASS Tamil and English switching preserve commercial links
+PASS buyer can reach a dedicated wholesale enquiry from the homepage
+PASS regional photographs are local files with attribution
+PASS homepage has one skip link and no repeated legacy photo galleries
+PASS people-information-hub.html initializes full existing local scripts without exceptions
+PASS people-information-hub.html keeps one shell and unique DOM IDs
+PASS people-information-hub-ta.html initializes full existing local scripts without exceptions
+PASS people-information-hub-ta.html keeps one shell and unique DOM IDs
+PASS podaturpet-local-business-directory.html initializes full existing local scripts without exceptions
+PASS podaturpet-local-business-directory.html keeps one shell and unique DOM IDs
+PASS lungi-product-catalogue.html initializes full existing local scripts without exceptions
+PASS lungi-product-catalogue.html keeps one shell and unique DOM IDs
+PASS podaturpet-town-guide.html initializes full existing local scripts without exceptions
+PASS podaturpet-town-guide.html keeps one shell and unique DOM IDs
+PASS advertise-on-podaturpet.html initializes full existing local scripts without exceptions
+PASS advertise-on-podaturpet.html keeps one shell and unique DOM IDs
+PASS business-website-development.html initializes full existing local scripts without exceptions
+PASS business-website-development.html keeps one shell and unique DOM IDs
+PASS free-invoice.html initializes full existing local scripts without exceptions
+PASS free-invoice.html keeps one shell and unique DOM IDs
+PASS invoice preview and add-item controls remain live
+PASS us-india-family-travel-planner.html initializes full existing local scripts without exceptions
+PASS us-india-family-travel-planner.html keeps one shell and unique DOM IDs
+PASS native planner Tamil and large-text controls survive header merge
+PASS textile context does not leak into unrelated information navigation
+PASS feedback reuses one existing trigger in the footer
+PASS homepage complete script initialization has no runtime errors
+PASS privacy page remains reachable and has no added collector
+30 website journey tests passed.
+
+
+life-core-results.txt
+PASS education known worked example and cent rounding
+PASS funding above cost never creates a negative target
+PASS invalid money and months rejected
+PASS same-budget quote deducts fees in the correct currencies
+PASS invalid quote does not produce misleading money
+PASS one inline assistant, no duplicate floating assistant or storage default
+PASS natural English question routes to Aadhaar
+PASS natural Tamil question routes to scholarship
+PASS unknown questions get explicit fallback
+PASS ID-like query is discarded and never retained in URL
+PASS untrusted input cannot create active nodes
+PASS matching education guide offers the integrated calculator
+PASS read-aloud fails safely without a local voice
+PASS remote voice is never selected
+PASS real calculator form produces result and clears obsolete result on editing
+PASS human help requires explicit consent, no draft link before it
+PASS preview includes only chosen request, not prior query or calculator amounts
+PASS editing invalidates both outbound drafts
+PASS withdrawing consent destroys the preview
+PASS email and long identifier patterns are blocked in request notes
+PASS default interactions create no analytics storage or network calls
+PASS explicit counts opt-in only stores bounded stage totals
+PASS unknown analytics events cannot store query text
+PASS counts deletion preserves unrelated tools
+PASS GPC blocks counting even with saved consent
+PASS storage failure does not break question answering
+PASS Tamil UI has translated answers, forms and consent
+PASS all new controls have accessible labels and no duplicate IDs
+PASS inline app still makes no network calls after opt-in
+PASS existing 24 directory categories remain with Tamil search
+PASS existing assistant routes Singapore visa to hub, not lungi sales
+PASS existing assistant retains lungi wholesale routing
+32 Life Assistant tests passed.
+
+
+market-core-results.txt
+PASS exact Tanglish example extracts category, location and language
+PASS Tamil phrase retains Tamil language marks
+PASS unknown city can be supplied without silently inventing a country
+PASS service aliases avoid accidental English substring matches
+PASS informational intent recognized before optional provider routing
+PASS all 40 categories have bilingual names and 18 are launch enabled
+PASS service, country, region, city and language match together
+PASS no result for another city, language or country
+PASS remote choice never silently returns a local-only provider
+PASS expired providers excluded
+PASS currency is CAD for a Canadian quote, never hardcoded INR
+PASS directory initializes Tamil-first with no new duplicate directory
+PASS existing page view happens once; no service events before consent
+PASS full Tanglish search requires confirm step then finds Tamil provider
+PASS profile uses dated scoped checks without fake star ratings
+PASS contact recipient is fixed to the selected provider and draft requires consent
+PASS consented draft includes exact visible message and random reference
+PASS editing revokes the contact link and reference
+PASS sensitive text does not produce an outbound draft
+PASS withdrawal destroys prepared draft
+PASS website contact never transmits notes as a query string
+PASS switching language revokes contact and translates visible controls
+PASS a fresh parsed question clears a prior location and language
+PASS empty real launch dataset is honest and offers official path
+PASS device count opt-in does not authorize remote events
+PASS separate remote consent sends fixed event fields without query, city or provider
+PASS unknown event names are not sent to analytics
+PASS a handoff produces one contact and one draft event, never a received sale
+PASS new contact links do not trigger lungi analytics classification
+PASS GPC suppresses old and new network tracking
+PASS storage denial leaves search and contact usable
+PASS hub assistant reuses service parser and points to the existing directory
+PASS all marketplace controls labelled and IDs unique
+PASS provider fixtures are absent from the delivered dataset
+34 marketplace journey tests passed.
+
+
+people-core-results.txt
+PASS case and whitespace insensitive search
+PASS Tamil search retains vowel marks
+PASS Unicode normalization
+PASS all query words required
+PASS category isolates results
+PASS Tamil Nadu includes India guides
+PASS India includes Tamil Nadu guides
+PASS country excludes unrelated specific regions
+PASS general guides available in every region
+PASS general-only excludes national guides
+PASS saved filter only returns selected
+PASS saved schema stores only valid public IDs
+PASS valid backup handles removed and duplicate IDs
+PASS invalid storage rejected
+PASS unknown sensitive properties ignored
+PASS stale review changes after 90 days
+PASS malformed and future review dates not fresh
+PASS calendar date respects India midnight
+PASS Tamil date is localized
+PASS invalid timezone fails safely to caller
+PASS hashes allow only known guides and categories
+PASS all guide IDs unique with translated content
+PASS every source reference resolves to HTTPS and has evidence
+23 core tests passed.
+
+
+travel-core-results.txt
+PASS leap dates and invalid dates
+PASS calendar arithmetic crosses year and DST boundaries
+PASS all time buckets use departure, arrival is separate
+PASS due and overdue boundaries and missing dates
+PASS invalid itinerary order
+PASS route and parent filtering
+PASS expired passport
+PASS passport expires on arrival
+PASS passport expires before return
+PASS six-month reminder, not eligibility
+PASS passport expires soon without itinerary
+PASS visa before arrival
+PASS visa before return is not a stay violation
+PASS I-94 shorter than visit
+PASS date and status requirements
+PASS backup round-trip
+PASS backup rejects malformed schema, version and huge arrays
+PASS backup rejects duplicate ids and invalid dates
+PASS backup strips extra metadata and accepts text without execution
+PASS all prompts translated and source references valid
+20 core tests passed.
+
+
+travel-dom-results.txt
+PASS initial state and all five section controls
+PASS dates update countdown and task anchors
+PASS invalid dates stop save
+PASS route and parent checklist update
+PASS multi-traveler expiry fields and warning
+PASS check task and progress persists
+PASS packing custom item and category
+PASS medicines and gifts retain user content
+PASS emergency card is bilingual and safe text
+PASS local save includes every list and completion
+PASS local load restores edits
+PASS language translates all marked strings and dynamic UI
+PASS large text toggle
+PASS section switching
+PASS full print includes all task stages, lists, docs and official links
+PASS card-only print excludes medicine list
+PASS delete saved copy preserves current plan and invoice key
+PASS corrupt saved data does not replace current plan
+PASS fresh app discovers saved data without auto-loading sensitive contents
+PASS all source links are official HTTPS with no-referrer
+PASS all inputs have labels and no passport-number field
+PASS malformed import rejected without data loss
+PASS valid import restores schema and flags unsaved
+PASS storage-denied fallback is visible
+PASS new plan resets records
+PASS no runtime exceptions during DOM interaction
+26 DOM tests passed.

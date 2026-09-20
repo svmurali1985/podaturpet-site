@@ -56,7 +56,7 @@
  shell.querySelectorAll('#site-main-nav a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
  if(media){const reset=()=>{setMenu(false);menu.hidden=!media.matches;};media.addEventListener?media.addEventListener('change',reset):media.addListener(reset);reset();}
  function language(lang){
-  lang=lang==='ta'?'ta':'en';document.body.dataset.siteLang=lang;
+  lang=lang==='ta'?'ta':'en';document.body.dataset.siteLang=lang;document.documentElement.lang=lang;document.documentElement.dataset.buyerLanguage=lang;
   document.querySelectorAll('[data-site-en][data-site-ta]').forEach(e=>{e.textContent=lang==='ta'?e.dataset.siteTa:e.dataset.siteEn;e.lang=lang;});
   shell.querySelectorAll('[data-site-language]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.siteLanguage===lang)));
   document.querySelectorAll('a[href^="/people-information-hub"]').forEach(a=>{if(a.hasAttribute('data-language'))return;const u=new URL(a.href,location.href);if(/^\/people-information-hub(?:-ta)?\.html$/.test(u.pathname)){u.pathname='/people-information-hub'+(lang==='ta'?'-ta':'')+'.html';a.setAttribute('href',u.pathname+u.search+u.hash);}});
@@ -68,9 +68,11 @@
  }));
  document.addEventListener('podaturpet:language',e=>language(e.detail.language));
  let initial=document.documentElement.lang==='ta'?'ta':new URLSearchParams(location.search).get('lang');
+ if(!shell.querySelector('[data-site-language]'))initial=document.documentElement.lang;
  if(!initial)try{initial=localStorage.getItem('podaturpet-intro-language');}catch(_){}
  language(initial==='ta'?'ta':'en');
- new MutationObserver(()=>{if(!shell.querySelector('[data-site-language]'))language(document.documentElement.lang);}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+ document.dispatchEvent(new CustomEvent('podaturpet:language',{detail:{language:initial==='ta'?'ta':'en'}}));
+ new MutationObserver(()=>{if(!shell.querySelector('[data-site-language]') && document.body.dataset.siteLang!==document.documentElement.lang)language(document.documentElement.lang);}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
  const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
 })();
 // Reuse the existing feedback trigger in the footer instead of a second floating tab.

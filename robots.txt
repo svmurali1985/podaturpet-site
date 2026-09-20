@@ -9,4 +9,7 @@ Disallow: /travel-planner-backup-20260919-131909-J8d3om/
 Disallow: /website-update/
 Disallow: /podaturpet-site-v1/
 
+Disallow: /updated-files/
+Disallow: /tools/
+
 Sitemap: https://podaturpet.com/sitemap.xml

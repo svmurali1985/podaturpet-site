@@ -1,0 +1,357 @@
+{
+  "pages": [
+    {
+      "page": "podaturpet-lungi-weaving-story.html",
+      "title": "Podaturpet Lungi Weaving Story",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 9,
+      "forms": [],
+      "native_translation_segments": 24
+    },
+    {
+      "page": "podaturpet-textile-supplier-enquiry.html",
+      "title": "Podaturpet Textile Business Enquiry",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 9,
+      "forms": [
+        "supplier-enquiry-form"
+      ],
+      "native_translation_segments": 23
+    },
+    {
+      "page": "podaturpet-stories-and-culture.html",
+      "title": "Podaturpet & Nearby Villages | Stories, Festivals & Culture",
+      "h1": 1,
+      "stylesheets": 12,
+      "scripts": 8,
+      "forms": [],
+      "native_translation_segments": 68
+    },
+    {
+      "page": "lungi-wholesale-worldwide.html",
+      "title": "Wholesale Lungis Worldwide | India Lungi Buyer Enquiries",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 9,
+      "forms": [
+        "market-enquiry"
+      ],
+      "native_translation_segments": 36
+    },
+    {
+      "page": "about-podaturpet.html",
+      "title": "About Podaturpet, Tamil Nadu | Town Profile & Facts",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 9,
+      "forms": [],
+      "native_translation_segments": 29
+    },
+    {
+      "page": "business-website-development.html",
+      "title": "Websites, AI Chatbots & Automation | MuraRaj Technologies",
+      "h1": 1,
+      "stylesheets": 4,
+      "scripts": 3,
+      "forms": [],
+      "native_translation_segments": 37
+    },
+    {
+      "page": "powerloom-lungis.html",
+      "title": "Powerloom Lungis from Podaturpet | Wholesale Buyer Guide",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 9,
+      "forms": [],
+      "native_translation_segments": 23
+    },
+    {
+      "page": "lungi-wholesale-india.html",
+      "title": "Wholesale Lungis India | Podaturpet",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 9,
+      "forms": [
+        "market-enquiry"
+      ],
+      "native_translation_segments": 32
+    },
+    {
+      "page": "podaturpet-government-offices.html",
+      "title": "Podaturpet Government Offices & Contacts",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 8,
+      "forms": [],
+      "native_translation_segments": 23
+    },
+    {
+      "page": "modern-lungi-investors-research-partners.html",
+      "title": "Modern Lungi Research Partners | Podaturpet",
+      "h1": 1,
+      "stylesheets": 9,
+      "scripts": 7,
+      "forms": [],
+      "native_translation_segments": 22
+    },
+    {
+      "page": "advertise-on-podaturpet.html",
+      "title": "Advertise Your Shop or Business | Podaturpet",
+      "h1": 1,
+      "stylesheets": 4,
+      "scripts": 3,
+      "forms": [],
+      "native_translation_segments": 35
+    },
+    {
+      "page": "modern-lungi-product-innovation.html",
+      "title": "Modern Lungi Innovation | Convertible Lungi Product Concepts",
+      "h1": 1,
+      "stylesheets": 9,
+      "scripts": 7,
+      "forms": [],
+      "native_translation_segments": 22
+    },
+    {
+      "page": "white-checked-lungi-wholesale.html",
+      "title": "White Checked Lungi Wholesale | Podaturpet Textile Sourcing",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 9,
+      "forms": [],
+      "native_translation_segments": 34
+    },
+    {
+      "page": "free-invoice.html",
+      "title": "Free Invoice Maker — 3 Trial Exports | Podaturpet",
+      "h1": 1,
+      "stylesheets": 4,
+      "scripts": 4,
+      "forms": [
+        "invoice-form"
+      ],
+      "native_translation_segments": 21
+    },
+    {
+      "page": "people-information-hub.html",
+      "title": "People Information Hub | Podaturpet",
+      "h1": 1,
+      "stylesheets": 4,
+      "scripts": 8,
+      "forms": [
+        "life-ask-form",
+        "education-form",
+        "remittance-form",
+        "life-help-form"
+      ],
+      "native_translation_segments": 21
+    },
+    {
+      "page": "us-india-family-travel-planner.html",
+      "title": "US ↔ India Family Travel Planner | Free English & Tamil Tool",
+      "h1": 1,
+      "stylesheets": 4,
+      "scripts": 6,
+      "forms": [
+        "add-packing"
+      ],
+      "native_translation_segments": 21
+    },
+    {
+      "page": "privacy-policy.html",
+      "title": "Privacy Policy & Visitor Tracking | Podaturpet.com",
+      "h1": 1,
+      "stylesheets": 9,
+      "scripts": 7,
+      "forms": [],
+      "native_translation_segments": 22
+    },
+    {
+      "page": "podaturpet-weaving-textiles.html",
+      "title": "Podaturpet Weaving & Textiles | Handloom and Powerloom Guide",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 9,
+      "forms": [],
+      "native_translation_segments": 28
+    },
+    {
+      "page": "blue-border-lungi-wholesale.html",
+      "title": "Blue Border Lungi Wholesale | Podaturpet",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 9,
+      "forms": [],
+      "native_translation_segments": 33
+    },
+    {
+      "page": "lungi-product-catalogue.html",
+      "title": "Wholesale Lungi Catalogue | Checked Designs from Podaturpet",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 9,
+      "forms": [],
+      "native_translation_segments": 165
+    },
+    {
+      "page": "podaturpet-town-guide.html",
+      "title": "Podaturpet Town Guide | Services & Travel",
+      "h1": 1,
+      "stylesheets": 13,
+      "scripts": 8,
+      "forms": [
+        "pt-contribution-form"
+      ],
+      "native_translation_segments": 43
+    },
+    {
+      "page": "podaturpet-tourist-places.html",
+      "title": "Tourist Places Near Podaturpet | Temples, Hills & Waterfalls",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 8,
+      "forms": [],
+      "native_translation_segments": 23
+    },
+    {
+      "page": "business-workflow-automation.html",
+      "title": "Business Workflow & Excel Automation | MuraRaj Technologies",
+      "h1": 1,
+      "stylesheets": 7,
+      "scripts": 4,
+      "forms": [],
+      "native_translation_segments": 40
+    },
+    {
+      "page": "index-ta.html",
+      "title": "பொதட்டூர்பேட்டை | ஊர் தகவல், மொத்த லுங்கிகள், AI சேவைகள்",
+      "h1": 1,
+      "stylesheets": 7,
+      "scripts": 8,
+      "forms": [],
+      "native_translation_segments": 98
+    },
+    {
+      "page": "podaturpet-local-business-directory.html",
+      "title": "Global Services & Podaturpet Local Business Directory",
+      "h1": 1,
+      "stylesheets": 12,
+      "scripts": 10,
+      "forms": [
+        "market-ask",
+        "market-search",
+        "market-contact-form"
+      ],
+      "native_translation_segments": 23
+    },
+    {
+      "page": "index.html",
+      "title": "Podaturpet | Town Guide, Wholesale Lungis, AI & Digital Services",
+      "h1": 1,
+      "stylesheets": 7,
+      "scripts": 8,
+      "forms": [],
+      "native_translation_segments": 98
+    },
+    {
+      "page": "cotton-lungi-wholesale.html",
+      "title": "Cotton Lungi Wholesale Enquiries | Podaturpet, Tamil Nadu",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 9,
+      "forms": [],
+      "native_translation_segments": 45
+    },
+    {
+      "page": "wholesale-lungi-enquiry.html",
+      "title": "Wholesale Lungi Enquiry | Designs, Samples & Bulk Quotes",
+      "h1": 1,
+      "stylesheets": 7,
+      "scripts": 4,
+      "forms": [
+        "wholesale-enquiry"
+      ],
+      "native_translation_segments": 36
+    },
+    {
+      "page": "handloom-lungis.html",
+      "title": "Handloom Lungis & Podaturpet Weaving Heritage | Buyer Guide",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 9,
+      "forms": [],
+      "native_translation_segments": 23
+    },
+    {
+      "page": "modern-lungi-global-collection.html",
+      "title": "Modern Lungi 2026 | Global Utility Lungi Design Concepts",
+      "h1": 1,
+      "stylesheets": 9,
+      "scripts": 7,
+      "forms": [],
+      "native_translation_segments": 22
+    },
+    {
+      "page": "podaturpet-useful-information.html",
+      "title": "Podaturpet Useful Information & Services",
+      "h1": 1,
+      "stylesheets": 12,
+      "scripts": 8,
+      "forms": [],
+      "native_translation_segments": 23
+    },
+    {
+      "page": "podaturpet-travel-pin-code.html",
+      "title": "Podaturpet PIN Code 631208 | Travel, Rail & Location Guide",
+      "h1": 1,
+      "stylesheets": 10,
+      "scripts": 8,
+      "forms": [],
+      "native_translation_segments": 25
+    },
+    {
+      "page": "how-checked-lungis-are-made.html",
+      "title": "How Checked Lungis Are Made | Podaturpet",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 9,
+      "forms": [],
+      "native_translation_segments": 23
+    },
+    {
+      "page": "people-information-hub-ta.html",
+      "title": "மக்கள் தகவல் மையம் | Podaturpet",
+      "h1": 1,
+      "stylesheets": 4,
+      "scripts": 8,
+      "forms": [
+        "life-ask-form",
+        "education-form",
+        "remittance-form",
+        "life-help-form"
+      ],
+      "native_translation_segments": 21
+    },
+    {
+      "page": "ai-chatbot-development.html",
+      "title": "AI Chatbot Development for Businesses | MuraRaj Technologies",
+      "h1": 1,
+      "stylesheets": 7,
+      "scripts": 4,
+      "forms": [],
+      "native_translation_segments": 40
+    },
+    {
+      "page": "wholesale-lungi-sample-buying-guide.html",
+      "title": "Wholesale Lungi Sample & Order Guide | Podaturpet",
+      "h1": 1,
+      "stylesheets": 11,
+      "scripts": 9,
+      "forms": [],
+      "native_translation_segments": 23
+    }
+  ],
+  "issues": []
+}

@@ -114,13 +114,13 @@
   launcher.type = 'button';
   launcher.setAttribute('aria-expanded', 'false');
   launcher.setAttribute('aria-controls', 'podaturpet-assistant-panel');
-  launcher.innerHTML = '<span class="pta-launcher-icon" aria-hidden="true">✦</span><span>Ask us</span>';
+  launcher.innerHTML = '<span class="pta-launcher-icon" aria-hidden="true">✦</span><span data-site-en="Ask us" data-site-ta="கேளுங்கள்">Ask us</span>';
 
   var panel = document.createElement('section');
   panel.id = 'podaturpet-assistant-panel';
   panel.className = 'pta-panel';
   panel.setAttribute('aria-label', 'Podaturpet website assistant');
-  panel.innerHTML = '<div class="pta-header"><div><div class="pta-title">Podaturpet Assistant</div><div class="pta-status">Website answers · Google search available</div></div><button class="pta-close" type="button" aria-label="Close assistant">×</button></div><div class="pta-messages" aria-live="polite"></div><div class="pta-suggestions"><button class="pta-suggestion" type="button">Tamil Life Assistant</button><button class="pta-suggestion" type="button">Lungi wholesale</button><button class="pta-suggestion" type="button">Retail shops</button><button class="pta-suggestion" type="button">PIN code</button><button class="pta-suggestion" type="button">Places to visit</button></div><form class="pta-form"><input class="pta-input" type="text" maxlength="240" placeholder="Ask about Podaturpet..." aria-label="Ask a question" autocomplete="off"><button class="pta-send" type="submit">Send</button></form><div class="pta-google">Answers use website information. Other topics can be <a href="https://www.google.com/search?q=Podaturpet" target="_blank" rel="noopener noreferrer">searched on Google</a>.</div>';
+  panel.innerHTML = '<div class="pta-header"><div><div class="pta-title" data-site-en="Podaturpet Assistant" data-site-ta="பொதட்டூர்பேட்டை உதவியாளர்">Podaturpet Assistant</div><div class="pta-status">Website answers · Google search available</div></div><button class="pta-close" type="button" aria-label="Close assistant">×</button></div><div class="pta-messages" aria-live="polite"></div><div class="pta-suggestions"><button class="pta-suggestion" type="button">Tamil Life Assistant</button><button class="pta-suggestion" type="button">Lungi wholesale</button><button class="pta-suggestion" type="button">Retail shops</button><button class="pta-suggestion" type="button">PIN code</button><button class="pta-suggestion" type="button">Places to visit</button></div><form class="pta-form"><input class="pta-input" type="text" maxlength="240" placeholder="Ask about Podaturpet..." aria-label="Ask a question" autocomplete="off"><button class="pta-send" type="submit" data-site-en="Send" data-site-ta="அனுப்பு">Send</button></form><div class="pta-google">Answers use website information. Other topics can be <a href="https://www.google.com/search?q=Podaturpet" target="_blank" rel="noopener noreferrer">searched on Google</a>.</div>';
 
   document.body.appendChild(panel);
   document.body.appendChild(launcher);

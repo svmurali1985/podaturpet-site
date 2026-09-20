@@ -1,0 +1,31 @@
+PASS homepage presents business routes without repeated content sections
+PASS mobile navigation opens, closes with Escape and restores focus
+PASS Tamil and English switching preserve commercial links
+PASS buyer can reach a dedicated wholesale enquiry from the homepage
+PASS regional photographs are local files with attribution
+PASS homepage has one skip link and no repeated legacy photo galleries
+PASS people-information-hub.html initializes full existing local scripts without exceptions
+PASS people-information-hub.html keeps one shell and unique DOM IDs
+PASS people-information-hub-ta.html initializes full existing local scripts without exceptions
+PASS people-information-hub-ta.html keeps one shell and unique DOM IDs
+PASS podaturpet-local-business-directory.html initializes full existing local scripts without exceptions
+PASS podaturpet-local-business-directory.html keeps one shell and unique DOM IDs
+PASS lungi-product-catalogue.html initializes full existing local scripts without exceptions
+PASS lungi-product-catalogue.html keeps one shell and unique DOM IDs
+PASS podaturpet-town-guide.html initializes full existing local scripts without exceptions
+PASS podaturpet-town-guide.html keeps one shell and unique DOM IDs
+PASS advertise-on-podaturpet.html initializes full existing local scripts without exceptions
+PASS advertise-on-podaturpet.html keeps one shell and unique DOM IDs
+PASS business-website-development.html initializes full existing local scripts without exceptions
+PASS business-website-development.html keeps one shell and unique DOM IDs
+PASS free-invoice.html initializes full existing local scripts without exceptions
+PASS free-invoice.html keeps one shell and unique DOM IDs
+PASS invoice preview and add-item controls remain live
+PASS us-india-family-travel-planner.html initializes full existing local scripts without exceptions
+PASS us-india-family-travel-planner.html keeps one shell and unique DOM IDs
+PASS native planner Tamil and large-text controls survive header merge
+PASS textile context does not leak into unrelated information navigation
+PASS feedback reuses one existing trigger in the footer
+PASS homepage complete script initialization has no runtime errors
+PASS privacy page remains reachable and has no added collector
+30 website journey tests passed.

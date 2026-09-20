@@ -1,0 +1,246 @@
+{
+  "tests": [
+    {
+      "page": "index.html",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "index.html",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "index-ta.html",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "index-ta.html",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "lungi-product-catalogue.html",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "lungi-product-catalogue.html",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "wholesale-lungi-enquiry.html",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "wholesale-lungi-enquiry.html",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "podaturpet-town-guide.html",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "podaturpet-town-guide.html",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "business-website-development.html",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "business-website-development.html",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "ai-chatbot-development.html",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "ai-chatbot-development.html",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "business-workflow-automation.html",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "business-workflow-automation.html",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "advertise-on-podaturpet.html",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "advertise-on-podaturpet.html",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "podaturpet-local-business-directory.html",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "podaturpet-local-business-directory.html",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "free-invoice.html",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "free-invoice.html",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "people-information-hub.html",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "people-information-hub.html",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "us-india-family-travel-planner.html",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "page": "us-india-family-travel-planner.html",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "journey": "Buyer prefill, safe text rendering, WhatsApp draft, stale draft clearing and translation privacy",
+      "pass": true
+    },
+    {
+      "journey": "Tamil preference persists between homepage and AI service",
+      "pass": true
+    },
+    {
+      "journey": "Explicit Tamil homepage wins over saved English",
+      "pass": true
+    }
+  ],
+  "a11y": [
+    {
+      "page": "index.html",
+      "violations": []
+    },
+    {
+      "page": "index-ta.html",
+      "violations": []
+    },
+    {
+      "page": "wholesale-lungi-enquiry.html",
+      "violations": []
+    },
+    {
+      "page": "ai-chatbot-development.html",
+      "violations": []
+    },
+    {
+      "page": "business-workflow-automation.html",
+      "violations": []
+    }
+  ]
+}
