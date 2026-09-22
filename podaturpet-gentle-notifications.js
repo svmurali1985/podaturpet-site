@@ -1,1 +1,0 @@
-/* Retired duplicate advertising rotation. Current advertising enquiries use the homepage buttons and local directory. */

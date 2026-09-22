@@ -12,7 +12,7 @@
   document.body.append(launcher,dialog);
   const input=dialog.querySelector('textarea');
   let language=document.documentElement.dataset.buyerLanguage==='ta'?'ta':'en';
-  let restoreFocus=null, autoShown=false;
+  let restoreFocus=null;
   function translate(value) {
     language=value==='ta'?'ta':'en'; const w=words[language]; dialog.lang=language; launcher.lang=language;
     launcher.textContent=w.button;
@@ -21,17 +21,16 @@
     dialog.querySelector('[data-language]').textContent=w.language;
     input.placeholder=w.placeholder;input.setCustomValidity('');
   }
-  function seen(){autoShown=true;try{sessionStorage.setItem('pt-feedback-seen','1');}catch(_) {}}
-  function open(manual) {
+  function open() {
     if(dialog.open)return;
-    restoreFocus=manual?document.activeElement:null;
-    if(manual)dialog.showModal();else dialog.show();
-    launcher.setAttribute('aria-expanded','true');seen();
-    if(manual)input.focus();
+    restoreFocus=document.activeElement;
+    dialog.showModal();
+    launcher.setAttribute('aria-expanded','true');
+    input.focus();
   }
   function close(){dialog.close();}
   dialog.addEventListener('close',()=>{launcher.setAttribute('aria-expanded','false');if(restoreFocus&&restoreFocus.isConnected)restoreFocus.focus();restoreFocus=null;});
-  launcher.addEventListener('click',()=>{if(dialog.open)close();else open(true);});
+  launcher.addEventListener('click',()=>{if(dialog.open)close();else open();});
   dialog.querySelector('[data-close]').addEventListener('click',close);
   dialog.querySelector('[data-language]').addEventListener('click',()=>translate(language==='en'?'ta':'en'));
   document.addEventListener('podaturpet:language',event=>translate(event.detail.language));
@@ -44,20 +43,7 @@
     // Only the public page path is shared; query parameters and fragments are omitted.
     const page='https://podaturpet.com'+location.pathname;
     const text='Podaturpet website feedback\nType: '+words.en[type]+'\nPage: '+page+'\n\n'+message;
-    seen();document.dispatchEvent(new CustomEvent('podaturpet:feedback-handoff'));window.location.assign('https://wa.me/14793201970?text='+encodeURIComponent(text));
+    document.dispatchEvent(new CustomEvent('podaturpet:feedback-handoff'));window.location.assign('https://wa.me/14793201970?text='+encodeURIComponent(text));
   });
   translate(language);
-  try{autoShown=sessionStorage.getItem('pt-feedback-seen')==='1';}catch(_){}
-  // Offer once per tab session. Do not interrupt typing, another dialog or hidden tabs.
-  let attempts=0;
-  function offer(){
-    if(autoShown||dialog.open)return;
-    const active=document.activeElement;
-    const busy=document.hidden||(active&&active.matches('input,textarea,select,[contenteditable="true"]'))||document.querySelector('dialog[open], [aria-modal="true"], .pta-open');
-    if(busy){if(++attempts<12)setTimeout(offer,10000);return;}
-    const previous=document.activeElement;open(false);
-    // Native non-modal dialogs can move focus; return it for an unsolicited invitation.
-    if(previous&&previous.isConnected)previous.focus({preventScroll:true});
-  }
-  setTimeout(offer,25000);
 })();

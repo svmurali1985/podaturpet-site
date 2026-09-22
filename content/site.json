@@ -5,45 +5,19 @@
   "email": "svmuralicenterton@gmail.com",
   "navigation": [
     [
-      "People & information",
-      "/people-information-hub.html"
-    ],
-    [
-      "Find a service",
-      "/podaturpet-local-business-directory.html"
-    ],
-    [
-      "Advertise with us",
-      "/advertise-on-podaturpet.html"
-    ],
-    [
       "Lungis & textiles",
       "/lungi-product-catalogue.html"
     ],
     [
-      "Podaturpet local",
+      "Explore Podaturpet",
       "/podaturpet-town-guide.html"
+    ],
+    [
+      "Technology & collaboration",
+      "/business-website-development.html"
     ]
   ],
   "areas": [
-    {
-      "key": "people",
-      "en": "People & information",
-      "ta": "மக்கள் தகவல்",
-      "url": "/people-information-hub.html"
-    },
-    {
-      "key": "services",
-      "en": "Find a service",
-      "ta": "சேவைகள்",
-      "url": "/podaturpet-local-business-directory.html"
-    },
-    {
-      "key": "advertise",
-      "en": "Advertise with us",
-      "ta": "விளம்பரம்",
-      "url": "/advertise-on-podaturpet.html"
-    },
     {
       "key": "textiles",
       "en": "Lungis & textiles",
@@ -52,9 +26,15 @@
     },
     {
       "key": "local",
-      "en": "Podaturpet local",
-      "ta": "நம்ம ஊர்",
+      "en": "Explore Podaturpet",
+      "ta": "நம்ம ஊரை அறிய",
       "url": "/podaturpet-town-guide.html"
+    },
+    {
+      "key": "digital",
+      "en": "Technology & collaboration",
+      "ta": "தொழில்நுட்பம் · கூட்டாண்மை",
+      "url": "/business-website-development.html"
     }
   ]
 }
