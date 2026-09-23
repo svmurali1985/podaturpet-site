@@ -64,9 +64,9 @@ def apply_layout(text,page):
   target=mid[1] if mid else 'site-main'
   if main and not mid:text=text[:main.start()]+main[0][:-1]+' id="site-main">'+text[main.end():]
   text=re.sub(r'(<body\b[^>]*>)',r'\1<a class="pt-skip" href="#'+target+'">Skip to main content</a>',text,count=1)
- if 'podaturpet-global.css' not in text:text=text.replace('</head>','<link rel="stylesheet" href="/podaturpet-global.css?v=20260920"></head>')
+ if 'podaturpet-global.css' not in text:text=text.replace('</head>','<link rel="stylesheet" href="/podaturpet-global.css?v=20260923"></head>')
  if 'podaturpet-global.js' not in text:text=text.replace('</body>','<script src="/podaturpet-global.js?v=20260920" defer></script></body>')
  if page in ['index.html','index-ta.html']:
   text=re.sub(r'<link[^>]+href="/podaturpet-home\.css[^"]*"[^>]*>\s*','',text)
-  text=text.replace('</head>','<link rel="stylesheet" href="/podaturpet-home.css?v=20260922"></head>')
+  text=text.replace('</head>','<link rel="stylesheet" href="/podaturpet-home.css?v=20260923"></head>')
  return text

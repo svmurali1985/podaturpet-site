@@ -1,0 +1,14 @@
+Run from your existing website repository folder, with the ZIP in Downloads.
+
+unzip -o "$HOME/Downloads/Podaturpet-Visual-Refresh.zip" -d "$HOME/Downloads"
+
+git apply --check "$HOME/Downloads/Podaturpet-Visual-Refresh/redesign.patch" &&
+git apply "$HOME/Downloads/Podaturpet-Visual-Refresh/redesign.patch" &&
+python3 tools/check_site_links.py
+
+git add -A --pathspec-from-file="$HOME/Downloads/Podaturpet-Visual-Refresh/changed-files.txt" &&
+git diff --cached --check &&
+git commit -m "Enrich Podaturpet with visual collections local guides and wholesale form" &&
+git push origin main
+
+If the patch check fails, stop and share the error. Do not force it or delete files. This patch is based on fb8bd7bde7ec4195f21b6c020acf188ab712e0e6.
