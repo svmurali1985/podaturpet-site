@@ -1,3 +1,2 @@
-/* Public settings only. Never put ADMIN_TOKEN or FORM_SECRET in a website file.
-   Set apiBase to your NEW Cloudflare Worker origin after following SETUP.md. */
-window.PodaturpetCommunity = Object.freeze({ apiBase: 'https://podaturpet-community.svmuralicenterton.workers.dev' });
+/* Public configuration only. Never add secret keys here. */
+window.PodaturpetCommunity = Object.freeze({ apiBase: "https://podaturpet-community.svmuralicenterton.workers.dev" });
