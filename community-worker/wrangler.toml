@@ -1,0 +1,17 @@
+name = "podaturpet-community"
+main = "worker.mjs"
+compatibility_date = "2026-09-01"
+workers_dev = true
+# Deploy ONLY on a Workers Free account. This file cannot enforce your account plan.
+[observability]
+enabled = false
+[vars]
+ALLOWED_ORIGINS = "https://podaturpet.com,https://www.podaturpet.com"
+ENABLED = "false"
+[[d1_databases]]
+binding = "DB"
+database_name = "podaturpet-community"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+[triggers]
+crons = ["15 2 * * *"]
+# Add ADMIN_TOKEN and FORM_SECRET as Cloudflare secrets, never here.

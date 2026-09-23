@@ -1,0 +1,38 @@
+Run in your existing website Git repository. Download the attached ZIP first.
+No patch application is needed: this package contains actual updated HTML/CSS/JS and backend files.
+
+1. Check your branch and save any unrelated unfinished edits first:
+
+git status --short
+git branch --show-current
+
+2. Extract the actual downloaded ZIP and copy the updated files:
+
+unzip -q "$HOME/Downloads/Podaturpet-Community-Free-Update.zip" -d "$HOME/Downloads" &&
+rsync -av "$HOME/Downloads/Podaturpet-Community-Free-Update/updated-files/" ./
+
+Do not use rsync --delete. Existing unmodified files are required and retained.
+If the ZIP is in another folder, use its actual downloaded path.
+If macOS already extracted it, skip unzip and use the extracted folder.
+
+3. Follow community-worker/SETUP.md for Workers Free + D1. Set the real public Worker URL in podaturpet-community-config.js. Keep ADMIN_TOKEN and FORM_SECRET only in Cloudflare secrets. No backend credentials go in Git.
+
+4. Validate locally. Python is needed for links; Node 22+ is optional for the server tests (Node 24 was used):
+
+python3 tools/check_site_links.py
+node --test community-worker/worker.test.mjs
+
+5. Stage exactly the supplied files, inspect, commit and push from your intended branch (main in your earlier workflow):
+
+git add --pathspec-from-file="$HOME/Downloads/Podaturpet-Community-Free-Update/changed-files.txt" &&
+git diff --cached --check &&
+git diff --cached --stat
+
+Review the staged changes before committing. If Git already had staged unrelated files, keep them out of this commit.
+
+git commit -m "Add consent-based page analytics and moderated public comments" &&
+git push origin main
+
+A Git push publishes only through your existing hosting workflow. The Cloudflare Worker must be configured/deployed separately. If you publish before backend setup, comments show an unavailable message and analytics remains off.
+
+After release, verify the real site and retire the old tracker as described in SETUP.md.

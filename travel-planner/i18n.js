@@ -246,8 +246,8 @@ window.TravelI18n={
     "Save செய்தால் இந்தச் சாதனத்தின் இந்த browser-ல் ஒரு திட்டம் சேமிக்கப்படும். இது குறியாக்கம் செய்யப்படாது; மற்ற சாதனத்துடன் sync ஆகாது. இதே browser பயன்படுத்துபவர்கள், extensions அல்லது இதே தளத்தின் scripts இதைப் படிக்கக்கூடும். நம்பகமான சாதனத்தைப் பயன்படுத்தி, தனிப்பட்ட விவரங்களைத் தவிர்த்து, பயணத்திற்குப் பின் சேமிப்பை நீக்குங்கள்."
   ],
   "noNetwork": [
-    "The planner has no ads, trackers, login, uploads or network requests from your entries. Existing website pages keep their usual analytics and ads. Opening an official-source link leaves this planner; those sites have their own privacy policies. Hosting providers may log ordinary page requests.",
-    "இந்தக் கருவியில் விளம்பரம், tracker, login, upload அல்லது உங்கள் பதிவிலிருந்து network request இல்லை. மற்ற தளப் பக்கங்களில் வழக்கமான analytics, ads இருக்கும். அதிகாரப்பூர்வ இணைப்பைத் திறந்தால் வேறு தளத்திற்குச் செல்வீர்கள்; அதற்குத் தனி privacy policy உண்டு. Hosting சேவை வழக்கமான page request-ஐப் பதிவு செய்யலாம்."
+    "The planner has no ads, trackers, login, uploads or network requests from your entries. Optional page counts and public comments are separate; see the website privacy notice. Opening an official-source link leaves this planner; those sites have their own privacy policies. Hosting providers may log ordinary page requests.",
+    "இந்தக் கருவியில் விளம்பரம், tracker, login, upload அல்லது உங்கள் பதிவிலிருந்து network request இல்லை. தனியான விருப்பப் பக்க எண்ணிக்கை மற்றும் பொதுக் கருத்துகளுக்கு தளத் தனியுரிமைக் கொள்கை பொருந்தும். அதிகாரப்பூர்வ இணைப்பைத் திறந்தால் வேறு தளத்திற்குச் செல்வீர்கள்; அதற்குத் தனி privacy policy உண்டு. Hosting சேவை வழக்கமான page request-ஐப் பதிவு செய்யலாம்."
   ],
   "backupHeading": [
     "Keep a backup you control",

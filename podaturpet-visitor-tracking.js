@@ -1,8 +1,8 @@
 (function () {
   "use strict";
-  // The hub has no network analytics. Explicit opt-in, device-only funnel totals.
+  // Preserve explicit opt-in, device-only tool totals; separate site counts below.
   const marketRoot=document.getElementById('service-marketplace');
-  if (document.getElementById('life-count-consent')) { localLifeCounts(); if(!marketRoot)return; }
+  if (document.getElementById('life-count-consent')) { localLifeCounts(); }
   function localLifeCounts(){
     const box=document.getElementById('life-count-consent'),out=document.getElementById('life-counts'),button=document.getElementById('life-count-export'),status=document.getElementById('life-count-status');
     let U=marketRoot?window.PodaturpetServicesData.ui[marketRoot.lang==='en'?'en':'ta']:window.PeopleHubData.ui[document.documentElement.lang==='ta'?'ta':'en'];
@@ -18,133 +18,23 @@
     document.addEventListener('podaturpet:life-event',e=>increment(e.detail&&e.detail.stage));
     document.addEventListener('podaturpet:market-event',e=>{if(['market_search','market_profile','market_contact','market_enquiry_prepared','market_enquiry_handoff'].includes(e.detail&&e.detail.stage))increment(e.detail.stage);});
     document.addEventListener('podaturpet:market-language',e=>{if(marketRoot&&['en','ta'].includes(e.detail&&e.detail.lang)){U=window.PodaturpetServicesData.ui[e.detail.lang];render();}});
-    const net=document.getElementById('market-network-consent');if(net){net.checked=false;if(blocked)net.disabled=true;}
     button.addEventListener('click',()=>{if(!enabled)return;const url=URL.createObjectURL(new Blob([JSON.stringify({scope:'this device only; steps, not people or leads',version:1,counts},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='podaturpet-device-counts.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
     if(enabled)increment('view');render();
   }
 
 
-  var endpoint = "https://podaturpet-visitor-tracker.svmuralicenterton.workers.dev/track";
-  var trackedHostnames = ["podaturpet.com", "www.podaturpet.com"];
 
-  if (trackedHostnames.indexOf(window.location.hostname) === -1) {
-    return;
-  }
-
-  if (navigator.globalPrivacyControl === true || navigator.doNotTrack === "1") {
-    return;
-  }
-
-  // Only fixed new service stages. No query, location, provider ID, lead ref or message payload.
-  document.addEventListener('podaturpet:market-event',function(e){
-    var choice=document.getElementById('market-network-consent');
-    if(!marketRoot||!choice||!choice.checked)return;
-    if(['market_search','market_profile','market_contact','market_enquiry_prepared','market_enquiry_handoff'].indexOf(e.detail&&e.detail.stage)!==-1)track(e.detail.stage);
-  });
-
-  function safeReferrer() {
-    try { return document.referrer ? new URL(document.referrer).origin : ""; }
-    catch (_) { return ""; }
-  }
-  document.addEventListener("podaturpet:enquiry-handoff", function (event) {
-    if (event.detail && event.detail.channel === "email") track("email_click");
-    else if (event.detail && event.detail.channel === "whatsapp") track("whatsapp_click");
-  });
-
-  function track(eventName) {
-    var path = window.location.pathname;
-    var journey = /town|stories|tourist|local-business|government|useful-information|travel-pin/.test(path) ? "town" : path === "/" || path === "/index.html" ? "home" : "wholesale";
-    var params = new URLSearchParams(window.location.search);
-    // Only known campaign tags are recorded; arbitrary query strings and form data are excluded.
-    var allowed = {utm_source:["whatsapp","facebook","instagram","email"],utm_medium:["social","group","email"],utm_campaign:["wholesale-buyers","town-community","local-businesses"]};
-    var campaign = {};
-    Object.keys(allowed).forEach(function(key){var value=params.get(key);if(allowed[key].indexOf(value)!==-1)campaign[key]=value;});
-    var payload = JSON.stringify({
-      event: eventName,
-      page: window.location.origin + window.location.pathname,
-      title: document.title,
-      referrer: safeReferrer(),
-      journey: journey,
-      campaign: campaign
-    });
-
-    if (navigator.sendBeacon) {
-      var body = new Blob([payload], { type: "text/plain;charset=UTF-8" });
-
-      if (navigator.sendBeacon(endpoint, body)) {
-        return;
-      }
-    }
-
-    fetch(endpoint, {
-      method: "POST",
-      mode: "cors",
-      keepalive: true,
-      headers: { "Content-Type": "text/plain;charset=UTF-8" },
-      body: payload
-    }).catch(function () {});
-  }
-
-  function linkContext(link) {
-    var text = [
-      link.textContent || "",
-      link.getAttribute("aria-label") || "",
-      link.getAttribute("href") || ""
-    ].join(" ").toLowerCase();
-
-    var advertisingSection = link.closest(
-      "#advertise, .town-advertising, .town-ad-copy, .local-services-banner, [data-notice-type='advertising']"
-    );
-
-    if (advertisingSection || /advertis|promot.*shop|promot.*business/.test(text)) {
-      return "advertisement_click";
-    }
-
-    if (/catalogue|catalog|collection|lungi-product/.test(text)) {
-      return "catalogue_click";
-    }
-
-    if (/lungi|wholesale|weav|textile|quote|product|sourc/.test(text)) {
-      return "lungi_click";
-    }
-
-    return "";
-  }
-
-  track("page_view");
-  document.addEventListener("podaturpet:feedback-handoff", function () { track("feedback_handoff"); });
-  document.addEventListener("podaturpet:community-handoff", function () { track("community_handoff"); });
-
-  document.addEventListener("click", function (event) {
-    if(event.target.closest("#service-marketplace"))return; // Avoid old quote/WhatsApp classification and duplicate counts.
-    var link = event.target.closest("a[href], button");
-
-    if (!link) {
-      return;
-    }
-
-    var href = (link.getAttribute("href") || "").toLowerCase();
-    var context = linkContext(link);
-    if (link.dataset.track === "directions_click") context = "directions_click";
-    else if (/podaturpet-stories-and-culture/.test(href)) context = "story_click";
-    else if (/podaturpet-town-guide/.test(href) && !/contribute=/.test(href)) context = "town_guide_click";
-    else if (/contribute=business/.test(href)) context = "listing_request_click";
-    var contactEvent = "";
-
-    if (/wa\.me|whatsapp/.test(href)) {
-      contactEvent = "whatsapp_click";
-    } else if (href.indexOf("tel:") === 0) {
-      contactEvent = "phone_click";
-    } else if (href.indexOf("mailto:") === 0) {
-      contactEvent = "email_click";
-    }
-
-    if (context) {
-      track(context);
-    }
-
-    if (contactEvent && contactEvent !== context) {
-      track(contactEvent);
-    }
-  }, { capture: true, passive: true });
+  let api='';try{const u=new URL(window.PodaturpetCommunity?.apiBase);if(u.protocol==='https:'&&u.hostname.endsWith('.workers.dev')&&u.pathname==='/')api=u.origin;}catch{}
+  if(!api)return;
+  const key='pt.analytics.choice.v1',blocked=navigator.globalPrivacyControl===true||navigator.doNotTrack==='1';
+  let choice='unset',sent=false;
+  try{const saved=JSON.parse(localStorage.getItem(key));if(saved&&saved.expires>Date.now()&&['yes','no'].includes(saved.value))choice=saved.value;}catch{}
+  if(blocked)choice='no';
+  const panel=document.createElement('aside');panel.id='pt-privacy-choice';panel.className='pt-community';panel.setAttribute('aria-label','Privacy choices / தனியுரிமை');
+  panel.innerHTML='<p>May we count this page view and approximate country, region and city? No names, IP addresses or browsing identifiers are stored in our analytics database. Optional; you can change your choice here.</p><p lang="ta">இந்தப் பக்கப் பார்வை மற்றும் தோராயமான நாடு, மாநிலம், ஊரை எண்ணலாமா? பெயர், IP, தனிநபர் அடையாளம் எங்கள் analytics database-ல் சேமிக்கப்படாது. இது உங்கள் விருப்பம்.</p><button type="button" data-choice="yes">Allow / அனுமதி</button> <button type="button" data-choice="no">No thanks / வேண்டாம்</button> <a href="/privacy-policy.html#community-privacy">Privacy / தனியுரிமை</a><p data-choice-status role="status"></p>';
+  const comments=document.getElementById('pt-user-comments'),footer=document.querySelector('footer');(comments||footer)?.before(panel);if(!panel.isConnected)document.body.append(panel);
+  function render(){panel.querySelectorAll('[data-choice]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.choice===choice));b.disabled=blocked&&b.dataset.choice==='yes';});panel.querySelector('[data-choice-status]').textContent=blocked?'Your browser privacy preference blocks counting. / உலாவியின் தனியுரிமை அமைப்பு எண்ணிக்கையைத் தடுக்கிறது.':choice==='yes'?'Optional counting enabled. / விருப்ப எண்ணிக்கை அனுமதிக்கப்பட்டது.':choice==='no'?'Optional counting off. / விருப்ப எண்ணிக்கை முடக்கப்பட்டுள்ளது.':'';}
+  function track(){if(sent||choice!=='yes'||blocked)return;sent=true;fetch(api+'/v1/view',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({page:location.pathname==='/'?'/index.html':location.pathname,consent:true}),credentials:'omit',referrerPolicy:'no-referrer',keepalive:true}).catch(()=>{});}
+  panel.querySelectorAll('[data-choice]').forEach(button=>button.addEventListener('click',()=>{choice=button.dataset.choice;if(blocked)choice='no';try{localStorage.setItem(key,JSON.stringify({value:choice,expires:Date.now()+180*86400000}));}catch{}render();track();}));
+  render();track();
 })();

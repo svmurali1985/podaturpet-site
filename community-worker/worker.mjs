@@ -1,0 +1,125 @@
+// Original Podaturpet community implementation. See LICENSE in this directory.
+import { PAGES } from './pages.mjs';
+const encoder = new TextEncoder();
+const DAY = 86400;
+const now = () => Math.floor(Date.now() / 1000);
+const day = () => new Date().toISOString().slice(0,10);
+const validPage = p => typeof p === 'string' && PAGES.includes(p);
+const clean = (v,n) => typeof v === 'string' ? v.trim().replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g,'').slice(0,n) : '';
+function fail(status,message) { throw Object.assign(new Error(message),{status}); }
+async function jsonBody(request) {
+ if (!request.headers.get('content-type')?.startsWith('application/json')) fail(415,'JSON required.');
+ if (Number(request.headers.get('content-length')) > 16384) fail(413,'Request too large.');
+ const reader=request.body?.getReader(); if(!reader) fail(400,'Missing request.');
+ let bytes=0, chunks=[];
+ for (;;) {const {value,done}=await reader.read();if(done)break;bytes+=value.length;if(bytes>16384){await reader.cancel();fail(413,'Request too large.');}chunks.push(value);}
+ const all=new Uint8Array(bytes);let offset=0;for(const c of chunks){all.set(c,offset);offset+=c.length;}
+ try {const b=JSON.parse(new TextDecoder().decode(all));if(!b||typeof b!=='object'||Array.isArray(b))fail(400,'Invalid request.');return b;}catch{fail(400,'Invalid JSON.');}
+}
+async function hash(s){return new Uint8Array(await crypto.subtle.digest('SHA-256',encoder.encode(s)));}
+async function authorized(request,env){
+ if (!env.ADMIN_TOKEN || env.ADMIN_TOKEN.length < 32) return false;
+ const h=request.headers.get('authorization')||'';if(h.length>256)return false;
+ const a=await hash(h), b=await hash('Bearer '+env.ADMIN_TOKEN);let diff=0;for(let i=0;i<a.length;i++)diff|=a[i]^b[i];return diff===0;
+}
+async function key(env){if(!env.FORM_SECRET||env.FORM_SECRET.length<32)fail(503,'Comments temporarily unavailable.');return crypto.subtle.importKey('raw',encoder.encode(env.FORM_SECRET),{name:'HMAC',hash:'SHA-256'},false,['sign','verify']);}
+const hex = b => [...new Uint8Array(b)].map(v=>v.toString(16).padStart(2,'0')).join('');
+async function challenge(page,env){
+ const payload=btoa(JSON.stringify({id:crypto.randomUUID(),page,exp:now()+600}));
+ const signature=hex(await crypto.subtle.sign('HMAC',await key(env),encoder.encode(payload)));
+ return {token:payload+'.'+signature, difficulty:3};
+}
+async function verifyChallenge(b,env){
+ if(typeof b.token!=='string'||b.token.length>2048||!Number.isInteger(b.proof)||b.proof<0||b.proof>1000000)fail(400,'Please reopen the form and try again.');
+ const parts=b.token.split('.');if(parts.length!==2||!/^[a-f0-9]{64}$/.test(parts[1]))fail(400,'Invalid form token.');
+ const sig=Uint8Array.from(parts[1].match(/../g),s=>parseInt(s,16));
+ if(!await crypto.subtle.verify('HMAC',await key(env),sig,encoder.encode(parts[0])))fail(400,'Invalid form token.');
+ let p;try{p=JSON.parse(atob(parts[0]));}catch{fail(400,'Invalid form token.');}
+ if(p.page!==b.page||p.exp<now()||p.exp>now()+600||typeof p.id!=='string')fail(400,'Form expired. Please try again.');
+ if(!hex(await hash(b.token+'.'+b.proof)).startsWith('000'))fail(400,'Verification failed.');
+ return p.id;
+}
+async function budget(env,kind,limit){
+ const r=await env.DB.prepare('INSERT INTO budgets(day,kind,n) VALUES(?,?,1) ON CONFLICT(day,kind) DO UPDATE SET n=n+1 WHERE n<? RETURNING n').bind(day(),kind,limit).first();
+ if(!r)fail(429,'Daily free-service limit reached. Please try tomorrow.');
+}
+export async function route(request,env){
+ const url=new URL(request.url),path=url.pathname, method=request.method;
+ if(env.ENABLED!=='true'||!env.DB)fail(503,'Service is not enabled.');
+ const admin=path.startsWith('/v1/admin/');
+ if(admin&&!await authorized(request,env))fail(401,'Admin sign-in required.');
+ if(path==='/v1/view'&&method==='POST'){
+  const b=await jsonBody(request);if(!validPage(b.page)||b.consent!==true)fail(400,'A known page and explicit consent are required.');
+  if(request.headers.get('sec-gpc')==='1'||request.headers.get('dnt')==='1')return {ignored:true};
+  await budget(env,'views',5000);
+  const cf=request.cf||{};
+  await env.DB.prepare('INSERT INTO page_views(day,page,country,region,city,views) VALUES(?,?,?,?,?,1) ON CONFLICT(day,page,country,region,city) DO UPDATE SET views=views+1')
+   .bind(day(),b.page,clean(cf.country,2)||'Unknown',clean(cf.region,80)||'Unknown',clean(cf.city,80)||'Unknown').run();
+  return {ok:true};
+ }
+ if(path==='/v1/challenge'&&method==='GET'){
+  const p=url.searchParams.get('page');if(!validPage(p))fail(400,'Unknown page.');return challenge(p,env);
+ }
+ if(path==='/v1/comments'&&method==='POST'){
+  const b=await jsonBody(request);
+  if(!validPage(b.page)||b.consent!==true||b.website)fail(400,'Check the form and publication permission.');
+  const name=clean(b.name,60)||'Anonymous', location=clean(b.location,100),purpose=clean(b.purpose,40),message=clean(b.message,1200);
+  if(!['','textiles','local','technology','other'].includes(purpose)||message.length<3||typeof b.message!=='string'||b.message.length>1200||/https?:\/\/|www\./i.test(message))fail(400,'Use 3–1200 characters, without website links.');
+  const id=await verifyChallenge(b,env);
+  if(await env.DB.prepare('SELECT id FROM comments WHERE id=?').bind(id).first())fail(409,'Already received. Please do not submit again.');
+  await budget(env,'comments',100);
+  await env.DB.prepare('INSERT INTO comments(id,page,name,location,purpose,message,created,consent_version) VALUES(?,?,?,?,?,?,?,?)').bind(id,b.page,name,location,purpose,message,now(),'2026-09-23').run();
+  return {ok:true,id,status:'pending'};
+ }
+ if(path==='/v1/comments'&&method==='GET'){
+  const p=url.searchParams.get('page');if(!validPage(p))fail(400,'Unknown page.');
+  const before=Number(url.searchParams.get('before')||Number.MAX_SAFE_INTEGER);if(!Number.isSafeInteger(before)||before<1)fail(400,'Invalid cursor.');
+  const r=await env.DB.prepare("SELECT seq,id,name,location,purpose,message,created FROM comments WHERE status='approved' AND page=? AND seq<? AND created>=? ORDER BY seq DESC LIMIT 21").bind(p,before,now()-365*DAY).all();
+  return {comments:r.results.slice(0,20),next:r.results.length>20?r.results[19].seq:null};
+ }
+ if(path==='/v1/admin/stats'&&method==='GET'){
+  const days=Number(url.searchParams.get('days')||30),p=url.searchParams.get('page')||'';
+  if(!Number.isInteger(days)||days<1||days>90||p&&!validPage(p))fail(400,'Invalid filter.');
+  const from=new Date(Date.now()-(days-1)*DAY*1000).toISOString().slice(0,10);
+  const filter='day>=?'+(p?' AND page=?':'');const args=p?[from,p]:[from];
+  const q=s=>env.DB.prepare(s).bind(...args);
+  const [total,pages,daily,locations]=await env.DB.batch([
+   q('SELECT COALESCE(SUM(views),0) AS views FROM page_views WHERE '+filter),
+   q('SELECT page,SUM(views) AS views FROM page_views WHERE '+filter+' GROUP BY page ORDER BY views DESC LIMIT 100'),
+   q('SELECT day,SUM(views) AS views FROM page_views WHERE '+filter+' GROUP BY day ORDER BY day'),
+   q('SELECT country,region,city,SUM(views) AS views FROM page_views WHERE '+filter+' GROUP BY country,region,city ORDER BY views DESC LIMIT 100')]);
+  return {views:total.results[0].views,pages:pages.results,daily:daily.results,locations:locations.results,pageOptions:PAGES,days,from};
+ }
+ if(path==='/v1/admin/comments'&&method==='GET'){
+  const status=url.searchParams.get('status')||'pending',before=Number(url.searchParams.get('before')||Number.MAX_SAFE_INTEGER);
+  if(!['pending','approved'].includes(status)||!Number.isSafeInteger(before)||before<1)fail(400,'Invalid filter.');
+  const r=await env.DB.prepare('SELECT * FROM comments WHERE status=? AND seq<? AND created>=? ORDER BY seq DESC LIMIT 51').bind(status,before,now()-(status==='pending'?30:365)*DAY).all();
+  return {comments:r.results.slice(0,50),next:r.results.length>50?r.results[49].seq:null};
+ }
+ if(path==='/v1/admin/moderate'&&method==='POST'){
+  const b=await jsonBody(request);if(typeof b.id!=='string'||b.id.length>40||!['approve','delete'].includes(b.action))fail(400,'Invalid action.');
+  const query=b.action==='delete'?'DELETE FROM comments WHERE id=?':"UPDATE comments SET status='approved' WHERE id=? AND created>=?";
+  await (b.action==='delete'?env.DB.prepare(query).bind(b.id):env.DB.prepare(query).bind(b.id,now()-30*DAY)).run();return {ok:true};
+ }
+ fail(404,'Not found.');
+}
+export default {
+ async fetch(request,env){
+  const origin=request.headers.get('origin')||'';
+  const allowed=(env.ALLOWED_ORIGINS||'').split(',').map(s=>s.trim());
+  const headers={'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Vary':'Origin'};
+  if(!origin||!allowed.includes(origin))return new Response(JSON.stringify({error:'Origin not allowed.'}),{status:403,headers});
+  Object.assign(headers,{'Access-Control-Allow-Origin':origin,'Access-Control-Allow-Methods':'GET, POST, OPTIONS','Access-Control-Allow-Headers':'Content-Type, Authorization','Access-Control-Max-Age':'600'});
+  if(request.method==='OPTIONS')return new Response(null,{status:204,headers});
+  try{return new Response(JSON.stringify(await route(request,env)),{headers});}
+  catch(e){return new Response(JSON.stringify({error:e.status?e.message:'Service temporarily unavailable. Please try later.'}),{status:e.status||503,headers});}
+ },
+ async scheduled(_event,env){
+  if(!env.DB)return;
+  await env.DB.batch([
+   env.DB.prepare('DELETE FROM page_views WHERE day<?').bind(new Date(Date.now()-89*DAY*1000).toISOString().slice(0,10)),
+   env.DB.prepare("DELETE FROM comments WHERE (status='pending' AND created<?) OR created<?").bind(now()-30*DAY,now()-365*DAY),
+   env.DB.prepare('DELETE FROM budgets WHERE day<?').bind(new Date(Date.now()-2*DAY*1000).toISOString().slice(0,10))
+  ]);
+ }
+};

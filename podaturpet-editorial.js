@@ -75,8 +75,3 @@
  new MutationObserver(()=>{if(!shell.querySelector('[data-site-language]') && document.body.dataset.siteLang!==document.documentElement.lang)language(document.documentElement.lang);}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
  const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
 })();
-// Reuse the existing feedback trigger in the footer instead of a second floating tab.
-(() => {
- const button=document.getElementById('pt-feedback-button'),footer=document.querySelector('.site-footer-inner');
- if(button&&footer){const slot=document.createElement('div');slot.className='site-feedback-slot';slot.append(button);footer.insertBefore(slot,footer.querySelector('.site-footer-bottom'));}
-})();

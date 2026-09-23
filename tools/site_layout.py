@@ -1,6 +1,7 @@
 """Original shared presentation layer for existing pages; no network or dependencies."""
 from pathlib import Path
 import html,json,re
+from community_layout import apply_community
 ROOT=Path(__file__).resolve().parents[1]
 AREAS=[(a['key'],a['en'],a['ta'],a['url']) for a in json.loads((ROOT/'content/site.json').read_text())['areas']]
 NAV_AREAS=AREAS
@@ -28,6 +29,7 @@ def footer(page):
  markup='<div class="site-footer-inner"><div class="site-footer-intro"><a class="site-brand" href="/">PODATURPET</a><p>'+word('Rooted in Tamil Nadu. Open to the world.','தமிழ்நாட்டில் வேரூன்றி, உலகுடன் இணைகிறோம்.')+'</p></div><nav aria-label="Explore Podaturpet">'+links+'</nav><nav aria-label="Tools and contact"><a href="/podaturpet-local-business-directory.html">'+word('Shops & services','கடைகள் · சேவைகள்')+'</a><a href="/advertise-on-podaturpet.html">'+word('Local advertising','உள்ளூர் விளம்பரம்')+'</a><a href="/free-invoice.html">'+word('Invoice maker · 3 trial exports','இன்வாய்ஸ் · 3 இலவச முயற்சிகள்')+'</a><a href="/us-india-family-travel-planner.html">'+word('Free family travel planner','இலவச குடும்பப் பயணத் திட்டம்')+'</a><a href="/#contact">'+word('Contact the team','குழுவைத் தொடர்புகொள்ள')+'</a><a href="/privacy-policy.html">'+word('Privacy & visitor tracking','தனியுரிமை · வருகைப் புள்ளிவிவரங்கள்')+'</a></nav><div class="site-footer-bottom"><span>© <span id="year"></span> Podaturpet.com</span><span class="mr-footer-credit"><img src="/images/muraraj-mr-logo.svg" width="28" height="28" alt="" loading="lazy">Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div></div>'
  return localized(markup,page)
 def apply_layout(text,page):
+ if page=='community-admin.html':return text
  if re.search(r'<meta[^>]+http-equiv=["\']refresh',text,re.I):return text
  # Existing native app language/font-size controls remain functional in the shared header.
  if 'data-site-shell="true"' not in text:
@@ -69,4 +71,4 @@ def apply_layout(text,page):
  if page in ['index.html','index-ta.html']:
   text=re.sub(r'<link[^>]+href="/podaturpet-home\.css[^"]*"[^>]*>\s*','',text)
   text=text.replace('</head>','<link rel="stylesheet" href="/podaturpet-home.css?v=20260923"></head>')
- return text
+ return apply_community(text,page)
