@@ -7,11 +7,11 @@ workers_dev = true
 enabled = false
 [vars]
 ALLOWED_ORIGINS = "https://podaturpet.com,https://www.podaturpet.com"
-ENABLED = "false"
+ENABLED = "true"
 [[d1_databases]]
 binding = "DB"
 database_name = "podaturpet-community"
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+database_id = "e2d390bc-dd3e-4aa2-b941-04e4b06304be"
 [triggers]
 crons = ["15 2 * * *"]
 # Add ADMIN_TOKEN and FORM_SECRET as Cloudflare secrets, never here.
