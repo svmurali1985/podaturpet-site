@@ -1,0 +1,7 @@
+/* Scoped buyer controls: preserve the existing site design. */
+#wholesale-enquiry select{box-sizing:border-box;width:100%;max-width:100%;padding:.8rem;border:1px solid #b8b6ac;border-radius:.5rem;background:#fff;color:#172b29;font:inherit}
+#buyer-review .rev-button{margin:.35rem .5rem .35rem 0}
+#buyer-review pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%}
+#buyer-review[hidden]{display:none}
+body.market-home #home-title,body.market-home #home-title span{font-size:clamp(32px,3.8vw,50px)!important;line-height:1.15!important;max-width:17ch;overflow-wrap:break-word}
+body.market-home[data-site-lang=ta] #home-title,body.market-home[data-site-lang=ta] #home-title span{font-size:clamp(25px,3.3vw,40px)!important;line-height:1.4!important;max-width:20ch}

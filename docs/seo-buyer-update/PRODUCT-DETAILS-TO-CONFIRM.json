@@ -1,0 +1,77 @@
+{
+  "note": "Owner input worksheet only; not loaded by the website. Fill verified values before publishing product specifications. Null means unconfirmed.",
+  "products": [
+    {
+      "reference": "PT-WC-01",
+      "fabric_composition": null,
+      "finished_size": null,
+      "open_or_stitched": null,
+      "production_method": null,
+      "minimum_pieces": null,
+      "sample_cost_and_shipping": null,
+      "price_currency_and_quantity_basis": null,
+      "packing": null,
+      "dispatch_estimate": null
+    },
+    {
+      "reference": "PT-BB-02",
+      "fabric_composition": null,
+      "finished_size": null,
+      "open_or_stitched": null,
+      "production_method": null,
+      "minimum_pieces": null,
+      "sample_cost_and_shipping": null,
+      "price_currency_and_quantity_basis": null,
+      "packing": null,
+      "dispatch_estimate": null
+    },
+    {
+      "reference": "PT-CC-03",
+      "fabric_composition": null,
+      "finished_size": null,
+      "open_or_stitched": null,
+      "production_method": null,
+      "minimum_pieces": null,
+      "sample_cost_and_shipping": null,
+      "price_currency_and_quantity_basis": null,
+      "packing": null,
+      "dispatch_estimate": null
+    },
+    {
+      "reference": "PT-HC-04",
+      "fabric_composition": null,
+      "finished_size": null,
+      "open_or_stitched": null,
+      "production_method": null,
+      "minimum_pieces": null,
+      "sample_cost_and_shipping": null,
+      "price_currency_and_quantity_basis": null,
+      "packing": null,
+      "dispatch_estimate": null
+    },
+    {
+      "reference": "PT-PC-05",
+      "fabric_composition": null,
+      "finished_size": null,
+      "open_or_stitched": null,
+      "production_method": null,
+      "minimum_pieces": null,
+      "sample_cost_and_shipping": null,
+      "price_currency_and_quantity_basis": null,
+      "packing": null,
+      "dispatch_estimate": null
+    },
+    {
+      "reference": "PT-NC-06",
+      "fabric_composition": null,
+      "finished_size": null,
+      "open_or_stitched": null,
+      "production_method": null,
+      "minimum_pieces": null,
+      "sample_cost_and_shipping": null,
+      "price_currency_and_quantity_basis": null,
+      "packing": null,
+      "dispatch_estimate": null
+    }
+  ]
+}

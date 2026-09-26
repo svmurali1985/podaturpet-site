@@ -94,8 +94,19 @@ export async function route(request,env){
   await budget(env,'views',5000);
   const cf=request.cf||{};
   await env.DB.prepare('INSERT INTO page_views(day,page,country,region,city,views) VALUES(?,?,?,?,?,1) ON CONFLICT(day,page,country,region,city) DO UPDATE SET views=views+1')
-   .bind(day(),b.page,clean(cf.country,2)||'Unknown',clean(cf.region,80)||'Unknown',clean(cf.city,80)||'Unknown').run();
+   .bind(day(),b.page,clean(cf.country,2)||'Unknown',clean(cf.region,80)||'Unknown','').run();
   return {ok:true};
+ }
+ // Public aggregates only: no city, identifiers, comments or admin data.
+ if(path==='/v1/stats'&&method==='GET'){
+  const p=url.searchParams.get('page');if(!validPage(p))fail(400,'Unknown page.');
+  const days=30,from=new Date(Date.now()-(days-1)*DAY*1000).toISOString().slice(0,10);
+  const [total,pageTotal,locations]=await env.DB.batch([
+   env.DB.prepare('SELECT COALESCE(SUM(views),0) AS views FROM page_views WHERE day>=?').bind(from),
+   env.DB.prepare('SELECT COALESCE(SUM(views),0) AS views FROM page_views WHERE day>=? AND page=?').bind(from,p),
+   env.DB.prepare('SELECT country,region,SUM(views) AS views FROM page_views WHERE day>=? GROUP BY country,region ORDER BY views DESC,country,region LIMIT 20').bind(from)
+  ]);
+  return {days,from,page:p,siteViews:total.results[0].views,pageViews:pageTotal.results[0].views,locations:locations.results};
  }
  if(path==='/v1/challenge'&&method==='GET'){
   const p=url.searchParams.get('page');if(!validPage(p))fail(400,'Unknown page.');return challenge(p,env);
@@ -127,7 +138,7 @@ export async function route(request,env){
    q('SELECT COALESCE(SUM(views),0) AS views FROM page_views WHERE '+filter),
    q('SELECT page,SUM(views) AS views FROM page_views WHERE '+filter+' GROUP BY page ORDER BY views DESC LIMIT 100'),
    q('SELECT day,SUM(views) AS views FROM page_views WHERE '+filter+' GROUP BY day ORDER BY day'),
-   q('SELECT country,region,city,SUM(views) AS views FROM page_views WHERE '+filter+' GROUP BY country,region,city ORDER BY views DESC LIMIT 100')]);
+   q('SELECT country,region,SUM(views) AS views FROM page_views WHERE '+filter+' GROUP BY country,region ORDER BY views DESC LIMIT 100')]);
   return {views:total.results[0].views,pages:pages.results,daily:daily.results,locations:locations.results,pageOptions:PAGES,days,from};
  }
  if(path==='/v1/admin/comments'&&method==='GET'){

@@ -20,7 +20,7 @@
  }
  async function stats(){const g=generation;const params=new URLSearchParams(new FormData($('#filters')));const d=await call('/v1/admin/stats?'+params);if(g!==generation||!token)return;
   const selected=$('#page-filter').value;$('#page-filter').replaceChildren(new Option('All pages',''),...d.pageOptions.map(p=>new Option(p,p)));$('#page-filter').value=selected;
-  $('#stats').replaceChildren();$('#total').textContent=d.views+' consenting page views · '+d.from+' onward (UTC)';table('Pages',d.pages,[['page','Page'],['views','Views']]);table('Daily totals',d.daily,[['day','UTC date'],['views','Views']]);table('Top 100 approximate locations',d.locations,[['country','Country code'],['region','State / region'],['city','City'],['views','Views']]);
+  $('#stats').replaceChildren();$('#total').textContent=d.views+' consenting page views · '+d.from+' onward (UTC)';table('Pages',d.pages,[['page','Page'],['views','Views']]);table('Daily totals',d.daily,[['day','UTC date'],['views','Views']]);table('Top 100 countries and states / regions',d.locations,[['country','Country code'],['region','State / region'],['views','Views']]);
  }
  async function comments(append=false){const g=generation,q=$('#queue').value;const d=await call('/v1/admin/comments?status='+q+(append&&next?'&before='+next:''));if(g!==generation||!token||q!==$('#queue').value)return;
   if(!append)$('#comments').replaceChildren();if(!d.comments.length&&!append)$('#comments').textContent='No comments in this queue.';
