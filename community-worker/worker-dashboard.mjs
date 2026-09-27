@@ -39,7 +39,6 @@ const PAGES = [
   "/wholesale-lungi-enquiry.html",
   "/wholesale-lungi-sample-buying-guide.html"
 ];
-
 const encoder = new TextEncoder();
 const DAY = 86400;
 const now = () => Math.floor(Date.now() / 1000);
@@ -89,22 +88,22 @@ export async function route(request,env){
  const admin=path.startsWith('/v1/admin/');
  if(admin&&!await authorized(request,env))fail(401,'Admin sign-in required.');
  if(path==='/v1/view'&&method==='POST'){
-  const b=await jsonBody(request);if(!validPage(b.page)||b.consent!==true)fail(400,'A known page and explicit consent are required.');
+  const b=await jsonBody(request);if(!validPage(b.page)||(b.countMode!=='aggregate'&&b.consent!==true))fail(400,'A known page and supported counting mode are required.');
   if(request.headers.get('sec-gpc')==='1'||request.headers.get('dnt')==='1')return {ignored:true};
   await budget(env,'views',5000);
   const cf=request.cf||{};
   await env.DB.prepare('INSERT INTO page_views(day,page,country,region,city,views) VALUES(?,?,?,?,?,1) ON CONFLICT(day,page,country,region,city) DO UPDATE SET views=views+1')
-   .bind(day(),b.page,clean(cf.country,2)||'Unknown',clean(cf.region,80)||'Unknown','').run();
+   .bind(day(),b.page,clean(cf.country,2)||'Unknown',clean(cf.region,80)||'Unknown',clean(cf.city,80)||'Unknown').run();
   return {ok:true};
  }
- // Public aggregates only: no city, identifiers, comments or admin data.
+ // Public aggregate city counts only; no identifiers, comments or admin data.
  if(path==='/v1/stats'&&method==='GET'){
   const p=url.searchParams.get('page');if(!validPage(p))fail(400,'Unknown page.');
   const days=30,from=new Date(Date.now()-(days-1)*DAY*1000).toISOString().slice(0,10);
   const [total,pageTotal,locations]=await env.DB.batch([
    env.DB.prepare('SELECT COALESCE(SUM(views),0) AS views FROM page_views WHERE day>=?').bind(from),
    env.DB.prepare('SELECT COALESCE(SUM(views),0) AS views FROM page_views WHERE day>=? AND page=?').bind(from,p),
-   env.DB.prepare('SELECT country,region,SUM(views) AS views FROM page_views WHERE day>=? GROUP BY country,region ORDER BY views DESC,country,region LIMIT 20').bind(from)
+   env.DB.prepare("SELECT COALESCE(NULLIF(city,''),'Unknown') AS city,SUM(views) AS views FROM page_views WHERE day>=? AND page=? GROUP BY COALESCE(NULLIF(city,''),'Unknown') ORDER BY views DESC,city LIMIT 50").bind(from,p)
   ]);
   return {days,from,page:p,siteViews:total.results[0].views,pageViews:pageTotal.results[0].views,locations:locations.results};
  }

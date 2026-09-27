@@ -19,12 +19,12 @@ async function comment(req,changes={}){
 test('admin authentication, origin restriction and fail-closed configuration',async()=>{
  const {req,env}=setup();assert.equal((await req('/v1/admin/stats')).status,401);assert.equal((await req('/v1/admin/comments',undefined,false,{Authorization:'Bearer wrong'})).status,401);assert.equal((await req('/v1/admin/stats',undefined,true,{Origin:'https://evil.example'})).status,403);assert.equal((await req('/v1/admin/stats',undefined,true)).status,200);env.ENABLED='false';assert.equal((await req('/v1/admin/stats',undefined,true)).status,503);
 });
-test('analytics requires consent, honours privacy signals, strips all other fields and aggregates page views',async()=>{
+test('analytics validates counting mode, honours privacy signals, strips all other fields and aggregates page views',async()=>{
  const {req,db}=setup();assert.equal((await req('/v1/view',{page:'/index.html',consent:false})).status,400);
  assert.equal((await req('/v1/view',{page:'/index.html?secret=1',consent:true})).status,400);
  await req('/v1/view',{page:'/index.html',consent:true},false,{'Sec-GPC':'1'});assert.equal(db.prepare('SELECT COUNT(*) n FROM page_views').get().n,0);
  for(let i=0;i<2;i++)assert.equal((await req('/v1/view',{page:'/index.html',consent:true,ip:'secret',name:'private',query:'private'})).status,200);
- const d=await (await req('/v1/admin/stats?days=1',undefined,true)).json();assert.equal(d.views,2);assert.equal(d.locations[0].region,'Tamil Nadu');assert(!('city' in d.locations[0]));assert.equal(db.prepare('SELECT city FROM page_views').get().city,'');assert.equal(db.prepare('SELECT COUNT(*) n FROM page_views').get().n,1);assert(!JSON.stringify(db.prepare('SELECT * FROM page_views').all()).includes('private'));
+ const d=await (await req('/v1/admin/stats?days=1',undefined,true)).json();assert.equal(d.views,2);assert.equal(d.locations[0].region,'Tamil Nadu');assert(!('city' in d.locations[0]));assert.equal(db.prepare('SELECT city FROM page_views').get().city,'Chennai');assert.equal(db.prepare('SELECT COUNT(*) n FROM page_views').get().n,1);assert(!JSON.stringify(db.prepare('SELECT * FROM page_views').all()).includes('private'));
 });
 test('pending comments stay private; approve publishes; delete removes; replay rejected',async()=>{
  const {req}=setup();const {body,response}=await comment(req);assert.equal(response.status,200);const {id}=await response.json();assert.equal((await req('/v1/comments',body)).status,409);
@@ -56,9 +56,18 @@ test('signed form token cannot be changed or used for a different page',async()=
  const {req}=setup();const {body}=await comment(req);const tampered=body.token.slice(0,-1)+(body.token.endsWith('a')?'b':'a');assert.equal((await req('/v1/comments',{...body,token:tampered})).status,400);assert.equal((await req('/v1/comments',{...body,page:'/privacy-policy.html'})).status,400);
 });
 
-test('public counts aggregate legacy city rows without exposing cities, preserve scope and require a known page',async()=>{
+test('public city totals preserve page scope, retention, unknown cities and exclude private fields',async()=>{
  const {req,db}=setup();const today=new Date().toISOString().slice(0,10);
  const insert=db.prepare('INSERT INTO page_views VALUES(?,?,?,?,?,?)');
- insert.run(today,'/index.html','IN','Tamil Nadu','Chennai',3);insert.run(today,'/index.html','IN','Tamil Nadu','Madurai',2);insert.run(today,'/privacy-policy.html','US','Arkansas','Centerton',4);
- const data=await (await req('/v1/stats?page=%2Findex.html')).json();assert.equal(data.siteViews,9);assert.equal(data.pageViews,5);assert.equal(data.days,30);assert.equal(data.locations.length,2);assert.equal(data.locations[0].views,5);assert(!JSON.stringify(data).includes('Chennai'));assert(!JSON.stringify(data).includes('city'));assert.equal((await req('/v1/stats?page=%2Funknown')).status,400);assert.equal((await req('/v1/stats?page=%2Findex.html',undefined,false,{Origin:'https://evil.example'})).status,403);
+ insert.run(today,'/index.html','IN','Tamil Nadu','Chennai',3);
+ insert.run(today,'/index.html','IN','Tamil Nadu','',2);
+ insert.run(today,'/privacy-policy.html','US','Arkansas','Centerton',4);
+ insert.run('2000-01-01','/index.html','US','Arkansas','Old',50);
+ assert.equal((await req('/v1/view',{page:'/index.html',countMode:'aggregate'})).status,200);
+ await req('/v1/view',{page:'/index.html',countMode:'aggregate'},false,{'DNT':'1'});
+ const data=await (await req('/v1/stats?page=%2Findex.html')).json();
+ assert.equal(data.siteViews,10);assert.equal(data.pageViews,6);assert.equal(data.days,30);
+ assert.deepEqual(data.locations,[{city:'Chennai',views:4},{city:'Unknown',views:2}]);
+ assert.equal((await req('/v1/stats?page=%2Funknown')).status,400);
+ assert.equal((await req('/v1/stats?page=%2Findex.html',undefined,false,{Origin:'https://evil.example'})).status,403);
 });
