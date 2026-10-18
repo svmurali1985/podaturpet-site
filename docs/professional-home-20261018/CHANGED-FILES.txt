@@ -1,0 +1,10 @@
+docs/professional-home-20261018/APPLY.md
+docs/professional-home-20261018/CHANGED-FILES.txt
+docs/professional-home-20261018/DELETIONS.txt
+docs/professional-home-20261018/README.md
+docs/professional-home-20261018/verify.cjs
+index-ta.html
+index.html
+podaturpet-feedback.js
+podaturpet-professional.css
+podaturpet-visitor-tracking.js

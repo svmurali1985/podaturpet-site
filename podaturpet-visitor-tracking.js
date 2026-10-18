@@ -32,12 +32,12 @@
   const isTamil=()=>document.body.dataset.siteLang==='ta'||document.documentElement.lang==='ta';
   function drawCounts(){
     const ta=isTamil();counts.replaceChildren();
-    const heading=document.createElement('h2');heading.textContent=ta?'பக்கப் பார்வைகள்':'Page views';counts.append(heading);
+    const heading=document.createElement('h2');heading.textContent=ta?'தளப் பார்வைகள்':'Site views';counts.append(heading);
     const note=document.createElement('p');note.textContent=ta?'கடந்த 30 நாட்கள் · பதிவான பக்கப் பார்வைகள். மீண்டும் திறந்ததும் எண்ணப்படும்; தனித்தனி நபர்களின் எண்ணிக்கை அல்ல.':'Last 30 days · Recorded page loads. Repeat loads count; these are not unique viewers.';counts.append(note);
     const total=document.createElement('p');
     if(!stats){total.textContent=statsError?(ta?'பார்வை எண்ணிக்கையை இப்போது பெற முடியவில்லை.':'View counts are unavailable right now.'):(ta?'எண்ணிக்கையை ஏற்றுகிறது…':'Loading counts…');counts.append(total);return;}
-    total.textContent=ta?'இந்தப் பக்கம்: '+stats.pageViews+' · முழுத் தளம்: '+stats.siteViews:'This page: '+stats.pageViews+' · Entire site: '+stats.siteViews;counts.append(total);
-    const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent=ta?'நகரம் வாரியாகப் பார்வைகள்':'Views by city';details.open=true;details.append(summary);
+    total.textContent=String(stats.siteViews);counts.append(total);
+    const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent=ta?'நகரம் வாரியாகப் பார்வைகள்':'Views by city';details.open=false;details.append(summary);
     const scope=document.createElement('p');scope.textContent=ta?'இந்தப் பக்கத்தின் முதல் 50 நகரங்கள். இடம் தோராயமானது; ஒரே பெயருள்ள நகரங்கள் ஒன்றாக எண்ணப்படும்.':'Top 50 cities for this page. Locations are approximate; identically named cities are combined.';details.append(scope);
     if(!stats.locations.length){const empty=document.createElement('p');empty.textContent=ta?'இந்தக் காலத்தில் பதிவான பார்வைகள் இல்லை.':'No recorded page views in this period.';details.append(empty);}
     else{
