@@ -11,7 +11,7 @@ function app(date='2026-10-03T06:00:00Z',enhance=true){
  return dom;
 }
 let dom=app(undefined,false),d=dom.window.document;
-check('dated news and twelve service cards available without scripts',()=>{assert.equal(d.querySelectorAll('[data-local-news]').length,4);assert.equal(d.querySelectorAll('.local-service-card').length,12);assert.equal(d.querySelectorAll('[data-local-news][hidden]').length,0);assert(d.querySelector('.local-controls').hidden);});dom.window.close();
+check('dated news and twelve service cards available without scripts',()=>{assert.equal(d.querySelectorAll('[data-local-news]').length,6);assert.equal(d.querySelectorAll('.local-service-card').length,12);assert.equal(d.querySelectorAll('[data-local-news][hidden]').length,0);assert(d.querySelector('.local-controls').hidden);});dom.window.close();
 dom=app();d=dom.window.document;const w=dom.window;
 const cards=()=>[...d.querySelectorAll('[data-local-news]')].filter(x=>!x.hidden);
 const search=d.getElementById('local-news-search'),category=d.getElementById('local-news-category');
@@ -19,7 +19,7 @@ function input(value){search.value=value;search.dispatchEvent(new w.Event('input
 check('English search finds the job fair',()=>{input('Job fair');assert.equal(cards().length,1);assert.equal(cards()[0].dataset.eventDate,'2026-10-10');});
 check('Tamil search works in English mode',()=>{input('ட்ரோன்');assert.equal(cards().length,1);assert.equal(cards()[0].dataset.category,'education');});
 check('combined topic and text filter has useful empty state',()=>{category.value='jobs';category.dispatchEvent(new w.Event('change'));assert.equal(cards().length,0);assert(!d.getElementById('local-news-empty').hidden);});
-check('reset restores news and search focus',()=>{d.getElementById('local-news-reset').click();assert.equal(cards().length,4);assert.equal(d.activeElement,search);});
+check('reset restores news and search focus',()=>{d.getElementById('local-news-reset').click();assert.equal(cards().length,6);assert.equal(d.activeElement,search);});
 check('Tamil switch translates headline, count and status',()=>{d.querySelector('[data-site-language=ta]').click();assert.equal(d.documentElement.lang,'ta');assert.match(d.querySelector('h1').textContent,/பொதட்டூர்பேட்டை/);assert.match(d.getElementById('local-news-count').textContent,/செய்திகளில்/);assert.match(d.querySelector('.local-news-status').textContent,/அறிவிப்பு/);});
 check('single heading and metadata retain canonical identity',()=>{assert.equal(d.querySelectorAll('h1').length,1);assert.equal(d.querySelector('link[rel=canonical]').href,'https://podaturpet.com/podaturpet-local-updates.html');for(const el of d.querySelectorAll('[data-site-en]'))assert.equal(el.children.length,0);});dom.window.close();
 dom=app('2026-10-10T20:00:00Z');d=dom.window.document;

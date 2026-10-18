@@ -1,0 +1,23 @@
+Unzip Podaturpet-Three-Pillar-Update.zip into Downloads. Run these commands from your existing website repository folder. Review git status first; keep unrelated local work separate. The patch checks that the current files match its expected context and will stop if they differ.
+
+unzip -o ~/Downloads/Podaturpet-Three-Pillar-Update.zip -d ~/Downloads
+
+git status --short
+
+git apply --check ~/Downloads/Podaturpet-Three-Pillar-Update/redesign.patch &&
+git apply ~/Downloads/Podaturpet-Three-Pillar-Update/redesign.patch
+
+python3 tools/check_site_links.py
+
+Preview before committing:
+python3 -m http.server 8000
+Open http://localhost:8000, review desktop/mobile and English/Tamil, then stop the server with Control-C.
+
+After review:
+
+git add -A --pathspec-from-file="$HOME/Downloads/Podaturpet-Three-Pillar-Update/changed-files.txt" &&
+git diff --cached --check &&
+git commit -m "Refocus Podaturpet on lungis with three clear site pillars" &&
+git push origin main
+
+The commands do not force-push. If the patch check fails, stop and provide its output rather than overwriting files. The patch was prepared against d66d1c9e07e76bc0b47c0a1217ee8c118d890948.

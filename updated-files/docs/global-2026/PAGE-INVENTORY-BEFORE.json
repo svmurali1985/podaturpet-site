@@ -1,0 +1,1148 @@
+[
+  {
+    "page": "about-podaturpet.html",
+    "title": "About Podaturpet, Tamil Nadu | Town Profile & Facts",
+    "h1": [
+      "About Podaturpet"
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-buyers",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911-buyers",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 21,
+    "redirect": false
+  },
+  {
+    "page": "advertise-on-podaturpet.html",
+    "title": "Advertise Your Shop or Business | Podaturpet",
+    "h1": [
+      "Put your business in the picture."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/podaturpet-business.css",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 32,
+    "redirect": false
+  },
+  {
+    "page": "blue-border-lungi-wholesale.html",
+    "title": "Blue Border Lungi Wholesale | Podaturpet",
+    "h1": [
+      "White checked lungis. One bold blue border."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "business-website-development.html",
+    "title": "Websites, AI Chatbots & Automation | MuraRaj Technologies",
+    "h1": [
+      "Websites, AI chatbots & automation."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/podaturpet-business.css",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 31,
+    "redirect": false
+  },
+  {
+    "page": "cotton-lungi-wholesale.html",
+    "title": "Cotton Lungi Wholesale Enquiries | Podaturpet, Tamil Nadu",
+    "h1": [
+      "Cotton lungi wholesale from Podaturpet."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-buyers",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911-buyers",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "free-invoice.html",
+    "title": "Free Invoice Maker — 3 Trial Exports | Podaturpet",
+    "h1": [
+      "A clear invoice.A professional impression."
+    ],
+    "forms": [
+      "invoice-form"
+    ],
+    "scripts": [
+      "invoice-core.js",
+      "invoice-tool.js",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "invoice-tool.css",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "handloom-lungis.html",
+    "title": "Handloom Lungis & Podaturpet Weaving Heritage | Buyer Guide",
+    "h1": [
+      "Handloom lungis and the Podaturpet weaving tradition."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "how-checked-lungis-are-made.html",
+    "title": "How Checked Lungis Are Made | Podaturpet",
+    "h1": [
+      "From a line of yarn to a field of checks."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "index.html",
+    "title": "Podaturpet | Our Town, Wholesale Lungis & Digital Services",
+    "h1": [
+      "Our town.Our threads.Your next connection."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-visitor-counter.js?v=20260906-footer",
+      "/podaturpet-assistant.js",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/podaturpet-assistant.css",
+      "/podaturpet-visitor-counter.css?v=20260906",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911-explorer",
+      "/podaturpet-editorial.css?v=20260911-sections",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 81,
+    "redirect": false
+  },
+  {
+    "page": "lungi-product-catalogue.html",
+    "title": "Wholesale Lungi Catalogue | Checked Designs from Podaturpet",
+    "h1": [
+      "Wholesale lungi catalogue. Find your checked design."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-buyers",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911-buyers",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "lungi-suppliers-mumbai.html",
+    "title": "Page moved | Podaturpet",
+    "h1": [],
+    "forms": [],
+    "scripts": [],
+    "css": [
+      "/podaturpet-colourful.css?v=20260920",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 0,
+    "redirect": true
+  },
+  {
+    "page": "lungi-wholesale-bengaluru.html",
+    "title": "Page moved | Podaturpet",
+    "h1": [],
+    "forms": [],
+    "scripts": [],
+    "css": [
+      "/podaturpet-colourful.css?v=20260920",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 0,
+    "redirect": true
+  },
+  {
+    "page": "lungi-wholesale-chennai.html",
+    "title": "Page moved | Podaturpet",
+    "h1": [],
+    "forms": [],
+    "scripts": [],
+    "css": [
+      "/podaturpet-colourful.css?v=20260920",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 0,
+    "redirect": true
+  },
+  {
+    "page": "lungi-wholesale-delhi.html",
+    "title": "Page moved | Podaturpet",
+    "h1": [],
+    "forms": [],
+    "scripts": [],
+    "css": [
+      "/podaturpet-colourful.css?v=20260920",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 0,
+    "redirect": true
+  },
+  {
+    "page": "lungi-wholesale-hyderabad.html",
+    "title": "Page moved | Podaturpet",
+    "h1": [],
+    "forms": [],
+    "scripts": [],
+    "css": [
+      "/podaturpet-colourful.css?v=20260920",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 0,
+    "redirect": true
+  },
+  {
+    "page": "lungi-wholesale-india.html",
+    "title": "Wholesale Lungis India | Podaturpet",
+    "h1": [
+      "One place for wholesale lungi enquiries across India."
+    ],
+    "forms": [
+      "market-enquiry"
+    ],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "lungi-wholesale-kerala.html",
+    "title": "Page moved | Podaturpet",
+    "h1": [],
+    "forms": [],
+    "scripts": [],
+    "css": [
+      "/podaturpet-colourful.css?v=20260920",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 0,
+    "redirect": true
+  },
+  {
+    "page": "lungi-wholesale-kolkata.html",
+    "title": "Page moved | Podaturpet",
+    "h1": [],
+    "forms": [],
+    "scripts": [],
+    "css": [
+      "/podaturpet-colourful.css?v=20260920",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 0,
+    "redirect": true
+  },
+  {
+    "page": "lungi-wholesale-worldwide.html",
+    "title": "Wholesale Lungis Worldwide | India Lungi Buyer Enquiries",
+    "h1": [
+      "Source lungis for your market."
+    ],
+    "forms": [
+      "market-enquiry"
+    ],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "modern-lungi-global-collection.html",
+    "title": "Modern Lungi 2026 | Global Utility Lungi Design Concepts",
+    "h1": [
+      "The lungi, reimagined."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "modern-lungi-investors-research-partners.html",
+    "title": "Modern Lungi Research Partners | Podaturpet",
+    "h1": [
+      "Help take the lungi into its next era."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "modern-lungi-product-innovation.html",
+    "title": "Modern Lungi Innovation | Convertible Lungi Product Concepts",
+    "h1": [
+      "Traditional comfort. Modern function."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "modulungi-product-innovation-concept.html",
+    "title": "Page moved | Podaturpet",
+    "h1": [],
+    "forms": [],
+    "scripts": [],
+    "css": [
+      "/podaturpet-colourful.css?v=20260920",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 0,
+    "redirect": true
+  },
+  {
+    "page": "people-information-hub-ta.html",
+    "title": "மக்கள் தகவல் மையம் | Podaturpet",
+    "h1": [
+      "மக்கள் தகவல் மையம்"
+    ],
+    "forms": [
+      "life-ask-form",
+      "education-form",
+      "remittance-form",
+      "life-help-form"
+    ],
+    "scripts": [
+      "/people-hub/data.js",
+      "/people-hub/core.js",
+      "/content/businesses-public.js",
+      "/people-hub/hub.js",
+      "/podaturpet-assistant.js",
+      "/podaturpet-visitor-tracking.js",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/people-hub/hub.css",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "people-information-hub.html",
+    "title": "People Information Hub | Podaturpet",
+    "h1": [
+      "People Information Hub"
+    ],
+    "forms": [
+      "life-ask-form",
+      "education-form",
+      "remittance-form",
+      "life-help-form"
+    ],
+    "scripts": [
+      "/people-hub/data.js",
+      "/people-hub/core.js",
+      "/content/businesses-public.js",
+      "/people-hub/hub.js",
+      "/podaturpet-assistant.js",
+      "/podaturpet-visitor-tracking.js",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/people-hub/hub.css",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "podaturpet-government-offices.html",
+    "title": "Podaturpet Government Offices & Contacts",
+    "h1": [
+      "Government offices and official contacts."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/podaturpet-town-guide.css",
+      "/podaturpet-business-redesign.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "podaturpet-local-business-directory.html",
+    "title": "Global Services & Podaturpet Local Business Directory",
+    "h1": [
+      "Your language. Your city. The right service."
+    ],
+    "forms": [
+      "market-ask",
+      "market-search",
+      "market-contact-form"
+    ],
+    "scripts": [
+      "/content/businesses-public.js",
+      "/people-hub/core.js",
+      "/podaturpet-community.js?v=20260919-market",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/podaturpet-town-guide.css",
+      "/podaturpet-business-redesign.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-premium-2026.css?v=20260906",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "podaturpet-lungi-weaving-story.html",
+    "title": "Podaturpet Lungi Weaving Story",
+    "h1": [
+      "The people, looms and work behind Podaturpet lungis."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "podaturpet-stories-and-culture.html",
+    "title": "Podaturpet & Nearby Villages | Stories, Festivals & Culture",
+    "h1": [
+      "Podaturpet, and the places that make its story."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/podaturpet-town-guide.css",
+      "/podaturpet-business-redesign.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-village-stories.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "podaturpet-textile-supplier-enquiry.html",
+    "title": "Podaturpet Textile Business Enquiry",
+    "h1": [
+      "Your weaving story deserves to be discovered."
+    ],
+    "forms": [
+      "supplier-enquiry-form"
+    ],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "podaturpet-tourist-places.html",
+    "title": "Tourist Places Near Podaturpet | Temples, Hills & Waterfalls",
+    "h1": [
+      "Places to visit near Podaturpet."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/podaturpet-town-guide.css",
+      "/podaturpet-business-redesign.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "podaturpet-town-guide.html",
+    "title": "Podaturpet Town Guide | Services & Travel",
+    "h1": [
+      "Discover Podaturpet."
+    ],
+    "forms": [
+      "pt-contribution-form"
+    ],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/podaturpet-town-guide.css?v=20260906-facilities",
+      "/podaturpet-assistant.css",
+      "/podaturpet-premium-2026.css?v=20260906",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/travel-planner/promo.css",
+      "/people-hub/promo.css",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 25,
+    "redirect": false
+  },
+  {
+    "page": "podaturpet-travel-pin-code.html",
+    "title": "Podaturpet PIN Code 631208 | Travel, Rail & Location Guide",
+    "h1": [
+      "Podaturpet Travel & PIN Code"
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 21,
+    "redirect": false
+  },
+  {
+    "page": "podaturpet-useful-information.html",
+    "title": "Podaturpet Useful Information & Services",
+    "h1": [
+      "Travel, study, shop and get things done."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/podaturpet-town-guide.css?v=20260906-facilities",
+      "/podaturpet-business-redesign.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/people-hub/promo.css",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "podaturpet-weaving-textiles.html",
+    "title": "Podaturpet Weaving & Textiles | Handloom and Powerloom Guide",
+    "h1": [
+      "Podaturpet Weaving & Textiles"
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-buyers",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911-buyers",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "powerloom-lungis.html",
+    "title": "Powerloom Lungis from Podaturpet | Wholesale Buyer Guide",
+    "h1": [
+      "Powerloom lungis from a documented weaving town."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "privacy-policy.html",
+    "title": "Privacy Policy & Visitor Tracking | Podaturpet.com",
+    "h1": [
+      "Privacy & Visitor Tracking"
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/podaturpet-assistant.css",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "us-india-family-travel-planner.html",
+    "title": "US ↔ India Family Travel Planner | Free English & Tamil Tool",
+    "h1": [
+      "US ↔ India Family Travel Planner"
+    ],
+    "forms": [
+      "add-packing"
+    ],
+    "scripts": [
+      "travel-planner/content.js",
+      "travel-planner/core.js",
+      "travel-planner/i18n.js",
+      "travel-planner/planner.js",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "travel-planner/planner.css",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "white-checked-lungi-wholesale.html",
+    "title": "White Checked Lungi Wholesale | Podaturpet Textile Sourcing",
+    "h1": [
+      "White checked lungis for wholesale buyers."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "wholesale-lungi-sample-buying-guide.html",
+    "title": "Wholesale Lungi Sample & Order Guide | Podaturpet",
+    "h1": [
+      "A good bulk order starts with a clear sample."
+    ],
+    "forms": [],
+    "scripts": [
+      "/podaturpet-community.js?v=20260911",
+      "/podaturpet-visitor-tracking.js?v=20260911",
+      "/podaturpet-assistant.js",
+      "/podaturpet-b2b-upgrade.js?v=20260910-research",
+      "/podaturpet-buyer-languages.js?v=20260911-showcase",
+      "/podaturpet-buyer-journey.js?v=20260911-editorial",
+      "/podaturpet-feedback.js?v=20260910",
+      "/podaturpet-editorial.js?v=20260919-reorg"
+    ],
+    "css": [
+      "/contact-bar.css",
+      "/podaturpet-assistant.css",
+      "/podaturpet-b2b-upgrade.css?v=20260907",
+      "/podaturpet-research-update.css?v=20260910",
+      "/podaturpet-feedback.css?v=20260910",
+      "/podaturpet-site-refresh.css?v=20260911",
+      "/podaturpet-editorial.css?v=20260911",
+      "/muraraj-footer.css?v=20260912-top",
+      "/podaturpet-colourful.css?v=20260919-reorg",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 18,
+    "redirect": false
+  },
+  {
+    "page": "wholesale-lungis-malaysia.html",
+    "title": "Page moved | Podaturpet",
+    "h1": [],
+    "forms": [],
+    "scripts": [],
+    "css": [
+      "/podaturpet-colourful.css?v=20260920",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 0,
+    "redirect": true
+  },
+  {
+    "page": "wholesale-lungis-oman.html",
+    "title": "Page moved | Podaturpet",
+    "h1": [],
+    "forms": [],
+    "scripts": [],
+    "css": [
+      "/podaturpet-colourful.css?v=20260920",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 0,
+    "redirect": true
+  },
+  {
+    "page": "wholesale-lungis-saudi-arabia.html",
+    "title": "Page moved | Podaturpet",
+    "h1": [],
+    "forms": [],
+    "scripts": [],
+    "css": [
+      "/podaturpet-colourful.css?v=20260920",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 0,
+    "redirect": true
+  },
+  {
+    "page": "wholesale-lungis-singapore.html",
+    "title": "Page moved | Podaturpet",
+    "h1": [],
+    "forms": [],
+    "scripts": [],
+    "css": [
+      "/podaturpet-colourful.css?v=20260920",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 0,
+    "redirect": true
+  },
+  {
+    "page": "wholesale-lungis-sri-lanka.html",
+    "title": "Page moved | Podaturpet",
+    "h1": [],
+    "forms": [],
+    "scripts": [],
+    "css": [
+      "/podaturpet-colourful.css?v=20260920",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 0,
+    "redirect": true
+  },
+  {
+    "page": "wholesale-lungis-uae.html",
+    "title": "Page moved | Podaturpet",
+    "h1": [],
+    "forms": [],
+    "scripts": [],
+    "css": [
+      "/podaturpet-colourful.css?v=20260920",
+      "/podaturpet-heritage.css?v=20260919"
+    ],
+    "bilingual": 0,
+    "redirect": true
+  }
+]

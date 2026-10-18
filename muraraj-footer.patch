@@ -1,0 +1,717 @@
+diff --git a/about-podaturpet.html b/about-podaturpet.html
+index 2b5b260..9b8a23b 100644
+--- a/about-podaturpet.html
++++ b/about-podaturpet.html
+@@ -23,7 +23,8 @@ main{padding:60px 0}h2{font-size:2rem;line-height:1.15;color:var(--ink);margin-t
+   <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911-buyers"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911-buyers"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="studio-site" data-page="about-podaturpet">
+ <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="hero"><div class="wrap"><div class="eyebrow">Podaturpet • Tamil Nadu</div><h1>About Podaturpet</h1><p class="lead">A practical introduction to Podaturpet — its location, town profile, people, weaving heritage and community life.</p></div></section>
+ <main id="main-content"><div class="wrap">
+@@ -67,7 +68,8 @@ main{padding:60px 0}h2{font-size:2rem;line-height:1.15;color:var(--ink);margin-t
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ 
+ 
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+diff --git a/blue-border-lungi-wholesale.html b/blue-border-lungi-wholesale.html
+index 63a63fd..4ec5fc3 100644
+--- a/blue-border-lungi-wholesale.html
++++ b/blue-border-lungi-wholesale.html
+@@ -25,7 +25,8 @@
+   <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="studio-site" data-page="blue-border-lungi-wholesale">
+   <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><main class="wrap" id="main-content">
+     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/cotton-lungi-wholesale.html">Lungi collection</a> / Blue border</nav>
+@@ -40,7 +41,8 @@
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+ <script src="/podaturpet-assistant.js" defer></script>
+   <script src="/podaturpet-b2b-upgrade.js?v=20260910-research" defer></script>
+diff --git a/build_podaturpet_town_guides.py b/build_podaturpet_town_guides.py
+index 4f847d2..a750ed1 100644
+--- a/build_podaturpet_town_guides.py
++++ b/build_podaturpet_town_guides.py
+@@ -56,6 +56,7 @@ def page(key: str, title: str, description: str, heading: str, lead: str, conten
+   <meta property="og:url" content="https://podaturpet.com/{escape(filename)}">
+   <link rel="icon" href="/images/podaturpet-logo.svg" type="image/svg+xml">
+   <link rel="stylesheet" href="/podaturpet-town-guide.css">
++<link rel="stylesheet" href="/muraraj-footer.css">
+ </head>
+ <body class="guide-body">
+   <header class="guide-header">
+@@ -67,7 +68,8 @@ def page(key: str, title: str, description: str, heading: str, lead: str, conten
+   </header>
+   <section class="guide-hero"><div class="guide-shell"><div class="guide-kicker">Podaturpet · Tiruvallur · Tamil Nadu</div><h1>{escape(heading)}</h1><p class="guide-lead">{escape(lead)}</p></div></section>
+   <main class="guide-main"><div class="guide-shell">{content}</div></main>
+-  <footer class="guide-footer"><div class="guide-shell guide-footer-inner"><div>© Podaturpet.com · Independent town information</div><div><a href="/#advertise">Advertising enquiries</a> · <a href="/">Return home</a></div></div></footer>
++  <footer class="guide-footer"><div class="guide-shell guide-footer-inner"><div>© Podaturpet.com · Independent town information</div><div><a href="/#advertise">Advertising enquiries</a> · <a href="/">Return home</a></div></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ </body>
+ </html>
+ '''
+@@ -152,7 +154,9 @@ index = index_path.read_text(encoding="utf-8")
+ 
+ stylesheet = '  <link rel="stylesheet" href="/podaturpet-town-guide.css">\n'
+ if stylesheet not in index:
+-    index = index.replace("</head>", stylesheet + "</head>", 1)
++    index = index.replace("<link rel="stylesheet" href="/muraraj-footer.css">
++</head>", stylesheet + "<link rel="stylesheet" href="/muraraj-footer.css">
++</head>", 1)
+ 
+ index = index.replace('<a href="#weaving">Our Weaving</a>', '<a href="#town-guide">Town Guide</a>', 1)
+ old_mobile = '<a href="#international-buyers">Worldwide</a></nav>'
+diff --git a/cotton-lungi-wholesale.html b/cotton-lungi-wholesale.html
+index b9dfc1b..13e0823 100644
+--- a/cotton-lungi-wholesale.html
++++ b/cotton-lungi-wholesale.html
+@@ -24,7 +24,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+   <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911-buyers"></head><body class="studio-site" data-page="cotton-lungi-wholesale">
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911-buyers"><link rel="stylesheet" href="/muraraj-footer.css">
++</head><body class="studio-site" data-page="cotton-lungi-wholesale">
+ <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="hero"><div class="wrap"><div class="eyebrow">Cotton Lungi Buyers</div><h1>Cotton lungi wholesale from Podaturpet.</h1><p class="lead">Buying for a shop, resale or distribution? Compare checked designs and request a quotation for your quantity and destination. Confirm fabric composition and finished size for your selected product.</p>
+ <a class="btn" href="https://wa.me/14793201970?text=Hello%20Podaturpet%20Team%2C%20I%20am%20looking%20for%20cotton%20lungis%20in%20bulk.%20Quantity%3A%20____%20Destination%3A%20____" target="_blank" rel="noopener noreferrer">WhatsApp Buyer Enquiry</a>
+ <a class="btn dark" href="/lungi-product-catalogue.html">View the lungi catalogue</a>
+@@ -82,7 +83,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ 
+ 
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+diff --git a/handloom-lungis.html b/handloom-lungis.html
+index 3aa3e9c..3beb059 100644
+--- a/handloom-lungis.html
++++ b/handloom-lungis.html
+@@ -23,7 +23,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+   <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head><body class="studio-site" data-page="handloom-lungis">
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head><body class="studio-site" data-page="handloom-lungis">
+ <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="hero"><div class="wrap"><div class="eyebrow">Handloom &amp; Heritage</div><h1>Handloom lungis and the Podaturpet weaving tradition.</h1><p class="lead">Podaturpet's local-government profile specifically identifies the town as a handloom and powerloom centre. This page connects that documented textile identity with modern buyer enquiries.</p>
+ <a class="btn" href="https://wa.me/14793201970?text=Hello%20Podaturpet%20Team%2C%20I%20am%20interested%20in%20traditional%20lungi%20sourcing.%20Handloom%2FPowerloom%3A%20____%20Quantity%3A%20____%0AReference%3A%20PT-HC-04" target="_blank" rel="noopener noreferrer">WhatsApp Buyer Enquiry</a>
+ <a class="btn dark" href="mailto:svmuralicenterton@gmail.com?subject=Lungi%20Wholesale%20Enquiry">Email Enquiry</a></div></section>
+@@ -46,7 +47,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ 
+ 
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+diff --git a/how-checked-lungis-are-made.html b/how-checked-lungis-are-made.html
+index 7b2c645..d649a39 100644
+--- a/how-checked-lungis-are-made.html
++++ b/how-checked-lungis-are-made.html
+@@ -23,7 +23,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+ <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "From a line of yarn to a field of checks.", "description": "Follow the making of a woven checked lungi: yarn selection, colour planning, loom preparation, weaving and finishing.", "mainEntityOfPage": "https://podaturpet.com/how-checked-lungis-are-made.html", "author": {"@type": "Organization", "name": "Podaturpet.com"}, "publisher": {"@type": "Organization", "name": "Podaturpet.com"}, "inLanguage": "en", "image": "https://podaturpet.com/images/lungi-collection.jpeg"}</script><style>article p{max-width:75ch}article a:not(.btn){text-decoration:underline}article h2{font-size:clamp(1.6rem,3vw,2.3rem)}.podaturpet-privacy-notice{color:#40574c!important}</style>  <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head><body class="studio-site" data-page="how-checked-lungis-are-made">
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head><body class="studio-site" data-page="how-checked-lungis-are-made">
+ <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="hero"><div class="wrap"><div class="eyebrow">Podaturpet Textile Story</div><h1>From a line of yarn to a field of checks.</h1><p class="lead">Follow the making of a woven checked lungi: yarn selection, colour planning, loom preparation, weaving and finishing.</p>
+ <a class="btn" href="https://wa.me/14793201970?text=Hello%20Podaturpet%20Team%2C%20I%20read%20the%20Podaturpet%20weaving%20story.%20I%20am%20interested%20in%20lungi%20sourcing." target="_blank" rel="noopener noreferrer">WhatsApp Buyer Enquiry</a>
+ <a class="btn dark" href="mailto:svmuralicenterton@gmail.com?subject=Lungi%20Wholesale%20Enquiry">Email Enquiry</a></div></section>
+@@ -41,7 +42,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ 
+ 
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+diff --git a/images/muraraj-mr-logo.svg b/images/muraraj-mr-logo.svg
+new file mode 100644
+index 0000000..6412ac4
+--- /dev/null
++++ b/images/muraraj-mr-logo.svg
+@@ -0,0 +1,8 @@
++<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
++  <title>MuraRaj Technologies MR monogram</title>
++  <rect width="96" height="96" rx="22" fill="#0b2239"/>
++  <rect x="1" y="1" width="94" height="94" rx="21" fill="none" stroke="#d8b66d" stroke-opacity=".65" stroke-width="2"/>
++  <path d="M19 66V30l15 20 15-20v36" fill="none" stroke="#f5f0e5" stroke-width="6" stroke-linejoin="round"/>
++  <path d="M57 66V30h10a11 11 0 0 1 0 22H57m10 0 13 14" fill="none" stroke="#d8b66d" stroke-width="6" stroke-linejoin="round"/>
++  <path d="M20 77h56" fill="none" stroke="#d8b66d" stroke-width="2"/>
++</svg>
+diff --git a/index.html b/index.html
+index dc76241..fd7ef46 100644
+--- a/index.html
++++ b/index.html
+@@ -81,7 +81,8 @@
+ <link rel="stylesheet" href="/lungi-lifestyle-gallery.css?v=20260910-clean">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911-explorer"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911-sections"><link rel="stylesheet" href="/podaturpet-home-showcase.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911-explorer"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911-sections"><link rel="stylesheet" href="/podaturpet-home-showcase.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ 
+ <body class="studio-site studio-home" data-page="index">
+ <a class="pt-skip" href="#top">Skip to content</a><a class="skip-to-content" href="#top">Skip to main content</a>
+@@ -211,7 +212,8 @@
+     The public counter displays only aggregate visits and approximate country, state or region, and city. It does not display visitor names or IP addresses.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ 
+ <nav class="mobile-contact-dock" aria-label="Quick contact actions"><a href="#quick-quote">Request a quote</a><a href="https://wa.me/14793201970?text=Hello%20Podaturpet%20Team%2C%20I%20would%20like%20to%20discuss%20a%20wholesale%20lungi%20enquiry." target="_blank" rel="noopener noreferrer">WhatsApp us</a></nav>
+ 
+diff --git a/lungi-product-catalogue.html b/lungi-product-catalogue.html
+index b4fac94..655ff73 100644
+--- a/lungi-product-catalogue.html
++++ b/lungi-product-catalogue.html
+@@ -19,7 +19,8 @@
+ 
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911-buyers"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911-buyers"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="studio-site studio-catalogue" data-page="lungi-product-catalogue">
+   <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html" aria-current="page">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><main class="wrap" id="main-content">
+     <section class="hero"><div class="eyebrow">The Podaturpet collection</div><h1>Wholesale lungi catalogue. <span>Find your checked design.</span></h1><p class="lead">Compare original product photographs for your shop or wholesale business. Choose a design, then send your quantity and delivery destination to request a quotation.</p><div class="hero-links"><a class="button" href="/#quick-quote">Send a wholesale requirement</a><a class="button secondary" href="/#powerloom-video">Watch the weaving process</a></div></section>
+@@ -41,7 +42,8 @@
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ 
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+ <script src="/podaturpet-assistant.js" defer></script>
+diff --git a/lungi-wholesale-india.html b/lungi-wholesale-india.html
+index 166f8c5..73fe72b 100644
+--- a/lungi-wholesale-india.html
++++ b/lungi-wholesale-india.html
+@@ -23,7 +23,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+   <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <style>#market-enquiry input,#market-enquiry select{box-sizing:border-box;width:min(100%,520px);padding:12px;font:inherit;border:1px solid #81948b;border-radius:6px}#market-enquiry label{display:inline-block;margin-bottom:6px}#market-enquiry button{cursor:pointer;border:0;font:inherit}main h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.2}main p{line-height:1.7}</style><link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head><body class="studio-site" data-page="lungi-wholesale-india">
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head><body class="studio-site" data-page="lungi-wholesale-india">
+ <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><main id="main-content"><div class="wrap" style="padding:42px 0"><h1>One place for wholesale lungi enquiries across India.</h1><p>Choose your city or state and share what your shop needs. Compare designs in the catalogue and send your quantity and destination in one message.</p><p>Tell us whether you need a mixed selection for a shop or quantities by design for distribution.</p><p><a class="btn" href="/lungi-product-catalogue.html">Browse product designs</a></p><form id="market-enquiry" class="cta"><h2>Prepare your enquiry</h2><p><label for="market-destination">City or state</label><br><select id="market-destination" name="market"><option>Chennai</option><option>Delhi</option><option>Hyderabad</option><option>Kerala</option><option>Kolkata</option><option>Bengaluru</option><option>Mumbai</option><option>Other destination</option></select></p><p><label for="market-quantity">Approximate quantity</label><br><input id="market-quantity" name="quantity" placeholder="For example: 500 pieces" required maxlength="80"></p><p><label for="market-design">Design or colour</label><br><input id="market-design" name="design" placeholder="Design reference or preferred colours" maxlength="160"></p><p><label for="other-destination">City / destination details</label><br><input id="other-destination" name="destination_detail" maxlength="100" placeholder="City or another destination"></p><button class="btn" type="submit" name="channel" value="whatsapp">Continue on WhatsApp</button> <button class="btn" type="submit" name="channel" value="email">Continue by email</button><p class="enquiry-status" role="status" aria-live="polite"></p><p>You choose whether to send the message in WhatsApp.</p></form><p><a href="/wholesale-lungi-sample-buying-guide.html">Sample and bulk order guide</a> · <a href="/lungi-wholesale-worldwide.html">International buyer enquiries</a></p></div></main>
+ <footer><div class="wrap">© Podaturpet.com • Own lungi manufacturing and independent Podaturpet town information.</div>
+   <div class="podaturpet-privacy-notice" style="max-width:1120px;margin:18px auto 0;padding:16px 20px;border-top:1px solid rgba(148,163,184,.28);color:#cbd5e1;font-size:13px;line-height:1.7;text-align:center">
+@@ -31,7 +32,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ 
+ 
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+diff --git a/lungi-wholesale-worldwide.html b/lungi-wholesale-worldwide.html
+index 4332dc9..15164f9 100644
+--- a/lungi-wholesale-worldwide.html
++++ b/lungi-wholesale-worldwide.html
+@@ -23,7 +23,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+   <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <style>#market-enquiry input,#market-enquiry select{box-sizing:border-box;width:min(100%,520px);padding:12px;font:inherit;border:1px solid #81948b;border-radius:6px}#market-enquiry label{display:inline-block;margin-bottom:6px}#market-enquiry button{cursor:pointer;border:0;font:inherit}main h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.2}main p{line-height:1.7}</style><link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head><body class="studio-site" data-page="lungi-wholesale-worldwide">
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head><body class="studio-site" data-page="lungi-wholesale-worldwide">
+ <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><main id="main-content"><div class="wrap" style="padding:42px 0"><h1>Source lungis for your market.</h1><p>Choose your destination and tell us about your business. Browse the catalogue once, then send a country-specific enquiry.</p><p>Discuss delivery arrangements, documentation and packing for your destination with the team.</p><p><a class="btn" href="/lungi-product-catalogue.html">Browse product designs</a></p><form id="market-enquiry" class="cta"><h2>Prepare your enquiry</h2><p><label for="market-destination">Country</label><br><select id="market-destination" name="market"><option>UAE</option><option>Oman</option><option>Saudi Arabia</option><option>Malaysia</option><option>Singapore</option><option>Sri Lanka</option><option>USA</option><option>Canada</option><option>UK</option><option>Finland</option><option>Other country</option><option>Other destination</option></select></p><p><label for="market-quantity">Approximate quantity</label><br><input id="market-quantity" name="quantity" placeholder="For example: 500 pieces" required maxlength="80"></p><p><label for="market-design">Design or colour</label><br><input id="market-design" name="design" placeholder="Design reference or preferred colours" maxlength="160"></p><p><label for="other-destination">City / destination details</label><br><input id="other-destination" name="destination_detail" maxlength="100" placeholder="City or another destination"></p><button class="btn" type="submit" name="channel" value="whatsapp">Continue on WhatsApp</button> <button class="btn" type="submit" name="channel" value="email">Continue by email</button><p class="enquiry-status" role="status" aria-live="polite"></p><p>You choose whether to send the message in WhatsApp.</p></form><p><a href="/wholesale-lungi-sample-buying-guide.html">Sample and bulk order guide</a> · <a href="/lungi-wholesale-india.html">India buyer enquiries</a></p></div></main>
+ <footer><div class="wrap">© Podaturpet.com • Own lungi manufacturing and independent Podaturpet town information.</div>
+   <div class="podaturpet-privacy-notice" style="max-width:1120px;margin:18px auto 0;padding:16px 20px;border-top:1px solid rgba(148,163,184,.28);color:#cbd5e1;font-size:13px;line-height:1.7;text-align:center">
+@@ -31,7 +32,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ 
+ 
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+diff --git a/modern-lungi-global-collection.html b/modern-lungi-global-collection.html
+index 35613d0..e26bd83 100644
+--- a/modern-lungi-global-collection.html
++++ b/modern-lungi-global-collection.html
+@@ -26,7 +26,8 @@
+   <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="studio-site" data-page="modern-lungi-global-collection">
+   <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><main id="main-content">
+     <section class="hero"><div class="container hero-grid"><div><div class="eyebrow">Global design study · 2026</div><h1>The lungi, <em>reimagined.</em></h1><p class="lead">A new utility-led direction for customers in the USA, Canada, UK, Europe and beyond—combining woven identity with secure closures, useful pockets and styling for travel, leisure and city life.</p><div class="actions"><a class="button" href="#collection">See 14 concepts</a><a class="button alt" href="https://wa.me/14793201970?text=Hello%20Podaturpet%20Team%2C%20I%20would%20like%20to%20share%20feedback%20or%20discuss%20the%20Global%20Modern%20Lungi%20concept." target="_blank" rel="noopener noreferrer">WhatsApp feedback</a></div></div><div class="hero-photo"><img src="images/modern-lungi/modern-lungi-global-city.webp" alt="Modern utility lungi styling concept for a global city" width="1500" height="1000" fetchpriority="high" decoding="async"><div class="concept-tag">Original concept visual</div></div></div></section>
+@@ -54,7 +55,8 @@
+     <section class="video-plan" id="video-plan"><div class="container"><div class="head"><div class="eyebrow">Three short videos planned</div><h2>Built for quick customer interaction.</h2><p>These 8-second clips are ready to generate after Runway is connected. Exact prompts are included with the website files.</p></div><div class="videos"><article class="video"><small>VIDEO 01 · 8 SEC</small><h3>Global City Reveal</h3><p>Walk, turn, then close-up on the adjustable waist and secure pocket.</p></article><article class="video"><small>VIDEO 02 · 8 SEC</small><h3>How to Wear</h3><p>Centre, adjust, wrap and snap—shown in a clean studio sequence.</p></article><article class="video"><small>VIDEO 03 · 8 SEC</small><h3>One Lungi, Many Lives</h3><p>Fast travel, winter, resort and streetwear transitions.</p></article></div></div></section>
+     <section class="cta" id="feedback"><div class="container"><div class="cta-box"><div class="eyebrow">Buyers · brands · distributors</div><h2>Which concept would your customers wear?</h2><p>Send the concept name, target country, preferred colour and estimated quantity. Our team can discuss samples, current capability and commercial terms.</p><div class="actions" style="justify-content:center"><a class="button" href="https://wa.me/14793201970?text=Hello%20Podaturpet%20Team%2C%20I%20am%20interested%20in%20the%20Global%20Modern%20Lungi%20concept.%20Target%20country%3A%20____.%20Preferred%20style%3A%20____.%20Estimated%20quantity%3A%20____." target="_blank" rel="noopener noreferrer">Discuss on WhatsApp</a><a class="button alt" href="/podaturpet-textile-supplier-enquiry.html">Supplier enquiry</a></div><div class="notice"><strong>Concept transparency:</strong> These are exploratory design visuals. Final materials, construction, samples, availability, price, minimum quantity and export arrangements must be confirmed before ordering.</div></div></div></section>
+   </main>
+-  <footer><div class="container footer-row"><span>Podaturpet, Tamil Nadu, India</span><span>Woven tradition, explored for global lifestyles.</span></div><div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++  <footer><div class="container footer-row"><span>Podaturpet, Tamil Nadu, India</span><span>Woven tradition, explored for global lifestyles.</span></div><div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+   <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-b2b-upgrade.js?v=20260910-research" defer></script>
+ <script src="/podaturpet-buyer-languages.js?v=20260911-showcase" defer></script><script src="/podaturpet-buyer-journey.js?v=20260911-editorial" defer></script><script src="/podaturpet-feedback.js?v=20260910" defer></script>
+ <script src="/podaturpet-editorial.js?v=20260911" defer></script></body>
+diff --git a/modern-lungi-investors-research-partners.html b/modern-lungi-investors-research-partners.html
+index 9de984b..96ef2d2 100644
+--- a/modern-lungi-investors-research-partners.html
++++ b/modern-lungi-investors-research-partners.html
+@@ -19,7 +19,8 @@
+   <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="studio-site" data-page="modern-lungi-investors-research-partners">
+   <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><main id="main-content">
+     <section class="hero"><div class="container hero-grid"><div><div class="kicker">Global Modern Lungi Innovation Initiative</div><h1>Help take the lungi <em>into its next era.</em></h1><p class="lead">We are seeking strategic investors, textile researchers, fashion designers, product engineers and international market partners to research, prototype and test modern lungi concepts for global lifestyles.</p><p class="tamil" lang="ta">உலக சந்தைக்கு ஏற்ற நவீன லுங்கி வடிவங்களை ஆராய்ச்சி செய்து, மாதிரிகள் உருவாக்கி, சோதனை செய்து அறிமுகப்படுத்த முதலீட்டாளர்கள், ஆராய்ச்சியாளர்கள், வடிவமைப்பாளர்கள் மற்றும் வணிகக் கூட்டாளர்கள் தேவை.</p><div class="actions"><a class="button" href="#join">Become a partner</a><a class="button alt" href="/modern-lungi-global-collection.html">View design concepts</a></div></div><div><div class="hero-images"><img src="images/modern-lungi/modern-lungi-global-city.webp" alt="Global modern lungi design concept" width="1500" height="1000" decoding="async"><img src="images/modern-lungi/modern-lungi-feature-details.webp" alt="Modern lungi functional feature concepts" width="1312" height="1199" decoding="async"><img src="images/modern-lungi/modern-lungi-airport-travel.webp" alt="Modern lungi travel concept" width="1500" height="1000" decoding="async"></div><p class="tag">Original exploratory visuals created for this initiative.</p></div></div></section>
+@@ -28,7 +29,8 @@
+     <section id="roadmap"><div class="container"><div class="head"><div class="kicker">Research-to-market roadmap</div><h2>A clear path from insight to launch.</h2><p>Partnership discussions can be organised around six transparent stages, with scope and budgets agreed before work begins.</p></div><div class="roadmap"><article class="stage"><h3>Global User Research</h3><p>Interview potential wearers, buyers and retailers across selected markets.</p></article><article class="stage"><h3>Prototype Development</h3><p>Create material, fit, closure, pocket and styling prototypes.</p></article><article class="stage"><h3>Wear &amp; Market Testing</h3><p>Measure comfort, movement, care, acceptance and purchase interest.</p></article><article class="stage"><h3>Pilot Manufacturing</h3><p>Prepare a limited, quality-controlled pilot based on validated designs.</p></article><article class="stage"><h3>Brand &amp; Education</h3><p>Build respectful storytelling and simple how-to-wear content.</p></article><article class="stage"><h3>Global Market Entry</h3><p>Work with suitable distributors, retailers and online channels.</p></article></div></div></section>
+     <section class="join" id="join"><div class="container join-grid"><div><div class="head"><div class="kicker">Investor &amp; collaborator interest</div><h2>Bring your experience to the table.</h2><p>Start with one prototype: name the customer problem, the concept you want to test, the expertise you can contribute and your proposed timeline. The first discussion will define a practical trial, responsibilities and the evidence needed before a wider launch.</p><p>We welcome serious introductory discussions with people and organisations who can contribute funding, research, design, manufacturing knowledge or market access.</p></div><div class="checklist"><span>Tell us your country and organisation</span><span>Select your role: investor, researcher, designer or market partner</span><span>Explain the expertise or support you may contribute</span><span>Suggest the market or customer group you want to explore</span></div></div><div class="contact-card"><h3>Start a confidential introductory conversation</h3><p>Send a short message. Detailed plans, responsibilities, budgets and legal terms will be discussed only after mutual review.</p><a class="button" href="https://wa.me/14793201970?text=Hello%20Podaturpet%20Team%2C%20I%20am%20interested%20in%20the%20Global%20Modern%20Lungi%20Innovation%20Initiative.%0ACountry%3A%20____%0ARole%20or%20organisation%3A%20____%0AI%20can%20contribute%3A%20____%0ATarget%20market%3A%20____" target="_blank" rel="noopener noreferrer">Send partnership interest</a><a class="button alt" href="/podaturpet-textile-supplier-enquiry.html">Use the enquiry page</a><div class="lang-box" lang="ta"><strong>தமிழில்:</strong> உங்கள் நாடு, நிறுவனம் அல்லது பங்கு, நீங்கள் வழங்கக்கூடிய உதவி மற்றும் நீங்கள் ஆராய விரும்பும் சந்தையைத் தெரிவிக்கவும்.</div><p class="legal">This page is an invitation to discuss possible collaboration. It is not a public securities offering, financial advice or a promise of returns. Any investment will require independent due diligence and appropriate written legal agreements.</p></div></div></section>
+   </main>
+-  <footer><div class="container footer-row"><span>Podaturpet, Tamil Nadu, India</span><span>Research · Prototype · Test · Build responsibly</span></div><div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++  <footer><div class="container footer-row"><span>Podaturpet, Tamil Nadu, India</span><span>Research · Prototype · Test · Build responsibly</span></div><div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+   <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-b2b-upgrade.js?v=20260910-research" defer></script>
+ <script src="/podaturpet-buyer-languages.js?v=20260911-showcase" defer></script><script src="/podaturpet-buyer-journey.js?v=20260911-editorial" defer></script><script src="/podaturpet-feedback.js?v=20260910" defer></script>
+ <script src="/podaturpet-editorial.js?v=20260911" defer></script></body>
+diff --git a/modern-lungi-product-innovation.html b/modern-lungi-product-innovation.html
+index 8b7b75a..0f92528 100644
+--- a/modern-lungi-product-innovation.html
++++ b/modern-lungi-product-innovation.html
+@@ -20,7 +20,8 @@
+   <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="studio-site" data-page="modern-lungi-product-innovation">
+   <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><main id="main-content">
+     <section class="hero"><div class="container hero-grid"><div><div class="kicker">Modern Lungi product concepts · 2026</div><h1>Traditional comfort. <em>Modern function.</em></h1><p class="lead"><strong>Modern Lungi</strong> is an exploratory convertible-lungi direction designed to retain woven identity while making fit, movement, storage and climate use easier for a wider global audience.</p><p class="tamil" lang="ta"><strong>நவீன லுங்கி:</strong> பாரம்பரிய அழகை பாதுகாத்து, இன்றைய வாழ்க்கைக்கு ஏற்ற வகையில் ஒரே லுங்கியை ஐந்து விதமாகப் பயன்படுத்தும் புதிய தயாரிப்பு யோசனை.</p><div class="actions"><a class="button" href="#five-modes">Explore the concepts</a><a class="button alt" href="/modern-lungi-global-collection.html">View the visual collection</a></div></div><div class="hero-image"><img src="images/modern-lungi/modern-lungi-reversible.webp" alt="Modern Lungi long and short wearing mode concept" width="1500" height="1000" decoding="async"><div class="hero-badge">Original exploratory concept</div></div></div></section>
+@@ -41,7 +42,8 @@
+     <section class="prototype-section" id="prototypes"><div class="container"><div class="head"><div class="kicker">Start focused</div><h2>Three prototypes to test first.</h2><p>Instead of placing every feature in one product, these three focused versions can reveal what customers genuinely value.</p></div><div class="prototype-grid"><article class="prototype"><img src="images/modern-lungi/modern-lungi-resort.webp" alt="Modern Lungi Air warm weather concept" loading="lazy" width="1500" height="1000" decoding="async"><div class="prototype-copy"><h3>Modern Lungi Air</h3><p>A lightweight warm-weather version for home, resort and summer use.</p><ul><li>Breathable woven fabric</li><li>FitLock waist</li><li>One secure pocket</li></ul></div></article><article class="prototype"><img src="images/modern-lungi/modern-lungi-airport-travel.webp" alt="Modern Lungi Travel concept" loading="lazy" width="1500" height="1000" decoding="async"><div class="prototype-copy"><h3>Modern Lungi Travel</h3><p>A secure, packable version for airports, road trips and leisure.</p><ul><li>Passport and phone pockets</li><li>Snap closure</li><li>Optional inner shorts</li></ul></div></article><article class="prototype"><img src="images/modern-lungi/modern-lungi-winter-style.webp" alt="Modern Lungi Winter cold climate concept" loading="lazy" width="1500" height="1000" decoding="async"><div class="prototype-copy"><h3>Modern Lungi Winter</h3><p>A layered concept for customers in colder markets.</p><ul><li>Removable thermal layer</li><li>Legging-compatible fit</li><li>Heavier seasonal check</li></ul></div></article></div></div></section>
+     <section class="validation" id="feedback"><div class="container validation-grid"><div><div class="head"><div class="kicker">Research before production</div><h2>What should be tested?</h2><p>A good idea becomes a real product only after practical customer and manufacturing validation.</p></div><div class="test-list"><div><b>Fit and movement</b><span>Walking, sitting, stairs and active conversion.</span></div><div><b>Pocket load</b><span>Phone and passport security without waist sag.</span></div><div><b>Wash performance</b><span>Shrinkage, colour fastness, closures and lining durability.</span></div><div><b>Market acceptance</b><span>Style preference, price expectations and how-to-wear confidence.</span></div></div></div><div class="cta-card"><div class="kicker">Customer · retailer · collaborator</div><h2>Which prototype should we develop first?</h2><p>Share your country, preferred prototype, use case and the feature that matters most to you.</p><a class="button" href="https://wa.me/14793201970?text=Hello%20Podaturpet%20Team%2C%20I%20would%20like%20to%20share%20feedback%20on%20the%20Modern%20Lungi%20innovation%20concepts.%0ACountry%3A%20____%0APreferred%20prototype%3A%20Air%20%2F%20Travel%20%2F%20Winter%0AMost%20important%20feature%3A%20____%0AComments%3A%20____" target="_blank" rel="noopener noreferrer">Send product feedback</a><a class="button alt" href="/modern-lungi-investors-research-partners.html">Investor or research partnership</a><p class="notice">These Modern Lungi visuals and features are exploratory concepts. Final specifications, feasibility, availability, price and intellectual-property status must be confirmed before commercial use.</p></div></div></section>
+   </main>
+-  <footer><div class="container footer-row"><span>Podaturpet, Tamil Nadu, India</span><span>Tradition adapted through research and responsible design.</span></div><div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++  <footer><div class="container footer-row"><span>Podaturpet, Tamil Nadu, India</span><span>Tradition adapted through research and responsible design.</span></div><div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+   <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-b2b-upgrade.js?v=20260910-research" defer></script>
+ <script src="/podaturpet-buyer-languages.js?v=20260911-showcase" defer></script><script src="/podaturpet-buyer-journey.js?v=20260911-editorial" defer></script><script src="/podaturpet-feedback.js?v=20260910" defer></script>
+ <script src="/podaturpet-editorial.js?v=20260911" defer></script></body>
+diff --git a/muraraj-footer.css b/muraraj-footer.css
+new file mode 100644
+index 0000000..82645bf
+--- /dev/null
++++ b/muraraj-footer.css
+@@ -0,0 +1,40 @@
++/* Original MuraRaj footer credit; styles apply only to this component. */
++.mr-footer-credit {
++  box-sizing: border-box;
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  gap: 12px;
++  max-width: 1120px;
++  margin: 20px auto 0;
++  padding: 18px 20px 0;
++  border-top: 1px solid currentColor;
++  color: inherit;
++  font-family: inherit;
++  font-size: 13px;
++  font-weight: 400;
++  line-height: 1.6;
++  text-align: left;
++}
++.mr-footer-credit .mr-footer-logo {
++  display: block;
++  flex: 0 0 44px;
++  width: 44px;
++  height: 44px;
++  max-width: none;
++  margin: 0;
++  padding: 0;
++  border: 0;
++  border-radius: 10px;
++  box-shadow: none;
++}
++.mr-footer-credit strong {
++  display: inline;
++  color: inherit;
++  font-size: inherit;
++  font-weight: 700;
++}
++@media (max-width: 420px) {
++  .mr-footer-credit { padding-inline: 16px; gap: 10px; }
++  .mr-footer-credit strong { display: block; }
++}
+diff --git a/podaturpet-government-offices.html b/podaturpet-government-offices.html
+index 86f1eba..77440cd 100644
+--- a/podaturpet-government-offices.html
++++ b/podaturpet-government-offices.html
+@@ -19,7 +19,8 @@
+   <link rel="stylesheet" href="/podaturpet-assistant.css">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="guide-body studio-site" data-page="podaturpet-government-offices">
+   <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="guide-hero"><div class="guide-shell"><div class="guide-kicker">Podaturpet · Tiruvallur · Tamil Nadu</div><h1>Government offices and official contacts.</h1><p class="guide-lead">Find official local-government contact information, district administration resources and postal guidance relevant to Podaturpet and its surrounding region.</p></div></section>
+   <main class="guide-main" id="main-content"><div class="guide-shell"><nav class="guide-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/podaturpet-town-guide.html">Town guide</a><span aria-hidden="true">/</span><span>Podaturpet Government Offices and Official Contacts</span></nav>
+@@ -37,7 +38,8 @@
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+ <script src="/podaturpet-assistant.js" defer></script>
+ <script src="/podaturpet-buyer-languages.js?v=20260911-showcase" defer></script><script src="/podaturpet-buyer-journey.js?v=20260911-editorial" defer></script><script src="/podaturpet-feedback.js?v=20260910" defer></script>
+diff --git a/podaturpet-local-business-directory.html b/podaturpet-local-business-directory.html
+index 517eddd..4376acb 100644
+--- a/podaturpet-local-business-directory.html
++++ b/podaturpet-local-business-directory.html
+@@ -25,7 +25,8 @@
+   <link rel="stylesheet" href="/podaturpet-premium-2026.css?v=20260906">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="guide-body studio-site" data-page="podaturpet-local-business-directory">
+   <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html" aria-current="page">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="retail-market-hero"><div class="guide-shell"><div class="guide-kicker">PODATURPET · LOCAL RETAIL DIRECTORY</div><h1>Discover the shops that keep our town moving.</h1><p class="guide-lead">Browse everyday shopping, food, clothing, healthcare, and useful local services in one dedicated Podaturpet retail directory.</p><div class="retail-hero-pills"><span>24 retail categories</span><span>Local shops &amp; services</span><span>Direct listing enquiries</span></div></div></section>
+   <main class="guide-main" id="main-content"><section class="pt-feature" id="business-listings"><h2>Local business listings</h2><div data-pt-content="businesses"><!-- PT:content:businesses:START --><p class="pt-empty">Business listings are being collected. Browse the service categories below, or send your shop details for review.</p><!-- PT:content:businesses:END --></div><a class="pt-button" href="/podaturpet-town-guide.html?contribute=business#contribute">Submit your business details</a></section><div class="guide-shell"><nav class="guide-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Retail Shops</span></nav>
+@@ -160,7 +161,8 @@
+     Only aggregate visits and approximate country, state or region, and city are shown publicly. Visitor names and IP addresses are not displayed.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+ <script>
+ (function(){var search=document.getElementById('retail-search'),cards=Array.prototype.slice.call(document.querySelectorAll('.retail-card')),buttons=Array.prototype.slice.call(document.querySelectorAll('.retail-filter')),count=document.getElementById('retail-count'),empty=document.getElementById('retail-empty'),active='all';function refresh(){var query=search.value.toLowerCase().trim(),visible=0;cards.forEach(function(card){var matchesCategory=active==='all'||card.getAttribute('data-category')===active,matchesSearch=!query||card.getAttribute('data-search').indexOf(query)!==-1,show=matchesCategory&&matchesSearch;card.hidden=!show;if(show)visible++;});count.textContent='Showing '+visible+' shop categor'+(visible===1?'y':'ies');empty.classList.toggle('is-visible',visible===0);}buttons.forEach(function(button){button.addEventListener('click',function(){active=button.getAttribute('data-filter');buttons.forEach(function(item){item.classList.toggle('is-active',item===button);});refresh();});});search.addEventListener('input',refresh);})();
+diff --git a/podaturpet-lungi-weaving-story.html b/podaturpet-lungi-weaving-story.html
+index 54f1e89..f2fd7bf 100644
+--- a/podaturpet-lungi-weaving-story.html
++++ b/podaturpet-lungi-weaving-story.html
+@@ -23,7 +23,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+   <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head><body class="studio-site" data-page="podaturpet-lungi-weaving-story">
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head><body class="studio-site" data-page="podaturpet-lungi-weaving-story">
+ <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="hero"><div class="wrap"><div class="eyebrow">Podaturpet Textile Story</div><h1>The people, looms and work behind Podaturpet lungis.</h1><p class="lead">A factual, original introduction to Podaturpet's weaving identity and the many stages behind a traditional checked lungi.</p>
+ <a class="btn" href="https://wa.me/14793201970?text=Hello%20Podaturpet%20Team%2C%20I%20read%20the%20Podaturpet%20weaving%20story.%20I%20am%20interested%20in%20lungi%20sourcing." target="_blank" rel="noopener noreferrer">WhatsApp Buyer Enquiry</a>
+ <a class="btn dark" href="mailto:svmuralicenterton@gmail.com?subject=Lungi%20Wholesale%20Enquiry">Email Enquiry</a></div></section>
+@@ -58,7 +59,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ 
+ 
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+diff --git a/podaturpet-stories-and-culture.html b/podaturpet-stories-and-culture.html
+index f99f65f..a3e2876 100644
+--- a/podaturpet-stories-and-culture.html
++++ b/podaturpet-stories-and-culture.html
+@@ -20,7 +20,8 @@
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-village-stories.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="guide-body stories-page studio-site" data-page="podaturpet-stories-and-culture">
+   <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="guide-hero stories-hero studio-town-hero"><div class="guide-shell studio-town-hero-grid"><div class="studio-town-copy"><div class="guide-kicker">PODATURPET / VILLAGES / CULTURE</div><h1>Podaturpet, and the places that make its story.</h1><p class="guide-lead">Follow the threads from a weaving town to its village neighbourhoods, festival streets and the hills of the wider region.</p></div><figure class="studio-image"><img src="/images/powerloom-video-poster.jpg" alt="A powerloom from the supplied weaving video" width="848" height="478" decoding="async" loading="lazy"><figcaption>The craft behind the cloth · From our weaving footage.</figcaption></figure></div></section>
+   <main class="guide-main" id="main-content"><div class="guide-shell"><nav class="guide-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/podaturpet-town-guide.html">Town guide</a><span aria-hidden="true">/</span><span>Podaturpet Stories and Culture</span></nav>
+@@ -31,7 +32,8 @@
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+ <script src="/podaturpet-assistant.js" defer></script>
+ <script src="/podaturpet-buyer-languages.js?v=20260911-showcase" defer></script><script src="/podaturpet-buyer-journey.js?v=20260911-editorial" defer></script><script src="/podaturpet-feedback.js?v=20260910" defer></script>
+diff --git a/podaturpet-textile-supplier-enquiry.html b/podaturpet-textile-supplier-enquiry.html
+index 9b1d532..c3ee616 100644
+--- a/podaturpet-textile-supplier-enquiry.html
++++ b/podaturpet-textile-supplier-enquiry.html
+@@ -16,7 +16,8 @@
+   <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="studio-site" data-page="podaturpet-textile-supplier-enquiry">
+   <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><main class="wrap" id="main-content">
+     <section class="hero"><div><div class="eyebrow">For local textile businesses</div><h1>Your weaving story deserves <span>to be discovered.</span></h1><p class="lead">If you operate a textile, weaving or lungi-supply business connected with the Podaturpet region, tell us about your work and start a conversation about a possible sourcing or listing opportunity.</p></div><img class="hero-photo" src="images/lungi-patterns.jpeg" alt="Original photograph of traditional checked lungi designs associated with Podaturpet textile sourcing" fetchpriority="high" decoding="async" width="1332" height="1178" srcset="/images/responsive/lungi-patterns-480.webp 480w, /images/responsive/lungi-patterns-800.webp 800w, /images/responsive/lungi-patterns-1200.webp 1200w, /images/lungi-patterns.jpeg 1332w" sizes="(max-width: 600px) 92vw, (max-width: 1000px) 50vw, 560px"></section>
+@@ -30,7 +31,8 @@
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+   <script src="/podaturpet-community.js?v=20260911" defer></script><script>
+     document.getElementById("supplier-enquiry-form").addEventListener("submit", function(event) {
+       event.preventDefault();
+diff --git a/podaturpet-tourist-places.html b/podaturpet-tourist-places.html
+index f1b3e83..1016318 100644
+--- a/podaturpet-tourist-places.html
++++ b/podaturpet-tourist-places.html
+@@ -19,7 +19,8 @@
+   <link rel="stylesheet" href="/podaturpet-assistant.css">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="guide-body studio-site" data-page="podaturpet-tourist-places">
+   <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="guide-hero studio-town-hero"><div class="guide-shell studio-town-hero-grid"><div class="studio-town-copy"><div class="guide-kicker">Podaturpet · Tiruvallur · Tamil Nadu</div><h1>Places to visit near Podaturpet.</h1><p class="guide-lead">Discover temple towns, hill landscapes, waterfalls and district attractions around the Podaturpet region, with links to official information wherever available.</p></div><figure class="studio-image"><img src="/images/nagari-hills-town-guide.jpg" alt="Nagari Hills in the wider region around Podaturpet" width="1100" height="618" decoding="async" loading="lazy"><figcaption>Nagari Hills · regional landscape. <a href="https://commons.wikimedia.org/wiki/File:Nagari_hills.jpg">Chirag1745 · CC0</a></figcaption></figure></div></section>
+   <main class="guide-main" id="main-content"><div class="guide-shell"><nav class="guide-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/podaturpet-town-guide.html">Town guide</a><span aria-hidden="true">/</span><span>Places to Visit Near Podaturpet</span></nav>
+@@ -32,7 +33,8 @@
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+ <script src="/podaturpet-assistant.js" defer></script>
+ <script src="/podaturpet-buyer-languages.js?v=20260911-showcase" defer></script><script src="/podaturpet-buyer-journey.js?v=20260911-editorial" defer></script><script src="/podaturpet-feedback.js?v=20260910" defer></script>
+diff --git a/podaturpet-town-guide.html b/podaturpet-town-guide.html
+index 87e59d6..f8c2b7f 100644
+--- a/podaturpet-town-guide.html
++++ b/podaturpet-town-guide.html
+@@ -18,7 +18,8 @@
+   <link rel="stylesheet" href="/podaturpet-premium-2026.css?v=20260906">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="guide-body studio-site" data-page="podaturpet-town-guide">
+   <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html" aria-current="page">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="hub-hero studio-town-hero"><div class="guide-shell hub-hero-grid studio-town-hero-grid"><div><div class="guide-kicker">Podaturpet · Pallipet Taluk · Tiruvallur district</div><h1>Discover Podaturpet.</h1><p>A weaving town, village stories and a region to explore. Find a place to start, then discover the everyday details.</p><div class="hub-search"><label for="town-search" class="guide-kicker">Search this guide</label><input id="town-search" type="search" placeholder="Try police, fire, temple, school, bank or street"></div></div><figure class="studio-image"><img src="/images/nagari-hills-town-guide.jpg" alt="Nagari Hills in the wider region around Podaturpet" width="1100" height="618" decoding="async" loading="lazy"><figcaption>Nagari Hills · regional landscape. <a href="https://commons.wikimedia.org/wiki/File:Nagari_hills.jpg">Chirag1745 · CC0</a></figcaption></figure></div></section>
+   <nav class="hub-nav" aria-label="Guide topics"><div class="guide-shell hub-nav-inner"><a href="#festivals">Festivals &amp; temples</a><a href="#updates">Current updates</a><a href="#emergency">Police &amp; fire</a><a href="#offices">Government offices</a><a href="#everyday">Everyday services</a><a href="#streets">Streets &amp; localities</a><a href="#travel">Travel</a><a href="#photos">Photos</a><a href="#sources">Official sources</a></div></nav>
+@@ -33,7 +34,8 @@
+     <section class="hub-section" id="photos" data-search-section><div class="hub-section-head"><h2>Regional photo gallery</h2><p>These reusable photographs show the wider hill landscape around the Tamil Nadu–Andhra region. They do not claim to show Podaturpet streets themselves.</p></div><div class="photo-grid"><figure class="photo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Nagari_hills.jpg/1280px-Nagari_hills.jpg" alt="Nagari Hills landscape in the wider region" loading="lazy" decoding="async"><figcaption>Nagari Hills · Chirag1745 · CC0 / public-domain dedication</figcaption></figure><figure class="photo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Nagari_Nose.jpg" alt="Nagari Nose hill seen from Taduku Peta" loading="lazy" decoding="async"><figcaption>Nagari Nose · Balaji Kolukuluri · CC BY-SA 3.0</figcaption></figure><figure class="photo-card"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Hills_Tirupati.jpg/1280px-Hills_Tirupati.jpg" alt="Rocky hill landscape near Tirupati" loading="lazy" decoding="async"><figcaption>Tirupati hills · Krishna M Venkat · CC BY-SA 4.0</figcaption></figure></div><p class="source-note" style="margin-top:14px"><strong>Want real Podaturpet street and festival photos here?</strong> Send original photographs with the photographer's name and clear permission to publish. This protects the website from copyright complaints.</p></section>
+     <details class="studio-fold studio-town-fold"><summary>Official sources and accuracy</summary><section class="hub-section" id="sources" data-search-section><div class="hub-section-head"><h2>Official sources and accuracy</h2><p>This is an independent guide, not a government website. Contacts, events, hours and routes can change. Each important fact links to its primary public source for confirmation.</p></div><ul class="guide-source-list"><li><a href="https://townpanchayat.in/podhaturpet/town_profile" target="_blank" rel="noopener noreferrer">Directorate of Town Panchayats: Podhaturpet Town Profile</a></li><li><a href="https://tiruvallur.nic.in/contact-directory/" target="_blank" rel="noopener noreferrer">Tiruvallur District Administration: Contact Directory</a></li><li><a href="https://www.tnfrs.tn.gov.in/subsubmenu_page_content.php?dept_id=443&amp;lang=MQ%3D%3D&amp;menu_id=NDM2&amp;submenu_id=ODk5&amp;thirdlvl_id=NDEy" target="_blank" rel="noopener noreferrer">Tamil Nadu Fire and Rescue Services: Tiruvallur District</a></li><li><a href="https://www.indiapost.gov.in/locate-postoffice" target="_blank" rel="noopener noreferrer">India Post: Post Office Locator</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Nagari_hills.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons: Nagari Hills licensing</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Nagari_Nose.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons: Nagari Nose licensing</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Hills_Tirupati.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons: Tirupati Hills licensing</a></li></ul></section>
+     </details></div><details class="studio-fold studio-wrap"><summary>Share a photo, story, business or event</summary><section class="pt-feature" id="contribute" data-search-section><div class="pt-kicker">YOUR TOWN, YOUR CONTRIBUTION</div><h2>Share a local story, photo or update.</h2><p>Help people discover Podaturpet through accurate details and original photographs. Our team reviews contributions before publishing.</p><form class="pt-form" id="pt-contribution-form" data-whatsapp="14793201970"><label for="pt-contribution-type">What would you like to share?</label><select id="pt-contribution-type" name="type"><option value="photo">Original town photo</option><option value="story">Weaver interview or local story</option><option value="business">Local business listing</option><option value="event">Public event</option><option value="correction">Correction to this guide</option></select><label for="pt-contribution-title">Name or title</label><input id="pt-contribution-title" name="title" maxlength="120" required><label for="pt-contribution-location">Place or address</label><input id="pt-contribution-location" name="place" maxlength="200" required><div data-event-fields hidden><label for="pt-contribution-date">Event date</label><input id="pt-contribution-date" name="date" type="date"><label for="pt-contribution-organiser">Organiser and public contact</label><input id="pt-contribution-organiser" name="organiser" maxlength="200"></div><label for="pt-contribution-detail">Details and source</label><textarea id="pt-contribution-detail" name="detail" rows="5" maxlength="1500" required aria-describedby="pt-contribution-help"></textarea><p id="pt-contribution-help">For a shop, include its category, public phone and opening hours. For photos, include the photographer, place and date. For stories, distinguish personal memories from documented facts.</p><label class="pt-consent"><input type="checkbox" name="permission" required><span>I have permission to share this information and any photos for publication.</span></label><button class="pt-button" type="submit">Review in WhatsApp</button><p>WhatsApp opens with your details. Attach photos there, review the message and tap Send. Nothing is sent or published automatically.</p><p role="status" id="pt-contribution-status"></p></form></section></details></main>
+-  <footer class="hub-footer"><div class="guide-shell">© Podaturpet.com · Independent local information · <a href="/privacy-policy.html">Privacy</a> · <a href="/">Return home</a></div><div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++  <footer class="hub-footer"><div class="guide-shell">© Podaturpet.com · Independent local information · <a href="/privacy-policy.html">Privacy</a> · <a href="/">Return home</a></div><div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+   <script src="/podaturpet-community.js?v=20260911" defer></script><script>var search=document.getElementById('town-search');search.addEventListener('input',function(){var q=this.value.trim().toLowerCase();document.querySelectorAll('[data-search-section]').forEach(function(section){section.classList.toggle('is-filtered-out',q&&section.textContent.toLowerCase().indexOf(q)===-1)})});</script>
+   <script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script><script src="/podaturpet-assistant.js" defer></script>
+ <script src="/podaturpet-buyer-languages.js?v=20260911-showcase" defer></script><script src="/podaturpet-buyer-journey.js?v=20260911-editorial" defer></script><script src="/podaturpet-feedback.js?v=20260910" defer></script>
+diff --git a/podaturpet-travel-pin-code.html b/podaturpet-travel-pin-code.html
+index 0f79aab..2a1a67c 100644
+--- a/podaturpet-travel-pin-code.html
++++ b/podaturpet-travel-pin-code.html
+@@ -22,7 +22,8 @@ main{padding:60px 0}h2{font-size:2rem;line-height:1.15;color:var(--ink);margin-t
+   <link rel="stylesheet" href="/podaturpet-assistant.css">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="studio-site" data-page="podaturpet-travel-pin-code">
+ <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="hero"><div class="wrap"><div class="eyebrow">Podaturpet • Tamil Nadu</div><h1>Podaturpet Travel &amp; PIN Code</h1><p class="lead">Postal and location information for Podaturpet, with a simple overview of nearby rail and road connections.</p></div></section>
+ <main id="main-content"><div class="wrap">
+@@ -58,7 +59,8 @@ main{padding:60px 0}h2{font-size:2rem;line-height:1.15;color:var(--ink);margin-t
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ 
+ 
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+diff --git a/podaturpet-useful-information.html b/podaturpet-useful-information.html
+index dc0bc4a..9ff3319 100644
+--- a/podaturpet-useful-information.html
++++ b/podaturpet-useful-information.html
+@@ -19,7 +19,8 @@
+   <link rel="stylesheet" href="/podaturpet-assistant.css">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="guide-body facilities-page studio-site" data-page="podaturpet-useful-information">
+   <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="facilities-hero">
+     <div class="guide-shell facilities-hero-grid">
+@@ -128,7 +129,8 @@
+     </section>
+   </div></main>
+ 
+-  <footer class="guide-footer"><div class="guide-shell guide-footer-inner"><div>© Podaturpet.com · Independent town information</div><div><a href="/podaturpet-local-business-directory.html">Local businesses</a> · <a href="/privacy-policy.html">Privacy</a> · <a href="/">Return home</a></div></div><div class="podaturpet-privacy-notice" style="max-width:1120px;margin:18px auto 0;padding:16px 20px;border-top:1px solid rgba(148,163,184,.28);color:#65726b;font-size:13px;line-height:1.7;text-align:center"><strong style="color:#876326">Privacy-first visitor counter:</strong> Only aggregate visits and approximate country, state or region, and city are shown publicly. Visitor names and IP addresses are not displayed. <a href="/privacy-policy.html" style="color:#17614e;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.</div><div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++  <footer class="guide-footer"><div class="guide-shell guide-footer-inner"><div>© Podaturpet.com · Independent town information</div><div><a href="/podaturpet-local-business-directory.html">Local businesses</a> · <a href="/privacy-policy.html">Privacy</a> · <a href="/">Return home</a></div></div><div class="podaturpet-privacy-notice" style="max-width:1120px;margin:18px auto 0;padding:16px 20px;border-top:1px solid rgba(148,163,184,.28);color:#65726b;font-size:13px;line-height:1.7;text-align:center"><strong style="color:#876326">Privacy-first visitor counter:</strong> Only aggregate visits and approximate country, state or region, and city are shown publicly. Visitor names and IP addresses are not displayed. <a href="/privacy-policy.html" style="color:#17614e;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.</div><div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+   <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+   <script src="/podaturpet-assistant.js" defer></script>
+ <script src="/podaturpet-buyer-languages.js?v=20260911-showcase" defer></script><script src="/podaturpet-buyer-journey.js?v=20260911-editorial" defer></script><script src="/podaturpet-feedback.js?v=20260910" defer></script>
+diff --git a/podaturpet-weaving-textiles.html b/podaturpet-weaving-textiles.html
+index f2badf5..70a908f 100644
+--- a/podaturpet-weaving-textiles.html
++++ b/podaturpet-weaving-textiles.html
+@@ -23,7 +23,8 @@ main{padding:60px 0}h2{font-size:2rem;line-height:1.15;color:var(--ink);margin-t
+   <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911-buyers"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911-buyers"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="studio-site" data-page="podaturpet-weaving-textiles">
+ <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="hero"><div class="wrap"><div class="eyebrow">Podaturpet • Tamil Nadu</div><h1>Podaturpet Weaving &amp; Textiles</h1><p class="lead">An independent guide to Podaturpet's documented handloom and powerloom identity, traditional textile work and wholesale buyer enquiries.</p></div></section>
+ <main id="main-content"><div class="wrap">
+@@ -59,7 +60,8 @@ main{padding:60px 0}h2{font-size:2rem;line-height:1.15;color:var(--ink);margin-t
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ 
+ 
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+diff --git a/powerloom-lungis.html b/powerloom-lungis.html
+index 36ab316..a75e505 100644
+--- a/powerloom-lungis.html
++++ b/powerloom-lungis.html
+@@ -24,7 +24,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+   <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head><body class="studio-site" data-page="powerloom-lungis">
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head><body class="studio-site" data-page="powerloom-lungis">
+ <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="hero"><div class="wrap"><div class="eyebrow">Powerloom Textile Buyers</div><h1>Powerloom lungis from a documented weaving town.</h1><p class="lead">Podaturpet's official Town Panchayat profile records house-to-house powerloom activity, making powerloom weaving an important part of the town's textile identity.</p>
+ <a class="btn" href="https://wa.me/14793201970?text=Hello%20Podaturpet%20Team%2C%20I%20am%20looking%20for%20powerloom%20lungis.%20Quantity%3A%20____%20Destination%3A%20____%0AReference%3A%20PT-PC-05" target="_blank" rel="noopener noreferrer">WhatsApp Buyer Enquiry</a>
+ <a class="btn dark" href="mailto:svmuralicenterton@gmail.com?subject=Lungi%20Wholesale%20Enquiry">Email Enquiry</a></div></section>
+@@ -48,7 +49,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ 
+ 
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+diff --git a/privacy-policy.html b/privacy-policy.html
+index 8cf51ae..9a72d0c 100644
+--- a/privacy-policy.html
++++ b/privacy-policy.html
+@@ -12,7 +12,8 @@
+   <link rel="stylesheet" href="/podaturpet-assistant.css">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="studio-site" data-page="privacy-policy">
+   <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="pt-feature"><h1>Privacy &amp; Visitor Tracking</h1><p>Clear information about the visitor and business-enquiry data that may be collected when you use Podaturpet.com.</p></section><main class="wrap" id="main-content"><article class="card">
+     <p class="notice"><strong>Privacy-first visitor counter:</strong> The public counter shows only aggregate visit totals and approximate country, state or region, and city. Our custom visitor database does not store or display visitor names or IP addresses.</p>
+@@ -30,7 +31,8 @@
+     <p>By accessing Podaturpet.com, you acknowledge this visitor-tracking and privacy notice. Where applicable law requires separate consent for optional tracking technologies, that consent should be obtained before those technologies are used.</p>
+     <p><strong>Last updated:</strong> September 6, 2026</p><p><a href="/">← Return to Podaturpet.com</a></p>
+   </article><section class="guide-shell"><h2>Website feedback</h2><p>The feedback box opens WhatsApp with the message you write, the selected topic and the current public page address. You choose whether to send it in WhatsApp. The website does not save your feedback text. A sessionStorage flag remembers that the invitation has been shown in this tab so it does not repeatedly appear as you browse.</p></section></main>
+-  <footer class="footer">© Podaturpet.com · Podaturpet, Tamil Nadu, India<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++  <footer class="footer">© Podaturpet.com · Podaturpet, Tamil Nadu, India<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-assistant.js" defer></script>
+ <script src="/podaturpet-buyer-languages.js?v=20260911-showcase" defer></script><script src="/podaturpet-buyer-journey.js?v=20260911-editorial" defer></script><script src="/podaturpet-feedback.js?v=20260910" defer></script>
+ <script src="/podaturpet-editorial.js?v=20260911" defer></script></body>
+diff --git a/white-checked-lungi-wholesale.html b/white-checked-lungi-wholesale.html
+index 4643a5f..4329efd 100644
+--- a/white-checked-lungi-wholesale.html
++++ b/white-checked-lungi-wholesale.html
+@@ -25,7 +25,8 @@
+   <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head>
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head>
+ <body class="studio-site" data-page="white-checked-lungi-wholesale">
+   <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><main class="wrap" id="main-content">
+     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/cotton-lungi-wholesale.html">Lungi collection</a> / White checks</nav>
+@@ -40,7 +41,8 @@
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>
+ <script src="/podaturpet-assistant.js" defer></script>
+   <script src="/podaturpet-b2b-upgrade.js?v=20260910-research" defer></script>
+diff --git a/wholesale-lungi-sample-buying-guide.html b/wholesale-lungi-sample-buying-guide.html
+index 2718dd0..8b19031 100644
+--- a/wholesale-lungi-sample-buying-guide.html
++++ b/wholesale-lungi-sample-buying-guide.html
+@@ -23,7 +23,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+ <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "A good bulk order starts with a clear sample.", "description": "A practical wholesale lungi checklist for samples, fabric details, dimensions, packing and supplier quotations for India and overseas buyers.", "mainEntityOfPage": "https://podaturpet.com/wholesale-lungi-sample-buying-guide.html", "author": {"@type": "Organization", "name": "Podaturpet.com"}, "publisher": {"@type": "Organization", "name": "Podaturpet.com"}, "inLanguage": "en", "image": "https://podaturpet.com/images/lungi-collection.jpeg"}</script><style>article p{max-width:75ch}article a:not(.btn){text-decoration:underline}article h2{font-size:clamp(1.6rem,3vw,2.3rem)}.podaturpet-privacy-notice{color:#40574c!important}</style>  <link rel="stylesheet" href="/podaturpet-b2b-upgrade.css?v=20260907">
+ <link rel="stylesheet" href="/podaturpet-research-update.css?v=20260910">
+ <link rel="stylesheet" href="/podaturpet-feedback.css?v=20260910">
+-<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"></head><body class="studio-site" data-page="wholesale-lungi-sample-buying-guide">
++<link rel="stylesheet" href="/podaturpet-site-refresh.css?v=20260911"><link rel="stylesheet" href="/podaturpet-editorial.css?v=20260911"><link rel="stylesheet" href="/muraraj-footer.css">
++</head><body class="studio-site" data-page="wholesale-lungi-sample-buying-guide">
+ <a class="pt-skip" href="#main-content">Skip to content</a><header class="pt-site-header" data-pt-shared="header"><!-- PT:shared:header:START --><div class="pt-header-inner"><a class="pt-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" alt="" width="44" height="44"><strong>PODATURPET</strong></a><nav class="pt-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/lungi-product-catalogue.html">Lungi Catalogue</a><a href="/podaturpet-town-guide.html">Explore Podaturpet</a><a href="/podaturpet-local-business-directory.html">Local Directory</a><a href="/#contact">Contact</a></nav></div><!-- PT:shared:header:END --></header><section class="hero"><div class="wrap"><div class="eyebrow">Podaturpet Textile Story</div><h1>A good bulk order starts with a clear sample.</h1><p class="lead">A practical wholesale lungi checklist for samples, fabric details, dimensions, packing and supplier quotations for India and overseas buyers.</p>
+ <a class="btn" href="https://wa.me/14793201970?text=Hello%20Podaturpet%20Team%2C%20I%20read%20the%20Podaturpet%20weaving%20story.%20I%20am%20interested%20in%20lungi%20sourcing." target="_blank" rel="noopener noreferrer">WhatsApp Buyer Enquiry</a>
+ <a class="btn dark" href="mailto:svmuralicenterton@gmail.com?subject=Lungi%20Wholesale%20Enquiry">Email Enquiry</a></div></section>
+@@ -42,7 +43,8 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
+     Public visitor statistics show aggregate counts and approximate locations, never visitor names or IP addresses. See our privacy policy for analytics, hosting and contact-service details.
+     <a href="/privacy-policy.html" style="color:#e7bd57;text-decoration:underline;white-space:nowrap">Read our Privacy Policy</a>.
+   </div>
+-<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div></footer>
++<div data-pt-shared="contact"><!-- PT:shared:contact:START --><div class="pt-shared-contact" aria-label="Wholesale contact"><span>Wholesale enquiries</span><a href="tel:+14793201970">+1 479-320-1970</a><a href="https://wa.me/14793201970">WhatsApp</a><a href="mailto:svmuralicenterton@gmail.com">Email the team</a></div><!-- PT:shared:contact:END --></div><div class="mr-footer-credit" lang="en"><img class="mr-footer-logo" src="/images/muraraj-mr-logo.svg" alt="" width="44" height="44" loading="lazy" decoding="async"><span>Developed &amp; Maintained by <strong>MuraRaj Technologies</strong></span></div>
++</footer>
+ 
+ 
+ <script src="/podaturpet-community.js?v=20260911" defer></script><script src="/podaturpet-visitor-tracking.js?v=20260911" defer></script>

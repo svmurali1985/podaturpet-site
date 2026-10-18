@@ -1,0 +1,174 @@
+{
+  "reviewed": "2026-09-19",
+  "rating_kind": "editorial hypotheses, not measured demand or search volumes",
+  "dimensions": [
+    "recurrence",
+    "problem_severity",
+    "Tamil_guidance_gap",
+    "ethical_commercial_intent",
+    "source_quality",
+    "delivery_feasibility"
+  ],
+  "weights": [
+    25,
+    25,
+    15,
+    15,
+    10,
+    10
+  ],
+  "scale": "1 low to 5 high",
+  "risk_penalty": "0 to 15",
+  "opportunities": [
+    {
+      "opportunity": "Government document navigation",
+      "ratings": [
+        5,
+        5,
+        4,
+        3,
+        4,
+        5
+      ],
+      "risk_penalty": 4,
+      "score": 85.0,
+      "decision": "Extend existing Aadhaar, DigiLocker, eSevai and scheme guides",
+      "evidence": "Official service routes; urgency and repetition inferred, not measured"
+    },
+    {
+      "opportunity": "Remittance quote comparison",
+      "ratings": [
+        5,
+        4,
+        3,
+        4,
+        5,
+        5
+      ],
+      "risk_penalty": 6,
+      "score": 80.0,
+      "decision": "Add arithmetic comparison using user quotes",
+      "evidence": "World Bank comparison purpose; CFPB describes total cost/rate/recipient amounts"
+    },
+    {
+      "opportunity": "Education funding and scholarship steps",
+      "ratings": [
+        4,
+        4,
+        4,
+        3,
+        5,
+        5
+      ],
+      "risk_penalty": 2,
+      "score": 79.0,
+      "decision": "Add education cost planning; reuse scholarship/exam guides",
+      "evidence": "NSP process and NTA notice changes; cost-planning need inferred"
+    },
+    {
+      "opportunity": "Jobs and overseas recruitment checks",
+      "ratings": [
+        4,
+        5,
+        4,
+        2,
+        4,
+        5
+      ],
+      "risk_penalty": 5,
+      "score": 76.0,
+      "decision": "Extend existing jobs guides; add overseas recruitment route",
+      "evidence": "NCS anti-fraud guidance and international jobs section"
+    },
+    {
+      "opportunity": "Local services and reviewed listings",
+      "ratings": [
+        5,
+        4,
+        4,
+        5,
+        2,
+        3
+      ],
+      "risk_penalty": 8,
+      "score": 74.0,
+      "decision": "Improve existing directory; verified supply gate remains",
+      "evidence": "Existing 24 categories, zero approved records; demand not independently measured"
+    },
+    {
+      "opportunity": "Parents and family travel",
+      "ratings": [
+        3,
+        4,
+        4,
+        3,
+        4,
+        5
+      ],
+      "risk_penalty": 4,
+      "score": 70.0,
+      "decision": "Reuse existing Family Travel Planner",
+      "evidence": "Avoid a second planner; current rules remain at official sources"
+    },
+    {
+      "opportunity": "Diaspora welfare routing",
+      "ratings": [
+        3,
+        5,
+        4,
+        1,
+        4,
+        5
+      ],
+      "risk_penalty": 4,
+      "score": 69.0,
+      "decision": "Add NRT / mission / MADAD route",
+      "evidence": "Official welfare and consular pathways; jurisdiction and urgency limits"
+    },
+    {
+      "opportunity": "Temple and local visit planning",
+      "ratings": [
+        3,
+        3,
+        4,
+        3,
+        4,
+        5
+      ],
+      "risk_penalty": 3,
+      "score": 66.0,
+      "decision": "Reuse reviewed temple and local guides",
+      "evidence": "TTD official booking route and Tiruvallur local-body directory"
+    },
+    {
+      "opportunity": "Daily date / holidays discovery",
+      "ratings": [
+        5,
+        2,
+        2,
+        1,
+        4,
+        5
+      ],
+      "risk_penalty": 2,
+      "score": 60.0,
+      "decision": "Keep existing date and official calendar links",
+      "evidence": "Recurring but low problem severity and ethical commercial intent"
+    },
+    {
+      "opportunity": "Tax, visa eligibility or medical decisions",
+      "ratings": [
+        3,
+        5,
+        4,
+        4,
+        2,
+        1
+      ],
+      "risk_penalty": 15,
+      "score": 55.0,
+      "decision": "Do not automate personalized decisions",
+      "evidence": "High stakes, changing rules, jurisdiction and professional review required"
+    }
+  ]
+}

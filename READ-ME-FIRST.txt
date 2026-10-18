@@ -1,0 +1,37 @@
+PODATURPET WHOLESALE BUYER UPDATE
+Prepared against main commit 4aca56c.
+
+1. Back up your current website folder.
+2. Extract this ZIP. Copy its HTML, CSS, JavaScript and tools folder into your website folder, replacing matching files. Merge the tools folder; keep its other contents.
+3. From your website folder, review and publish:
+
+   git diff --stat
+   git diff --check
+   git add about-podaturpet.html blue-border-lungi-wholesale.html cotton-lungi-wholesale.html lungi-product-catalogue.html podaturpet-buyer-languages.js podaturpet-editorial.css podaturpet-weaving-textiles.html tools/build_content.py white-checked-lungi-wholesale.html
+   git commit -m "Improve wholesale catalogue and buyer enquiry routes"
+   git push origin main
+
+No new service, package installation or paid dependency is required.
+
+CHANGES
+- Catalogue title, heading and order instructions explain wholesale buying.
+- All six catalogue designs link to the existing homepage quote form with their design reference.
+- Product specification buttons on the catalogue and two detail pages no longer send buyers to supplier registration.
+- The content generator preserves the corrected buyer routes on future rebuilds.
+- About Podaturpet and the weaving guide contain contextual catalogue links.
+- Cotton wholesale page adds buyer questions, catalogue navigation and product enquiry links.
+- General cotton enquiries no longer assume the colourful design reference.
+- New content includes Tamil translations using the existing language selector.
+- Mobile catalogue cards use one column for readable specifications and buttons.
+
+Existing photographs, contact details, tracking, page URLs and town facts are preserved.
+Unconfirmed fabric, sizes, minimum orders, prices, samples and delivery terms are not invented.
+
+CHECKED
+All changed HTML local links and anchors resolve. Each page has one H1 and unique IDs.
+JSON-LD parses. All six design references reach the quote form route.
+JavaScript syntax and git whitespace checks pass. Rebuilding shared content makes no further changes.
+Browser interaction and visual testing were not performed. WhatsApp messages were not sent.
+Changes have not been published to podaturpet.com.
+
+After publishing, open the catalogue, choose a design and check that the homepage quote form selects it. Check English/Tamil and the mobile layout. Monitor Search Console and genuine enquiries over the next few weeks; rankings are not guaranteed.

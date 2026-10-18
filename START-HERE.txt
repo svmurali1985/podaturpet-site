@@ -1,0 +1,67 @@
+PODATURPET INVOICE TOOL — INSTALLATION
+
+Based on your uploaded website(8).zip, which includes the colourful redesign.
+This package adds a general invoice maker and a homepage link.
+Not published. No backend or subscription billing is installed.
+
+INSTALL
+1. Extract this ZIP into Downloads.
+2. In Terminal, type: bash followed by a space.
+3. Drag INSTALL.command from the extracted folder into Terminal, then press Enter.
+   The default destination is ~/website.
+   For another location: bash /path/to/INSTALL.command /path/to/website
+4. The installer backs up overwritten files inside your website folder.
+   It copies seven named files and does not replace the content folder.
+   Keep the backup local; do not run git add .
+
+PREVIEW
+cd ~/website
+python3 -m http.server 8000
+Open http://localhost:8000/free-invoice.html
+Use a test invoice. Check the preview, logo, totals and Print / Save as PDF.
+Choose Save as PDF in the print dialog; disable browser headers/footers.
+After three export attempts, the export button must be disabled.
+An attempt counts even if the print dialog is cancelled.
+Stop the preview server with Control-C.
+
+PUBLISH
+cd ~/website
+git add free-invoice.html invoice-tool.css invoice-core.js invoice-tool.js index.html content/site.json sitemap.xml
+git diff --cached --check
+git diff --cached --stat
+git commit -m "Add invoice maker with three browser trial exports"
+git push origin main
+
+FEATURES
+- Own business name, contact details and PNG/JPEG/WebP logo.
+- Customer details, invoice number, invoice date and optional due date.
+- Up to 50 items; quantity supports 3 decimal places; price supports 2.
+- Discount amount, one user-entered tax percentage, notes/payment text.
+- INR, USD, GBP, EUR, CAD and AED; totals rounded to minor currency units.
+- Plain invoice output, no Podaturpet or MuraRaj logo/credit on the invoice.
+- Browser print dialog supplies Save as PDF; no external PDF service.
+- Three Print/PDF REQUESTS per browser origin, then a WhatsApp contact link.
+- Clearing the invoice does not reset the trial. Reloading clears entered data.
+- Invoice contents and logo stay in page memory; only trial usage is stored.
+- The tool itself loads no analytics or external scripts.
+
+LIMITS — IMPORTANT
+This is a browser-local trial, NOT secure per-person licensing. Clearing storage,
+using another browser/device, modifying the JavaScript, or copying output can
+bypass it. Saved PDFs can also be copied or reprinted. The tool does not provide
+an admin unlock or automatic permanent access after contacting you.
+For enforceable user-wise quotas and paid access, add authenticated accounts,
+a server-side quota store and an entitlement/admin workflow. Do not advertise
+this browser-only version as tamper-proof or as enforcing three uses per person.
+The WhatsApp link does not send a message automatically; visitors review and send.
+
+No automatic invoice-number registry, saved history, accounting integration,
+GST split, e-invoicing or jurisdiction-specific tax certification is included.
+Enter the required business/tax information and rates yourself.
+
+VALIDATION
+JavaScript syntax passed. Automated checks cover decimal rounding, line totals,
+discount bounds, tax bounds, invalid quantity, and trial-state parsing.
+Existing homepage links/forms retained. Sitemap and configuration validated.
+Final interactive browser/print layout has not been verified in this environment;
+use the local preview steps before publishing.
