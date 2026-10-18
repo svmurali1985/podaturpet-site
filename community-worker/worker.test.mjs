@@ -71,3 +71,18 @@ test('public city totals preserve page scope, retention, unknown cities and excl
  assert.equal((await req('/v1/stats?page=%2Funknown')).status,400);
  assert.equal((await req('/v1/stats?page=%2Findex.html',undefined,false,{Origin:'https://evil.example'})).status,403);
 });
+
+test('public geography provides site-wide country/state/city totals without merging names or exposing records',async()=>{
+ const {req,db}=setup();const today=new Date().toISOString().slice(0,10),insert=db.prepare('INSERT INTO page_views VALUES(?,?,?,?,?,?)');
+ insert.run(today,'/index.html','IN','Tamil Nadu','Chennai',3);
+ insert.run(today,'/privacy-policy.html','US','Arkansas','Chennai',2);
+ insert.run(today,'/index.html','IN','Tamil Nadu','',1);
+ insert.run('2000-01-01','/index.html','US','Arkansas','Old',50);
+ const d=await(await req('/v1/stats?page=%2Findex.html')).json();
+ assert.equal(d.siteViews,6);assert.equal(d.pageViews,4);
+ assert.deepEqual(d.countries,[{country:'IN',views:4},{country:'US',views:2}]);
+ assert.deepEqual(d.regions,[{country:'IN',region:'Tamil Nadu',views:4},{country:'US',region:'Arkansas',views:2}]);
+ assert.equal(d.geography.length,3);assert.equal(d.geography.filter(x=>x.city==='Chennai').length,2);
+ for(const row of d.geography)assert.deepEqual(Object.keys(row).sort(),['city','country','region','views']);
+ assert(!JSON.stringify(d).includes('2000-01-01'));assert(!JSON.stringify(d).includes('Old'));
+});

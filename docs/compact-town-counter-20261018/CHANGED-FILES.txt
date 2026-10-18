@@ -1,0 +1,14 @@
+community-worker/worker.mjs
+community-worker/worker.test.mjs
+docs/compact-town-counter-20261018/APPLY.md
+docs/compact-town-counter-20261018/CHANGED-FILES.txt
+docs/compact-town-counter-20261018/DELETIONS.txt
+docs/compact-town-counter-20261018/README.md
+docs/compact-town-counter-20261018/SOURCES-AND-LICENSES.md
+docs/compact-town-counter-20261018/counter-test.cjs
+docs/compact-town-counter-20261018/verify.cjs
+index-ta.html
+index.html
+podaturpet-professional.css
+podaturpet-visitor-tracking.js
+privacy-policy.html

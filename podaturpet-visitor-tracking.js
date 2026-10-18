@@ -32,23 +32,33 @@
   const isTamil=()=>document.body.dataset.siteLang==='ta'||document.documentElement.lang==='ta';
   function drawCounts(){
     const ta=isTamil();counts.replaceChildren();
-    const heading=document.createElement('h2');heading.textContent=ta?'தளப் பார்வைகள்':'Site views';counts.append(heading);
-    const note=document.createElement('p');note.textContent=ta?'கடந்த 30 நாட்கள் · பதிவான பக்கப் பார்வைகள். மீண்டும் திறந்ததும் எண்ணப்படும்; தனித்தனி நபர்களின் எண்ணிக்கை அல்ல.':'Last 30 days · Recorded page loads. Repeat loads count; these are not unique viewers.';counts.append(note);
-    const total=document.createElement('p');
-    if(!stats){total.textContent=statsError?(ta?'பார்வை எண்ணிக்கையை இப்போது பெற முடியவில்லை.':'View counts are unavailable right now.'):(ta?'எண்ணிக்கையை ஏற்றுகிறது…':'Loading counts…');counts.append(total);return;}
-    total.textContent=String(stats.siteViews);counts.append(total);
-    const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent=ta?'நகரம் வாரியாகப் பார்வைகள்':'Views by city';details.open=false;details.append(summary);
-    const scope=document.createElement('p');scope.textContent=ta?'இந்தப் பக்கத்தின் முதல் 50 நகரங்கள். இடம் தோராயமானது; ஒரே பெயருள்ள நகரங்கள் ஒன்றாக எண்ணப்படும்.':'Top 50 cities for this page. Locations are approximate; identically named cities are combined.';details.append(scope);
-    if(!stats.locations.length){const empty=document.createElement('p');empty.textContent=ta?'இந்தக் காலத்தில் பதிவான பார்வைகள் இல்லை.':'No recorded page views in this period.';details.append(empty);}
-    else{
-      const table=document.createElement('table'),head=document.createElement('thead'),tr=document.createElement('tr');
-      for(const label of ta?['நகரம்','பார்வைகள்']:['City','Views']){const th=document.createElement('th');th.scope='col';th.textContent=label;tr.append(th);}head.append(tr);table.append(head);
-      const body=document.createElement('tbody');
-      for(const row of stats.locations){const line=document.createElement('tr');
-        const city=!row.city||row.city==='Unknown'?(ta?'நகரம் கிடைக்கவில்லை':'City unavailable'):row.city;
-        for(const value of [city,row.views]){const td=document.createElement('td');td.textContent=String(value);line.append(td);}body.append(line);}
-      table.append(body);details.append(table);
-    }counts.append(details);
+    const top=document.createElement('div');top.className='stats-heading';
+    const heading=document.createElement('h2');heading.textContent=ta?'நம் தளத்தின் பார்வைகள்':'Our website views';top.append(heading);
+    const refresh=document.createElement('button');refresh.type='button';refresh.textContent=ta?'புதுப்பி':'Refresh';refresh.addEventListener('click',loadCounts);top.append(refresh);counts.append(top);
+    const total=document.createElement('p');total.className='stats-total';total.setAttribute('aria-live','polite');
+    total.textContent=stats?new Intl.NumberFormat(ta?'ta-IN':'en-US').format(stats.siteViews):(statsError?'—':'…');counts.append(total);
+    const note=document.createElement('p');note.className='stats-note';note.textContent=ta?'கடந்த 30 நாட்களின் மொத்தத் தளப் பார்வைகள். மீண்டும் திறந்ததும் எண்ணப்படும்; தனிநபர் எண்ணிக்கை அல்ல.':'Recorded site-wide page loads in the last 30 days. Repeat visits count; this is not a unique-person total.';counts.append(note);
+    if(statsError){const error=document.createElement('p');error.className='stats-error';error.setAttribute('role','status');error.textContent=ta?'நேரடி எண்ணிக்கையைப் பெற முடியவில்லை. Refresh முயலுங்கள். API இணைப்பைச் சரிபார்க்க வேண்டும்.':'Live counts could not be reached. Try Refresh. The analytics API connection may need attention.';counts.append(error);}
+    if(!stats)return;
+    const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent=ta?'நாடு · மாநிலம் · நகரம் வாரியாகப் பாருங்கள்':'View countries, states and cities';details.open=true;details.append(summary);
+    const scope=document.createElement('p');scope.textContent=ta?'முழுத் தளத்தின் முதல் 50 இடங்கள். இடம் தோராயமானது; கிடைக்காத விவரம் குறிப்பிடப்படும். IP அல்லது தனிநபர் பதிவுகள் காட்டப்படாது.':'Top 50 locations across the site. Geography is approximate; unavailable fields are labelled. No IP addresses or individual visitor records are shown.';details.append(scope);
+    const missing=ta?'கிடைக்கவில்லை':'Unavailable';
+    const regionNames=typeof Intl.DisplayNames==='function'?new Intl.DisplayNames([ta?'ta':'en'],{type:'region'}):null;
+    const countryName=v=>{if(!v||v==='Unknown')return missing;try{return regionNames?.of(v)||v;}catch{return v;}};
+    const value=v=>!v||v==='Unknown'?missing:v;
+    function table(headers,rows){const wrap=document.createElement('div');wrap.className='stats-table-wrap';const table=document.createElement('table'),thead=document.createElement('thead'),tr=document.createElement('tr');for(const label of headers){const th=document.createElement('th');th.scope='col';th.textContent=label;tr.append(th);}thead.append(tr);table.append(thead);const tbody=document.createElement('tbody');for(const row of rows){const line=document.createElement('tr');for(const v of row){const td=document.createElement('td');td.textContent=String(v);line.append(td);}tbody.append(line);}table.append(tbody);wrap.append(table);return wrap;}
+    const geo=Array.isArray(stats.geography)?stats.geography:null;
+    if(geo){
+      if(!geo.length){const empty=document.createElement('p');empty.textContent=ta?'இந்தக் காலத்தில் பதிவான பார்வைகள் இல்லை.':'No recorded views in this period.';details.append(empty);}
+      else details.append(table(ta?['நாடு','மாநிலம்','நகரம்','பார்வைகள்']:['Country','State / region','City','Views'],geo.map(r=>[countryName(r.country),value(r.region),value(r.city),r.views])));
+      for(const [key,title,headers] of [['countries',ta?'நாடு வாரியான மொத்தம்':'Country totals',ta?['நாடு','பார்வைகள்']:['Country','Views']],['regions',ta?'மாநிலம் வாரியான மொத்தம்':'State / region totals',ta?['நாடு','மாநிலம்','பார்வைகள்']:['Country','State / region','Views']]]){
+       const rows=stats[key];if(!Array.isArray(rows)||!rows.length)continue;const group=document.createElement('details'),label=document.createElement('summary');label.textContent=title;group.append(label);group.append(table(headers,rows.map(r=>key==='countries'?[countryName(r.country),r.views]:[countryName(r.country),value(r.region),r.views])));details.append(group);
+      }
+    }else{
+      const upgrade=document.createElement('p');upgrade.className='stats-error';upgrade.textContent=ta?'நாடு/மாநில விவரங்களுக்கு analytics Worker update தேவை. தற்போது பழைய API நகரத் தகவல்களை மட்டுமே தருகிறது.':'Country/state details require the updated analytics Worker. The current API returns city data only.';details.append(upgrade);
+      if(stats.locations.length)details.append(table(ta?['நகரம் (இந்தப் பக்கம்)','பார்வைகள்']:['City (this page)','Views'],stats.locations.map(r=>[value(r.city),r.views])));
+    }
+    counts.append(details);
   }
   const pagePath=location.pathname==='/'?'/index.html':location.pathname;
   let generation=0;
@@ -63,5 +73,7 @@
     }
     await loadCounts();
   }
+  loadCounts();
   start();
+  window.addEventListener('online',loadCounts);
 })();

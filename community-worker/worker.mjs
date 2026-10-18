@@ -57,16 +57,19 @@ export async function route(request,env){
    .bind(day(),b.page,clean(cf.country,2)||'Unknown',clean(cf.region,80)||'Unknown',clean(cf.city,80)||'Unknown').run();
   return {ok:true};
  }
- // Public aggregate city counts only; no identifiers, comments or admin data.
+ // Public aggregate geography only; no identifiers, comments or admin data.
  if(path==='/v1/stats'&&method==='GET'){
   const p=url.searchParams.get('page');if(!validPage(p))fail(400,'Unknown page.');
   const days=30,from=new Date(Date.now()-(days-1)*DAY*1000).toISOString().slice(0,10);
-  const [total,pageTotal,locations]=await env.DB.batch([
+  const [total,pageTotal,locations,geography,countries,regions]=await env.DB.batch([
    env.DB.prepare('SELECT COALESCE(SUM(views),0) AS views FROM page_views WHERE day>=?').bind(from),
    env.DB.prepare('SELECT COALESCE(SUM(views),0) AS views FROM page_views WHERE day>=? AND page=?').bind(from,p),
-   env.DB.prepare("SELECT COALESCE(NULLIF(city,''),'Unknown') AS city,SUM(views) AS views FROM page_views WHERE day>=? AND page=? GROUP BY COALESCE(NULLIF(city,''),'Unknown') ORDER BY views DESC,city LIMIT 50").bind(from,p)
+   env.DB.prepare("SELECT COALESCE(NULLIF(city,''),'Unknown') AS city,SUM(views) AS views FROM page_views WHERE day>=? AND page=? GROUP BY COALESCE(NULLIF(city,''),'Unknown') ORDER BY views DESC,city LIMIT 50").bind(from,p),
+   env.DB.prepare("SELECT country,region,COALESCE(NULLIF(city,''),'Unknown') AS city,SUM(views) AS views FROM page_views WHERE day>=? GROUP BY country,region,COALESCE(NULLIF(city,''),'Unknown') ORDER BY views DESC,country,region,city LIMIT 50").bind(from),
+   env.DB.prepare('SELECT country,SUM(views) AS views FROM page_views WHERE day>=? GROUP BY country ORDER BY views DESC,country LIMIT 50').bind(from),
+   env.DB.prepare('SELECT country,region,SUM(views) AS views FROM page_views WHERE day>=? GROUP BY country,region ORDER BY views DESC,country,region LIMIT 50').bind(from)
   ]);
-  return {days,from,page:p,siteViews:total.results[0].views,pageViews:pageTotal.results[0].views,locations:locations.results};
+  return {days,from,page:p,siteViews:total.results[0].views,pageViews:pageTotal.results[0].views,locations:locations.results,geography:geography.results,countries:countries.results,regions:regions.results};
  }
  if(path==='/v1/challenge'&&method==='GET'){
   const p=url.searchParams.get('page');if(!validPage(p))fail(400,'Unknown page.');return challenge(p,env);
