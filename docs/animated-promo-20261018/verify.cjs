@@ -14,7 +14,7 @@ function app(reduce=false,save=false){
 function check(n,fn){fn();passed++;console.log('PASS '+n)}
 let a=app();
 check('no autoplay until visible',()=>assert.equal(a.plays(),0));
-check('one autoplay attempt and native controls preserved',()=>{a.visible(true);a.visible(true);assert.equal(a.plays(),1);const v=a.d.querySelector('video');assert(v.controls&&v.muted&&v.loop);assert.equal(v.preload,'none');});
+check('one autoplay attempt and compact controls available',()=>{a.visible(true);a.visible(true);assert.equal(a.plays(),1);const v=a.d.querySelector('video');assert(!v.controls&&v.muted&&v.loop);assert(!a.d.querySelector(".biz-promo-toggle").hidden);assert.equal(v.preload,'none');});
 check('offscreen playback pauses without automatic restart',()=>{a.visible(false);assert.equal(a.pauses(),1);a.visible(true);assert.equal(a.plays(),1);});
 check('captions follow seeking and language changes',()=>{const v=a.d.querySelector('video');v.currentTime=10;v.dispatchEvent(new a.w.Event('seeked'));assert.match(a.d.querySelector('.biz-promo-caption').textContent,/chatbot/);a.d.documentElement.lang='ta';a.d.dispatchEvent(new a.w.Event('podaturpet:language'));assert.match(a.d.querySelector('.biz-promo-caption').textContent,/சாட்பாட்/);v.currentTime=20;v.dispatchEvent(new a.w.Event('timeupdate'));assert.match(a.d.querySelector('.biz-promo-caption').textContent,/இலவசம்/);});
 check('new reduced-motion preference pauses playback',()=>{const p=a.pauses();a.changed({matches:true});assert.equal(a.pauses(),p+1);});a.dom.window.close();

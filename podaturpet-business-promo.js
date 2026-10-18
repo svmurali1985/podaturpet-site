@@ -14,6 +14,27 @@
  video.addEventListener('timeupdate', updateCaption);
  video.addEventListener('seeked', updateCaption);
  document.addEventListener('podaturpet:language', updateCaption);
+ const toggle = document.querySelector('.biz-promo-toggle');
+ function updateToggle() {
+  if (!toggle) return;
+  const label = toggle.querySelector('[data-site-en]');
+  const en = video.paused ? 'Play animation' : 'Pause animation';
+  const ta = video.paused ? 'அனிமேஷனை இயக்குங்கள்' : 'அனிமேஷனை நிறுத்துங்கள்';
+  label.dataset.siteEn = en; label.dataset.siteTa = ta;
+  label.textContent = document.documentElement.lang.startsWith('ta') ? ta : en;
+  toggle.setAttribute('aria-pressed', String(!video.paused));
+ }
+ if (toggle) {
+  toggle.hidden = false; video.controls = false;
+  toggle.addEventListener('click', () => {
+   if (!video.paused) video.pause();
+   else { const playing = video.play(); if (playing?.catch) playing.catch(() => {}); }
+  });
+  video.addEventListener('play', updateToggle);
+  video.addEventListener('pause', updateToggle);
+  document.addEventListener('podaturpet:language', updateToggle);
+  updateToggle();
+ }
  const motion = window.matchMedia?.('(prefers-reduced-motion: reduce)');
  const saveData = navigator.connection?.saveData === true;
  let attempted = false;

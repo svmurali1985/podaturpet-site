@@ -27,7 +27,7 @@ def robot(d,x,y,s=1,t=0):
  line(d,[(x+49*s,y+42*s),(x+78*s,y+(28-math.sin(t*3)*10)*s)],BLUE,max(2,int(8*s)))
  for ex in [-27,27]:rr(d,b([ex-13,83,ex+13,106]),BLUE,int(7*s))
 def person(d,x,y,color,flip=1):
- d.ellipse((x-19,y-84,x+19,y-46),fill='#f4c6a4');rr(d,(x-30,y-42,x+30,y+35),color,17)
+ d.ellipse((x-19,y-84,x+19,y-46),fill='#f4c6a4');d.arc((x-19,y-88,x+19,y-53),180,350,fill=INK,width=8);d.ellipse((x-8,y-69,x-5,y-65),fill=INK);d.ellipse((x+5,y-69,x+8,y-65),fill=INK);d.arc((x-7,y-66,x+7,y-53),10,170,fill=INK,width=2);rr(d,(x-30,y-42,x+30,y+35),color,17)
  line(d,[(x-14,y+30),(x-18,y+68)],INK,12);line(d,[(x+14,y+30),(x+18,y+68)],INK,12)
  line(d,[(x+flip*23,y-15),(x+flip*62,y+3)],'#f4c6a4',10)
 def bubble(d,x,y,w=130,color=WHITE,t=0):
@@ -75,9 +75,14 @@ def scene(n,u,t):
   for j in range(3):rr(d,(108+j*118,244,213+j*118,335),['#e5f2df','#ffeddb','#eee7ff'][j],8)
   rr(d,(125,168,261,177),WHITE,4);rr(d,(125,189,222,196),'#8fa9d5',4);rr(d,(126,208,185,217),LIME,4)
   robot(d,579,259+bob,.83,t)
+  cx=190+math.sin(u*math.pi)*38;cy=244-u*28;d.polygon([(cx,cy),(cx+5,cy+24),(cx+11,cy+16),(cx+22,cy+16)],fill=NAVY)
+  if u>.55:d.ellipse((167,199,195,227),fill=LIME);line(d,[(173,212),(179,218),(190,205)],INK,3)
  elif n==3:
   robot(d,350,255+bob,1.2,t);bubble(d,91,113,150,t=t);bubble(d,470,135,154,'#dff2ce',t+1)
-  bubble(d,498,261,135,'#ffe9d4',t+2);star(d,188,285,27,PINK)
+  bubble(d,498,261,135,'#ffe9d4',t+2)
+  if u>.4:
+   rr(d,(474,148,615,178),'#dff2ce',8);line(d,[(490,163),(499,170),(516,154)],BLUE,3);rr(d,(528,157,597,164),BLUE,3)
+  star(d,188,285,27,PINK)
  elif n==4:
   nodes=[(106,120),(470,120),(470,300),(106,300)]
   for j,(x,y) in enumerate(nodes):
@@ -88,6 +93,9 @@ def scene(n,u,t):
    rr(d,(x,y-36,x+110,y+36),WHITE,13,BLUE,2)
    for k in range(3):rr(d,(x+19,y-19+k*15,x+91,y-13+k*15),['#d5e5ff','#dcebb9','#ffd6b6'][j%3],3)
   robot(d,346,225+bob,.7,t)
+  if u>.35:
+   for x,y in [(106,120),(470,300)]:
+    d.ellipse((x+84,y-48,x+110,y-22),fill=LIME);line(d,[(x+90,y-36),(x+96,y-30),(x+106,y-42)],INK,2)
  elif n==5:
   rr(d,(85,102,550,367),'#e0efd9',18)
   line(d,[(95,242),(202,242),(280,136),(400,136),(525,281)],WHITE,23);line(d,[(215,350),(215,242),(418,242),(418,350)],WHITE,18)
