@@ -59,14 +59,5 @@
    form.reset();status.textContent=W.success+result.id;
   }catch{status.textContent=W.error;}finally{busy=false;send.disabled=false;dialog.querySelector('[data-close]').disabled=false;}
  });
- // One non-modal invitation per tab session. Do not interrupt typing or other dialogs.
- let mayInvite=false;try{mayInvite=api&&!sessionStorage.getItem('pt.comment.invited.v1');}catch{}
- if(mayInvite)setTimeout(()=>{
-  if(document.hidden||document.querySelector('dialog[open]')||/INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName))return;
-  try{sessionStorage.setItem('pt.comment.invited.v1','1');}catch{return;}
-  const invite=document.createElement('aside');invite.id='pt-comment-invite';invite.className='pt-community';invite.setAttribute('aria-label',W.invite);
-  const p=document.createElement('p');p.textContent=W.invite;
-  const yes=document.createElement('button');yes.type='button';yes.textContent=W.add;yes.onclick=()=>{invite.remove();open();};
-  const no=document.createElement('button');no.type='button';no.textContent=W.dismiss;no.onclick=()=>invite.remove();invite.append(p,yes,no);document.body.append(invite);
- },30000);
+ // Visitors choose Add your comments in the page footer; no timed overlay.
 })();

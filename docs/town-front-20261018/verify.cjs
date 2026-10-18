@@ -4,7 +4,7 @@ for(const file of ['index.html','index-ta.html']){
  const d=new JSDOM(fs.readFileSync(file,'utf8'),{url:'https://podaturpet.com/'+file,runScripts:'outside-only'}).window;
  const doc=d.document;
  assert.equal(doc.querySelectorAll('h1').length,1);checks++;
- assert.equal(doc.querySelectorAll('.portal-topic').length,4);checks++;
+ assert.equal(doc.querySelectorAll('.review-resource-grid article').length,3);checks++;
  assert(doc.querySelector('#agriculture'));checks++;
  assert(doc.querySelector('#town').compareDocumentPosition(doc.querySelector('#collection'))&4);checks++;
  for(const img of doc.querySelectorAll('.portal-cover img')){assert(img.width>0&&img.height>0);checks++}
