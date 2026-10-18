@@ -1,0 +1,14 @@
+/* Video companion to the studio homepage. Explicit dimensions prevent layout shift. */
+#technology-help-banner .biz-promo-media{display:block;min-width:0;margin:0;align-self:center}
+#technology-help-banner .biz-promo-player{overflow:hidden;border:1px solid #91adf455;border-radius:15px;background:#eef3ff;box-shadow:0 15px 35px #0003}
+#technology-help-banner .biz-promo-video{display:block;width:100%;height:auto;aspect-ratio:720/450;object-fit:contain;max-width:100%;background:#eef3ff}
+#technology-help-banner .biz-promo-media figcaption{display:grid;gap:6px;min-height:64px;margin-top:12px;text-align:center;color:#f2f6ff;font-size:12px;line-height:1.7}
+#technology-help-banner .biz-promo-media figcaption small{color:#afc1e1;font-size:10px;line-height:1.6}
+#technology-help-banner .biz-promo-media [data-site-en]{font:inherit;color:inherit}
+#technology-help-banner .biz-promo-video:focus-visible{outline:3px solid #d9f873;outline-offset:-3px}
+@media(max-width:1000px) and (min-width:701px){#technology-help-banner .biz-intro{grid-template-columns:minmax(0,1fr) minmax(270px,.65fr);gap:22px}}
+@media(max-width:700px){#technology-help-banner .biz-promo-media{max-width:440px;width:100%;justify-self:center}#technology-help-banner .biz-promo-media figcaption{min-height:56px}}
+@media(prefers-reduced-motion:reduce){#technology-help-banner .biz-promo-media *{animation:none!important;transition:none!important}}
+
+#technology-help-banner .biz-free-offer{display:inline-flex;max-width:100%;margin:0 0 14px;padding:8px 12px;border:1px solid #efffa5;border-radius:7px;background:#d9f873;color:#132e26;font-size:11px;font-weight:850;line-height:1.7;letter-spacing:.025em}
+.biz-free-detail{padding:22px;margin-top:22px;border:2px solid #b2d841;border-radius:12px;background:#f3ffd8;color:#173f31}.biz-free-detail h2{font-size:25px;line-height:1.5;margin:0 0 10px;color:#173f31!important}.biz-free-detail p{font-size:14px;line-height:1.8;margin:0}
