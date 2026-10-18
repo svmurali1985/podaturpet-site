@@ -1,52 +1,44 @@
-# Podaturpet local discovery refresh
+# Town-first homepage refresh
 
-Based on GitHub main `01fdad9a2e293c32fc8a380dd580dfc908ce8499`.
+Base: main, 3b27e50f336fe6ea5fcf65161c81df1ff152a6a5.
+Execution date: 18 October 2026 UTC / 17 October America/Chicago.
 
-## What changed
+Changed: index.html, index-ta.html. Added: podaturpet-town-front.css and this documentation/test folder. No required deletions.
 
-- Colourful, scoped local-information entry cards on the English/Tamil homepages and town guide. Wholesale lungi sections remain first.
-- New `podaturpet-local-updates.html`: four dated official Tiruvallur district stories, English/Tamil search and topic filtering, twelve everyday information links, publication dates and a distinct job-fair event date.
-- Attraction guide extended from ten to fourteen: Veeraraghava Perumal Temple, Periyapalayam Bhavani Amman Temple, Arcot Delhi Gate and Talakona waterfall. Longer journeys are explicitly identified.
-- Three locally hosted, compressed, licensed WebP photographs: Poondi, Pulicat and Delhi Gate. Source, author, licence and conversion/crop credits accompany each photograph.
-- News dates are evaluated in Asia/Kolkata. Completed events receive a reference label; notices older than thirty days receive an older-notice label. All summaries and source links remain available with JavaScript disabled.
-- Updated attraction structured data, breadcrumb, sitemap, source register and functional tests.
+The homepage now opens with a regional landscape and adjacent lungi product card. Four colourful entry cards introduce weaving, agriculture, temples and everyday services. The existing town/attractions section now appears before the product grid. A new bilingual regional agriculture section links directly to official sources. Existing catalogue, wholesale form, contact actions, language controls, consent, analytics, comments and administration code are retained. No new businesses, prices, contacts or opening hours were invented.
 
-This is a curated news section, not an automatic news feed. Refresh selections after reviewing official sources. Do not change the review date without checking the content. No scraping service, paid API, government logos, newspaper photos or article copies were added.
+## Sources and image rights
 
-## Install on your Mac
+Accessed 18 October 2026 UTC:
+- https://tiruvallur.nic.in/agriculture-department-of-agriculture/ — district crop background; page itself carries an older 2021 update date. Background only, not a new announcement or current production estimate.
+- https://tiruvallur.nic.in/horticulture/ — district horticulture and farmer information. Current scheme eligibility must be confirmed with the department.
 
-1. Back up any uncommitted website work. Run `git status` in your existing website folder.
-2. Extract the ZIP into a separate folder. Copy its website files into your existing repository at the same relative paths. The ZIP contains changed/new files only.
-3. Review `git diff --stat` and `git diff`. Preview the website locally before publishing:
+All imagery is reused from the existing repository; no new external or AI images added. Hero: images/nagari-hills-town-guide.jpg, Chirag1745, CC0, https://commons.wikimedia.org/wiki/File:Nagari_hills.jpg. It is explicitly labelled a regional Nagari landscape, not a photograph of Podaturpet town. Existing regional attraction photographs retain their credit records in images/region/IMAGE-CREDITS.txt and docs/local-refresh/SOURCES.md. Lungi photographs retain the existing source provenance; this update does not independently establish ownership of user-supplied images.
+
+## Checks completed
+
+- Existing refresh integration suite: 10 pages passed, including script initialization, navigation, English/Tamil and metadata (mocked network; no external writes).
+- New homepage test: 144 assertions passed, including town-before-catalogue ordering, four topic cards, hero image dimensions and English/Tamil switching for all added text.
+- All root HTML pages: zero missing local href/src file targets.
+- git diff --check: passed.
+
+No browser visual QA was available. Responsive CSS includes desktop, tablet and mobile breakpoints, but actual desktop/mobile appearance still needs review. Live enquiries, administration, analytics backend and Search Console were not exercised. No deployment, push or merge performed. Existing sitemap homepage dates already match the UTC modification date.
+
+## Apply safely (English)
+
+1. Work from your existing website checkout. Confirm `git branch --show-current` shows main and `git rev-parse HEAD` starts with 3b27e50. If your checkout has moved beyond this commit, review and merge the patch instead of overwriting newer edits.
+2. Run `git status --short`. Save or commit any unrelated changes before applying this update.
+3. Back up your checkout outside the website folder, for example from its parent directory: `cp -a website website-backup-before-town-front` (choose an unused backup name).
+4. Extract podaturpet-homepage-changes.zip to a separate temporary folder. Copy its files into your website folder, preserving paths. No deletions are required. The full-source ZIP is an alternative clean source copy, not a reason to delete your existing checkout.
+5. Run `git diff --check`, `git diff --stat`, and `git diff -- index.html index-ta.html`. Review the added CSS and documentation too.
+6. Review both homepage languages in a local preview. Check phone-width layout, images, catalogue, enquiry form, language switching, consent and contact actions.
+7. Stage only this update:
 
 ```bash
-python3 -m http.server 8000
-```
-
-Open `http://localhost:8000`, `/podaturpet-local-updates.html`, and `/podaturpet-tourist-places.html` in desktop and mobile browsers. Switch English/Tamil and try both filters.
-
-4. Publish from your website folder after review:
-
-```bash
-git add index.html index-ta.html podaturpet-town-guide.html podaturpet-tourist-places.html podaturpet-local-updates.html podaturpet-local-updates.js podaturpet-local-refresh.css images/region/poondi.webp images/region/pulicat.webp images/region/delhi-gate.webp sitemap.xml docs/local-refresh docs/town-discovery/dom-test.cjs
-git commit -m "Expand Podaturpet local attractions and dated official information"
+git add index.html index-ta.html podaturpet-town-front.css docs/town-front-20261018
+git diff --cached --stat
+git commit -m "Redesign homepage around Podaturpet town, agriculture and textiles"
 git push origin main
 ```
 
-## Verification
-
-Functional DOM tests exercise bilingual search, combined filters, reset/focus, no-JavaScript content, official-news date rollover and attraction schema anchors. The repository link checker checks files, internal anchors and duplicate IDs.
-
-```bash
-node docs/town-discovery/dom-test.cjs
-node docs/local-refresh/dom-test.cjs
-python3 tools/check_site_links.py
-```
-
-DOM tests require `jsdom` available to Node. They do not measure real-device layout or Core Web Vitals. Live deployment has not been changed by this package.
-
-## Results in this session
-- 15 attraction checks and 12 local-information checks passed.
-- Internal link/anchor checker: 52 pages, 0 errors.
-- Thirteen new district links checked; one revenue link corrected to the working official department page.
-- Local preview was blocked by the remote browser. Real-device visual QA and performance measurement remain required before publication.
+After your hosting build completes, hard refresh the public site and repeat the mobile, language and enquiry checks. Check browser console/network errors. In Google Search Console inspect / and /index-ta.html, test live URLs and request indexing if appropriate. Check the existing sitemap https://podaturpet.com/sitemap.xml; resubmit only if needed. No indexing requests were made here, and indexing/rankings are not guaranteed.
