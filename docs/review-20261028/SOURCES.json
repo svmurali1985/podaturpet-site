@@ -1,0 +1,49 @@
+{
+  "reviewed": "2026-10-28",
+  "notices": [
+    {
+      "id": "farmer-id",
+      "category": "agriculture",
+      "published": "2026-10-27",
+      "event": "",
+      "title": "Farmer ID registration notice",
+      "title_ta": "விவசாயி அடையாள அட்டை பதிவு அறிவிப்பு",
+      "summary": "The district asks farmers to register for a Farmer ID for fertilizer, crop insurance and crop loan services. Read the official notice for the registration process.",
+      "summary_ta": "உரம், பயிர்க் காப்பீடு மற்றும் பயிர்க் கடன் சேவைகளுக்கு விவசாயி அடையாள அட்டை பதிவு செய்ய மாவட்டம் அறிவுறுத்துகிறது. பதிவு முறையை அதிகாரப்பூர்வ அறிவிப்பில் பாருங்கள்.",
+      "source": "https://tiruvallur.nic.in/pr-644_27102026/"
+    },
+    {
+      "id": "farm-meeting",
+      "category": "agriculture",
+      "published": "2026-10-27",
+      "event": "2026-10-30",
+      "title": "Farmers’ grievance meeting · 30 October",
+      "title_ta": "விவசாயிகள் குறைதீர் கூட்டம் · அக்டோபர் 30",
+      "summary": "The October agriculture grievance meeting is announced for 30 October at the District Collectorate. Confirm the time and participation instructions in the source.",
+      "summary_ta": "அக்டோபர் மாத விவசாயிகள் குறைதீர் கூட்டம் அக்டோபர் 30 அன்று மாவட்ட ஆட்சியரகத்தில் நடைபெறுவதாக அறிவிக்கப்பட்டுள்ளது. நேரம் மற்றும் பங்கேற்பு விவரங்களை ஆதாரத்தில் உறுதிசெய்யுங்கள்.",
+      "source": "https://tiruvallur.nic.in/pr-643_27102026/"
+    },
+    {
+      "id": "rain",
+      "category": "civic",
+      "published": "2026-10-27",
+      "event": "",
+      "title": "Monsoon: rain and flood complaint information",
+      "title_ta": "பருவமழை: மழை மற்றும் வெள்ள புகார் தகவல்",
+      "summary": "A district notice explains how to contact emergency control rooms about rain and flooding. Open the official release for its contact details; this is not a weather forecast.",
+      "summary_ta": "மழை, வெள்ளம் தொடர்பாக அவசரக் கட்டுப்பாட்டு அறைகளைத் தொடர்புகொள்ள மாவட்ட அறிவிப்பு வழிகாட்டுகிறது. தொடர்பு விவரங்களுக்கு அசல் அறிவிப்பைப் பாருங்கள்; இது வானிலை முன்னறிவிப்பு அல்ல.",
+      "source": "https://tiruvallur.nic.in/pr-642_26102026/"
+    },
+    {
+      "id": "job-fair",
+      "category": "jobs",
+      "published": "2026-10-26",
+      "event": "2026-10-30",
+      "title": "Private-sector job fair · 30 October",
+      "title_ta": "தனியார் வேலைவாய்ப்பு முகாம் · அக்டோபர் 30",
+      "summary": "A job fair is announced for 30 October at the District Employment and Career Guidance Centre, Tiruvallur. Read the notice for attendance details and confirm arrangements before travelling.",
+      "summary_ta": "திருவள்ளூர் மாவட்ட வேலைவாய்ப்பு மற்றும் தொழில்நெறி வழிகாட்டும் மையத்தில் அக்டோபர் 30 அன்று தனியார் வேலைவாய்ப்பு முகாம் அறிவிக்கப்பட்டுள்ளது. பங்கேற்பு விவரங்களையும் ஏற்பாடுகளையும் அசல் அறிவிப்பில் உறுதிசெய்யுங்கள்.",
+      "source": "https://tiruvallur.nic.in/pr-640_26102026/"
+    }
+  ]
+}

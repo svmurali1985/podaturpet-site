@@ -1,0 +1,14 @@
+APPLY-UPDATE.py
+READ-ME-FIRST.txt
+docs/review-20261028/BASELINE-HASHES.json
+docs/review-20261028/LIVE-PAGE-AUDIT.json
+docs/review-20261028/REVIEW.md
+docs/review-20261028/SOURCES.json
+docs/review-20261028/check-news.cjs
+index-ta.html
+index.html
+podaturpet-local-updates.html
+podaturpet-local-updates.js
+podaturpet-review-20261028.css
+podaturpet-tourist-places.html
+docs/review-20261028/CHANGED-FILES.txt

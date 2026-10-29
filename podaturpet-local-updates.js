@@ -4,11 +4,12 @@
   if (!controls) return;
   const search = document.getElementById('local-news-search');
   const category = document.getElementById('local-news-category');
+  const archive = document.getElementById('local-news-archive');
   const cards = [...document.querySelectorAll('[data-local-news]')];
   // Date boundaries use Indian local dates, matching the district notices.
-  const today = new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit'
-  }).format(new Date());
+  const dateParts = new Intl.DateTimeFormat('en-CA', {timeZone:'Asia/Kolkata',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+  const part = type => dateParts.find(p => p.type === type).value;
+  const today = `${part('year')}-${part('month')}-${part('day')}`;
   const dayNumber = value => Date.parse(value + 'T00:00:00Z') / 86400000;
   function update() {
     const tamil = document.documentElement.lang.startsWith('ta');
@@ -17,7 +18,8 @@
     cards.forEach(card => {
       const text = [...card.querySelectorAll('[data-site-en]')]
         .map(el => el.dataset.siteEn + ' ' + el.dataset.siteTa).join(' ').toLocaleLowerCase();
-      const match = (!query || text.includes(query)) &&
+      const past = (card.dataset.eventDate && today > card.dataset.eventDate) || dayNumber(today) - dayNumber(card.dataset.published) > 30;
+      const match = (!past || archive.checked) && (!query || text.includes(query)) &&
         (category.value === 'all' || category.value === card.dataset.category);
       card.hidden = !match;
       if (match) shown++;
@@ -37,8 +39,9 @@
   }
   search.addEventListener('input', update);
   category.addEventListener('change', update);
+  archive.addEventListener('change', update);
   document.getElementById('local-news-reset').addEventListener('click', () => {
-    search.value = ''; category.value = 'all'; update(); search.focus();
+    search.value = ''; category.value = 'all'; archive.checked = false; update(); search.focus();
   });
   document.addEventListener('podaturpet:language', update);
   controls.hidden = false;

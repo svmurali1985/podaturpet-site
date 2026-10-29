@@ -1,0 +1,3 @@
+
+/* October 2026 visitor and news additions */
+.review-trip{max-width:1160px;margin:32px auto;padding:24px;background:#f0f6f3;border-radius:20px;color:#173a31}.review-trip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px}.review-trip article{background:#fff;border:1px solid #d5e4db;border-radius:14px;padding:20px;scroll-margin-top:100px}.review-trip a{color:#075342;font-weight:700}.review-archive{display:flex;align-items:center;gap:8px}.review-archive input{width:auto!important}.home-notices .notice-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}.home-notices .local-news-card{min-width:0}.home-notices time{font-size:.8rem}[hidden]{display:none!important}
