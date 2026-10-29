@@ -26,21 +26,42 @@
 
   let api='';try{const u=new URL(window.PodaturpetCommunity?.apiBase);if(u.protocol==='https:'&&u.hostname.endsWith('.workers.dev')&&u.pathname==='/')api=u.origin;}catch{}
   if(!api)return;
-  const counts=document.createElement('section');counts.className='pt-community';counts.id='pt-public-views';
+  const counts=document.createElement('section');counts.className='pt-community pt-views-compact';counts.id='pt-public-views';
+  const disclosure=document.createElement('details');disclosure.className='pt-views-disclosure';
+  const toggleSummary=document.createElement('summary');
+  const panel=document.createElement('div');panel.className='pt-views-panel';
+  disclosure.append(toggleSummary,panel);counts.append(disclosure);
+  const styles=document.createElement('style');styles.textContent=`
+  #pt-public-views.pt-views-compact{width:calc(100% - 36px);max-width:1200px;margin:0 auto 24px;padding:0;min-height:0;border:0;background:transparent;font-family:Arial,sans-serif;color:#173f43}
+  #pt-public-views .pt-views-disclosure>summary{display:list-item;width:fit-content;max-width:100%;cursor:pointer;padding:11px 16px;border:1px solid #cddcd8;border-radius:8px;background:#fff;font-size:13px;font-weight:600;min-height:44px}
+  #pt-public-views summary:focus-visible{outline:3px solid #a75d2d;outline-offset:4px}
+  #pt-public-views .pt-views-panel{padding:20px;margin-top:10px;background:#fff;border:1px solid #d5e1dc;border-radius:12px;max-height:420px;overflow:auto}
+  #pt-public-views .stats-heading{display:flex;justify-content:space-between;align-items:center;gap:15px}
+  #pt-public-views .stats-heading h2{font:700 18px/1.4 Arial,sans-serif;margin:0}
+  #pt-public-views .stats-heading button{font:600 12px Arial,sans-serif;padding:10px 14px;min-height:44px;border:1px solid #cddcd8;border-radius:6px;background:#edf6f3;color:#173f43;cursor:pointer}
+  #pt-public-views .stats-total{font:700 30px/1.3 Arial,sans-serif;margin:12px 0}
+  #pt-public-views p{font-size:12px;line-height:1.8;margin:10px 0}
+  #pt-public-views .stats-table-wrap{overflow-x:auto;max-width:100%}
+  #pt-public-views table{border-collapse:collapse;width:100%;font-size:12px}
+  #pt-public-views th,#pt-public-views td{padding:9px;text-align:left;border-bottom:1px solid #d5e1dc;white-space:normal}
+  #pt-public-views .stats-error{color:#8e4826}
+  #pt-public-views .pt-views-panel details{margin-top:14px}
+  #pt-public-views .pt-views-panel summary{cursor:pointer;min-height:36px;font-size:13px}
+  `;document.head.append(styles);
   const countsFooter=document.querySelector('footer');if(countsFooter)countsFooter.before(counts);else document.body.append(counts);
   let stats=null,statsError=false;
   const isTamil=()=>document.body.dataset.siteLang==='ta'||document.documentElement.lang==='ta';
   function drawCounts(){
-    const ta=isTamil();counts.replaceChildren();
+    const ta=isTamil();toggleSummary.textContent=ta?'தளப் பார்வைகள்':'Website views';panel.replaceChildren();
     const top=document.createElement('div');top.className='stats-heading';
     const heading=document.createElement('h2');heading.textContent=ta?'நம் தளத்தின் பார்வைகள்':'Our website views';top.append(heading);
-    const refresh=document.createElement('button');refresh.type='button';refresh.textContent=ta?'புதுப்பி':'Refresh';refresh.addEventListener('click',loadCounts);top.append(refresh);counts.append(top);
+    const refresh=document.createElement('button');refresh.type='button';refresh.textContent=ta?'புதுப்பி':'Refresh';refresh.addEventListener('click',loadCounts);top.append(refresh);panel.append(top);
     const total=document.createElement('p');total.className='stats-total';total.setAttribute('aria-live','polite');
-    total.textContent=stats?new Intl.NumberFormat(ta?'ta-IN':'en-US').format(stats.siteViews):(statsError?'—':'…');counts.append(total);
-    const note=document.createElement('p');note.className='stats-note';note.textContent=ta?'கடந்த 30 நாட்களின் மொத்தத் தளப் பார்வைகள். மீண்டும் திறந்ததும் எண்ணப்படும்; தனிநபர் எண்ணிக்கை அல்ல.':'Recorded site-wide page loads in the last 30 days. Repeat visits count; this is not a unique-person total.';counts.append(note);
-    if(statsError){const error=document.createElement('p');error.className='stats-error';error.setAttribute('role','status');error.textContent=ta?'நேரடி எண்ணிக்கையைப் பெற முடியவில்லை. Refresh முயலுங்கள். API இணைப்பைச் சரிபார்க்க வேண்டும்.':'Live counts could not be reached. Try Refresh. The analytics API connection may need attention.';counts.append(error);}
+    total.textContent=stats?new Intl.NumberFormat(ta?'ta-IN':'en-US').format(stats.siteViews):(statsError?'—':'…');panel.append(total);
+    const note=document.createElement('p');note.className='stats-note';note.textContent=ta?'கடந்த 30 நாட்களின் மொத்தத் தளப் பார்வைகள். மீண்டும் திறந்ததும் எண்ணப்படும்; தனிநபர் எண்ணிக்கை அல்ல.':'Recorded site-wide page loads in the last 30 days. Repeat visits count; this is not a unique-person total.';panel.append(note);
+    if(statsError){const error=document.createElement('p');error.className='stats-error';error.setAttribute('role','status');error.textContent=ta?'நேரடி எண்ணிக்கையைப் பெற முடியவில்லை. Refresh முயலுங்கள். API இணைப்பைச் சரிபார்க்க வேண்டும்.':'Live counts could not be reached. Try Refresh. The analytics API connection may need attention.';panel.append(error);}
     if(!stats)return;
-    const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent=ta?'நாடு · மாநிலம் · நகரம் வாரியாகப் பாருங்கள்':'View countries, states and cities';details.open=true;details.append(summary);
+    const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent=ta?'நாடு · மாநிலம் · நகரம் வாரியாகப் பாருங்கள்':'View countries, states and cities';details.open=false;details.append(summary);
     const scope=document.createElement('p');scope.textContent=ta?'முழுத் தளத்தின் முதல் 50 இடங்கள். இடம் தோராயமானது; கிடைக்காத விவரம் குறிப்பிடப்படும். IP அல்லது தனிநபர் பதிவுகள் காட்டப்படாது.':'Top 50 locations across the site. Geography is approximate; unavailable fields are labelled. No IP addresses or individual visitor records are shown.';details.append(scope);
     const missing=ta?'கிடைக்கவில்லை':'Unavailable';
     const regionNames=typeof Intl.DisplayNames==='function'?new Intl.DisplayNames([ta?'ta':'en'],{type:'region'}):null;
@@ -58,11 +79,11 @@
       const upgrade=document.createElement('p');upgrade.className='stats-error';upgrade.textContent=ta?'நாடு/மாநில விவரங்களுக்கு analytics Worker update தேவை. தற்போது பழைய API நகரத் தகவல்களை மட்டுமே தருகிறது.':'Country/state details require the updated analytics Worker. The current API returns city data only.';details.append(upgrade);
       if(stats.locations.length)details.append(table(ta?['நகரம் (இந்தப் பக்கம்)','பார்வைகள்']:['City (this page)','Views'],stats.locations.map(r=>[value(r.city),r.views])));
     }
-    counts.append(details);
+    panel.append(details);
   }
   const pagePath=location.pathname==='/'?'/index.html':location.pathname;
-  let generation=0;
-  async function loadCounts(){const requestGeneration=++generation;try{const response=await fetch(api+'/v1/stats?page='+encodeURIComponent(pagePath),{credentials:'omit',referrerPolicy:'no-referrer',signal:AbortSignal.timeout(10000)});if(!response.ok)throw Error('counts');const data=await response.json();if(!Number.isSafeInteger(data.pageViews)||!Number.isSafeInteger(data.siteViews)||!Array.isArray(data.locations))throw Error('counts');if(requestGeneration!==generation)return;stats=data;statsError=false;}catch{if(requestGeneration!==generation)return;statsError=true;}drawCounts();}
+  let generation=0,loading=false;
+  async function loadCounts(){if(loading)return;loading=true;const requestGeneration=++generation;try{const response=await fetch(api+'/v1/stats?page='+encodeURIComponent(pagePath),{credentials:'omit',referrerPolicy:'no-referrer',signal:AbortSignal.timeout(10000)});if(!response.ok)throw Error('counts');const data=await response.json();if(!Number.isSafeInteger(data.pageViews)||!Number.isSafeInteger(data.siteViews)||!Array.isArray(data.locations))throw Error('counts');if(requestGeneration!==generation)return;stats=data;statsError=false;}catch{if(requestGeneration!==generation)return;statsError=true;}loading=false;drawCounts();}
   document.addEventListener('podaturpet:language',drawCounts);drawCounts();
   const key='pt.analytics.choice.v1',blocked=navigator.globalPrivacyControl===true||navigator.doNotTrack==='1';
   let declined=false;
@@ -71,9 +92,8 @@
     if(!blocked&&!declined){
       try{await fetch(api+'/v1/view',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({page:pagePath,countMode:'aggregate'}),credentials:'omit',referrerPolicy:'no-referrer',keepalive:true,signal:AbortSignal.timeout(10000)});}catch{}
     }
-    await loadCounts();
   }
-  loadCounts();
+  disclosure.addEventListener('toggle',()=>{if(disclosure.open&&!stats&&!statsError)loadCounts();});
   start();
-  window.addEventListener('online',loadCounts);
+  window.addEventListener('online',()=>{if(disclosure.open)loadCounts();});
 })();
