@@ -24,6 +24,8 @@
 
 
 
+  // Never send preview visits to the production analytics service.
+  if(!['podaturpet.com','www.podaturpet.com'].includes(location.hostname))return;
   let api='';try{const u=new URL(window.PodaturpetCommunity?.apiBase);if(u.protocol==='https:'&&u.hostname.endsWith('.workers.dev')&&u.pathname==='/')api=u.origin;}catch{}
   if(!api)return;
   const counts=document.createElement('section');counts.className='pt-community pt-views-compact';counts.id='pt-public-views';
@@ -89,11 +91,15 @@
   let declined=false;
   try{const saved=JSON.parse(localStorage.getItem(key));declined=!!(saved&&saved.expires>Date.now()&&saved.value==='no');}catch{}
   async function start(){
-    if(!blocked&&!declined){
+    let optedIn=false;try{const saved=JSON.parse(localStorage.getItem(key));optedIn=!!(saved&&saved.expires>Date.now()&&saved.value==='yes');}catch{}
+    if(!blocked&&optedIn){
       try{await fetch(api+'/v1/view',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({page:pagePath,countMode:'aggregate'}),credentials:'omit',referrerPolicy:'no-referrer',keepalive:true,signal:AbortSignal.timeout(10000)});}catch{}
     }
   }
   disclosure.addEventListener('toggle',()=>{if(disclosure.open&&!stats&&!statsError)loadCounts();});
-  start();
+  let counted=false;
+  const countOnce=()=>{if(counted)return;try{const saved=JSON.parse(localStorage.getItem(key));if(saved?.value==='yes'&&saved.expires>Date.now()&&!blocked){counted=true;start();}}catch{}};
+  document.addEventListener('podaturpet:analytics-choice',countOnce);
+  countOnce();
   window.addEventListener('online',()=>{if(disclosure.open)loadCounts();});
 })();
