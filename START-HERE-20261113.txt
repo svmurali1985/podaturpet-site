@@ -1,15 +1,18 @@
-PODATURPET — COMPLETE COMPACT WEBSITE UPDATE
+PODATURPET — ORIGINAL WOVEN DESIGN / COMPLETE SOURCE
 Prepared 13 November 2026
-Baseline GitHub main: 8f729ef9d542c0bbf2b112409dba1f09610a05ce
+Baseline main commit: 12d59c2037a7f241fce0dc444c1cd61f37fd2cfa
 
-This is the newest complete package. It includes all earlier updates plus compact homepages, six readable town-information cards and dropdown topic navigation on 37 pages.
+This newest ZIP includes all prior content/navigation work and the new original Podaturpet design on 37 pages. Colours: navy, copper and linen. The homepage uses your existing lungi photos and keeps the compact town dashboard and menus.
 
-Extract the ZIP. website/ contains the complete current source, images and assets. Back up your existing repository before copying. Preserve its .git folder; no deletions are needed.
+Extract this ZIP. The website/ folder contains the full source and assets. Back up your repository before copying, preserve .git and do not delete existing files.
 
-Before copying: git status --short must be empty, git branch --show-current should be main, and git rev-parse HEAD should match the baseline above. If newer/different, merge changes instead of overwriting newer work.
+In your website repository, confirm a clean git status, main branch and the baseline above. If newer/different, merge the changed paths rather than overwriting newer work. Copy website/ contents into the repository root. Run:
+python3 tools/check_site_links.py
+python3 tools/verify_redesign.py
+git diff --check
 
-Copy website/ contents into your repository root. Run python3 tools/check_site_links.py and python3 tools/verify_redesign.py, then git diff --check. Inspect git diff. Preview with python3 -m http.server 8000; check English/Tamil homepages and dropdowns at desktop/mobile widths. Current browser QA was blocked; details are in docs/compact-20261113/REVIEW.md.
+Preview using python3 -m http.server 8000; open http://localhost:8000 and /index-ta.html. Check the hero, menu, product filtering, country links and enquiry pages before publishing. See docs/woven-20261113/REVIEW.md for verification and provenance.
 
-Stage only the reviewed changed paths in docs/compact-20261113/CHANGED-FILES.txt, content/navigation.json, podaturpet-compact-20261113.css, podaturpet-topic-nav.js, tools/site_layout.py, START-HERE-20261113.txt and docs/compact-20261113/. Commit and push using your current GitHub publishing setup.
+Stage reviewed changes from docs/woven-20261113/CHANGED-FILES.txt plus podaturpet-woven-20261113.css, docs/woven-20261113/ and START-HERE-20261113.txt. Commit and push using your existing GitHub hosting setup.
 
-No live push/deployment has been performed for this revision. Do not change your DNS or hosting setup to apply it.
+The live website has not changed for this revision. No DNS or hosting migration is required.

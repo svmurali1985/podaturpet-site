@@ -74,4 +74,6 @@ def apply_layout(text,page):
   text=text.replace('</head>','<link rel="stylesheet" href="/podaturpet-home.css?v=20260923"></head>')
  if 'podaturpet-compact-20261113.css' not in text:text=text.replace('</head>','<link rel="stylesheet" href="/podaturpet-compact-20261113.css"></head>')
  if 'podaturpet-topic-nav.js' not in text:text=text.replace('</body>','<script src="/podaturpet-topic-nav.js" defer></script></body>')
+ if 'podaturpet-woven-20261113.css' not in text:text=text.replace('</head>','<link rel="stylesheet" href="/podaturpet-woven-20261113.css"></head>')
+ text=re.sub(r'(<body\b[^>]*class=["\'])([^"\']*)',lambda m:m[1]+m[2]+('' if 'pt-woven' in m[2].split() else ' pt-woven'),text,count=1)
  return apply_community(text,page)

@@ -1,0 +1,9 @@
+# Original Podaturpet woven design
+
+Source baseline: 12d59c2037a7f241fce0dc444c1cd61f37fd2cfa. An original visual direction based on Podaturpet's textile identity: deep navy, warm copper, linen-paper background, numbered local-information cards and a framed collage of owner-confirmed lungi photographs. Shared finishing stylesheet applied to 37 pages; homepage hero edited in English/Tamil. Existing 4 topic dropdowns, 27 navigation links, town information, catalogue, international market sections, enquiry routes, privacy choices and Home navigation retained.
+
+No reference-site HTML, CSS, JavaScript, wording, imagery, logos or font assets were imported. Design code and new text were written for this site. No new third-party asset or remote font was added. The existing lungi photograph files were reused unchanged; the owner confirmed the real lungi photos are their own. This is a provenance statement for this change, not legal clearance of every older site asset or a guarantee against claims.
+
+Validation: 57 HTML pages, no internal-link/asset/anchor/duplicate-ID errors. Main-route headings/languages passed. Shared Python generator compiles; git diff --check passed. Ten DOM regression scenarios pass for menus, Escape/focus, outside-click dismissal, language changes, retained 6 products and 3 international cards. Browser layout checks covered 38 content/admin pages at 390, 768 and 1440 iframe widths (37 themed pages and unchanged admin); no broken-image results. Mobile news-header overflow was corrected with scoped border-box sizing. A transient catalogue-width result was rechecked after rendering and measured 375px viewport / 375px document. Desktop homepage and Tamil mobile menu/hero screenshots inspected. This is not testing of every backend or a full accessibility certification.
+
+No commit, push or live deployment occurred. Apply the package through the user's existing repository and publishing workflow.
