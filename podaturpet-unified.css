@@ -16,3 +16,14 @@
 
 .hub-hero-grid{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:40px}.hub-hero-grid .studio-image{border-radius:22px;overflow:hidden}.studio-image img{width:100%;height:340px;object-fit:cover}.studio-image figcaption{padding:10px;background:#152238;font-size:12px}.hub-search input{width:100%}.hub-main>section{margin-block:20px}.hub-hero-grid h1{font-size:clamp(36px,4vw,58px)}.hub-card h3{margin-bottom:14px}main .panel{margin-block:22px}main .panel label{display:flex;flex-direction:column;gap:8px}.pt-support-strip a{min-height:44px;align-items:center}.guide-body>header:not(.pt-site-header){padding:24px max(20px,calc((100vw - 1280px)/2));background:#101c2d;border-bottom:1px solid #30445e}
 @media(max-width:640px){.hub-hero-grid{grid-template-columns:1fr}.studio-image img{height:240px}.site-header-row #site-main-nav{overflow:visible}.pt-topic summary::after{display:none}.pt-topic summary{white-space:normal}.hero .btn{display:flex}.hub-hero-grid h1{font-size:36px}}
+
+/* Readability audit fixes: visitor panel and narrow Tamil town hero. */
+#pt-public-views.pt-views-compact{color:#edf3fb!important}
+#pt-public-views .pt-views-panel,#pt-public-views .pt-views-disclosure>summary{background:#152238!important;color:#edf3fb!important;border-color:#58769d!important}
+#pt-public-views :is(h2,h3,summary,th,td,.stats-total){color:#edf3fb!important}
+#pt-public-views :is(p,small,.stats-note){color:#b9c8dc!important}
+#pt-public-views .stats-heading button{background:#25456a!important;color:#edf3fb!important;border-color:#7895ba!important}
+#pt-public-views .stats-error{color:#ffbe9d!important}
+#pt-public-views :is(th,td){border-color:#3e5675!important}
+.hub-hero-grid>*{min-width:0}
+@media(max-width:640px){.hub-hero-grid{grid-template-columns:minmax(0,1fr)}.hub-hero-grid h1{overflow-wrap:anywhere}.hub-search input{min-width:0}}
