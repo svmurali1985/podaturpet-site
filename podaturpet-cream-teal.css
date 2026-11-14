@@ -1,14 +1,29 @@
-/* Podaturpet: cream and teal colour theme, November 2026. */
-:root{--paper:#f2eadb!important;--ink:#173f3b!important;--muted:#4e625c!important;--line:#c9d6c8!important;--accent:#17645d!important;--white:#fbf5e8!important;--wash:#dcebe2!important}
-html,body,body.thread-home{background-color:#f2eadb!important;color:#173f3b}
-body{background-image:radial-gradient(ellipse at top left,#dfebe0 0,transparent 55%);background-attachment:fixed}
-main{background-color:transparent!important}
-header,.pt-site-header,.site-header{background-color:#e2ede3!important;color:#173f3b}
-.section:nth-of-type(even){background-color:#e2ede3!important}
-.card,.product-card,.feature-card,.news-card,.service-card,.town-card,.language-panel{background-color:#fbf5e8!important;border-color:#c9d6c8!important;color:#173f3b}
-.button,.btn-primary{background-color:#17645d!important;color:#fff8eb!important;border-color:#17645d!important}
-.button:hover,.btn-primary:hover{background-color:#104d47!important;color:#fff8eb!important}
-.greeting{background-color:#d8e8dc!important;color:#244d42!important}
-input,textarea,select{background-color:#fbf5e8;color:#173f3b;border-color:#829c90}
-a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #8c4a23;outline-offset:3px}
-@media print{html,body,main{background:#fff!important;color:#000!important}}
+/* Modern navy theme: replaces the existing cream-teal stylesheet in place. */
+:root,body{--paper:#0b1120!important;--ink:#edf3ff!important;--muted:#b8c5dc!important;--line:#30415f!important;--accent:#90caff!important;--white:#142039!important;--wash:#162640!important;--woven-paper:#0b1120!important;--woven-ink:#edf3ff!important;--woven-line:#30415f!important;--woven-sage:#162640!important}
+html,body,body.thread-home,body.pt-woven{background:#0b1120!important;color:#edf3ff!important;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important}
+body{background-image:radial-gradient(ellipse at 10% 0%,#17335b 0,transparent 45%),radial-gradient(ellipse at 95% 25%,#25204b 0,transparent 40%)!important;background-attachment:fixed!important}
+body main{background:transparent!important}
+body h1,body h2,body h3{font-family:inherit!important;color:#edf3ff!important;letter-spacing:-.035em;font-weight:750!important}
+body p,body small,body figcaption,body .hero-lead,body .hero-subtitle,body .local-date,body .pt-source-note{color:#bdcbe2!important}
+body a{color:#a7d8ff}body a:hover{color:#e0f2ff}
+body header,body .pt-site-header,body .site-header{background:#101b30!important;border-color:#30415f!important;color:#edf3ff!important}
+body .site-brand,body .pt-topic summary,body #site-main-nav a{color:#edf3ff!important}
+body .site-brand small{color:#b8c5dc!important}
+body .section{border-color:#30415f!important}
+body .section:nth-of-type(even),body .guide-hero,body .hero:not(#home){background:#111f36!important;border-radius:20px;padding:clamp(18px,3vw,32px)!important;margin-block:18px}
+body :is(.card,.product-card,.feature-card,.news-card,.local-news-card,.service-card,.town-card,.discovery-card,.pt-town-card,.pt-source-note,.language-panel,.pt-topic-links){background:#15233b!important;border:1px solid #354969!important;border-radius:16px!important;box-shadow:0 12px 28px #0003!important;color:#edf3ff!important}
+body :is(.pt-topic-links,.language-panel) a{color:#edf3ff!important}
+body .pt-topic[open]>summary,body #site-main-nav .pt-topic-links a:hover{background:#243b5c!important;color:#fff!important}
+body :is(.button,.btn,.btn-primary,.pt-home-return),body .site-language a[aria-current]{background:linear-gradient(115deg,#2459d3,#7040ca)!important;color:#fff!important;border:1px solid #9bafff!important;border-radius:12px!important;box-shadow:0 6px 22px #4164ed35!important;font-weight:700!important;min-height:44px;transition:filter .2s,box-shadow .2s}
+body :is(.button,.btn,.btn-primary):hover{filter:brightness(1.16);box-shadow:0 8px 28px #6964ed66!important}
+body :is(.button,.btn,.btn-primary) *{color:inherit!important}
+body .eyebrow,body .local-news-status{color:#8ed7ee!important}
+body .greeting,body .site-language{background:#1a2c49!important;color:#d8eaff!important;border-color:#3b5276!important}
+body :is(.footer,.site-footer){background:#0b1426!important;color:#edf3ff!important;border-color:#30415f!important}
+body input,body textarea,body select{background:#111e34!important;color:#edf3ff!important;border:1px solid #6681a4!important;border-radius:8px}
+body input::placeholder,body textarea::placeholder{color:#acbdd5!important}
+body :is(a,button,input,textarea,select,summary):focus-visible{outline:3px solid #6ee7f9!important;outline-offset:4px}
+body .hero-image{border-radius:20px;overflow:hidden;box-shadow:0 16px 48px #0005}
+@media(prefers-reduced-motion:reduce){body *{transition:none!important;background-attachment:scroll!important}}
+@media(max-width:600px){body{background-attachment:scroll!important}body .section:nth-of-type(even){border-radius:14px;padding:18px!important}}
+@media print{html,body,body main,body .section{background:#fff!important;color:#000!important}body p,body h1,body h2,body h3{color:#000!important}}
