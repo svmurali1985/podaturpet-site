@@ -27,3 +27,19 @@ body .hero-image{border-radius:20px;overflow:hidden;box-shadow:0 16px 48px #0005
 @media(prefers-reduced-motion:reduce){body *{transition:none!important;background-attachment:scroll!important}}
 @media(max-width:600px){body{background-attachment:scroll!important}body .section:nth-of-type(even){border-radius:14px;padding:18px!important}}
 @media print{html,body,body main,body .section{background:#fff!important;color:#000!important}body p,body h1,body h2,body h3{color:#000!important}}
+
+/* Consistent links, controls, and product-first homepage polish. */
+body :is(.pt-town-overview,.pt-town-card,.pt-town-grid,.product-card,.collection,.notices,.pt-support-strip,.contact,.footer,.site-footer) a:not(.button):not(.btn):not(.btn-primary){color:#a7d8ff!important;text-decoration-color:#739bc4!important;text-underline-offset:4px}
+body :is(.pt-town-overview,.collection,.notices) a:not(.button):hover{color:#e5f5ff!important}
+body #collection button[data-filter]{background:#172b48!important;color:#d8e8ff!important;border:1px solid #56749c!important;border-radius:999px!important;min-height:44px;padding:10px 18px!important;font:600 13px/1.4 system-ui,sans-serif;box-shadow:none!important;cursor:pointer}
+body #collection button[data-filter][aria-pressed=true]{background:#2563eb!important;color:#fff!important;border-color:#8ab4ff!important;box-shadow:0 4px 16px #2563eb44!important}
+body #collection button[data-filter]:hover{background:#25446c!important;color:#fff!important}
+body :is(.button,.btn,.btn-primary){background:#2563eb!important;border-color:#77a8ff!important;border-radius:11px!important;box-shadow:0 5px 18px #2563eb33!important}
+body :is(.button,.btn,.btn-primary):hover{background:#1d4ed8!important}
+body .pt-town-overview a{font-weight:600}
+body .hero-image figcaption{background:#15233b!important;color:#d2e2f8!important;padding:10px 14px!important;border-radius:0 0 12px 12px}
+body .section{margin-block:20px!important}
+body .pt-town-overview p{max-width:60ch;line-height:1.65}
+body :is(.product-card,.pt-town-card){overflow:hidden}
+@media(min-width:900px){body .hero{padding-block:36px!important}body .hero h1{font-size:clamp(38px,4vw,58px)!important;line-height:1.08!important}body .section{padding-block:36px!important}}
+@media(max-width:600px){body .section{margin-block:14px!important}body #collection button[data-filter]{padding:9px 13px!important}}
