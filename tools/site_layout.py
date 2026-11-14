@@ -20,9 +20,10 @@ def localized(markup,page):
  return re.sub(r'(<span data-site-en="[^"]*" data-site-ta="([^"]*)")>[^<]*</span>',lambda m:m[1]+' lang="ta">'+html.escape(html.unescape(m[2]))+'</span>',markup)
 def header(page,controls=''):
  active=area(page)
- links=''.join('<a href="'+(url.replace('.html','-ta.html') if key=='people' and page.endswith('-ta.html') else url)+'"'+(' aria-current="page"' if page==url[1:] or key=='people' and page.endswith('-ta.html') else ' data-section-current="true"' if key==active else '')+'>'+word(en,ta)+'</a>' for key,en,ta,url in NAV_AREAS)
+ groups=json.loads((ROOT/'content/navigation.json').read_text())
+ links=''.join('<details class="pt-topic"><summary>'+word(en,ta)+'<span aria-hidden="true">⌄</span></summary><div class="pt-topic-links">'+''.join('<a href="'+html.escape(url,quote=True)+'">'+word(label,label_ta)+'</a>' for label,label_ta,url in items)+'</div></details>' for en,ta,items in groups)
  if not controls:controls='<div class="site-language" aria-label="Language / மொழி"><button type="button" data-site-language="en" aria-pressed="true">English</button><button type="button" data-site-language="ta" lang="ta" aria-pressed="false">தமிழ்</button></div>'
- markup='<div class="site-header-row"><a class="site-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" width="38" height="38" alt=""><span>PODATURPET<small>'+word('Textiles. Town. Technology.','நெசவு. ஊர். தொழில்நுட்பம்.')+'</small></span></a><button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-main-nav" hidden>'+word('Menu','பட்டியல்')+' <span aria-hidden="true">☰</span></button><nav id="site-main-nav" aria-label="Main navigation">'+links+'</nav><div class="site-utilities">'+controls+'</div></div>'
+ markup='<div class="site-header-row"><a class="site-brand" href="/" aria-label="Podaturpet home"><img src="/images/podaturpet-emblem.svg" width="38" height="38" alt=""><span>PODATURPET<small>'+word('Textiles. Town. Technology.','நெசவு. ஊர். தொழில்நுட்பம்.')+'</small></span></a><button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-main-nav" hidden>'+word('Menu','பட்டியல்')+' <span aria-hidden="true">☰</span></button><nav id="site-main-nav" class="pt-topic-nav" aria-label="Main topics">'+links+'</nav><div class="site-utilities">'+controls+'</div></div>'
  return localized(markup,page)
 def footer(page):
  site=json.loads((ROOT/'content/site.json').read_text());links=''.join('<a href="'+url+'">'+word(en,ta)+'</a>' for _,en,ta,url in AREAS)
@@ -71,4 +72,6 @@ def apply_layout(text,page):
  if page in ['index.html','index-ta.html']:
   text=re.sub(r'<link[^>]+href="/podaturpet-home\.css[^"]*"[^>]*>\s*','',text)
   text=text.replace('</head>','<link rel="stylesheet" href="/podaturpet-home.css?v=20260923"></head>')
+ if 'podaturpet-compact-20261113.css' not in text:text=text.replace('</head>','<link rel="stylesheet" href="/podaturpet-compact-20261113.css"></head>')
+ if 'podaturpet-topic-nav.js' not in text:text=text.replace('</body>','<script src="/podaturpet-topic-nav.js" defer></script></body>')
  return apply_community(text,page)

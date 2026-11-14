@@ -1,18 +1,15 @@
-PODATURPET — COMPLETE UPDATE INCLUDING LUNGI MARKETS
-Prepared: 13 November 2026
-Baseline GitHub main commit: f9461bc254791fb7a240d30f44f175595b86306a
+PODATURPET — COMPLETE COMPACT WEBSITE UPDATE
+Prepared 13 November 2026
+Baseline GitHub main: 8f729ef9d542c0bbf2b112409dba1f09610a05ce
 
-This ZIP supersedes the earlier complete-update ZIP. The website/ folder contains the full current source with all prior Home/news/layout work AND the new Malaysia, Singapore and Sri Lanka lungi content.
+This is the newest complete package. It includes all earlier updates plus compact homepages, six readable town-information cards and dropdown topic navigation on 37 pages.
 
-NEW: English/Tamil homepage market cards using your own existing lungi photographs; three source-linked market sections on the international lungi page; country-specific enquiry links; updated sitemap dates; three existing snippet contact links fixed. No new third-party images, logos or product-copy text were imported. See docs/lungi-markets-20261113/REVIEW.md and VALIDATION.md.
+Extract the ZIP. website/ contains the complete current source, images and assets. Back up your existing repository before copying. Preserve its .git folder; no deletions are needed.
 
-The three markets have visible commercial lungi/sarong listings. They are not a verified highest-demand ranking; no traffic or sales result is guaranteed.
+Before copying: git status --short must be empty, git branch --show-current should be main, and git rev-parse HEAD should match the baseline above. If newer/different, merge changes instead of overwriting newer work.
 
-APPLY ON MAC:
-1. Extract this ZIP. Back up your existing website repository.
-2. In the repository, run git status --short and git rev-parse HEAD. Continue only on a clean main checkout matching the baseline above. If newer/different, merge the listed changes instead of overwriting newer work.
-3. Copy website/ contents into the repository root, preserving .git. No deletions are needed.
-4. Run python3 tools/check_site_links.py and python3 tools/verify_redesign.py. Review git diff and preview English/Tamil homepages and country sections.
-5. Stage only the reviewed files listed in docs/lungi-markets-20261113/CHANGED-FILES.txt plus podaturpet-lungi-markets.css and docs/lungi-markets-20261113/. Commit and push through your existing GitHub publishing setup.
+Copy website/ contents into your repository root. Run python3 tools/check_site_links.py and python3 tools/verify_redesign.py, then git diff --check. Inspect git diff. Preview with python3 -m http.server 8000; check English/Tamil homepages and dropdowns at desktop/mobile widths. Current browser QA was blocked; details are in docs/compact-20261113/REVIEW.md.
 
-The assistant has not pushed or deployed this new change. Your live site still needs the normal publish workflow.
+Stage only the reviewed changed paths in docs/compact-20261113/CHANGED-FILES.txt, content/navigation.json, podaturpet-compact-20261113.css, podaturpet-topic-nav.js, tools/site_layout.py, START-HERE-20261113.txt and docs/compact-20261113/. Commit and push using your current GitHub publishing setup.
+
+No live push/deployment has been performed for this revision. Do not change your DNS or hosting setup to apply it.
