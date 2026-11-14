@@ -1,0 +1,14 @@
+/* Podaturpet: cream and teal colour theme, November 2026. */
+:root{--paper:#f2eadb!important;--ink:#173f3b!important;--muted:#4e625c!important;--line:#c9d6c8!important;--accent:#17645d!important;--white:#fbf5e8!important;--wash:#dcebe2!important}
+html,body,body.thread-home{background-color:#f2eadb!important;color:#173f3b}
+body{background-image:radial-gradient(ellipse at top left,#dfebe0 0,transparent 55%);background-attachment:fixed}
+main{background-color:transparent!important}
+header,.pt-site-header,.site-header{background-color:#e2ede3!important;color:#173f3b}
+.section:nth-of-type(even){background-color:#e2ede3!important}
+.card,.product-card,.feature-card,.news-card,.service-card,.town-card,.language-panel{background-color:#fbf5e8!important;border-color:#c9d6c8!important;color:#173f3b}
+.button,.btn-primary{background-color:#17645d!important;color:#fff8eb!important;border-color:#17645d!important}
+.button:hover,.btn-primary:hover{background-color:#104d47!important;color:#fff8eb!important}
+.greeting{background-color:#d8e8dc!important;color:#244d42!important}
+input,textarea,select{background-color:#fbf5e8;color:#173f3b;border-color:#829c90}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #8c4a23;outline-offset:3px}
+@media print{html,body,main{background:#fff!important;color:#000!important}}
