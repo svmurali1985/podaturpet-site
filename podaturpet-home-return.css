@@ -1,0 +1,5 @@
+/* Persistent return to the main page, including mobile safe areas. */
+.pt-home-return{position:fixed!important;left:max(12px,env(safe-area-inset-left));bottom:max(12px,env(safe-area-inset-bottom));z-index:900;display:inline-flex!important;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border:1px solid #d5c9b2;border-radius:999px;background:#173f35;color:#fff!important;font:600 15px/1.4 system-ui,sans-serif;text-decoration:none!important;box-shadow:0 3px 14px #0002}
+.pt-home-return:hover{background:#245b4c}.pt-home-return:focus-visible{outline:3px solid #e3ad42;outline-offset:4px}
+body{padding-bottom:76px!important}
+@media print{.pt-home-return{display:none!important}body{padding-bottom:0!important}}

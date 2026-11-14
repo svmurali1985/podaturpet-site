@@ -1,0 +1,9 @@
+# Website refresh — 13 November 2026
+
+Home navigation added to all 53 top-level HTML files (38 content/admin pages, 14 redirect pages, one review page). Shared responsive, typography, focus and reduced-motion improvements. Mobile overflow corrected on the local news and travel planner pages. Five source-linked notices added to local news; three featured on both homepages. New public-services category; dated archive retained; jobs links now reach the November fair. Outdated advance-festival strip removed. Destination count corrected to 14. Government office contact references rechecked. Town population distinguishes the 2011 census from the portal's undated current figure.
+
+Validation: internal links/anchors/assets and duplicate IDs: 53 pages, zero errors. Main-route document languages and headings passed. Content-page title/H1/image-alt audit passed. Home links present and destination targets checked. Browser layout measurements covered 38 content/admin pages at 390, 768 and 1440 iframe widths; discovered overflow corrected. New-notice search and real Home navigation from catalogue tested. Screenshots inspected on the desktop homepage and responsive preview. This is not a claim of a screenshot review of every page or testing every backend operation. Existing invoice, marketplace and community services remain dependent on their existing backend configuration.
+
+Content review checks specific linked official sources, rather than claiming every third-party fact is live. Earlier source dates remain where no new verification was performed. Stock, prices, transport times, admissions and service availability still require provider confirmation. See sources.json for newly checked primary references.
+
+No commit, push, hosting migration or live deployment was performed. GitHub write authentication is unavailable. Source baseline is recorded in START-HERE.txt.

@@ -1,0 +1,19 @@
+PODATURPET — ONE COMPLETE WEBSITE PACKAGE
+Prepared 13 November 2026
+
+The website/ folder contains the full GitHub source snapshot with this refresh applied, including pages, CSS, JavaScript, photos and other tracked assets. You do not need the earlier partial ZIP.
+
+Baseline main commit: 9eb1fd328ad4ef7273c80ac028fbbda69942e0ef
+
+What changed: Home on 53 HTML files; consistent mobile/tablet/desktop polish; five current source-linked notices; official civic-reference checks; dated archive and future-expiry labels; corrected destination counts. See website/docs/refresh-20261113/REVIEW.md for exact coverage and validation limits.
+
+HOW TO APPLY ON YOUR MAC
+1. Extract this ZIP.
+2. Back up your existing repository, including any uncommitted files.
+3. Compare your current git rev-parse HEAD with the baseline above. If newer, merge the changed files instead of overwriting newer work.
+4. Copy website/ contents into your existing repository root; preserve its .git folder. No deletions are required.
+5. Review git diff and git status. Run python3 tools/check_site_links.py and python3 tools/verify_redesign.py.
+6. Preview with python3 -m http.server 8000, open http://localhost:8000 and check the English/Tamil homepages, Home button and notices. Stop with Ctrl+C.
+7. Commit reviewed changes and push using your existing GitHub/Cloudflare publishing workflow.
+
+Live podaturpet.com has NOT been changed. No domain or hosting settings need to be changed for this package.
